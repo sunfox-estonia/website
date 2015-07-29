@@ -7,3 +7,24 @@ Author: Victor Litvinkov
 body{
 	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;color:#DACA97;font-weight:100;}
+nav>div.container_3{background-color:rgba(0,0,0,0.8);color:#A6A6A6;}
+nav small {display: block;font-size:16px;}
+nav ul{padding-left: 0;list-style: none;}
+nav a{color:#718ACA;}
+nav a:hover{text-decoration:none;}
+nav div.grid_1:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat left 15px;}
+nav div.grid_1:first-child h1, nav div.grid_1:first-child ul {margin-left:95px;}
+
+@media screen and (max-width: 1920px) {
+	body{font-size:13px;}
+	nav{padding:5px 0px 10px;}
+	nav h1{font-size:24px;}
+	nav h2{font-size:22px;}
+}
+@media screen and (max-width: 1366px) {
+	body{font-size:12px;}
+	nav{padding:3px 0px 6px;}
+	nav h1{font-size:19px;}
+	nav h2{font-size:17px;}
+}
