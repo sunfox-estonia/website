@@ -5,12 +5,12 @@ Author: Victor Litvinkov
 @font-face {font-family:Mezzo Bold;src: url(../fonts/mezzo_bd.otf);src: local(Mezzo), url(../fonts/mezzo_bd.otf);}
 @font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
 body{
-	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;
+	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;background: #212121 url(../img/background_500.png) repeat center;
 }
 h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;color:#DACA97;font-weight:100;}
 p, ul{line-height:18px;}
 
-nav>div.container_3{background:#212121;color:#A6A6A6;}
+nav>div.container_3{background: -moz-linear-gradient(left, rgba(33,33,33,0) 0%, rgba(33,33,33,0.15) 1%, rgba(33,33,33,0.5) 5%, rgba(33,33,33,0.5) 95%, rgba(33,33,33,0.15) 99%, rgba(33,33,33,0) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(33,33,33,0)), color-stop(1%,rgba(33,33,33,0.15)), color-stop(5%,rgba(33,33,33,0.5)), color-stop(95%,rgba(33,33,33,0.5)), color-stop(99%,rgba(33,33,33,0.15)), color-stop(100%,rgba(33,33,33,0))); background: -webkit-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: -o-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: -ms-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: linear-gradient(to right, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#00212121',GradientType=1 ); color:#A6A6A6;}
 nav small {display:block;color:#A6A6A6;}
 nav ul{padding-left: 0;list-style: none;}
 nav a{color:#718ACA;}

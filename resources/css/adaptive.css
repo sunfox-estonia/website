@@ -1,0 +1,65 @@
+body{min-width:960px}
+@media screen and (min-device-width: 1600px){
+	.container_3{margin-left:auto;margin-right:auto;width:1350px}
+	.container_3 .grid_1{width:430px}
+	.container_3 .grid_2{width:880px}
+	.container_3 .grid_3{width:1330px}
+	.container_3 .prefix_1{padding-left:450px}
+	.container_3 .prefix_2{padding-left:900px}
+	.container_3 .suffix_1{padding-right:450px}
+	.container_3 .suffix_2{padding-right:900px}
+	.container_3 .push_1{left:450px}
+	.container_3 .push_2{left:900px}
+	.container_3 .pull_1{left:-450px}
+	.container_3 .pull_2{left:-900px}
+}
+@media screen and (min-device-width: 1300px) and (max-device-width: 1599px){
+	.container_3{margin-left:auto;margin-right:auto;width:1110px}
+	.container_3 .grid_1{width:350px}
+	.container_3 .grid_2{width:720px}
+	.container_3 .grid_3{width:1090px}
+	.container_3 .prefix_1{padding-left:370px}
+	.container_3 .prefix_2{padding-left:740px}
+	.container_3 .suffix_1{padding-right:370px}
+	.container_3 .suffix_2{padding-right:740px}
+	.container_3 .push_1{left:370px}
+	.container_3 .push_2{left:740px}
+	.container_3 .pull_1{left:-370px}
+	.container_3 .pull_2{left:-740px}
+}
+@media screen and (min-device-width: 1100px) and (max-device-width: 1299px){
+	.container_3{margin-left:auto;margin-right:auto;width:999px}
+	.container_3 .grid_1{width:313px}
+	.container_3 .grid_2{width:646px}
+	.container_3 .grid_3{width:979px}
+	.container_3 .prefix_1{padding-left:333px}
+	.container_3 .prefix_2{padding-left:666px}
+	.container_3 .suffix_1{padding-right:333px}
+	.container_3 .suffix_2{padding-right:666px}
+	.container_3 .push_1{left:333px}
+	.container_3 .push_2{left:666px}
+	.container_3 .pull_1{left:-333px}
+	.container_3 .pull_2{left:-666px}
+}
+@media screen and (max-device-width: 1099px){
+	.container_3{margin-left:auto;margin-right:auto;width:900px}
+	.container_3 .grid_1{width:280px}
+	.container_3 .grid_2{width:580px}
+	.container_3 .grid_3{width:880px}
+	.container_3 .prefix_1{padding-left:300px}
+	.container_3 .prefix_2{padding-left:600px}
+	.container_3 .suffix_1{padding-right:300px}
+	.container_3 .suffix_2{padding-right:600px}
+	.container_3 .push_1{left:300px}
+	.container_3 .push_2{left:600px}
+	.container_3 .pull_1{left:-300px}
+	.container_3 .pull_2{left:-600px}
+}
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+.clearfix:before,.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+.clearfix:after{clear:both}
+.clearfix{zoom:1}
+.grid_1,.grid_2,.grid_3{display:inline;float:left;position:relative;margin-left:10px;margin-right:10px}
+.push_1,.pull_1,.push_2,.pull_2,.push_3,.pull_3{position:relative}
+.alpha{margin-left:0}
+.omega{margin-right:0}
