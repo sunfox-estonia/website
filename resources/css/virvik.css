@@ -17,6 +17,20 @@ nav a{color:#718ACA;}
 nav a:hover{text-decoration:none;}
 nav div.grid_1:first-child h1, nav div.grid_1:first-child ul {margin-left:95px;}
 
+footer>div.container_3{background: rgb(89,41,24);background: -moz-linear-gradient(top,  rgba(89,41,24,1) 1%, rgba(64,29,17,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(89,41,24,1)), color-stop(100%,rgba(64,29,17,1)));background: -webkit-linear-gradient(top,  rgba(89,41,24,1) 1%,rgba(64,29,17,1) 100%);background: -o-linear-gradient(top,  rgba(89,41,24,1) 1%,rgba(64,29,17,1) 100%);background: -ms-linear-gradient(top,  rgba(89,41,24,1) 1%,rgba(64,29,17,1) 100%);background: linear-gradient(to bottom,  rgba(89,41,24,1) 1%,rgba(64,29,17,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#592918', endColorstr='#401d11',GradientType=0 );}
+
+form{background:#783B27; color: #9B5138; border-radius:3px; padding: 0 5px 10px;}
+form>fieldset:first-child>legend{border-bottom:solid 1px #CA8F79;margin-top:5px;line-height:35px;font-size:19px}
+form>fieldset>legend{color:#ADC794;margin-top:10px; margin-bottom:15px;line-height:35px;border-bottom:dotted 1px #BF8773;line-height:30px;font-size:17px; font-family:Mezzo Regular;}
+form input, form textarea, form select, form .uneditable-input{border: 2px solid #BF8773; border-radius:3px}
+form textarea{resize: vertical;}
+form input:focus, form textarea:focus, form select:focus {border: 2px solid white; box-shadow:none;}
+form label {color:#FBB196;}
+form .help-block {color:#BF8773;font-style: italic; line-height:19px;}
+form button[type="submit"]{border:2px solid #BF8773;color:#401d11; margin-top:10px;}
+form button[type="submit"]:hover{box-shadow:0 0 7px rgba(64,29,17,1);}
+form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
+
 @media screen and (max-width: 1920px) {
 	body{font-size:13px;}
 	nav>div.container_3{padding:3px 0px 10px;}
