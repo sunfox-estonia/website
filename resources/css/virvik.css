@@ -26,7 +26,7 @@ form input, form textarea, form select, form .uneditable-input{border: 2px solid
 form textarea{resize: vertical;}
 form input:focus, form textarea:focus, form select:focus {border: 2px solid white; box-shadow:none;}
 form label {color:#86B286;}
-form .help-block {color:#739973;font-style: italic; line-height:19px;}
+form .help-block {color:#607F60;font-style: italic;line-height:19px;margin-top:0px}
 form button[type="submit"]{border:2px solid #607F60;color:#263326; margin-top:10px;}
 form button[type="submit"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);}
 form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}

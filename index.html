@@ -28,7 +28,7 @@
         <div class="grid_1">
             <h2>Вечера настольных игр <small>в Нарве, Йыхви и Ору</small></h2>
             <p>Викинги Вирумаа приглашают друзей чтобы вместе сыграть в интересные и захватывающие настольные игры.</p>
-            <p><a href="#">Регистрация</a></p>
+            <p><a href="#SpecialBlockBoardGames">Регистрация</a></p>
         </div>
         <div class="grid_1">
             <p><span class="glyphicon glyphicon-globe"></span> <a href="http://viruviking.club/et/">Eesti keeles</a></p>
@@ -67,9 +67,27 @@
         <div class="clear"></div>
     </div>
     <div class="container_3">
-        <div class="grid_1"></div>
-        <div class="grid_1"></div>
-        <div class="grid_1"></div>
+        <div class="grid_1 prefix_1"><h2>Вечера настольных игр</h2></div>
+        <div class="grid_1"><a name="SpecialBlockBoardGames"></a>
+          <form action="#" method="POST">
+           <fieldset>
+            <legend>Регистрация на мероприятие</legend>
+            <label for="eventreg_name">Имя, фамилия</label>
+            <input class="input-large" type="text" name="eventreg_name" value="" required>
+            <label for="eventreg_mail">Электропочта</label>
+            <input class="input-large" type="email" name="eventreg_mail" value="" placeholder="nickname@domain.tld" required>
+            <p class="help-block">Мы отправим подтверждение регистрации и дополнительную информацию о мероприятии на указанный Вами адрес электропочты.</p>
+            <label for="eventreg_dateplace">Предстоящие мероприятия</label>
+            <select class="input-xlarge" name="eventreg_dateplace" required>
+             <option disabled selected>Выбрать подходящее из списка</option>
+             <option value="option">1 окт. в 18:00, Нарва, офис Vitatiim</option>
+             <option value="option">7 окт. в 13:00, Йыхви, Молодежный центр</option>
+             <option value="option">3 нояб. в 14:00, Нарва, офис Vitatiim</option>
+            </select>
+           </fieldset>
+           <button type="submit" class="btn-large">Отправить</button>
+          </form>
+        </div>
         <div class="clear"></div>
     </div>
 </main>
@@ -80,7 +98,7 @@
 <footer>
     <div class="container_3">
         <div class="grid_2">
-         <div class="grid_1 alpha"><p>Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. Ниже приведены контактные данные координаторов сообщества.</p>
+         <div class="grid_1 alpha"><p>Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. Ниже указаны контактные данные координаторов сообщества.</p>
              <p><strong>Виктор Литвинков</strong><br/><i>Орг. вопросы сообщества в Йыхви</i><br/>+372 55 59 3171<br/><a href="mailto:victor@viruviking.club">victor@viruviking.club</a></p>
              <p><strong>Антон Корнышенков</strong><br/><i>LARP, крафтинг, тренировки в Йыхви</i><br/><a href="mailto:anton@viruviking.club">anton@viruviking.club</a></p>
              <p><strong>Даниил Плюшко</strong><br/><i>Орг. вопросы и тренировки в Нарве</i><br/><a href="mailto:daniil@viruviking.club">daniil@viruviking.club</a></p>
@@ -111,5 +129,7 @@
     </div>
 </footer>
 </body>
+<script src='resources/js/jquery.min.js'></script>
+<script src='resources/js/virvik.js'></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 </html>
