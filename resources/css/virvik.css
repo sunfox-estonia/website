@@ -17,7 +17,10 @@ nav div.grid_1:first-child h1, nav div.grid_1:first-child ul {margin-left:95px;}
 nav a, footer a{color:#718ACA;}
 nav a:hover, footer a:hover{text-decoration:none;}
 footer p.imprint{font-style: italic; color: #666;}
-footer span.delimiter {background: repeating-linear-gradient(90deg, #435943, #435943 2px, transparent 2px, transparent 6px);display: block;width:75px;height: 5px; margin: 25px 0px 10px;}
+footer span.delimiter {background: repeating-linear-gradient(90deg, #666, #666 2px, transparent 2px, transparent 6px);display: block;width:75px;height: 5px; margin: 25px 0px 10px;}
+main div.intro{color:#A6A6A6;text-shadow: 0px 1px 1px #020F25}
+main div.intro p[class^="summary-"]{color:#DACA97;font-family:Mezzo Regular;}
+
 
 form{background:rgba(67,89,67,0.25); color: #607F60; border-radius:3px; padding: 0 10px 10px;}
 form>fieldset:first-child>legend{border-bottom:solid 1px #8FBF8F;margin-top:5px;line-height:35px;font-size:19px}
@@ -34,10 +37,13 @@ form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
 @media screen and (max-width: 1920px) {
 	body{font-size:13px;}
 	nav>div.container_3{padding:3px 0px 10px;}
- nav div.grid_1:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat 6px 15px;}
+ 	nav div.grid_1:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat 6px 15px;}
 	nav h1{font-size:24px;}
 	nav h2{font-size:22px;}
- nav small {font-size:16px;line-height:19px;margin-top:4px;}
+ 	nav small {font-size:16px;line-height:19px;margin-top:4px;}
+	main div.intro{background: url(../img/intro_bg_1900_1.jpg) no-repeat top center;height:650px;}
+	main div.intro p.summary-main{font-size:19px;line-height:24px;}
+	main div.intro p.summary-add{font-size:17px;line-height:22px;}
 }
 
 @media screen and (max-width: 1366px) {
