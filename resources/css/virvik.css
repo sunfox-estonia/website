@@ -8,21 +8,34 @@ body{
 	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;background: #212121 url(../img/background_500.png) repeat center;
 }
 h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;color:#DACA97;font-weight:100;}
-p, ul{line-height:18px;}
+p{margin: 9px 0px 18px;}
+div>h1:first-child,div>h2:first-child,div>h3:first-child{margin-top: 0px;}
+h1,h2,h3{margin: 21px 0px 9px;}
+h1 + p, h2 + p{margin-top:0px;}
+h1{font-size:21px; line-height: 30px}
+h2{font-size:18px; line-height: 24px}
+h3{font-size:15px; line-height: 21px}
+small{font-size:15px; line-height: 21px; margin: 3px 0px 18px; display: block; color:#B3B3B3;}
+ul{padding-left: 0;list-style: none; margin: 9px 0px 18px;}
+div[class^="col-"]{padding-top: 18px;}
+div[class^="col-"]>p:first-child, div[class^="col-"]>ul:first-child, div[class^="col-"]>form:first-child{margin-top: 0px}
+div[class^="col-"]>p:last-child, div[class^="col-"]>ul:last-child, div[class^="col-"]>form:last-child{margin-bottom: 24px}
+main div.intro{color:#B3B3B3;text-shadow: 0px 1px 1px #020F25}
 
 nav>div.container, footer{background: -moz-linear-gradient(left, rgba(33,33,33,0) 0%, rgba(33,33,33,0.15) 1%, rgba(33,33,33,0.5) 5%, rgba(33,33,33,0.5) 95%, rgba(33,33,33,0.15) 99%, rgba(33,33,33,0) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(33,33,33,0)), color-stop(1%,rgba(33,33,33,0.15)), color-stop(5%,rgba(33,33,33,0.5)), color-stop(95%,rgba(33,33,33,0.5)), color-stop(99%,rgba(33,33,33,0.15)), color-stop(100%,rgba(33,33,33,0))); background: -webkit-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: -o-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: -ms-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: linear-gradient(to right, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#00212121',GradientType=1 ); color:#B3B3B3;}
-nav small {display:block;color:#B3B3B3;}
-nav ul{padding-left: 0;list-style: none;}
+nav div[class^="col-"]:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat 18px 18px;}
 nav div[class^="col-"]:first-child h1, nav div[class^="col-"]:first-child ul {margin-left:95px;}
+
 nav a, footer a{color:#718ACA;}
 nav a:hover, footer a:hover{text-decoration:none;}
 footer p.imprint{font-style: italic; color: #666;}
-main div.intro{color:#B3B3B3;text-shadow: 0px 1px 1px #020F25}
-main div.intro p[class^="summary-"]{color:#DACA97;font-family:Mezzo Regular;}
 
+main div.subintro {background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
+main div.subintro p {color:#B3B3B3;text-shadow: 0px 1px 1px #00050F;}
+main div.subintro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1 ); border-top:1px solid #00050F;}
 
-form{background:rgba(67,89,67,0.25); color: #607F60; border-radius:3px; padding: 0 10px 10px;}
-form>fieldset:first-child>legend{border-bottom:solid 1px #8FBF8F;margin-top:5px;line-height:35px;font-size:19px}
+form{background:rgba(67,89,67,0.25); color: #607F60; border-radius:3px; padding: 0 10px 10px; margin: 9px 0px 18px;}
+form>fieldset:first-child>legend{border-bottom:solid 1px #8FBF8F;margin-top:5px;font-size:18px; line-height: 30px}
 form>fieldset>legend{color:#8FBF8F;margin-top:10px; margin-bottom:15px;line-height:35px;border-bottom:dotted 1px #8FBF8F;line-height:30px;font-size:17px; font-family:Mezzo Regular;}
 form input, form textarea, form select, form .uneditable-input{border: 2px solid #607F60; border-radius:3px}
 form textarea{resize: vertical;}
@@ -34,37 +47,16 @@ form button[type="submit"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);}
 form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
 
 @media (min-width: 750px) {
-	body{font-size:12px;}
-	nav>div.container{padding:3px 0px 6px;}
- 	nav div[class^="col-"]:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat 15px 11px;}
-	nav h1{font-size:19px;}
-	nav h2{font-size:17px;}
-	nav small {font-size:14px;line-height:18px;margin-top:5px;}
 	main div.intro{background: url(../img/intro/750/intro_full_750.png) no-repeat top center;height:373px;}
-	main div.intro p.summary-main{font-size:19px;line-height:24px;}
-	main div.intro p.summary-add{font-size:17px;line-height:22px;}
+	body{font-size:13px; line-height: 18px;}
 }
 
 @media (min-width: 992px) {
-	body{font-size:12px;}
-	nav>div.container{padding:3px 0px 6px;}
- 	nav div[class^="col-"]:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat 15px 11px;}
-	nav h1{font-size:19px;}
-	nav h2{font-size:17px;}
-	nav small {font-size:14px;line-height:18px;margin-top:5px;}
 	main div.intro{background: url(../img/intro/970/intro_full_970.png) no-repeat top center;height:483px;}
-	main div.intro p.summary-main{font-size:19px;line-height:24px;}
-	main div.intro p.summary-add{font-size:17px;line-height:22px;}
+	body{font-size:13px; line-height: 18px;}
 }
 
 @media (min-width: 1200px) {
-	body{font-size:13px;}
-	nav>div.container{padding:3px 0px 10px;}
- 	nav div[class^="col-"]:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat 15px 15px;}
-	nav h1{font-size:24px;}
-	nav h2{font-size:22px;}
- 	nav small {font-size:16px;line-height:19px;margin-top:4px;}
 	main div.intro{background: url(../img/intro/1170/intro_full_1170.png) no-repeat top center;height:582px;}
-	main div.intro p.summary-main{font-size:19px;line-height:24px;}
-	main div.intro p.summary-add{font-size:17px;line-height:22px;}
+	body{font-size:13px; line-height: 18px;}
 }
