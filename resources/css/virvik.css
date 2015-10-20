@@ -20,19 +20,13 @@ ul{padding-left: 0;list-style: none; margin: 9px 0px 18px;}
 div[class^="col-"]{padding-top: 18px;}
 div[class^="col-"]>p:first-child, div[class^="col-"]>ul:first-child, div[class^="col-"]>form:first-child{margin-top: 0px}
 div[class^="col-"]>p:last-child, div[class^="col-"]>ul:last-child, div[class^="col-"]>form:last-child{margin-bottom: 24px}
-
 main div.intro{color:#B3B3B3;text-shadow: 0px 1px 1px #020F25}
-main div.subintro {background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
-main div.subintro p {color:#B3B3B3;text-shadow: 0px 1px 1px #00050F;}
-main div.subintro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1 ); border-top:1px solid #00050F;}
-main div.fireplace{background: #415A0B;}
 
 nav>div.container, footer{background: -moz-linear-gradient(left, rgba(33,33,33,0) 0%, rgba(33,33,33,0.15) 1%, rgba(33,33,33,0.5) 5%, rgba(33,33,33,0.5) 95%, rgba(33,33,33,0.15) 99%, rgba(33,33,33,0) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(33,33,33,0)), color-stop(1%,rgba(33,33,33,0.15)), color-stop(5%,rgba(33,33,33,0.5)), color-stop(95%,rgba(33,33,33,0.5)), color-stop(99%,rgba(33,33,33,0.15)), color-stop(100%,rgba(33,33,33,0))); background: -webkit-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: -o-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: -ms-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: linear-gradient(to right, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#00212121',GradientType=1 ); color:#B3B3B3;}
 nav div[class^="col-"]:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat 18px 18px;}
 nav div[class^="col-"]:first-child h1, nav div[class^="col-"]:first-child ul {margin-left:95px;}
 nav a, footer a{color:#718ACA;}
 nav a:hover, footer a:hover{text-decoration:none;}
-
 footer p.imprint{font-style: italic; color: #666;}
 
 form{background:rgba(67,89,67,0.25); color: #607F60; border-radius:3px; padding: 0 10px 10px; margin: 9px 0px 18px;}
@@ -70,11 +64,10 @@ form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
 }
 
 @media (min-width: 1200px) {
-	main div.intro{background: url(../img/intro/1170/intro_sky_1170.png) top center no-repeat;height:572px;}
-	main div.intro div.intro_thirdhill{background: url(../img/intro/1170/intro_thirdhill_1170.png) 0px -15px no-repeat;height:572px;}
-	/*
-	main div.intro div.intro_sechill{background: url(../img/intro/1170/intro_sechill_1170.png) 0px -10px no-repeat;height:572px;}
-	main div.intro div.intro_firsthill{background: url(../img/intro/1170/intro_firsthill_1170.png) 0px 10px no-repeat;height:572px;}
-	main div.intro div.intro_flag{background: url(../img/intro/1170/intro_flag_1170.png) 0px 5px no-repeat;height:572px;}*/
 	body{font-size:13px; line-height: 18px;}
+	main div.intro{background: url(../img/intro/1170/intro_sky_1170.png) no-repeat top center;height:582px;}
+  main div.intro div.intro_thirdhill{background: url(../img/intro/1170/intro_thirdhill_1170.png) 0 0 no-repeat;height:582px;}
+	main div.intro div.intro_sechill{background: url(../img/intro/1170/intro_sechill_1170.png) 0 0 no-repeat;height:582px;}
+	main div.intro div.intro_firsthill{background: url(../img/intro/1170/intro_firsthill_1170.png) 0 0 no-repeat;height:582px;}
+	main div.intro div.intro_flag{background: url(../img/intro/1170/intro_flag_1170.png) 0 0 no-repeat;height:582px;}
 }
