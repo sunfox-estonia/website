@@ -23,19 +23,22 @@ $(function() {
 Home page intro paralax
 More info: http://stackoverflow.com/questions/15465481/is-there-a-way-to-make-parallax-work-within-a-div
 */
-function parallax() {
+function intro_parallax() {
     var ev = {
         scrollTop: document.body.scrollTop || document.documentElement.scrollTop
     };
     ev.ratioScrolled = ev.scrollTop / (document.body.scrollHeight - document.documentElement.clientHeight);
-    render(ev);
+    intro_parallax_render(ev);
 }
-function render(ev) {
+function intro_parallax_render(ev) {
     var t = ev.scrollTop;
-    var y = Math.round(t * 2/3) - 800;
-    // var y = Math.round((1 - ev.ratioScrolled) * -100);
-    $('div#intro_thirdhill').css('background-position', '0 ' + y + 'px');
-    $('div#intro_sechill').css('background-position', '0 ' + y + 'px');
-    $('div#intro_firsthill').css('background-position', '0 ' + y + 'px');
-    $('div#intro_flag').css('background-position', '0 ' + y + 'px');
+    var thirdhill_val = Math.round(t*0.055-20);
+    var sechill_val = Math.round(t*0.02);
+    var firsthill_val = Math.round(t*(-0.04)+30);
+    var flag_val_ver = Math.round(t*(-0.035)+10);
+    var flag_val_hor = Math.round(t*(-0.02));
+    $('div#intro_thirdhill').css('background-position', '0px ' + thirdhill_val + 'px');
+    $('div#intro_sechill').css('background-position', '0 ' + sechill_val + 'px');
+    $('div#intro_firsthill').css('background-position', '0 ' + firsthill_val + 'px');
+    $('div#intro_flag').css('background-position', flag_val_hor + 'px ' + flag_val_ver + 'px');
 }

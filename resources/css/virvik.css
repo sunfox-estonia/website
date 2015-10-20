@@ -65,9 +65,9 @@ form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
 
 @media (min-width: 1200px) {
 	body{font-size:13px; line-height: 18px;}
-	main div.intro{background: url(../img/intro/1170/intro_sky_1170.png) no-repeat top center;height:582px;}
-  main div.intro div.intro_thirdhill{background: url(../img/intro/1170/intro_thirdhill_1170.png) 0 0 no-repeat;height:582px;}
-	main div.intro div.intro_sechill{background: url(../img/intro/1170/intro_sechill_1170.png) 0 0 no-repeat;height:582px;}
-	main div.intro div.intro_firsthill{background: url(../img/intro/1170/intro_firsthill_1170.png) 0 0 no-repeat;height:582px;}
-	main div.intro div.intro_flag{background: url(../img/intro/1170/intro_flag_1170.png) 0 0 no-repeat;height:582px;}
+	main div.intro{background: url(../img/intro/1170/intro_sky_1170.png) no-repeat top center;height:565px; overflow: hidden;}
+  main div.intro div#intro_thirdhill{background: url(../img/intro/1170/intro_thirdhill_1170.png) 0px -20px no-repeat;height:582px;}
+	main div.intro div#intro_sechill{background: url(../img/intro/1170/intro_sechill_1170.png) 0px 0px no-repeat;height:582px;}
+	main div.intro div#intro_firsthill{background: url(../img/intro/1170/intro_firsthill_1170.png) 0px 30px no-repeat;height:582px;}
+	main div.intro div#intro_flag{background: url(../img/intro/1170/intro_flag_1170.png) 0px 10px no-repeat;height:582px;}
 }
