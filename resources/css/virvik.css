@@ -64,8 +64,12 @@ form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
 }
 
 @media (min-width: 992px) {
-	main div.intro{background: url(../img/intro/970/intro_full_970.png) no-repeat top center;height:483px;}
 	body{font-size:13px; line-height: 18px;}
+	main div.intro{background: url(../img/intro/970/intro_sky_970.png) no-repeat top center;height:450px; overflow: hidden;}
+  main div.intro div#intro_thirdhill{background: url(../img/intro/970/intro_thirdhill_970.png) 0px -20px no-repeat;height:483px;}
+	main div.intro div#intro_sechill{background: url(../img/intro/970/intro_sechill_970.png) 0px 0px no-repeat;height:483px;}
+	main div.intro div#intro_firsthill{background: url(../img/intro/970/intro_firsthill_970.png) 0px 30px no-repeat;height:483px;}
+	main div.intro div#intro_flag{background: url(../img/intro/970/intro_flag_970.png) 0px 10px no-repeat;height:483px;}
 	div!>form[name="FormContactUs"]{padding-top:0;}
 }
 

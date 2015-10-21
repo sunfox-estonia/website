@@ -32,11 +32,11 @@ function intro_parallax() {
 }
 function intro_parallax_render(ev) {
     var t = ev.scrollTop;
-    var thirdhill_val = Math.round(t*0.055-20);
+    var thirdhill_val = Math.round(t*0.06-20);
     var sechill_val = Math.round(t*0.02);
     var firsthill_val = Math.round(t*(-0.04)+30);
-    var flag_val_ver = Math.round(t*(-0.035)+10);
-    var flag_val_hor = Math.round(t*(-0.02));
+    var flag_val_ver = Math.round(t*(-0.03)+10);
+    var flag_val_hor = Math.round(t*(-0.005));
     $('div#intro_thirdhill').css('background-position', '0px ' + thirdhill_val + 'px');
     $('div#intro_sechill').css('background-position', '0 ' + sechill_val + 'px');
     $('div#intro_firsthill').css('background-position', '0 ' + firsthill_val + 'px');
