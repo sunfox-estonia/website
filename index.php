@@ -1,3 +1,20 @@
+<?php
+require ($_SERVER['DOCUMENT_ROOT']."/resources/php/php_plg_recaptcha/recaptchalib.php");
+if($_POST['contact_mail'] && $_POST['contact_message'] && $_POST['g-recaptcha-response']){
+  // Recaptcha
+  $secret = "6Ldj3_8SAAAAANdPcol2bIkhVpuna87pGm9QN2MP";
+  $reCaptcha = new ReCaptcha($secret);
+  $response = $reCaptcha->verifyResponse(
+        $_SERVER["REMOTE_ADDR"],
+        $_POST["g-recaptcha-response"]
+      );
+  if ($response != null && $response->success) {
+    var_dump($_POST);
+  } else {
+    echo "Err!";
+  }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content=""><meta name="author" content=""><title>Викинги Вирумаа &ndash; Братство ролевиков и исторических реконструкторов</title>
@@ -24,7 +41,7 @@
             <p><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<a href="http://viruviking.club/et/">Eesti keeles</a></p>
             <p><a href="http://vk.com/viruviking"><img src="resources/img/ico/social_vk.png"></a>
                 &nbsp;<a href="http://fb.com/viruviking"><img src="resources/img/ico/social_fb.png"></a>
-                &nbsp;<a href="https://plus.google.com/103912695976021151107" rel="publisher"><img src="resources/img/ico/social_gplus.png"></a>
+                &nbsp;<a href="https://plus.google.com/+ViruvikingClub" rel="publisher"><img src="resources/img/ico/social_gplus.png"></a>
                 <!--&nbsp;<a href="#"><img src="resources/img/ico/social_yt.png"></a></p>-->
             <ul class="list-unstyled">
                 <li><a href="https://wiki.viruviking.club">Вики-система Братства</a></li>
@@ -82,10 +99,14 @@
            <fieldset>
             <legend>Регистрация на мероприятие</legend>
             <label for="eventreg_name">Имя, фамилия</label>
-            <input class="input-large" type="text" name="eventreg_name" value="" required>
+            <input class="input-large" type="text" name="ev
+<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>entreg_name" value="" required>
             <label for="eventreg_mail">Электропочта</label>
             <input class="input-large" type="email" name="eventreg_mail" value="" placeholder="nickname@domain.tld" required>
-            <p class="help-block">Мы отправим подтверждение регистрации и дополнительную информацию о мероприятии на указанный Вами адрес электропочты.</p>
+            <p class="help-block">Мы отпр+            <fieldset>
++             <legend>Верификация</legend>
++             <div class="g-recaptcha" data-sitekey="6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz"></div>
++            </fieldset>авим подтверждение регистрации и дополнительную информацию о мероприятии на указанный Вами адрес электропочты.</p>
             <label for="eventreg_dateplace">Предстоящие мероприятия</label>
             <select class="input-xlarge" name="eventreg_dateplace" required>
              <option disabled selected>Выбрать подходящее из списка</option>
@@ -117,14 +138,18 @@
             <p class="hidden-sm">Напишите нам о своём желании присоединиться к Братству - для этого воспользуйтесь формой обратной связи, расположенной справа. Укажите корректный адрес эл. почты в соответствующем поле и номер мобильного телефона в сообщении.</p>
         </div>
         <div class="col-xs-7 col-sm-6 col-md-5 col-lg-4">
-            <form action="#" method="POST" name="FormContactUs">
+            <form action="<?=$_PHP_SELF;?>" method="POST" name="FormContactUs">
             <fieldset>
              <legend>Обратная связь</legend>
              <label for="contact_mail">Электропочта</label>
              <input class="input-large" type="email" name="contact_mail" value="" placeholder="nickname@domain.tld" required>
            </fieldset>
-            <label for="contact_mail">Текст сообщения</label>
+            <label for="contact_message">Текст сообщения</label>
             <textarea class="input-xlarge" name="contact_message" rows="3" required ></textarea>
+          <fieldset>
+            <legend>Верификация</legend>
+            <div class="g-recaptcha" data-sitekey="6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz"></div>
+          </fieldset>
             <button type="submit" class="btn-large">Отправить</button>
            </form>
          </div>
@@ -136,4 +161,5 @@
 $(window).scroll(function () {
   intro_parallax();
 });
-</script></html>
+</script>
+<script src='https://www.google.com/recaptcha/api.js?hl=ru'></script></html>
