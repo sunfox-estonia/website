@@ -41,8 +41,8 @@ if($_POST['contact_mail'] && $_POST['contact_message'] && $_POST['g-recaptcha-re
             <p><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<a href="http://viruviking.club/et/">Eesti keeles</a></p>
             <p><a href="http://vk.com/viruviking"><img src="resources/img/ico/social_vk.png"></a>
                 &nbsp;<a href="http://fb.com/viruviking"><img src="resources/img/ico/social_fb.png"></a>
-                &nbsp;<a href="https://plus.google.com/+ViruvikingClub" rel="publisher"><img src="resources/img/ico/social_gplus.png"></a>
-                <!--&nbsp;<a href="#"><img src="resources/img/ico/social_yt.png"></a></p>-->
+                &nbsp;<a href="https://plus.google.com/103912695976021151107" rel="publisher"><img src="resources/img/ico/social_gplus.png"></a>
+                &nbsp;<a href="https://www.youtube.com/ViruvikingClub"><img src="resources/img/ico/social_yt.png"></a></p>
             <ul class="list-unstyled">
                 <li><a href="https://wiki.viruviking.club">Вики-система Братства</a></li>
                 <li><a href="https://mail.viruviking.club">Электронная почта</a></li></ul>
