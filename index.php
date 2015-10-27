@@ -1,25 +1,42 @@
 <?php
-require ($_SERVER['DOCUMENT_ROOT']."/resources/php/php_plg_recaptcha/recaptchalib.php");
-if($_POST['contact_mail'] && $_POST['contact_message'] && $_POST['g-recaptcha-response']){
-  // Recaptcha
-  $secret = "6Ldj3_8SAAAAANdPcol2bIkhVpuna87pGm9QN2MP";
-  $reCaptcha = new ReCaptcha($secret);
-  $response = $reCaptcha->verifyResponse(
-        $_SERVER["REMOTE_ADDR"],
-        $_POST["g-recaptcha-response"]
-      );
-  if ($response != null && $response->success) {
-    var_dump($_POST);
-  } else {
-    echo "Err!";
+require ($_SERVER['DOCUMENT_ROOT'] . "/resources/php/php_plg_recaptcha/recaptchalib.php");
+$privatekey = "6Ldj3_8SAAAAANdPcol2bIkhVpuna87pGm9QN2MP";
+$publickey = "6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz";
+if($_POST['contact_mail'] && $_POST['contact_message']){
+  $response = null;
+  $err = null;
+  if ($_POST["recaptcha_response_field"]) {
+    $response = recaptcha_check_answer ($privatekey, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
+    if ($response->is_valid) {
+        require_once ($_SERVER['DOCUMENT_ROOT'] . "/resources/php/php_plg_mailer/class.phpmailer.php");
+        $Mail = new PHPMailer;
+        $mail_body      = eregi_replace("[\]",'',$_POST["contact_message"]);
+        $Mail->From     = $_POST["contact_mail"];
+        $Mail->FromName = 'Посетитель viruviking.club';
+        $Mail->CharSet  = "utf-8";
+        $Mail->Subject  = 'Сообщение с viruviking.club';
+        $Mail->Body     = $mail_body;
+        $Mail->AddAddress('info@viruviking.club');
+        if(!$Mail->Send()) {
+          header('HTTP/1.1 301 Moved Permanently'); header('Location: /?msg=500'); exit();
+        } else {
+          header('HTTP/1.1 301 Moved Permanently'); header('Location: /?msg=200'); exit();
+        }
+    } else {
+    }
   }
 }
 ?>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content=""><meta name="author" content=""><title>Викинги Вирумаа &ndash; Братство ролевиков и исторических реконструкторов</title>
-<link href="resources/css/normalize.css" rel="stylesheet"><link href="resources/css/adaptive.css" rel="stylesheet"><link href="resources/css/glyphicons.css" rel="stylesheet"><link href="resources/css/forms.css" rel="stylesheet"><link href="resources/css/virvik.css" rel="stylesheet"></head>
+<link href="resources/css/normalize.css" rel="stylesheet"><link href="resources/css/adaptive.css" rel="stylesheet"><link href="resources/css/glyphicons.css" rel="stylesheet"><link href="resources/css/alerts.css" rel="stylesheet"><link href="resources/css/forms.css" rel="stylesheet"><link href="resources/css/virvik.css" rel="stylesheet"></head>
 <body>
+<?php if($_GET['msg'] == '200'){ ?>
+  <div class="container"><div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-success" role="alert"><strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней.</div></div></div></div>
+<?php } elseif ($_GET['msg'] == '500') { ?>
+  <div class="container"><div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-danger" role="alert"><strong>Ошибка!</strong> Сообщение не удалось отправить.</div></div></div></div>
+<?php } ?>
 <nav>
     <div class="container">
       <div class="row">
@@ -138,7 +155,7 @@ if($_POST['contact_mail'] && $_POST['contact_message'] && $_POST['g-recaptcha-re
             <p class="hidden-sm">Напишите нам о своём желании присоединиться к Братству - для этого воспользуйтесь формой обратной связи, расположенной справа. Укажите корректный адрес эл. почты в соответствующем поле и номер мобильного телефона в сообщении.</p>
         </div>
         <div class="col-xs-7 col-sm-6 col-md-5 col-lg-4">
-            <form action="<?=$_PHP_SELF;?>" method="POST" name="FormContactUs">
+            <form action="" method="POST" name="FormContactUs">
             <fieldset>
              <legend>Обратная связь</legend>
              <label for="contact_mail">Электропочта</label>
@@ -148,7 +165,7 @@ if($_POST['contact_mail'] && $_POST['contact_message'] && $_POST['g-recaptcha-re
             <textarea class="input-xlarge" name="contact_message" rows="3" required ></textarea>
           <fieldset>
             <legend>Верификация</legend>
-            <div class="g-recaptcha" data-sitekey="6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz"></div>
+            <?php echo recaptcha_get_html($publickey, $err, true); ?>
           </fieldset>
             <button type="submit" class="btn-large">Отправить</button>
            </form>
@@ -161,5 +178,4 @@ if($_POST['contact_mail'] && $_POST['contact_message'] && $_POST['g-recaptcha-re
 $(window).scroll(function () {
   intro_parallax();
 });
-</script>
-<script src='https://www.google.com/recaptcha/api.js?hl=ru'></script></html>
+</script></html>
