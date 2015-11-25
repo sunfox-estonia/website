@@ -29,7 +29,13 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
 ?>
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content=""><meta name="author" content=""><title>Викинги Вирумаа &ndash; Братство ролевиков и исторических реконструкторов</title>
+<head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Братство ролевиков и исторических реконструкторов в Ида-Вирумаа, Эстония. Тренировки по фехтованию, исторические костюмы, LARP (ролевые игры живого действия)."/>
+  <meta name="keywords" content="LARP, ролевые игры, реконструкторы, историческая реконструкция, Ида-Вирумаа, Йыхви, Нарва, тренировки по фехтованию, исторические костюмы, кружок по интересам, братство"/>
+  <meta name="author" content="MFO Virumaa Viikingid"/>
+  <meta name="robots" content="all"/>
+  <meta name="robots" content="noarchive"/>
+  <title>Викинги Вирумаа &ndash; Братство ролевиков и исторических реконструкторов</title>
 <link href="resources/css/normalize.css" rel="stylesheet"><link href="resources/css/adaptive.css" rel="stylesheet"><link href="resources/css/glyphicons.css" rel="stylesheet"><link href="resources/css/alerts.css" rel="stylesheet"><link href="resources/css/forms.css" rel="stylesheet"><link href="resources/css/virvik.css" rel="stylesheet"></head>
 <body>
 <?php if($_GET['msg'] == '200'){ ?>
@@ -55,14 +61,14 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
             <p><a href="#SpecialBlockBoardGames">Регистрация</a></p>-->
         </div>
         <div class="col-xs-5 col-sm-6 col-sm-offset-0 col-md-5 col-lg-4">
-            <p><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<a href="http://viruviking.club/et/">Eesti keeles</a></p>
+            <p><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<a href="https://viruviking.club/et/">Eesti keeles</a></p>
             <p><a href="http://vk.com/viruviking"><img src="resources/img/ico/social_vk.png"></a>
                 &nbsp;<a href="http://fb.com/viruviking"><img src="resources/img/ico/social_fb.png"></a>
-                &nbsp;<a href="https://plus.google.com/103912695976021151107" rel="publisher"><img src="resources/img/ico/social_gplus.png"></a>
-                &nbsp;<a href="https://www.youtube.com/ViruvikingClub"><img src="resources/img/ico/social_yt.png"></a></p>
+                &nbsp;<a href="http://plus.google.com/+ViruvikingClub" rel="publisher"><img src="resources/img/ico/social_gplus.png"></a>
+                &nbsp;<a href="http://www.youtube.com/ViruvikingClub"><img src="resources/img/ico/social_yt.png"></a></p>
             <ul class="list-unstyled">
-                <li><a href="https://wiki.viruviking.club">Вики-система Братства</a></li>
-                <li><a href="https://mail.viruviking.club">Электронная почта</a></li></ul>
+                <li><a href="http://wiki.viruviking.club">Вики-система Братства</a></li>
+                <li><a href="http://mail.viruviking.club">Электронная почта</a></li></ul>
         </div>
       </div>
     </div>
@@ -121,9 +127,9 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
             <label for="eventreg_mail">Электропочта</label>
             <input class="input-large" type="email" name="eventreg_mail" value="" placeholder="nickname@domain.tld" required>
             <p class="help-block">Мы отпр+            <fieldset>
-+             <legend>Верификация</legend>
-+             <div class="g-recaptcha" data-sitekey="6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz"></div>
-+            </fieldset>авим подтверждение регистрации и дополнительную информацию о мероприятии на указанный Вами адрес электропочты.</p>
+           <legend>Верификация</legend>
+           <div class="g-recaptcha" data-sitekey="6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz"></div>
+          </fieldset>авим подтверждение регистрации и дополнительную информацию о мероприятии на указанный Вами адрес электропочты.</p>
             <label for="eventreg_dateplace">Предстоящие мероприятия</label>
             <select class="input-xlarge" name="eventreg_dateplace" required>
              <option disabled selected>Выбрать подходящее из списка</option>
@@ -145,7 +151,7 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-4">
           <p>Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. Ниже указаны контактные данные координаторов сообщества.</p>
           <p><strong>Виктор Литвинков</strong><br/><i>Орг. вопросы сообщества в Йыхви</i><br/>+372 55 59 3171<br/><a href="mailto:victor@viruviking.club">victor@viruviking.club</a></p>
-          <!--<p><strong>Антон Корнышенков</strong><br/><i>LARP, крафтинг, тренировки в Йыхви</i><br/><a href="mailto:anton@viruviking.club">anton@viruviking.club</a></p>-->
+          <p><strong>Антон Корнышенков</strong><br/><i>LARP, крафтинг, тренировки в Йыхви</i><br/><a href="mailto:anton@viruviking.club">anton@viruviking.club</a></p>
           <p><strong>Антон Сычёв</strong><br/><i>Орг. вопросы и тренировки в Нарве</i><br/><a href="mailto:rue@viruviking.club">rue@viruviking.club</a></p>
           <p class="imprint hidden-xs">&copy; Братство &laquo;Викинги Вирумаа&raquo;, 2015 год<br>Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, Д. Плюшко.</p>
         </div>
