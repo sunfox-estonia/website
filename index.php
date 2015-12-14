@@ -152,7 +152,6 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
           <p>Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. Ниже указаны контактные данные координаторов сообщества.</p>
           <p><strong>Виктор Литвинков</strong><br/><i>Орг. вопросы сообщества в Йыхви</i><br/>+372 55 59 3171<br/><a href="mailto:victor@viruviking.club">victor@viruviking.club</a></p>
           <p><strong>Антон Корнышенков</strong><br/><i>LARP, крафтинг, тренировки в Йыхви</i><br/><a href="mailto:anton@viruviking.club">anton@viruviking.club</a></p>
-          <p><strong>Антон Сычёв</strong><br/><i>Орг. вопросы и тренировки в Нарве</i><br/><a href="mailto:rue@viruviking.club">rue@viruviking.club</a></p>
           <p class="imprint hidden-xs">&copy; Братство &laquo;Викинги Вирумаа&raquo;, 2015 год<br>Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, Д. Плюшко.</p>
         </div>
         <div class="col-xs-11 col-sm-6 col-md-5 col-lg-4">
