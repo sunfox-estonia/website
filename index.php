@@ -23,6 +23,7 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
           header('HTTP/1.1 301 Moved Permanently'); header('Location: /?msg=200'); exit();
         }
     } else {
+      header('HTTP/1.1 301 Moved Permanently'); header('Location: /?msg=500'); exit();
     }
   }
 }
@@ -38,13 +39,13 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
   <title>Викинги Вирумаа &ndash; Братство ролевиков и исторических реконструкторов</title>
 <link href="resources/css/normalize.css" rel="stylesheet"><link href="resources/css/adaptive.css" rel="stylesheet"><link href="resources/css/glyphicons.css" rel="stylesheet"><link href="resources/css/alerts.css" rel="stylesheet"><link href="resources/css/forms.css" rel="stylesheet"><link href="resources/css/virvik.css" rel="stylesheet"></head>
 <body>
-<?php if($_GET['msg'] == '200'){ ?>
-  <div class="container"><div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-success" role="alert"><strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней.</div></div></div></div>
-<?php } elseif ($_GET['msg'] == '500') { ?>
-  <div class="container"><div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-danger" role="alert"><strong>Ошибка!</strong> Сообщение не удалось отправить.</div></div></div></div>
-<?php } ?>
 <nav>
     <div class="container">
+      <?php if($_GET['msg'] == '200'){ ?>
+        <div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-success" role="alert"><strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней.</div></div></div>
+      <?php } elseif ($_GET['msg'] == '500') { ?>
+        <div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-danger" role="alert"><strong>Ошибка!</strong> Сообщение не удалось отправить.</div></div></div>
+      <?php } ?>      
       <div class="row">
         <div class="col-xs-7 col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-4">
             <h1>Викинги Вирумаа<small>Братство ролевиков<br/>и исторических реконструкторов</small></h1>
@@ -83,7 +84,7 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md"><h2>Йомсвикинги</h2>
          <p>История и традиции йомсборгских викингов, описанные в легендах, стали прообразом для Братства Викингов Вирумаа.</p>
-         <p>Из-за нехватки информации и отсуствия археологически подтверждёных фактов история братства йомсвикингов крайне запутана и противоречива. Согласно «Саге о йомсвикингах», братство существовало в X—XI веках, а база йомсвикингов находилась в крепости Йомсборг, расположенной на побережье Балтийского моря. Отсюда викинги совершали набеги на Норвегию, Швецию, Англию, Данию и другие страны.</p><p>Йомсвикинги подчинялись жёстким правилам с целью поддержания строгой военной дисциплины в общине. Запрещались ссоры и даже грубое обращение друг другу могло стоить йомсвикингу изгнания. Воинам не следовало показывать страх или бежать перед лицом равного или уступавшего в численности врага. Все трофеи приносились к знамени и делились между членами братства.</p>
+         <p>Из-за нехватки информации и отсутствия археологически подтверждёных фактов история братства йомсвикингов крайне запутана и противоречива. Согласно «Саге о йомсвикингах», братство существовало в X—XI веках, а база йомсвикингов находилась в крепости Йомсборг, расположенной на побережье Балтийского моря. Отсюда викинги совершали набеги на Норвегию, Швецию, Англию, Данию и другие страны.</p><p>Йомсвикинги подчинялись жёстким правилам с целью поддержания строгой военной дисциплины в общине. Запрещались ссоры и даже грубое обращение друг другу могло стоить йомсвикингу изгнания. Воинам не следовало показывать страх или бежать перед лицом равного или уступавшего в численности врага. Все трофеи приносились к знамени и делились между членами братства.</p>
          <p>В 1043 году король Норвегии Магнус I решил положить конец йомсвикингам. Он разграбил Йомсборг, сравнял крепость с землей и казнил уцелевших воинов братства.</p>
         </div>
       </div></div></div></div></div>
