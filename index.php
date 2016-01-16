@@ -39,14 +39,14 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
   <title>Викинги Вирумаа &ndash; Братство ролевиков и исторических реконструкторов</title>
 <link href="resources/css/normalize.css" rel="stylesheet"><link href="resources/css/adaptive.css" rel="stylesheet"><link href="resources/css/glyphicons.css" rel="stylesheet"><link href="resources/css/alerts.css" rel="stylesheet"><link href="resources/css/forms.css" rel="stylesheet"><link href="resources/css/virvik.css" rel="stylesheet"></head>
 <body>
-<nav>
+<header>
     <div class="container">
       <?php if($_GET['msg'] == '200'){ ?>
         <div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-success" role="alert"><strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней.</div></div></div>
       <?php } elseif ($_GET['msg'] == '500') { ?>
         <div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-danger" role="alert"><strong>Ошибка!</strong> Сообщение не удалось отправить.</div></div></div>
-      <?php } ?>      
-      <div class="row">
+      <?php } ?>
+      <nav><div class="row">
         <div class="col-xs-7 col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-4">
             <h1>Викинги Вирумаа<small>Братство ролевиков<br/>и исторических реконструкторов</small></h1>
             <!--<ul class="list-unstyled hidden-xs hidden-sm hidden-md">
@@ -71,9 +71,9 @@ if($_POST['contact_mail'] && $_POST['contact_message']){
                 <li><a href="http://wiki.viruviking.club">Вики-система Братства</a></li>
                 <li><a href="http://mail.viruviking.club">Электронная почта</a></li></ul>
         </div>
-      </div>
+      </div></nav>
     </div>
-</nav>
+</header>
 <main>
     <div class="container preintro"></div>
     <div class="container intro">
