@@ -5,7 +5,7 @@ Author: Victor Litvinkov
 @font-face {font-family:Mezzo Bold;src: url(../fonts/mezzo_bd.otf);src: local(Mezzo), url(../fonts/mezzo_bd.otf);}
 @font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
 body{
-	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;background: #212121 url(../img/background_500.png) repeat center;
+	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;background: #212121 url(../img/background_500.png) repeat center top;
 }
 h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;color:#DACA97;font-weight:100;}
 p{margin: 9px 0px 18px;}
@@ -42,6 +42,7 @@ form input, form textarea, form select, form .uneditable-input{border: 2px solid
 form textarea{resize: vertical; margin-bottom:18px;}
 form input:focus, form textarea:focus, form select:focus {border: 2px solid white; box-shadow:none;}
 form label {color:#86B286;margin-top: 9px;}
+form .alert {display: none; margin-top: 9px;}
 form .help-block {color:#607F60;font-style: italic;font-size:13px; line-height: 18px;margin:0px 0px 18px}
 form button[type="submit"]{border:2px solid #607F60;color:#263326; margin-top:9px;}
 form button[type="submit"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);}

@@ -32,7 +32,7 @@ function intro_parallax() {
 }
 function intro_parallax_render(ev) {
     var t = ev.scrollTop;
-    var thirdhill_val = Math.round(t*0.06-20);
+    var thirdhill_val = Math.round(t*0.05-20);
     var sechill_val = Math.round(t*0.025);
     var firsthill_val = Math.round(t*(-0.04)+30);
     var flag_val_ver = Math.round(t*(-0.03)+10);

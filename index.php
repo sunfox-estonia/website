@@ -1,35 +1,10 @@
 <?php
-session_start();
-/* Get contact form data & proccess it */
+/* Recaptcha settings */
 require ($_SERVER['DOCUMENT_ROOT'] . "/resources/php/php_plg_recaptcha/recaptchalib.php");
-$privatekey = "6Ldj3_8SAAAAANdPcol2bIkhVpuna87pGm9QN2MP";
 $publickey = "6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz";
-if($_POST['contact_mail'] && $_POST['contact_message']){
-  $response = null;
-  $err = null;
-  if ($_POST["recaptcha_response_field"]) {
-    $response = recaptcha_check_answer ($privatekey, $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
-    if ($response->is_valid) {
-        require_once ($_SERVER['DOCUMENT_ROOT'] . "/resources/php/php_plg_mailer/class.phpmailer.php");
-        $Mail = new PHPMailer;
-        $mail_body      = eregi_replace("[\]",'',$_POST["contact_message"]);
-        $Mail->From     = $_POST["contact_mail"];
-        $Mail->FromName = 'Посетитель viruviking.club';
-        $Mail->CharSet  = "utf-8";
-        $Mail->Subject  = 'Сообщение с viruviking.club';
-        $Mail->Body     = $mail_body;
-        $Mail->AddAddress('info@viruviking.club');
-        if(!$Mail->Send()) {
-          header('HTTP/1.1 301 Moved Permanently'); header('Location: /?msg=500'); exit();
-        } else {
-          header('HTTP/1.1 301 Moved Permanently'); header('Location: /?msg=200'); exit();
-        }
-    } else {
-      header('HTTP/1.1 301 Moved Permanently'); header('Location: /?msg=500'); exit();
-    }
-  }
-}
+$err = null;
 /* Site translation */
+session_start();
 if (!isset($_SESSION['native']) || isset($_GET['lang'])) {
   $_SESSION['native'] = isset($_GET['lang']) ? $_GET['lang'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 }
@@ -60,11 +35,6 @@ bind_textdomain_codeset($domain, 'UTF-8');
 <body>
 <header>
     <div class="container">
-      <?php if($_GET['msg'] == '200'){ ?>
-        <div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-success" role="alert"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div></div></div>
-      <?php } elseif ($_GET['msg'] == '500') { ?>
-        <div class="row"><div class="col-xs-12 col-sm-12 col-md-10 col-lg-7"><div class="alert alert-danger" role="alert"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div></div></div>
-      <?php } ?>
       <nav><div class="row">
         <div class="col-xs-7 col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-4">
             <h1><?=(_("Викинги Вирумаа"));?><small><?=(_("Братство ролевиков"));?><br/><?=(_("и исторических реконструкторов"));?></small></h1>
@@ -157,6 +127,8 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <?php echo recaptcha_get_html($publickey, $err, true); ?>
           </fieldset>
             <button type="submit" class="btn-large"><?=(_("Отправить"));?></button>
+            <div class="alert alert-danger" role="alert" id="BlockMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
+            <div class="alert alert-success" role="alert" id="BlockMessageOk"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
            </form>
          </div>
       </div>
@@ -166,5 +138,41 @@ bind_textdomain_codeset($domain, 'UTF-8');
 <script src='/resources/js/jquery.min.js'></script><script src='/resources/js/virvik.js'></script><script type="text/javascript">
 $(window).scroll(function () {
   intro_parallax();
+});
+$("form[name=FormContactUs]>button[type=submit]").click(function(){
+  $("form[name=FormContactUs]>button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="<?=(_("Загрузка..."));?>" />').blur();
+
+  var value_mail = $("form[name=FormContactUs] input[name=contact_mail]").val();
+  var value_message = $("form[name=FormContactUs] textarea[name=contact_message]").val();
+  var value_response_captcha = $("form[name=FormContactUs] input[name=recaptcha_response_field]").val();
+  var value_challenge_captcha = $("form[name=FormContactUs] input[name=recaptcha_challenge_field]").val();
+
+  var dataString = 'contact_mail='+ value_mail + '&contact_message='+ value_message + '&recaptcha_response_field='+ value_response_captcha + '&recaptcha_challenge_field='+ value_challenge_captcha;
+  $.ajax({
+    type: "POST",
+    url: "/resources/php/php_plg_mailer/virvik.mailer.php",
+    data: dataString,
+    cache: false,
+    success: function(response){
+      $("form[name=FormContactUs] div#recaptcha_widget_div").hide();
+      $("form[name=FormContactUs]>button[type=submit]").hide();
+      switch(response){
+      case 'true':
+        $("form[name=FormContactUs]>div#BlockMessageOk").fadeIn('slow');
+      break;
+      case 'false':
+        $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
+      break;
+      default:
+        $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
+      }
+    },
+    error:function(){
+      $("form[name=FormContactUs]>button[type=submit]").hide();
+      $("form[name=FormContactUs]>div#recaptcha_widget_div").hide();
+      $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
+    }
+  });
+  return false;
 });
 </script></html>
