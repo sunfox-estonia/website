@@ -13,6 +13,7 @@ switch ($_SESSION['native']) {
     $locale="et_EE.UTF-8";
     break;
   default:
+    $_SESSION['native']="ru";
     $locale="ru_RU.UTF-8";
     break;
 }
@@ -37,7 +38,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
 <link href="/resources/css/alerts.css" rel="stylesheet">
 <link href="/resources/css/forms.css" rel="stylesheet">
 <link href="/resources/css/virvik.css" rel="stylesheet">
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=<?=$_SESSION['native'];?>'></script>
 </head>
 <body>
 <header>
