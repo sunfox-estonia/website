@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /
+Disallow: /eventmarks
+Disallow: /fonts
+Disallow: /img
+Disallow: /js
+Disallow: /locale
+Disallow: /php
+
+
