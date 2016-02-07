@@ -1,7 +1,7 @@
 <?php
 /* Recaptcha settings */
 require ($_SERVER['DOCUMENT_ROOT'] . "/resources/php/php_plg_recaptcha/recaptchalib.php");
-$publickey = "6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz";
+// $publickey = "6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz";
 $err = null;
 /* Site translation */
 session_start();
@@ -31,7 +31,14 @@ bind_textdomain_codeset($domain, 'UTF-8');
   <meta name="robots" content="all"/>
   <meta name="robots" content="noarchive"/>
   <title><?=(_("Викинги Вирумаа"));?> &ndash; <?=(_("Братство ролевиков"));?> <?=(_("и исторических реконструкторов"));?></title>
-<link href="/resources/css/normalize.css" rel="stylesheet"><link href="/resources/css/adaptive.css" rel="stylesheet"><link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/alerts.css" rel="stylesheet"><link href="/resources/css/forms.css" rel="stylesheet"><link href="/resources/css/virvik.css" rel="stylesheet"></head>
+<link href="/resources/css/normalize.css" rel="stylesheet">
+<link href="/resources/css/adaptive.css" rel="stylesheet">
+<link href="/resources/css/glyphicons.css" rel="stylesheet">
+<link href="/resources/css/alerts.css" rel="stylesheet">
+<link href="/resources/css/forms.css" rel="stylesheet">
+<link href="/resources/css/virvik.css" rel="stylesheet">
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
 <body>
 <header>
     <div class="container">
@@ -124,7 +131,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <textarea class="input-xlarge" name="contact_message" rows="3" required ></textarea>
           <fieldset>
             <legend><?=(_("Верификация"));?></legend>
-            <?php echo recaptcha_get_html($publickey, $err, true); ?>
+            <div class="g-recaptcha" data-sitekey="6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz"></div>
           </fieldset>
             <button type="submit" class="btn-large"><?=(_("Отправить"));?></button>
             <div class="alert alert-danger" role="alert" id="BlockMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
@@ -141,13 +148,11 @@ $(window).scroll(function () {
 });
 $("form[name=FormContactUs]>button[type=submit]").click(function(){
   $("form[name=FormContactUs]>button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="<?=(_("Загрузка..."));?>" />').blur();
-
+  
   var value_mail = $("form[name=FormContactUs] input[name=contact_mail]").val();
   var value_message = $("form[name=FormContactUs] textarea[name=contact_message]").val();
-  var value_response_captcha = $("form[name=FormContactUs] input[name=recaptcha_response_field]").val();
-  var value_challenge_captcha = $("form[name=FormContactUs] input[name=recaptcha_challenge_field]").val();
-
-  var dataString = 'contact_mail='+ value_mail + '&contact_message='+ value_message + '&recaptcha_response_field='+ value_response_captcha + '&recaptcha_challenge_field='+ value_challenge_captcha;
+  var value_response_captcha = $("form[name=FormContactUs] textarea[name=g-recaptcha-response]").val();
+  var dataString = 'contact_mail='+ value_mail + '&contact_message='+ value_message + '&recaptcha_response_field='+ value_response_captcha;
   $.ajax({
     type: "POST",
     url: "/resources/php/php_plg_mailer/virvik.mailer.php",
