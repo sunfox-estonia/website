@@ -34,10 +34,11 @@ bind_textdomain_codeset($domain, 'UTF-8');
   <title><?=(_("Викинги Вирумаа"));?> &ndash; <?=(_("Братство ролевиков"));?> <?=(_("и исторических реконструкторов"));?></title>
 <link href="/resources/css/normalize.css" rel="stylesheet">
 <link href="/resources/css/adaptive.css" rel="stylesheet">
-<link href="/resources/css/glyphicons.css" rel="stylesheet">
+<link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet">
 <link href="/resources/css/alerts.css" rel="stylesheet">
 <link href="/resources/css/forms.css" rel="stylesheet">
 <link href="/resources/css/virvik.css" rel="stylesheet">
+<link href="/resources/css/bootstrap-social.css" rel="stylesheet">
 <script src='https://www.google.com/recaptcha/api.js?hl=<?=$_SESSION['native'];?>'></script>
 </head>
 <body>
@@ -79,6 +80,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
     </div>
 </header>
 <main>
+    <!-- Intro block -->
     <div class="container preintro"></div>
     <div class="container intro">
       <div class="row"><div id="intro_thirdhill"><div id="intro_sechill"><div id="intro_firsthill"><div id="intro_flag">
@@ -90,6 +92,59 @@ bind_textdomain_codeset($domain, 'UTF-8');
          <p><?=(_("История и традиции йомсборгских викингов, описанные в легендах, стали прообразом для Братства Викингов Вирумаа."));?></p>
          <p><?=(_("Из-за нехватки информации и отсутствия археологически подтверждёных фактов история братства йомсвикингов крайне запутана и противоречива. Согласно «Саге о йомсвикингах», братство существовало в X—XI веках, а база йомсвикингов находилась в крепости Йомсборг, расположенной на побережье Балтийского моря. Отсюда викинги совершали набеги на Норвегию, Швецию, Англию, Данию и другие страны."));?></p><p><?=(_("Йомсвикинги подчинялись жёстким правилам с целью поддержания строгой военной дисциплины в общине. Запрещались ссоры и даже грубое обращение друг другу могло стоить йомсвикингу изгнания. Воинам не следовало показывать страх или бежать перед лицом равного или уступавшего в численности врага. Все трофеи приносились к знамени и делились между членами братства."));?></p>
          <p><?=(_("В 1043 году король Норвегии Магнус I решил положить конец йомсвикингам. Он разграбил Йомсборг, сравнял крепость с землей и казнил уцелевших воинов братства."));?></p>
+        </div>
+      </div></div></div></div></div>
+    </div>
+    <div class="container subintro hidden-xs hidden-lg">
+      <div class="row">
+        <div class="col-sm-6"><h2><?=(_("Йомсвикинги"));?></h2>
+          <p><?=(_("История и традиции йомсборгских викингов, описанные в легендах, стали прообразом для Братства Викингов Вирумаа."));?></p>
+          <p><?=(_("Из-за нехватки информации и отсутствия археологически подтверждёных фактов история братства йомсвикингов крайне запутана и противоречива. Согласно «Саге о йомсвикингах», братство существовало в X—XI веках, а база йомсвикингов находилась в крепости Йомсборг, расположенной на побережье Балтийского моря. Отсюда викинги совершали набеги на Норвегию, Швецию, Англию, Данию и другие страны."));?></p>
+        </div>
+        <div class="col-sm-6">
+          <p style="margin-top:33px;"><?=(_("Йомсвикинги подчинялись жёстким правилам с целью поддержания строгой военной дисциплины в общине. Запрещались ссоры и даже грубое обращение друг другу могло стоить йомсвикингу изгнания. Воинам не следовало показывать страх или бежать перед лицом равного или уступавшего в численности врага. Все трофеи приносились к знамени и делились между членами братства."));?></p>
+          <p><?=(_("В 1043 году король Норвегии Магнус I решил положить конец йомсвикингам. Он разграбил Йомсборг, сравнял крепость с землей и казнил уцелевших воинов братства."));?></p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    
+    <!-- Trainings adv + reg block -->
+    <div class="container preadv_training"></div>
+    <div class="container adv_training">
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+            <h1><?=(_("Приглашаем на тренировки<small>по историческому фехтованию</small>"));?></h1><h2><?=(_("Мы проводим тренировки по историческому фехтованию, изготавливаем исторические и ролевые костюмы, участвуем в полевых ролевках и организуем собственные игры."));?></h2>
+         <h3 class="hidden-sm"><?=(_("LARP и историческая реконструкция — весьма интересное и достойное хобби. Вместе участники сообщества изучают историю, тренируются, учатся полезным жизненным навыкам выживания в суровых природных условиях без некоторых вещей. Они воспитывают в себе выдержку, волю, характер. Девушки приобретают навыки шитья, учатся готовить блюда, соотвествующие отыгрываемой исторической эпохе."));?></h3>
+        </div>
+        <div class="col-md-6 col-lg-4 hidden-xs hidden-sm">  
+            <form action="" method="POST" name="FormEventRegister">
+            <fieldset>
+             <legend><?=(_("Регистрация на пробную тренировку"));?></legend>
+             <p>Необходимо предоставить реальное имя, фамилию, возраст и адрес эл. почты.</p>
+             <p>Подробная информация о месте проведения тренировки и материалы для ознакомления будут высланы Вам по электронной почте.</p>
+           </fieldset>
+           <fieldset>
+            <legend><?=(_("Представьтесь, пожалуйста"));?></legend>
+                <a class="btn btn-sm btn-social btn-vk" href="/resources/php/php_hybridauth/vv_hybrid_auth.php?provider=vkontakte"><span class="fa fa-vk"></span>vk.com</a>
+                <a class="btn btn-sm btn-social btn-google" href="https://accounts.google.com/o/oauth2/auth?redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/GoogleController.php&response_type=code&client_id=700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile"><span class="fa fa-google"></span>Google+</a><br/>
+                <a class="btn btn-sm btn-social btn-facebook" href="/resources/php/php_hybridauth/vv_hybrid_auth.php?provider=facebook"><span class="fa fa-facebook"></span>facebook.com</a>
+           </fieldset>
+           <fieldset>
+            <legend><?=(_("Выберите подходящую тренировку"));?></legend>
+            <label for="contact_message"><?=(_("Место проведения, дата, время:"));?></label>
+            <select class="form-control">
+                <optgroup label="Кохтла-Ярве - Ахтме">
+                <option selected value="">11 апреля в 14:00</option>
+                <option value="">21 мая в 18:00</option>
+                <option value="">6 июня в 14:00</option>
+                </optgroup>
+            </select>
+           </fieldset>
+            <button type="submit" class="btn-large"><?=(_("Отправить"));?></button>
+            <div class="alert alert-danger" role="alert" id="BlockMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
+            <div class="alert alert-success" role="alert" id="BlockMessageOk"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
+           </form>
         </div>
       </div></div></div></div></div>
     </div>
@@ -160,7 +215,7 @@ $("form[name=FormContactUs]>button[type=submit]").click(function(){
     data: dataString,
     cache: false,
     success: function(response){
-      $("form[name=FormContactUs] div#recaptcha_widget_div").hide();
+      $("form[name=FormContactUs] div.g-recaptcha").hide();
       $("form[name=FormContactUs]>button[type=submit]").hide();
       switch(response){
       case 'true':
@@ -175,7 +230,7 @@ $("form[name=FormContactUs]>button[type=submit]").click(function(){
     },
     error:function(){
       $("form[name=FormContactUs]>button[type=submit]").hide();
-      $("form[name=FormContactUs]>div#recaptcha_widget_div").hide();
+      $("form[name=FormContactUs]>div.g-recaptcha").hide();
       $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
     }
   });

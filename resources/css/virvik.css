@@ -4,9 +4,7 @@ Author: Victor Litvinkov
 */
 @font-face {font-family:Mezzo Bold;src: url(../fonts/mezzo_bd.otf);src: local(Mezzo), url(../fonts/mezzo_bd.otf);}
 @font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
-body{
-	font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;background: #212121 url(../img/background_500.png) repeat center top;
-}
+body{font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;background: #212121 url(../img/background_500.png) repeat center top;}
 h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;color:#DACA97;font-weight:100;}
 p{margin: 9px 0px 18px;}
 div>h1:first-child,div>h2:first-child,div>h3:first-child{margin-top: 0px;}
@@ -47,7 +45,19 @@ form .help-block {color:#607F60;font-style: italic;font-size:13px; line-height: 
 form button[type="submit"]{border:2px solid #607F60;color:#263326; margin-top:9px;}
 form button[type="submit"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);}
 form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
+form>fieldset>p:last-child{margin-bottom: 5px;}
 
+div.adv_training form{background:rgba(10,64,9,0.87);color: #C0C0C0;}
+div.adv_training form .btn{margin-bottom: 3px;}
+/*
+div.adv_training form>fieldset:first-child>legend {border-bottom:solid 1px #CA8F79;}
+div.adv_training form>fieldset>legend {color:#ADC794;border-bottom:dotted 1px #BF8773;}
+div.adv_training form input, div.adv_training form textarea, div.adv_training form select, div.adv_training form .uneditable-input {border: 2px solid #BF8773;}
+div.adv_training form label {color:#FBB196;}
+div.adv_training form .help-block {color:#BF8773;}
+div.adv_training form button[type="submit"]{border:2px solid #BF8773;color:#401d11;}
+div.adv_training form button[type="submit"]:hover{box-shadow:0 0 7px rgba(64,29,17,1);}
+*/
 @media (max-width: 750px) {
 	body{font-size:13px; line-height: 18px;}
 	main div.preintro{background: url(../img/intro/750/intro_full_750.png) no-repeat 0px -65px;height:230px;}
@@ -67,18 +77,20 @@ form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
 @media (min-width: 992px) {
 	body{font-size:13px; line-height: 18px;}
 	main div.intro{background: url(../img/intro/970/intro_sky_970.png) no-repeat top center;height:450px; overflow: hidden;}
-  main div.intro div#intro_thirdhill{background: url(../img/intro/970/intro_thirdhill_970.png) 0px -20px no-repeat;height:483px;}
+        main div.intro div#intro_thirdhill{background: url(../img/intro/970/intro_thirdhill_970.png) 0px -20px no-repeat;height:483px;}
 	main div.intro div#intro_sechill{background: url(../img/intro/970/intro_sechill_970.png) 0px 0px no-repeat;height:483px;}
 	main div.intro div#intro_firsthill{background: url(../img/intro/970/intro_firsthill_970.png) 0px 30px no-repeat;height:483px;}
 	main div.intro div#intro_flag{background: url(../img/intro/970/intro_flag_970.png) 0px 10px no-repeat;height:483px;}
+        main div.adv_training{background-image: url(../img/adv_trainings/shield_fullsize.png), url(../img/adv_trainings/shield_bg.png); background-position: 200px center, left top; background-repeat: no-repeat, repeat; height:565px; overflow: hidden; }
 	div!>form[name="FormContactUs"]{padding-top:0;}
 }
 
 @media (min-width: 1200px) {
 	body{font-size:13px; line-height: 18px;}
-	main div.intro{background: url(../img/intro/1170/intro_sky_1170.png) no-repeat top center;height:565px; overflow: hidden;}
-  main div.intro div#intro_thirdhill{background: url(../img/intro/1170/intro_thirdhill_1170.png) 0px -20px no-repeat;height:582px;}
+	main div.intro{background: url(../img/intro/1170/intro_sky_1170.png) no-repeat top center; height:565px; overflow: hidden;}
+        main div.intro div#intro_thirdhill{background: url(../img/intro/1170/intro_thirdhill_1170.png) 0px -20px no-repeat;height:582px;}
 	main div.intro div#intro_sechill{background: url(../img/intro/1170/intro_sechill_1170.png) 0px 0px no-repeat;height:582px;}
 	main div.intro div#intro_firsthill{background: url(../img/intro/1170/intro_firsthill_1170.png) 0px 30px no-repeat;height:582px;}
 	main div.intro div#intro_flag{background: url(../img/intro/1170/intro_flag_1170.png) 0px 10px no-repeat;height:582px;}
+        main div.adv_training{background-image: url(../img/adv_trainings/shield_fullsize.png), url(../img/adv_trainings/shield_bg.png); background-position: 430px center, left top; background-repeat: no-repeat, repeat; height:565px; overflow: hidden; }
 }
