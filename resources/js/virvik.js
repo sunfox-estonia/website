@@ -42,3 +42,40 @@ function intro_parallax_render(ev) {
     $('div#intro_firsthill').css('background-position', '0 ' + firsthill_val + 'px');
     $('div#intro_flag').css('background-position', flag_val_hor + 'px ' + flag_val_ver + 'px');
 }
+/*
+Homepage Contact Form AJAX processing
+*/
+$("form[name=FormContactUs]>button[type=submit]").click(function(){
+  $("form[name=FormContactUs]>button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="<?=(_("Загрузка..."));?>" />').blur();
+  
+  var value_mail = $("form[name=FormContactUs] input[name=contact_mail]").val();
+  var value_message = $("form[name=FormContactUs] textarea[name=contact_message]").val();
+  var value_response_captcha = $("form[name=FormContactUs] textarea[name=g-recaptcha-response]").val();
+  var dataString = 'contact_mail='+ value_mail + '&contact_message='+ value_message + '&recaptcha_response_field='+ value_response_captcha;
+  $.ajax({
+    type: "POST",
+    url: "/resources/php/php_plg_mailer/virvik.mailer.php",
+    data: dataString,
+    cache: false,
+    success: function(response){
+      $("form[name=FormContactUs] div.g-recaptcha").hide();
+      $("form[name=FormContactUs]>button[type=submit]").hide();
+      switch(response){
+      case 'true':
+        $("form[name=FormContactUs]>div#BlockMessageOk").fadeIn('slow');
+      break;
+      case 'false':
+        $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
+      break;
+      default:
+        $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
+      }
+    },
+    error:function(){
+      $("form[name=FormContactUs]>button[type=submit]").hide();
+      $("form[name=FormContactUs]>div.g-recaptcha").hide();
+      $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
+    }
+  });
+  return false;
+});
