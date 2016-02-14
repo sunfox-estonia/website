@@ -1,43 +1,125 @@
-<html>
-<head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="<?=(_("Братство ролевиков и исторических реконструкторов в Ида-Вирумаа, Эстония. Тренировки по фехтованию, исторические костюмы, LARP (ролевые игры живого действия)."));?>"/>
-  <meta name="keywords" content="<?=(_("LARP, ролевые игры, реконструкторы, историческая реконструкция, Ида-Вирумаа, Йыхви, Нарва, тренировки по фехтованию, исторические костюмы, кружок по интересам, братство"));?>"/>
-  <meta name="author" content="MFO Virumaa Viikingid"/>
-  <meta name="robots" content="all"/>
-  <meta name="robots" content="noarchive"/>
-  <title><?=(_("Викинги Вирумаа"));?> &ndash; <?=(_("Братство ролевиков"));?> <?=(_("и исторических реконструкторов"));?></title>
-<link href="/resources/css/normalize.css" rel="stylesheet">
-<link href="/resources/css/adaptive.css" rel="stylesheet">
-<link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet">
-<link href="/resources/css/alerts.css" rel="stylesheet">
-<link href="/resources/css/forms.css" rel="stylesheet">
-<link href="/resources/css/virvik.css" rel="stylesheet">
-<link href="/resources/css/bootstrap-social.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="row"><div class="col-xs-12"><?=$user_data->{'given_name'};?> <?=$user_data->{'family_name'};?>
-                <br/><?=$user_data->{'email'};?>
-            <form action="" method="POST" name="FormEventRegister">
+
+            <form name="FormClientIdentify" style="margin-bottom:15px;">
             <fieldset>
-                <legend><?=(_("Представьтесь, пожалуйста!"));?></legend>
-                <div class="row"><div class="col-xs-4"><image src="<?=$user_data->{'picture'};?>" style="border-radius: 50%;width:140px;"/></div>
-                <div class="col-xs-8">
-                    <label for="contact_mail"><?=(_("Электропочта"));?></label><input class="input-large" type="email" name="contact_mail" value="" placeholder="nickname@domain.tld" required>
-                    <label for="contact_mail"><?=(_("Номер телефона"));?></label><input class="input-large" type="tel" name="contact_mail" value="" placeholder="nickname@domain.tld" required>
-                    <label for="contact_mail"><?=(_("Возраст"));?></label><input class="input-small" type="number" name="contact_mail" value="" placeholder="nickname@domain.tld" required>
-                    <p class="help-block">В мероприятиях сообщества могут принимать участие юноши и девушки в возрасте от 14 до 23 лет. Лицам, не достигшим совершеннолетия необходимо разрешение родителей или опекунов.</p>
-                    <button type="submit" class="btn-large"><?=(_("Подтверждаю"));?></button>
-                </div>
+                <legend><?=(_("Идентификация"));?></legend>
+                <image src="<?=$User['picture'];?>" style="border-radius: 6px;width:100px;float: right;margin: 15px 0 5px 10px;"/>
+                <label for="client_fullname"><?=(_("Имя, фамилия"));?></label><input class="input-medium" type="text" name="client_fullname" value="<?=$User['fullname'];?>" <?=(is_null($User['fullname']) ? '' : 'disabled');?>>
+                <label for="client_age"><?=(_("Возраст"));?></label><input class="input-small" type="number" name="client_age" placeholder="14+" value="<?=$User['age'];?>" <?=(is_null($User['age']) ? '' : 'disabled');?>>
+                <p class="help-block">В мероприятиях сообщества могут принимать участие юноши и девушки в возрасте от 14 до 23 лет.</p>
+                <label for="client_email"><?=(_("Электропочта"));?></label><input class="input-large" type="email" name="client_email" value="<?=$User['email'];?>" placeholder="nickname@domain.tld" <?=(is_null($User['email']) ? '' : 'disabled');?>>
+                <label for="client_tel"><?=(_("Номер телефона"));?></label><input class="input-large" type="tel" name="client_tel" placeholder="+372 XX XX XXXX">
            </fieldset>
+           <fieldset style="display:none;" id="ClientIntifyNeedsParentAccept">
+                <legend><?=(_("Контактные данные родителей или опекуна"));?></legend>
+                <label for="client_parent_name"><?=(_("Имя, отчество"));?></label><input class="input-large" type="text" name="client_parent_name">
+                <label for="client_parent_tel"><?=(_("Номер телефона"));?></label><input class="input-large" type="tel" name="client_parent_tel" placeholder="+372 XX XX XXXX">
+            </fieldset>
+                
+            <?php if(!is_null($User['age'])){ ?>
+              <?=($User['age']>=14 && $User['age']<=23) ? '<button type="submit" class="btn-large">' . (_("Подтверждаю")) . '</button>' : '<div class="alert alert-warning" role="alert" id="FormClientIdentifyMessageAttention" style="display: block!important;">' . (_("<strong>Вы не можете зарегистрироваться</strong> на пробную тренировку! Свяжитесь с кооординаторами сообщества для уточнения данного вопроса.")) . '</div><button type="reset" class="btn-large" onclick="window.close();">' . (_("Закрыть")) . '</button>';?>
+            <?php }else{ ?>
+              <div class="alert alert-warning" role="alert" id="FormClientIdentifyMessageAttention"><?=(_("<strong>Вы не можете зарегистрироваться</strong> на пробную тренировку! Свяжитесь с кооординаторами сообщества для уточнения данного вопроса."));?></div>
+              <button type="submit" class="btn-large"><?=(_("Подтверждаю"));?></button><button type="reset" class="btn-large" style="display:none;" onclick="window.close();"><?=(_("Закрыть"));?></button>  
+            <?php } ?>
            </form>                
-            </div>
+           </div>
         </div>        
     </div>
-    
-    
-    
-    
-    <?=$user_data->{'link'};?>
+<!--<?=$user_data->{'link'};?>-->
 </body>
-<script src='/resources/js/jquery.min.js'></script><script src='/resources/js/virvik.js'></script></html>
+<script src='/resources/js/jquery.min.js'></script><script src='/resources/js/jquery.cookies.js'></script><script src='/resources/js/virvik.js'></script>
+<script>
+$("form[name='FormClientIdentify']").submit(function(e){
+    e.preventDefault();
+    $("form[name='FormClientIdentify'] input[name='client_fullname']").removeClass("error");
+    $("form[name='FormClientIdentify'] input[name='client_age']").removeClass("error");
+    $("form[name='FormClientIdentify'] input[name='client_email']").removeClass("error");
+    $("form[name='FormClientIdentify'] input[name='client_tel']").removeClass("error");
+    $("form[name='FormClientIdentify'] input[name='client_parent_name']").removeClass("error");
+    $("form[name='FormClientIdentify'] input[name='client_parent_tel']").removeClass("error");
+    $("form[name='FormClientIdentify'] button[type='submit']").removeClass("error");
+    var FormRating=0;
+    var emailExp = "/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/";
+
+    var ClientAge = $("form[name='FormClientIdentify'] input[name='client_age']").val();
+    if(ClientAge<18){
+        var FormRating=FormRating-2;
+    }
+    if($("form[name='FormClientIdentify'] input[name='client_fullname']").val().length >= 3){
+        var FormRating=FormRating+1;
+    }else{
+        $("form[name='FormClientIdentify'] input[name='client_fullname']").addClass("error");
+    }
+    if($("form[name='FormClientIdentify'] input[name='client_age']").val().length <2){
+        $("form[name='FormClientIdentify'] input[name='client_age']").addClass("error");
+    }else{
+        var FormRating=FormRating+1;
+    }
+    if ($("form[name='FormClientIdentify'] input[name='client_email']").val().length > 7){
+        var FormRating=FormRating+1;
+    } else {
+        $("form[name='FormClientIdentify'] input[name='client_email']").addClass("error");
+    }
+    if($("form[name='FormClientIdentify'] input[name='client_tel']").val().length > 5){
+        var FormRating=FormRating+1;
+    } else {
+        $("form[name='FormClientIdentify'] input[name='client_tel']").addClass("error");
+    }
+    if($("form[name='FormClientIdentify'] input[name='client_parent_name']").val().length >= 3){
+        var FormRating=FormRating+1;
+    }else{
+        $("form[name='FormClientIdentify'] input[name='client_parent_name']").addClass("error");
+    }
+    if($("form[name='FormClientIdentify'] input[name='client_parent_tel']").val().length > 5){
+        var FormRating=FormRating+1;
+    } else {
+        $("form[name='FormClientIdentify'] input[name='client_parent_tel']").addClass("error");
+    }
+    if(FormRating<4){
+        $("form[name='FormClientIdentify'] button[type='submit']").addClass("error");
+    }else{
+        var ClientDataArr = [];
+        $.each($("form[name='FormClientIdentify'] input"), function() {
+            ClientDataArr.push({name:$(this).attr('name'),value:$(this).val()});
+        });
+        ClientDataArr.push({name:'client_first_name',value:'<?=$User['firstname'];?>'});
+        ClientDataArr.push({name:'client_last_name',value:'<?=$User['lastname'];?>'});
+        ClientDataArr.push({name:'client_gender',value:'<?=$User['gender'];?>'});
+        ClientDataArr.push({name:'client_language',value:'<?=$User['language'];?>'});
+        ClientDataArr.push({name:'client_profile_link',value:'<?=$User['profile_link'];?>'}); 
+        JsonPrepared=JSON.stringify(ClientDataArr);
+        $.cookie('UserDataTransfer', JsonPrepared, { expires: 5, path: '/' });
+        window.close();
+    }
+});    
+
+$("form[name='FormClientIdentify'] input[name='client_age']").one().blur(function() {
+    $("form[name='FormClientIdentify'] input[name='client_age']").removeClass("error");
+    var ClientAgeFlag=true;
+    var ClientAge = $(this).val();
+    if (ClientAge != '' && ClientAgeFlag){
+    switch (true) {
+      case (ClientAge<14):
+        $('#FormClientIdentifyMessageAttention').show("fast");
+        $("form[name='FormClientIdentify'] button[type='submit']").hide();
+        $("form[name='FormClientIdentify'] button[type='reset']").show();
+        ClientAgeFlag = false;
+        break
+      case (ClientAge<18):
+        $('#ClientIntifyNeedsParentAccept').slideDown("fast");
+        ClientAgeFlag = false;
+        break
+      case (ClientAge>23):
+        $('#FormClientIdentifyMessageAttention').show("fast");
+        $("form[name='FormClientIdentify'] button[type='submit']").hide();
+        $("form[name='FormClientIdentify'] button[type='reset']").show();
+        ClientAgeFlag = false;
+        break
+      default:
+        ClientAgeFlag = false;
+    }
+    $("form[name='FormClientIdentify'] input[name='client_age']").attr("disabled", "disabled");
+    }
+});
+</script>           
+</html>

@@ -126,9 +126,15 @@ bind_textdomain_codeset($domain, 'UTF-8');
            </fieldset>
            <fieldset>
             <legend><?=(_("Представьтесь, пожалуйста"));?></legend>
-                <a class="btn btn-sm btn-social btn-vk" href="/resources/php/php_hybridauth/vv_hybrid_auth.php?provider=vkontakte"><span class="fa fa-vk"></span>vk.com</a>
-                <a class="btn btn-sm btn-social btn-google" href="https://accounts.google.com/o/oauth2/auth?redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/GoogleController.php&response_type=code&client_id=700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile"><span class="fa fa-google"></span>Google+</a><br/>
-                <a class="btn btn-sm btn-social btn-facebook" href="/resources/php/php_hybridauth/vv_hybrid_auth.php?provider=facebook"><span class="fa fa-facebook"></span>facebook.com</a>
+            <p id="FormEventRegister_ModalRequest">
+                <a class="btn btn-sm btn-social btn-vk" onclick="PopupCenter('http://oauth.vk.com/authorize?client_id=5293223&redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/VkController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-vk"></span>vk.com</a>
+                <a class="btn btn-sm btn-social btn-google" onclick="PopupCenter('https://accounts.google.com/o/oauth2/auth?redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/GoogleController.php&response_type=code&client_id=700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile', '<?=(_("Викинги Вирумаа"));?>', 500, 650)"><span class="fa fa-google"></span>Google+</a><br/>
+                <a class="btn btn-sm btn-social btn-facebook" onclick="PopupCenter('https://www.facebook.com/dialog/oauth?client_id=1704584893161917&redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/FacebookController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-facebook"></span>facebook.com</a>
+            </p>
+            <div id="FormEventRegister_ModalAnswer">
+                <label for="client_fullname"><?=(_("Имя, фамилия"));?></label><input class="input-large" type="text" name="client_fullname" value="" disabled>
+                <label for="client_email"><?=(_("Электропочта"));?></label><input class="input-large" type="email" name="client_email" value="" disabled>
+            </div>
            </fieldset>
            <fieldset>
             <legend><?=(_("Выберите подходящую тренировку"));?></legend>
@@ -142,9 +148,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
             </select>
            </fieldset>
             <button type="submit" class="btn-large"><?=(_("Отправить"));?></button>
-            <div class="alert alert-danger" role="alert" id="BlockMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
-            <div class="alert alert-success" role="alert" id="BlockMessageOk"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
-           </form>
+            </form>
         </div>
       </div></div></div></div></div>
     </div>
@@ -179,61 +183,45 @@ bind_textdomain_codeset($domain, 'UTF-8');
         <div class="col-xs-7 col-sm-6 col-md-5 col-lg-4">
             <form action="" method="POST" name="FormContactUs">
             <fieldset>
-             <legend><?=(_("Обратная связь"));?></legend>
-             <label for="contact_mail"><?=(_("Электропочта"));?></label>
-             <input class="input-large" type="email" name="contact_mail" value="" placeholder="nickname@domain.tld" required>
-           </fieldset>
-            <label for="contact_message"><?=(_("Текст сообщения"));?></label>
-            <textarea class="input-xlarge" name="contact_message" rows="3" required ></textarea>
-          <fieldset>
-            <legend><?=(_("Верификация"));?></legend>
-            <div class="g-recaptcha" data-sitekey="6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz"></div>
-          </fieldset>
+                <legend><?=(_("Обратная связь"));?></legend>
+                <label for="contact_mail"><?=(_("Электропочта"));?></label>
+                <input class="input-large" type="email" name="contact_mail" value="" placeholder="nickname@domain.tld" required>            <label for="contact_message"><?=(_("Текст сообщения"));?></label>
+                <textarea class="input-xlarge" name="contact_message" rows="3" required ></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><?=(_("Верификация"));?></legend>
+                <div class="g-recaptcha" data-sitekey="6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz"></div>
+            </fieldset>
             <button type="submit" class="btn-large"><?=(_("Отправить"));?></button>
-            <div class="alert alert-danger" role="alert" id="BlockMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
-            <div class="alert alert-success" role="alert" id="BlockMessageOk"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
+            <div class="alert alert-danger" role="alert" id="FormContactUsMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
+            <div class="alert alert-success" role="alert" id="FormContactUsMessageOk"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
            </form>
          </div>
       </div>
     </div>
 </footer>
 </body>
-<script src='/resources/js/jquery.min.js'></script><script src='/resources/js/virvik.js'></script><script type="text/javascript">
+<script src='/resources/js/jquery.min.js'></script><script src='/resources/js/jquery.cookies.js'></script><script src='/resources/js/virvik.js'></script><script type="text/javascript">
 $(window).scroll(function () {
   intro_parallax();
 });
-$("form[name=FormContactUs]>button[type=submit]").click(function(){
-  $("form[name=FormContactUs]>button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="<?=(_("Загрузка..."));?>" />').blur();
-  
-  var value_mail = $("form[name=FormContactUs] input[name=contact_mail]").val();
-  var value_message = $("form[name=FormContactUs] textarea[name=contact_message]").val();
-  var value_response_captcha = $("form[name=FormContactUs] textarea[name=g-recaptcha-response]").val();
-  var dataString = 'contact_mail='+ value_mail + '&contact_message='+ value_message + '&recaptcha_response_field='+ value_response_captcha;
-  $.ajax({
-    type: "POST",
-    url: "/resources/php/php_plg_mailer/virvik.mailer.php",
-    data: dataString,
-    cache: false,
-    success: function(response){
-      $("form[name=FormContactUs] div.g-recaptcha").hide();
-      $("form[name=FormContactUs]>button[type=submit]").hide();
-      switch(response){
-      case 'true':
-        $("form[name=FormContactUs]>div#BlockMessageOk").fadeIn('slow');
-      break;
-      case 'false':
-        $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
-      break;
-      default:
-        $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
-      }
-    },
-    error:function(){
-      $("form[name=FormContactUs]>button[type=submit]").hide();
-      $("form[name=FormContactUs]>div.g-recaptcha").hide();
-      $("form[name=FormContactUs]>div#BlockMessageErr").fadeIn('slow');
-    }
-  });
-  return false;
+$('document').ready(function() {
+    console.log( "Document ready!" );
+    Bjorn = setInterval(function(){   
+        if($.cookie('UserDataTransfer')){
+            console.log( "Cookies are ready!" );
+            clearInterval(Bjorn);
+            // Скрыть абзац с авторизацией
+            $("p#FormEventRegister_ModalRequest").hide();
+            $("div#FormEventRegister_ModalAnswer").fadeIn('fast');
+            // Добавить в скрыте поля значения из кукисов
+            // Показать данные юзера: имя, фамилия, майл, фото
+            var UserData = jQuery.parseJSON($.cookie('UserDataTransfer')); 
+            $("div#FormEventRegister_ModalAnswer input[name=client_fullname]").val(UserData[0].value);
+            $("div#FormEventRegister_ModalAnswer input[name=client_email]").val(UserData[2].value);
+        }else{
+            console.log( "Cookies is not ready :(" );
+        }
+    }, 2000);
 });
 </script></html>

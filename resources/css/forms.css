@@ -655,6 +655,7 @@ legend + .control-group {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  text-decoration:none;
 }
 .btn-block {
   display: block;

@@ -34,30 +34,33 @@ nav a:hover, footer a:hover{text-decoration:none;}
 footer p.imprint{font-style: italic; color: #666;}
 
 form{background:rgba(67,89,67,0.25); color: #607F60; border-radius:3px; padding: 0 10px 10px; margin: 9px 0px 18px;}
-form>fieldset:first-child>legend{border-bottom:solid 1px #8FBF8F;margin-top:5px;font-size:18px; line-height: 30px}
-form>fieldset>legend{color:#8FBF8F;margin-top:10px; margin-bottom:9px;line-height:35px;border-bottom:dotted 1px #8FBF8F;line-height:30px;font-size:17px; font-family:Mezzo Regular;}
-form input, form textarea, form select, form .uneditable-input{border: 2px solid #607F60; border-radius:3px;}
-form textarea{resize: vertical; margin-bottom:18px;}
-form input:focus, form textarea:focus, form select:focus {border: 2px solid white; box-shadow:none;}
-form label {color:#86B286;margin-top: 9px;}
+form>fieldset>legend{margin-top:0px; margin-bottom:0px;color:#8FBF8F;line-height:35px;border-bottom:dotted 1px #8FBF8F;line-height:30px;font-size:17px; font-family:Mezzo Regular;}
+form>fieldset:first-child>legend{border-bottom:solid 1px #8FBF8F;font-size:18px; line-height: 30px; margin-top:10px;margin-bottom:5px;}
+form label {color:#86B286;}
+form label, form>fieldset .g-recaptcha {margin-top:10px;margin-bottom:5px!important;}
+form>fieldset{margin-bottom:10px;}
+form>fieldset>legend+p{margin-top:13px;margin-bottom:0px!important;}
+form p {margin-bottom:5px}
+form label+input,form label+textarea,form label+select{margin-top: 0px; margin-bottom: 5px;}
+form label+input,form label+textarea,form label+select{margin-top: 0px; margin-bottom: 5px;}
+form .help-block {color:#607F60;font-style: italic;font-size:13px; line-height: 18px;margin:0px 0px 5px}
+form textarea+.help-block,form textarea+.help-block,form textarea+.help-block{margin-top: 5px; margin-bottom: 10px;}
 form .alert {display: none; margin-top: 9px;}
-form .help-block {color:#607F60;font-style: italic;font-size:13px; line-height: 18px;margin:0px 0px 18px}
-form button[type="submit"]{border:2px solid #607F60;color:#263326; margin-top:9px;}
+form button[type="submit"]{border:2px solid #607F60;color:#263326; margin-top:5px;}
 form button[type="submit"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);}
 form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
-form>fieldset>p:last-child{margin-bottom: 5px;}
+form button[type="reset"]{border:2px solid #7F7E7E;color:#263326; margin-top:5px;}
+form button[type="reset"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);}
+form button[type="reset"]:focus{border:2px solid transparent; background:#fff;}
+form input[disabled], form button[disabled]{border:2px solid #A175B2 !important;}
+form input.error{border:2px solid #CB342E !important;}
+form button.error{border:2px solid #CB342E !important;}
+form button[disabled]{color: #8C8C8C !important;}
+form div#FormEventRegister_ModalAnswer{display: none;}
 
 div.adv_training form{background:rgba(10,64,9,0.87);color: #C0C0C0;}
 div.adv_training form .btn{margin-bottom: 3px;}
-/*
-div.adv_training form>fieldset:first-child>legend {border-bottom:solid 1px #CA8F79;}
-div.adv_training form>fieldset>legend {color:#ADC794;border-bottom:dotted 1px #BF8773;}
-div.adv_training form input, div.adv_training form textarea, div.adv_training form select, div.adv_training form .uneditable-input {border: 2px solid #BF8773;}
-div.adv_training form label {color:#FBB196;}
-div.adv_training form .help-block {color:#BF8773;}
-div.adv_training form button[type="submit"]{border:2px solid #BF8773;color:#401d11;}
-div.adv_training form button[type="submit"]:hover{box-shadow:0 0 7px rgba(64,29,17,1);}
-*/
+
 @media (max-width: 750px) {
 	body{font-size:13px; line-height: 18px;}
 	main div.preintro{background: url(../img/intro/750/intro_full_750.png) no-repeat 0px -65px;height:230px;}
