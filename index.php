@@ -126,26 +126,27 @@ bind_textdomain_codeset($domain, 'UTF-8');
            </fieldset>
            <fieldset>
             <legend><?=(_("Представьтесь, пожалуйста"));?></legend>
+            <?php if(!isset($_COOKIE['UserDataTransfer'])){?>
             <p id="FormEventRegister_ModalRequest">
                 <a class="btn btn-sm btn-social btn-vk" onclick="PopupCenter('http://oauth.vk.com/authorize?client_id=5293223&redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/VkController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-vk"></span>vk.com</a>
                 <a class="btn btn-sm btn-social btn-google" onclick="PopupCenter('https://accounts.google.com/o/oauth2/auth?redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/GoogleController.php&response_type=code&client_id=700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile', '<?=(_("Викинги Вирумаа"));?>', 500, 650)"><span class="fa fa-google"></span>Google+</a><br/>
                 <a class="btn btn-sm btn-social btn-facebook" onclick="PopupCenter('https://www.facebook.com/dialog/oauth?client_id=1704584893161917&redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/FacebookController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-facebook"></span>facebook.com</a>
             </p>
-            <div id="FormEventRegister_ModalAnswer">
-                <label for="client_fullname"><?=(_("Имя, фамилия"));?></label><input class="input-large" type="text" name="client_fullname" value="" disabled>
-                <label for="client_email"><?=(_("Электропочта"));?></label><input class="input-large" type="email" name="client_email" value="" disabled>
+            <?php 
+            }            
+            $UserData=(isset($_COOKIE['UserDataTransfer']) ? json_decode($_COOKIE['UserDataTransfer'], TRUE) : null );
+            ?>
+            <div id="FormEventRegister_ModalAnswer" style="<?=(isset($_COOKIE['UserDataTransfer']) ? 'display:block;' : null );?>" >
+                <label for="client_fullname"><?=(_("Имя, фамилия"));?></label><input class="input-large" type="text" name="client_fullname" value="<?=$UserData[0]['value'];?>" disabled>
+                <label for="client_email"><?=(_("Электропочта"));?></label><input class="input-large" type="email" name="client_email" value="<?=$UserData[2]['value'];?>" disabled>
             </div>
            </fieldset>
            <fieldset>
             <legend><?=(_("Выберите подходящую тренировку"));?></legend>
-            <label for="contact_message"><?=(_("Место проведения, дата, время:"));?></label>
-            <select class="form-control">
-                <optgroup label="Кохтла-Ярве - Ахтме">
-                <option selected value="">11 апреля в 14:00</option>
-                <option value="">21 мая в 18:00</option>
-                <option value="">6 июня в 14:00</option>
-                </optgroup>
-            </select>
+            <label for="client_training_datetime"><?=(_("Место проведения, дата, время:"));?></label>
+            <?php
+            include './resources/php/php_yacal/yacal_parser.php';
+            ?>
            </fieldset>
             <button type="submit" class="btn-large"><?=(_("Отправить"));?></button>
             </form>
@@ -205,6 +206,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
 $(window).scroll(function () {
   intro_parallax();
 });
+<?php if(!isset($_COOKIE['UserDataTransfer'])){ ?>
 $('document').ready(function() {
     console.log( "Document ready!" );
     Bjorn = setInterval(function(){   
@@ -224,4 +226,5 @@ $('document').ready(function() {
         }
     }, 2000);
 });
+<?php } ?>
 </script></html>

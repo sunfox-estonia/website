@@ -88,7 +88,7 @@ $("form[name='FormClientIdentify']").submit(function(e){
         ClientDataArr.push({name:'client_language',value:'<?=$User['language'];?>'});
         ClientDataArr.push({name:'client_profile_link',value:'<?=$User['profile_link'];?>'}); 
         JsonPrepared=JSON.stringify(ClientDataArr);
-        $.cookie('UserDataTransfer', JsonPrepared, { expires: 5, path: '/' });
+        $.cookie('UserDataTransfer', JsonPrepared, { expires: 1, path: '/' });
         window.close();
     }
 });    
