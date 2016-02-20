@@ -12,9 +12,13 @@ $events_xml=new SimpleXMLElement($yacal_feed_xml);
 echo '<select class="form-control input-xlarge" name="client_training_datetime">';
 foreach($events_xml->entry as $entry)
 {
+    preg_match("'</p><p xmlns=\"\">(.*?)</p>'si", $entry->content, $result);
+    $event_location=substr($result[0],24,-4);
+
+    $option_value=base64_encode(json_encode(array('start'=>$entry->start, 'region'=>$entry->title, 'location'=>$event_location)));
     $clear_date_arr=date_parse_from_format('Y-n-j H:i:sP', $entry->start);
     $month_name = $months_titles_array[$clear_date_arr['month']];
-    echo '<option value="' . $clear_date_arr['day'] . ' ' . $month_name . ' в ' . $clear_date_arr['hour'] . ':' . $clear_date_arr['minute'] . ' (' . $entry->title . ')">' . $clear_date_arr['day'] . ' ' . $month_name . ' в ' . $clear_date_arr['hour'] . ':' . $clear_date_arr['minute'] . ' (' . $entry->title . ')</option>';
+    echo '<option value="'.$option_value.'">' . $clear_date_arr['day'] . ' ' . $month_name . ' в ' . $clear_date_arr['hour'] . ':' . $clear_date_arr['minute'] . ' (' . $entry->title . ')</option>';
 }
 echo '</select>';
     

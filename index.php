@@ -148,7 +148,9 @@ bind_textdomain_codeset($domain, 'UTF-8');
             include './resources/php/php_yacal/yacal_parser.php';
             ?>
            </fieldset>
-            <button type="submit" class="btn-large"><?=(_("Отправить"));?></button>
+            <button type="submit" class="btn-large" <?=(!isset($_COOKIE['UserDataTransfer']) ? 'disabled' : '');?>><?=(_("Отправить"));?></button>
+            <div class="alert alert-danger" role="alert" id="FormEventRegisterMessageErr"><?=(_("<strong>Ошибка!</strong> Отправить заявку не удалось."));?></div>
+            <div class="alert alert-success" role="alert" id="FormEventRegisterMessageOk"><?=(_("<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
             </form>
         </div>
       </div></div></div></div></div>
@@ -213,14 +215,12 @@ $('document').ready(function() {
         if($.cookie('UserDataTransfer')){
             console.log( "Cookies are ready!" );
             clearInterval(Bjorn);
-            // Скрыть абзац с авторизацией
             $("p#FormEventRegister_ModalRequest").hide();
             $("div#FormEventRegister_ModalAnswer").fadeIn('fast');
-            // Добавить в скрыте поля значения из кукисов
-            // Показать данные юзера: имя, фамилия, майл, фото
             var UserData = jQuery.parseJSON($.cookie('UserDataTransfer')); 
             $("div#FormEventRegister_ModalAnswer input[name=client_fullname]").val(UserData[0].value);
             $("div#FormEventRegister_ModalAnswer input[name=client_email]").val(UserData[2].value);
+            $("form[name='FormEventRegister'] button[type='submit']").removeAttr('disabled');
         }else{
             console.log( "Cookies is not ready :(" );
         }

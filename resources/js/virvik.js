@@ -46,7 +46,7 @@ function intro_parallax_render(ev) {
 Homepage Contact Form AJAX processing
 */
 $("form[name=FormContactUs]>button[type=submit]").click(function(){
-  $("form[name=FormContactUs]>button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="<?=(_("Загрузка..."));?>" />').blur();
+  $("form[name=FormContactUs]>button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="Загрузка..." />').blur();
   
   var value_mail = $("form[name=FormContactUs] input[name=contact_mail]").val();
   var value_message = $("form[name=FormContactUs] textarea[name=contact_message]").val();
@@ -75,6 +75,42 @@ $("form[name=FormContactUs]>button[type=submit]").click(function(){
       $("form[name=FormContactUs]>button[type=submit]").hide();
       $("form[name=FormContactUs]>div.g-recaptcha").hide();
       $("form[name=FormContactUs]>div#FormContactUsMessageErr").fadeIn('slow');
+    }
+  });
+  return false;
+});
+/*
+Homepage Trainings Register Form AJAX processing
+*/
+$("form[name='FormEventRegister']>button[type='submit']").click(function(){
+  $("form[name='FormEventRegister']>button[type='submit']").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="Загрузка..." />').blur();  
+  var training_datetime = $("form[name=FormEventRegister] select[name=client_training_datetime]").val();
+  var dataString = 'client_training_datetime='+ training_datetime;
+  $.ajax({
+    type: "POST",
+    url: "/resources/php/php_trainreg/training_reg_request.php",
+    data: dataString,
+    cache: false,
+    success: function(response){
+      $("form[name=FormEventRegister]>button[type=submit]").hide();
+      switch(response){
+      case 'true':
+        $("form[name=FormEventRegister]>div#FormEventRegisterMessageOk").fadeIn('slow');
+        $.removeCookie('UserDataTransfer');
+      break;
+      case 'false':
+        $("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
+        $.removeCookie('UserDataTransfer');
+      break;
+      default:
+        $("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
+        $.removeCookie('UserDataTransfer');
+      }
+    },
+    error:function(){
+      $("form[name=FormEventRegister]>button[type=submit]").hide();
+      $("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
+      $.removeCookie('UserDataTransfer');
     }
   });
   return false;
