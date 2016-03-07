@@ -109,7 +109,8 @@ function msgCoordinator($UserData,$client_training_datetime,$TryClientMesg){
     $mail_html_prepare = '<html><body>';
     $mail_html_prepare .= '<link href="https://viruviking.club/resources/css/virvik_mail.css" rel="stylesheet">';
     $mail_html_prepare .= '<p>Привет!</p><p>Поступила новая заявка на участие в пробной тренировке по историческому фехтованию <i>' . $client_training_datetime . '</i>.</p>';
-    $mail_html_prepare .= '<p>Необходимо выполнить следующие действия:<br>- проверить указанный профиль заявителя в социальной сети, убедиться в том, что личные данные (имя, фамилия, возраст) предоставлены верно;<br>- проверить контексты, в которых упоминается имя и/или фамилия заявителя в Сети, сделать это можно при помощи любого поисковика;<br>- в случае, если заявка предоставлена несовершеннолетним лицом, необходимо связаться с родителями/опекуном, воспользовавшись указанным номером телефона;<br>- если данные, предоставленные в заявке и/или профиль заявителя в социальной сети вызывают сомнение, заявку следует отклонить.</p>';
+    $mail_html_prepare .= '<p>Необходимо выполнить следующие действия:<br>- проверить указанный профиль заявителя в социальной сети, убедиться в том, что личные данные (имя, фамилия, возраст) предоставлены верно;<br>- проверить контексты, в которых упоминается имя и/или фамилия заявителя в Сети, сделать это можно при помощи любого поисковика;<br>- в случае, если заявка предоставлена';
+    $mail_html_prepare.='несовершеннолетним лицом, необходимо связаться с родителями/опекуном, воспользовавшись указанным номером телефона;<br>- если данные, предоставленные в заявке и/или профиль заявителя в социальной сети вызывают сомнение, заявку следует отклонить.</p>';
     $mail_html_prepare .= '<p>Благодарим за ответственный подход к обработке заявок на участие в тренировках!</p>';
     $mail_html_prepare .= '<p><strong>Заявитель:</strong>';
     $mail_html_prepare .= '<br>Имя, фамилия: '.$UserData[0]['value'];
@@ -151,7 +152,8 @@ function msgCLient($UserData,$client_training_datetime){
     	3 => 'осеннего'
     );
     $сurrent_season=$seasons_arr[floor(date('n') / 3) % 4];    
-    $mail_html_prepare = '<html><body><link href="https://viruviking.club/resources/css/virvik_mail.css" rel="stylesheet"><p style="text-align:center;"><img src="https://viruviking.club/resources/img/logo/mail_logo_100.png" style="width:100px;"></p><p style="text-align:center;">Пусть лучи ' . $сurrent_season . ' солнца озарят Ваш дом!</p><p style="text-align:center;">Мы получили Вашу заявку на участие в пробной тренировке по историческому фехтованию<br>'. $client_training_datetime . '.</p><p style="text-align:center;">Заявка будет рассмотрена Координаторами в течение нескольких дней.<br>Мы сообщим Вам о результатах рассмотрения заявки посредством электронной почты.</p><p style="text-align:center;">Будьте счастливы!</p><p style="text-align:center;"><a href="https://viruviking.club/" target="_blank">www.viruviking.club</a></p>';
+    $mail_html_prepare = '<html><body><link href="https://viruviking.club/resources/css/virvik_mail.css" rel="stylesheet"><p style="text-align:center;"><img src="https://viruviking.club/resources/img/logo/mail_logo_100.png" style="width:100px;"></p><p style="text-align:center;">Пусть лучи ' . $сurrent_season . ' солнца озарят Ваш дом!</p><p style="text-align:center;">Мы получили Вашу заявку на участие в пробной тренировке по историческому фехтованию<br>'. $client_training_datetime . '.</p>';
+    $mail_html_prepare.='<p style="text-align:center;">Заявка будет рассмотрена Координаторами в течение нескольких дней.<br>Мы сообщим Вам о результатах рассмотрения заявки посредством электронной почты.</p><p style="text-align:center;"><a href="https://viruviking.club/" target="_blank">www.viruviking.club</a></p>';
             
     $Mail = new PHPMailer;
     $Mail->From     = 'noreply@viruviking.club';

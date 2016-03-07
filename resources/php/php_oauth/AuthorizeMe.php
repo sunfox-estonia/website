@@ -85,7 +85,7 @@ $("form[name='FormClientIdentify']").submit(function(e){
         ClientDataArr.push({name:'client_first_name',value:'<?=$User['firstname'];?>'});
         ClientDataArr.push({name:'client_last_name',value:'<?=$User['lastname'];?>'});
         ClientDataArr.push({name:'client_gender',value:'<?=$User['gender'];?>'});
-        ClientDataArr.push({name:'client_language',value:'<?=$User['language'];?>'});
+        ClientDataArr.push({name:'client_language',value:'<?=(!is_null($User['language']) ? $User['language'] : $_SESSION['native']);?>'});
         ClientDataArr.push({name:'client_profile_link',value:'<?=$User['profile_link'];?>'}); 
         JsonPrepared=JSON.stringify(ClientDataArr);
         $.cookie('UserDataTransfer', JsonPrepared, { expires: 1, path: '/' });
