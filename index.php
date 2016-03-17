@@ -68,10 +68,10 @@ bind_textdomain_codeset($domain, 'UTF-8');
                     echo '<a href="https://viruviking.club/lang/et">Eesti keeles</a></p>';
                     break;
                 } ?></p>
-            <p><a href="http://vk.com/viruviking"><img src="/resources/img/ico/social_vk.png"></a>
-                &nbsp;<a href="http://fb.com/viruviking"><img src="/resources/img/ico/social_fb.png"></a>
-                &nbsp;<a href="http://plus.google.com/+ViruvikingClub" rel="publisher"><img src="/resources/img/ico/social_gplus.png"></a>
-                &nbsp;<a href="http://www.youtube.com/ViruvikingClub"><img src="/resources/img/ico/social_yt.png"></a></p>
+            <p>
+                <a class="btn btn-social-icon btn-sm btn-vk" href="http://vk.com/viruviking" style="border-radius:15px;"><i class="fa fa-vk"></i></a>
+                <a class="btn btn-social-icon btn-sm btn-facebook" href="http://fb.com/viruviking" style="border-radius:15px;margin-left:2px;"><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-sm btn-google"  href="http://plus.google.com/+ViruvikingClub" style="border-radius:15px;margin-left:2px;"><i class="fa fa-google"></i></a></p>
             <ul class="list-unstyled">
                 <li><a href="http://wiki.viruviking.club"><?=(_("Вики-система Братства"));?></a></li>
                 <li><a href="http://mail.viruviking.club"><?=(_("Электронная почта"));?></a></li></ul>
