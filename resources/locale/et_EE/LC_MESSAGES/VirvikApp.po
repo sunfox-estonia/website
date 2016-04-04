@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: viruviking.club\n"
 "POT-Creation-Date: 2016-04-04 08:17+0300\n"
-"PO-Revision-Date: 2016-04-04 08:19+0300\n"
+"PO-Revision-Date: 2016-04-04 17:06+0300\n"
 "Last-Translator: Victor Litvinkov <victor.litvinkov@eesti.ee>\n"
 "Language-Team: \n"
 "Language: et_EE\n"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: index.php:473
 msgid "Приходите на тренировки<br>по историческому фехтованию!"
-msgstr ""
+msgstr " Tulge ajaloolise mõõgavõitluse treeningutele!"
 
 #: index.php:473
 msgid ""
@@ -157,6 +157,10 @@ msgid ""
 "активный отдых в компании интересных людей. Каждый бой - словно встреча "
 "персонажей из древних преданий и легенд."
 msgstr ""
+"Treenime ühe- ja kahekäemõõkadega, omandame kilbi kasutamise oskusi. "
+"Ajalooline mõõgavõitlus – see on unustamatu kogemus ja aktiivne puhkus "
+"huvitavate inimeste seltskonnas. Iga lahing on nagu kohtumine iidsetest "
+"lugudest ja legendidest pärit isikutega."
 
 #: index.php:474 index.php:520
 msgid ""
@@ -164,6 +168,9 @@ msgid ""
 "осуществляется на тренировочном снаряжении, приближенном к боевому. "
 "Контактные бои проводятся на гуманизированном оружии."
 msgstr ""
+"Treeningud toimuvad harrastamise tasemel. Õppimine ja võtete viimistlemine "
+"toimuvad treeningvarustuses, mis on lahingvarustusele sarnane. "
+"Kontaktlahingud toimuvad pehmendatud relvadega."
 
 #: index.php:475 index.php:521
 msgid ""
@@ -171,30 +178,37 @@ msgid ""
 "теплое время года занятия проводятся на тренировочном полигоне, два раза в "
 "неделю.\n"
 msgstr ""
+"Külmal aastaajal trennime üks kord nädalas ruumis. Soojemal aastaajal tunnid "
+"toimuvad harjutusväljakul kaks korda nädalas.\n"
 
 #: index.php:477 index.php:523
 msgid ""
 "Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных "
 "тренировках."
 msgstr ""
+"Tunnid on tasuta. Uustulnukatele esitletakse proovitreeningutel osalemise "
+"varustust."
 
 #: index.php:482 index.php:529
 msgid "Регистрация на пробную тренировку"
-msgstr ""
+msgstr "Registreerimine proovitreeningule"
 
 #: index.php:483 index.php:530
 msgid "Необходимо указать реальное имя, фамилию, возраст и адрес эл. почты."
 msgstr ""
+"Teil tuleb märkida tegelik nimi, perekonnanimi, vanus ja e-posti aadress."
 
 #: index.php:484
 msgid ""
 "Подробная информация о месте проведения тренировки и материалы для "
 "ознакомления будут высланы Вам по электронной почте."
 msgstr ""
+"Täpne informatsioon treeningu toimumise koha ning tutvustavad materjalid "
+"saadetakse Teile e-posti teel."
 
 #: index.php:487 index.php:534
 msgid "Представьтесь, пожалуйста"
-msgstr ""
+msgstr "Palun tutvustage ennast"
 
 #: index.php:499 index.php:546 resources/php/php_oauth/AuthorizeMe.php:6
 msgid "Имя, фамилия"
@@ -207,11 +221,11 @@ msgstr "E-post"
 
 #: index.php:504 index.php:551
 msgid "Выберите подходящую тренировку"
-msgstr ""
+msgstr "Valige sobiv treening"
 
 #: index.php:505 index.php:552
 msgid "Место проведения, дата, время:"
-msgstr ""
+msgstr "Toimumiskoht, kuupäev ja kellaaeg:"
 
 #: index.php:510 index.php:557 index.php:592
 msgid "Отправить"
@@ -225,13 +239,15 @@ msgstr "<strong>Viga!</strong>"
 msgid ""
 "<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких "
 "дней."
-msgstr ""
+msgstr "<strong>Saadetud!</strong> Võtame Teiega ühendust paari päeva jooksul."
 
 #: index.php:524 index.php:531
 msgid ""
 "Подробная информация о месте проведения тренировки и материалы для "
 "ознакомления будут высланы Вам по электронной почте после регистрации."
 msgstr ""
+"Täpne informatsioon treeningu toimumiskoha kohta ning tutvustavad materjalid "
+"saadame Teile e-posti teel."
 
 #: index.php:570
 msgid ""
@@ -324,7 +340,7 @@ msgstr ""
 
 #: resources/php/php_oauth/AuthorizeMe.php:4
 msgid "Идентификация"
-msgstr ""
+msgstr "Identifitseerimine"
 
 #: resources/php/php_oauth/AuthorizeMe.php:7
 msgid "Возраст"
@@ -337,7 +353,7 @@ msgstr "Telefoni number"
 
 #: resources/php/php_oauth/AuthorizeMe.php:13
 msgid "Контактные данные родителей или опекуна"
-msgstr ""
+msgstr "Vanemate või eestkostja kontaktandmed"
 
 #: resources/php/php_oauth/AuthorizeMe.php:14
 msgid "Имя, отчество"
@@ -354,6 +370,8 @@ msgid ""
 "<strong>Вы не можете зарегистрироваться</strong> на пробную тренировку! "
 "Свяжитесь с кооординаторами сообщества для уточнения данного вопроса."
 msgstr ""
+"<strong>Te ei saa proovitreeningule registreeruda!</strong> Käesoleva "
+"küsimuse lahendamiseks võtke ühendust koordinaatoritega."
 
 #: resources/php/php_oauth/AuthorizeMe.php:19
 #: resources/php/php_oauth/AuthorizeMe.php:22
