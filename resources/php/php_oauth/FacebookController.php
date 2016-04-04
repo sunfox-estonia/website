@@ -1,5 +1,6 @@
 <?php
 include 'AuthorizeMeHeader.php';
+parse_str(file_get_contents('https://graph.facebook.com/oauth/access_token?client_id=1704584893161917&redirect_uri=https://viruviking.club/resources/php/php_oauth/FacebookController.php&client_secret=cfdf0275217a31453da8afd978847b39&code=' . $_GET['code']), $my_token);
 $user_data=json_decode(file_get_contents('https://graph.facebook.com/me?fields=id,name,first_name,last_name,birthday,email,gender,link&access_token='.$my_token['access_token']),TRUE);
 //Array{
 //    [id] => 100000317390816
@@ -32,7 +33,7 @@ $User=array(
     'gender'=>$user_data['gender'],
     'age'=>$user_data['age'],
     'language'=>$user_data['locale'],
-    'picture'=>'http://graph.facebook.com/'.$user_data['id'].'/picture?type=large',
+    'picture'=>'https://graph.facebook.com/'.$user_data['id'].'/picture?width=200&height=200',
     'profile_link'=>$user_data['link'],
     );
 include 'AuthorizeMe.php';

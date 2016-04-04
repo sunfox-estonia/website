@@ -84,14 +84,14 @@ array(11) {
 }
 */
 if($_COOKIE['UserDataTransfer'] && $_POST['client_training_datetime']){
-    $UserData=json_decode($_COOKIE['UserDataTransfer'], TRUE);    
-    $EventData=base64_decode($_POST['client_training_datetime']);    
+    $UserData=json_decode($_COOKIE['UserDataTransfer'], TRUE);
+    $EventData=base64_decode($_POST['client_training_datetime']);
     $client_training_datetime=json_decode($EventData, TRUE);
-    
+
     $months_titles_array = array(1 => 'января', 2 => 'февраля', 3 => 'марта', 4 => 'апреля', 5 => 'мая', 6 => 'июня', 7 => 'июля', 8 => 'августа', 9 => 'сентября', 10 => 'октября', 11 => 'ноября', 12 => 'декабря');
     $clear_date_arr=date_parse_from_format('Y-n-j H:i:sP', $client_training_datetime['start'][0]);
     $month_name = $months_titles_array[$clear_date_arr['month']];
-    $client_training_datetime = $clear_date_arr['day'] . ' ' . $month_name . ' в ' . $clear_date_arr['hour'] . ':' . $clear_date_arr['minute'] . ' (' . $client_training_datetime['region'][0] . ')';  
+    $client_training_datetime = $clear_date_arr['day'] . ' ' . $month_name . ' в ' . $clear_date_arr['hour'] . ':' . $clear_date_arr['minute'] . ' (' . $client_training_datetime['region'][0] . ')';
 
     $TryClientMesg=msgCLient($UserData, $client_training_datetime);
     $TryCoordinatorMesg=msgCoordinator($UserData,$client_training_datetime,$TryClientMesg);
@@ -103,14 +103,14 @@ if($_COOKIE['UserDataTransfer'] && $_POST['client_training_datetime']){
     echo $return;
 }
 
-function msgCoordinator($UserData,$client_training_datetime,$TryClientMesg){  
+function msgCoordinator($UserData,$client_training_datetime,$TryClientMesg){
 
-    $UserDataEncoded=base64_encode($_COOKIE['UserDataTransfer']);    
+    $UserDataEncoded=base64_encode($_COOKIE['UserDataTransfer']);
     $mail_html_prepare = '<html><body>';
     $mail_html_prepare .= '<link href="https://viruviking.club/resources/css/virvik_mail.css" rel="stylesheet">';
     $mail_html_prepare .= '<p>Привет!</p><p>Поступила новая заявка на участие в пробной тренировке по историческому фехтованию <i>' . $client_training_datetime . '</i>.</p>';
-    $mail_html_prepare .= '<p>Необходимо выполнить следующие действия:<br>- проверить указанный профиль заявителя в социальной сети, убедиться в том, что личные данные (имя, фамилия, возраст) предоставлены верно;<br>- проверить контексты, в которых упоминается имя и/или фамилия заявителя в Сети, сделать это можно при помощи любого поисковика;<br>- в случае, если заявка предоставлена';
-    $mail_html_prepare.='несовершеннолетним лицом, необходимо связаться с родителями/опекуном, воспользовавшись указанным номером телефона;<br>- если данные, предоставленные в заявке и/или профиль заявителя в социальной сети вызывают сомнение, заявку следует отклонить.</p>';
+    $mail_html_prepare .= '<p>Необходимо выполнить следующие действия:<br>- проверить указанный профиль заявителя в социальной сети, убедиться в том, что личные данные (имя, фамилия, возраст) предоставлены верно;<br>- проверить контексты, в которых упоминается имя и/или фамилия заявителя в Сети, сделать это можно при помощи любого поисковика;<br>- в случае, если заявка предоставлена ';
+    $mail_html_prepare .= 'несовершеннолетним лицом, необходимо связаться с родителями/опекуном, воспользовавшись указанным номером телефона;<br>- если данные, предоставленные в заявке и/или профиль заявителя в социальной сети вызывают сомнение, заявку следует отклонить.</p>';
     $mail_html_prepare .= '<p>Благодарим за ответственный подход к обработке заявок на участие в тренировках!</p>';
     $mail_html_prepare .= '<p><strong>Заявитель:</strong>';
     $mail_html_prepare .= '<br>Имя, фамилия: '.$UserData[0]['value'];
@@ -123,7 +123,7 @@ function msgCoordinator($UserData,$client_training_datetime,$TryClientMesg){
         $mail_html_prepare .= '</p><p><strong>Контактные данные родителя/опекуна:</strong>';
         $mail_html_prepare .= '<br>Имя, отчество: '.$UserData[4]['value'];
         $mail_html_prepare .= '<br>Номер телефона: '.$UserData[5]['value'];
-    }    
+    }
     $mail_html_prepare .= '</p><p>Профиль заявителя: <a href="'. $UserData[10]['value'] .'" target="_blank">'.$UserData[10]['value'].'</a>';
     $mail_html_prepare .= '</p><p>Выбранная дата, время тренировки: <i>'.$client_training_datetime.'</i>';
     $mail_html_prepare .= '</p><p><strong>Доступные действия:</strong><br>- <a href="https://viruviking.club/resources/php/php_trainreg/training_reg_decision.php?usr='.$UserDataEncoded.'&event='.$_POST['client_training_datetime'].'&dec=1">Подтвердить</a><br>- <a href="https://viruviking.club/resources/php/php_trainreg/training_reg_decision.php?usr='.$UserDataEncoded.'&event='.$_POST['client_training_datetime'].'&dec=0">Отклонить</a></p>';
@@ -136,7 +136,7 @@ function msgCoordinator($UserData,$client_training_datetime,$TryClientMesg){
     $Mail->isHTML(true);
     $Mail->Body     = $mail_html_prepare;
     // $Mail->AltBody  = $mail_txt_prepare;
-    $Mail->AddAddress('victor@viruviking.club');    
+    $Mail->AddAddress('victor@viruviking.club');
     if(!$Mail->Send()) {
       return false;
     } else {
@@ -151,10 +151,10 @@ function msgCLient($UserData,$client_training_datetime){
     	2 => 'летнего',
     	3 => 'осеннего'
     );
-    $сurrent_season=$seasons_arr[floor(date('n') / 3) % 4];    
+    $сurrent_season=$seasons_arr[floor(date('n') / 3) % 4];
     $mail_html_prepare = '<html><body><link href="https://viruviking.club/resources/css/virvik_mail.css" rel="stylesheet"><p style="text-align:center;"><img src="https://viruviking.club/resources/img/logo/mail_logo_100.png" style="width:100px;"></p><p style="text-align:center;">Пусть лучи ' . $сurrent_season . ' солнца озарят Ваш дом!</p><p style="text-align:center;">Мы получили Вашу заявку на участие в пробной тренировке по историческому фехтованию<br>'. $client_training_datetime . '.</p>';
     $mail_html_prepare.='<p style="text-align:center;">Заявка будет рассмотрена Координаторами в течение нескольких дней.<br>Мы сообщим Вам о результатах рассмотрения заявки посредством электронной почты.</p><p style="text-align:center;"><a href="https://viruviking.club/" target="_blank">www.viruviking.club</a></p>';
-            
+
     $Mail = new PHPMailer;
     $Mail->From     = 'noreply@viruviking.club';
     $Mail->FromName = 'Викинги Вирумаа';
@@ -163,7 +163,7 @@ function msgCLient($UserData,$client_training_datetime){
     $Mail->isHTML(true);
     $Mail->Body     = $mail_html_prepare;
     // $Mail->AltBody  = $mail_txt_prepare;
-    $Mail->AddAddress($UserData[2]['value']);    
+    $Mail->AddAddress($UserData[2]['value']);
     if(!$Mail->Send()) {
       return false;
     } else {
