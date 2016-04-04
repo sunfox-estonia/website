@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VirvikApp\n"
-"POT-Creation-Date: 2016-04-04 20:32+0300\n"
-"PO-Revision-Date: 2016-04-04 20:54+0300\n"
+"POT-Creation-Date: 2016-04-04 21:20+0300\n"
+"PO-Revision-Date: 2016-04-04 21:21+0300\n"
 "Last-Translator: \n"
 "Language-Team: MFU Virumaa Viikingid <info@viruviking.club>\n"
 "Language: Estonian\n"
@@ -380,6 +380,13 @@ msgstr "Tuvastamine"
 #: /home/victor/Documents/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:7
 msgid "Возраст"
 msgstr "Vanus"
+
+#: /home/victor/Documents/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:8
+msgid ""
+"В мероприятиях сообщества могут принимать участие юноши и девушки в возрасте "
+"от 14 до 23 лет."
+msgstr ""
+"Vennaskonna üritustel saavad osaleda 14-23-aastased noormehed ja neiud."
 
 #: /home/victor/Documents/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:10
 #: /home/victor/Documents/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:15

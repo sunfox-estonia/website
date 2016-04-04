@@ -5,7 +5,7 @@
                 <image src="<?=$User['picture'];?>" style="border-radius: 6px;width:100px;float: right;margin: 15px 0 5px 10px;"/>
                 <label for="client_fullname"><?=(_("Имя, фамилия"));?></label><input class="input-medium" type="text" name="client_fullname" value="<?=$User['fullname'];?>" <?=(is_null($User['fullname']) ? '' : 'disabled');?>>
                 <label for="client_age"><?=(_("Возраст"));?></label><input class="input-small" type="number" name="client_age" placeholder="14+" value="<?=$User['age'];?>" <?=(is_null($User['age']) ? '' : 'disabled');?>>
-                <p class="help-block">В мероприятиях сообщества могут принимать участие юноши и девушки в возрасте от 14 до 23 лет.</p>
+                <p class="help-block"><?=(_("В мероприятиях сообщества могут принимать участие юноши и девушки в возрасте от 14 до 23 лет."));?></p>
                 <label for="client_email"><?=(_("Электропочта"));?></label><input class="input-large" type="email" name="client_email" value="<?=$User['email'];?>" placeholder="nickname@domain.tld" <?=(is_null($User['email']) ? '' : 'disabled');?>>
                 <label for="client_tel"><?=(_("Номер телефона"));?></label><input class="input-large" type="tel" name="client_tel" placeholder="+372 XX XX XXXX">
            </fieldset>
@@ -14,16 +14,16 @@
                 <label for="client_parent_name"><?=(_("Имя, отчество"));?></label><input class="input-large" type="text" name="client_parent_name">
                 <label for="client_parent_tel"><?=(_("Номер телефона"));?></label><input class="input-large" type="tel" name="client_parent_tel" placeholder="+372 XX XX XXXX">
             </fieldset>
-                
+
             <?php if(!is_null($User['age'])){ ?>
               <?=($User['age']>=14 && $User['age']<=23) ? '<button type="submit" class="btn-large">' . (_("Подтверждаю")) . '</button>' : '<div class="alert alert-warning" role="alert" id="FormClientIdentifyMessageAttention" style="display: block!important;">' . (_("<strong>Вы не можете зарегистрироваться</strong> на пробную тренировку! Свяжитесь с кооординаторами сообщества для уточнения данного вопроса.")) . '</div><button type="reset" class="btn-large" onclick="window.close();">' . (_("Закрыть")) . '</button>';?>
             <?php }else{ ?>
               <div class="alert alert-warning" role="alert" id="FormClientIdentifyMessageAttention"><?=(_("<strong>Вы не можете зарегистрироваться</strong> на пробную тренировку! Свяжитесь с кооординаторами сообщества для уточнения данного вопроса."));?></div>
-              <button type="submit" class="btn-large"><?=(_("Подтверждаю"));?></button><button type="reset" class="btn-large" style="display:none;" onclick="window.close();"><?=(_("Закрыть"));?></button>  
+              <button type="submit" class="btn-large"><?=(_("Подтверждаю"));?></button><button type="reset" class="btn-large" style="display:none;" onclick="window.close();"><?=(_("Закрыть"));?></button>
             <?php } ?>
-           </form>                
+           </form>
            </div>
-        </div>        
+        </div>
     </div>
 <!--<?=$user_data->{'link'};?>-->
 </body>
@@ -86,12 +86,12 @@ $("form[name='FormClientIdentify']").submit(function(e){
         ClientDataArr.push({name:'client_last_name',value:'<?=$User['lastname'];?>'});
         ClientDataArr.push({name:'client_gender',value:'<?=$User['gender'];?>'});
         ClientDataArr.push({name:'client_language',value:'<?=(!is_null($User['language']) ? $User['language'] : $_SESSION['native']);?>'});
-        ClientDataArr.push({name:'client_profile_link',value:'<?=$User['profile_link'];?>'}); 
+        ClientDataArr.push({name:'client_profile_link',value:'<?=$User['profile_link'];?>'});
         JsonPrepared=JSON.stringify(ClientDataArr);
         $.cookie('UserDataTransfer', JsonPrepared, { expires: 1, path: '/' });
         window.close();
     }
-});    
+});
 
 $("form[name='FormClientIdentify'] input[name='client_age']").one().blur(function() {
     $("form[name='FormClientIdentify'] input[name='client_age']").removeClass("error");
@@ -121,5 +121,5 @@ $("form[name='FormClientIdentify'] input[name='client_age']").one().blur(functio
     $("form[name='FormClientIdentify'] input[name='client_age']").attr("disabled", "disabled");
     }
 });
-</script>           
+</script>
 </html>
