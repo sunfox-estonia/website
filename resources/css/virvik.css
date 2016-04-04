@@ -92,7 +92,7 @@ form div#FormEventRegister_ModalAnswer{display: none;}
 @media (min-width: 992px) {
 	body{font-size:13px; line-height: 18px;}
 	main div.intro{background: url(../img/intro/970/intro_full_970.png) no-repeat top center;height:450px; overflow: hidden;}
-        main div.adv_training{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: 470px -55px, 470px -55px; background-repeat:no-repeat, repeat; overflow: hidden;}
+        main div.adv_training{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: 470px -75px, 470px -75px; background-repeat:no-repeat, repeat; overflow: hidden;}
 }
 
 @media (min-width: 1200px) {
