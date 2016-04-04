@@ -25,12 +25,16 @@ main div.subintro p {color:#B3B3B3;text-shadow: 0px 1px 1px #00050F;}
 main div.subintro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1 ); border-top:1px solid #00050F;}
 main div.fireplace{background: #415A0B;}
 
+main div.subadv_training{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29;}
+main div.subadv_training>div.row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;}
+
 div.adv_training{color:#fff;text-shadow: 1px 1px 1px #008C03}
 div.adv_training h1{color:#fff;}
 div.adv_training h2{color:#fff;}
-
 div.adv_training form{background:rgba(10,64,9,0.87);color: #C0C0C0;text-shadow:none;}
-div.adv_training form .btn{margin-bottom: 3px;}
+div.adv_training form .btn, div.subadv_training form .btn{margin-bottom: 3px;}
+div.subadv_training form{background:rgba(41,38,27,0.5);color: #C0C0C0;text-shadow:none;}
+div.subadv_training{color:#C9B999;}
 
 header>div.container, footer>div.container{background: -moz-linear-gradient(left, rgba(33,33,33,0) 0%, rgba(33,33,33,0.15) 1%, rgba(33,33,33,0.5) 5%, rgba(33,33,33,0.5) 95%, rgba(33,33,33,0.15) 99%, rgba(33,33,33,0) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(33,33,33,0)), color-stop(1%,rgba(33,33,33,0.15)), color-stop(5%,rgba(33,33,33,0.5)), color-stop(95%,rgba(33,33,33,0.5)), color-stop(99%,rgba(33,33,33,0.15)), color-stop(100%,rgba(33,33,33,0))); background: -webkit-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: -o-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: -ms-linear-gradient(left, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); background: linear-gradient(to right, rgba(33,33,33,0) 0%,rgba(33,33,33,0.15) 1%,rgba(33,33,33,0.5) 5%,rgba(33,33,33,0.5) 95%,rgba(33,33,33,0.15) 99%,rgba(33,33,33,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#00212121',GradientType=1 ); color:#B3B3B3;}
 /*nav div[class^="col-"]:first-child {background: url(../img/logo/virvik_logo_small.png) no-repeat 18px 18px;}*/
@@ -71,6 +75,9 @@ form div#FormEventRegister_ModalAnswer{display: none;}
 	main div.intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
 	main div.intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1 );}
 	main div.intro h3 {margin-bottom:21px;}
+        main div.preadv_training{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: center -110px, center -110px; background-repeat:no-repeat, repeat; overflow: hidden;height:200px;}
+        main div.adv_training{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29; color: #fff; text-shadow: 1px 1px 1px #2E2A1E; color:#C9B999;}
+        main div.adv_training>row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;}
 	footer div[class^="col-"]:first-child{padding-top:18px;}
 	footer div[class^="col-"]{padding-top:0px;}
 }
@@ -79,13 +86,13 @@ form div#FormEventRegister_ModalAnswer{display: none;}
 	body{font-size:13px; line-height: 18px;}
 	main div.intro{background: url(../img/intro/750/intro_full_750.png) no-repeat top center;height:373px;}
 	div!>form[name="FormContactUs"]{padding-top:0;}
+        main div.adv_training{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: 360px -20px, 360px -20px; background-repeat:no-repeat, repeat; overflow: hidden;}
 }
 
 @media (min-width: 992px) {
 	body{font-size:13px; line-height: 18px;}
 	main div.intro{background: url(../img/intro/970/intro_full_970.png) no-repeat top center;height:450px; overflow: hidden;}
-  main div.adv_training{background-image: url(../img/adv_trainings/shield_fullsize.png), url(../img/adv_trainings/shield_bg.png); background-position: 200px center, left top; background-repeat: no-repeat, repeat; height:565px; overflow: hidden; }
-	div!>form[name="FormContactUs"]{padding-top:0;}
+        main div.adv_training{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: 470px -45px, 470px -45px; background-repeat:no-repeat, repeat; overflow: hidden;}
 }
 
 @media (min-width: 1200px) {
@@ -95,5 +102,5 @@ form div#FormEventRegister_ModalAnswer{display: none;}
 	main div.intro div#intro_sechill{background: url(../img/intro/1170/intro_sechill_1170.png) 0px 0px no-repeat;height:582px;}
 	main div.intro div#intro_firsthill{background: url(../img/intro/1170/intro_firsthill_1170.png) 0px 30px no-repeat;height:582px;}
 	main div.intro div#intro_flag{background: url(../img/intro/1170/intro_flag_1170.png) 0px 10px no-repeat;height:582px;}
-        main div.adv_training{background-image: url(../img/adv_trainings/shield_fullsize.png), url(../img/adv_trainings/shield_bg.png); background-position: 430px center, left top; background-repeat: no-repeat, repeat; height:565px; overflow: hidden; }
+        main div.adv_training{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: 750px center, 750px center; background-repeat:no-repeat, repeat; height:565px; overflow: hidden;}
 }

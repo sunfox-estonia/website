@@ -469,14 +469,14 @@ bind_textdomain_codeset($domain, 'UTF-8');
     <div class="container preadv_training"></div>
     <div class="container adv_training">
       <div class="row">
-        <div class="col-md-6 col-lg-4">
-            <h1><?=(_("Приходите на тренировки<br>по историческому фехтованию!"));?></h1><h2><?=(_("Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки использования щита в бою. Историческое фехтование - это незабываемый опыт и активный отдых в компании интересных людей. Каждый бой - словно встреча персонажей из древних преданий и легенд."));?></h2>
-            <p style="margin-top:25px;"><?=(_("Тренировки проводятся на любительском уровне. Изучение и отработка приёмов осуществляется на тренировочном снаряжении, приближенном к боевому. Контактные бои проводятся на гуманизированном оружии."));?></p>
-            <p><?=(_("В холодное время года мы тренируемся в помещении, один раз в неделю. В теплое время года занятия проводятся на тренировочном полигоне, два раза в неделю.
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <h1><?=(_("Приходите на тренировки<br>по историческому фехтованию!"));?></h1><h2 style="margin-bottom:25px;"><?=(_("Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки использования щита в бою. Историческое фехтование - это незабываемый опыт и активный отдых в компании интересных людей. Каждый бой - словно встреча персонажей из древних преданий и легенд."));?></h2>
+            <p class="visible-lg"><?=(_("Тренировки проводятся на любительском уровне. Изучение и отработка приёмов осуществляется на тренировочном снаряжении, приближенном к боевому. Контактные бои проводятся на гуманизированном оружии."));?></p>
+            <p class="visible-lg"><?=(_("В холодное время года мы тренируемся в помещении, один раз в неделю. В теплое время года занятия проводятся на тренировочном полигоне, два раза в неделю.
 "));?></p>
-            <p><?=(_("Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных тренировках."));?></p>
+            <p class="visible-lg"><?=(_("Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных тренировках."));?></p>
         </div>
-        <div class="col-md-6 col-lg-4 hidden-xs hidden-sm">
+        <div class="col-lg-4 visible-lg">
             <form action="" method="POST" name="FormEventRegister">
             <fieldset>
              <legend><?=(_("Регистрация на пробную тренировку"));?></legend>
@@ -512,21 +512,56 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <div class="alert alert-success" role="alert" id="FormEventRegisterMessageOk"><?=(_("<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
             </form>
         </div>
-      </div></div></div></div></div>
     </div>
-    <div class="container subintro hidden-xs hidden-lg">
-      <div class="row">
-        <div class="col-sm-6"><h2><?=(_("Йомсвикинги"));?></h2>
-          <p><?=(_("История и традиции йомсборгских викингов, описанные в легендах, стали прообразом для Братства Викингов Вирумаа."));?></p>
-          <p><?=(_("Из-за нехватки информации и отсутствия археологически подтверждёных фактов история братства йомсвикингов крайне запутана и противоречива. Согласно «Саге о йомсвикингах», братство существовало в X—XI веках, а база йомсвикингов находилась в крепости Йомсборг, расположенной на побережье Балтийского моря. Отсюда викинги совершали набеги на Норвегию, Швецию, Англию, Данию и другие страны."));?></p>
+</div>
+<div class="container subadv_training visible-xs visible-sm visible-md">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 visible-sm visible-md">
+            <p><?=(_("Тренировки проводятся на любительском уровне. Изучение и отработка приёмов осуществляется на тренировочном снаряжении, приближенном к боевому. Контактные бои проводятся на гуманизированном оружии."));?></p>
+            <p><?=(_("В холодное время года мы тренируемся в помещении, один раз в неделю. В теплое время года занятия проводятся на тренировочном полигоне, два раза в неделю.
+"));?></p>
+            <p><?=(_("Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных тренировках."));?></p>
+            <p><?=(_("Подробная информация о месте проведения тренировки и материалы для ознакомления будут высланы Вам по электронной почте после регистрации."));?></p>
         </div>
-        <div class="col-sm-6">
-          <p style="margin-top:33px;"><?=(_("Йомсвикинги подчинялись жёстким правилам с целью поддержания строгой военной дисциплины в общине. Запрещались ссоры и даже грубое обращение друг другу могло стоить йомсвикингу изгнания. Воинам не следовало показывать страх или бежать перед лицом равного или уступавшего в численности врага. Все трофеи приносились к знамени и делились между членами братства."));?></p>
-          <p><?=(_("В 1043 году король Норвегии Магнус I решил положить конец йомсвикингам. Он разграбил Йомсборг, сравнял крепость с землей и казнил уцелевших воинов братства."));?></p>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <form action="" method="POST" name="FormEventRegister">
+            <fieldset>
+             <legend><?=(_("Регистрация на пробную тренировку"));?></legend>
+             <p><?=(_("Необходимо указать реальное имя, фамилию, возраст и адрес эл. почты."));?></p>
+             <p class="visible-xs"><?=(_("Подробная информация о месте проведения тренировки и материалы для ознакомления будут высланы Вам по электронной почте после регистрации."));?></p>
+           </fieldset>
+           <fieldset>
+            <legend><?=(_("Представьтесь, пожалуйста"));?></legend>
+            <?php if(!isset($_COOKIE['UserDataTransfer'])){?>
+            <p id="FormEventRegister_ModalRequest">
+                <a class="btn btn-sm btn-social btn-vk" onclick="PopupCenter('http://oauth.vk.com/authorize?client_id=5293223&redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/VkController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-vk"></span>vk.com</a>
+                <a class="btn btn-sm btn-social btn-google" onclick="PopupCenter('https://accounts.google.com/o/oauth2/auth?redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/GoogleController.php&response_type=code&client_id=700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile', '<?=(_("Викинги Вирумаа"));?>', 500, 650)"><span class="fa fa-google"></span>Google+</a><br/>
+                <a class="btn btn-sm btn-social btn-facebook" onclick="PopupCenter('https://www.facebook.com/dialog/oauth?client_id=1704584893161917&redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/FacebookController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-facebook"></span>facebook.com</a>
+            </p>
+            <?php
+            }
+            $UserData=(isset($_COOKIE['UserDataTransfer']) ? json_decode($_COOKIE['UserDataTransfer'], TRUE) : null );
+            ?>
+            <div id="FormEventRegister_ModalAnswer" style="<?=(isset($_COOKIE['UserDataTransfer']) ? 'display:block;' : null );?>" >
+                <label for="client_fullname"><?=(_("Имя, фамилия"));?></label><input class="input-large" type="text" name="client_fullname" value="<?=$UserData[0]['value'];?>" disabled>
+                <label for="client_email"><?=(_("Электропочта"));?></label><input class="input-large" type="email" name="client_email" value="<?=$UserData[2]['value'];?>" disabled>
+            </div>
+           </fieldset>
+           <fieldset>
+            <legend><?=(_("Выберите подходящую тренировку"));?></legend>
+            <label for="client_training_datetime"><?=(_("Место проведения, дата, время:"));?></label>
+            <?php
+            include './resources/php/php_yacal/yacal_parser.php';
+            ?>
+           </fieldset>
+            <button type="submit" class="btn-large" <?=(!isset($_COOKIE['UserDataTransfer']) ? 'disabled' : '');?>><?=(_("Отправить"));?></button>
+            <div class="alert alert-danger" role="alert" id="FormEventRegisterMessageErr"><?=(_("<strong>Ошибка!</strong> Отправить заявку не удалось."));?></div>
+            <div class="alert alert-success" role="alert" id="FormEventRegisterMessageOk"><?=(_("<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
+            </form>
         </div>
         <div class="clearfix"></div>
-      </div>
-    </div>
+    </div>    
+</div>
 </main>
 <footer>
     <div class="container"><a name="BlockContactUs"></a>
@@ -537,12 +572,12 @@ bind_textdomain_codeset($domain, 'UTF-8');
           <p><strong><?=(_("Антон Корнышенков"));?></strong><br/><i><?=(_("LARP, тренировки в Йыхви"));?></i><br/><a href="mailto:anton@viruviking.club">anton@viruviking.club</a></p>
           <p class="imprint hidden-xs"><?=(_("&copy; Братство &laquo;Викинги Вирумаа&raquo;, 2015 год"));?><br><?=(_("Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, Д. Плюшко."));?></p>
         </div>
-        <div class="col-xs-11 col-sm-6 col-md-5 col-lg-4">
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
             <p><?=(_("Присоединиться к Братству могут юноши и девушки в возрасте от 14 до 23 лет, желающие принимать активное участие в жизни сообщества."));?></p>
             <p><?=(_("Лицам, не достигшим совершеннолетия необходимо разрешение родителей или опекунов."));?><br/><a href="https://wiki.viruviking.club/public:start" target="_blank"><?=(_("Информация для родителей"));?></a></p>
             <p class="hidden-sm"><?=(_("Напишите нам о своём желании присоединиться к Братству - для этого воспользуйтесь формой обратной связи, расположенной справа. Укажите корректный адрес эл. почты в соответствующем поле и номер мобильного телефона в сообщении."));?></p>
         </div>
-        <div class="col-xs-7 col-sm-6 col-md-5 col-lg-4">
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
             <form action="" method="POST" name="FormContactUs">
             <fieldset>
                 <legend><?=(_("Обратная связь"));?></legend>
