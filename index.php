@@ -560,7 +560,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
             </form>
         </div>
         <div class="clearfix"></div>
-    </div>    
+    </div>
 </div>
 </main>
 <footer>
