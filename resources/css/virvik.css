@@ -31,7 +31,7 @@ main div.subadv_training>div.row{background: -moz-linear-gradient(top, rgba(50,4
 div.adv_training{color:#fff;text-shadow: 1px 1px 1px #008C03}
 div.adv_training h1{color:#fff;}
 div.adv_training h2{color:#fff;}
-div.adv_training form{background:rgba(10,64,9,0.87);color: #C0C0C0;text-shadow:none;}
+div.adv_training form{background:rgba(8,51,7,0.7);color: #C0C0C0;text-shadow:none;}
 div.adv_training form .btn, div.subadv_training form .btn{margin-bottom: 3px;}
 div.subadv_training form{background:rgba(41,38,27,0.5);color: #C0C0C0;text-shadow:none;}
 div.subadv_training{color:#C9B999;}
