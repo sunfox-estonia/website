@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: viruviking.club\n"
-"POT-Creation-Date: 2016-04-04 08:17+0300\n"
-"PO-Revision-Date: 2016-04-04 18:09+0300\n"
+"POT-Creation-Date: 2016-04-04 19:14+0300\n"
+"PO-Revision-Date: 2016-04-04 19:14+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: et_EE\n"
@@ -35,8 +35,8 @@ msgstr ""
 "Ida-Virumaa, Jõhvi, Narva, mõõgavõitluse treeninguid, ajaloolised "
 "rollikostüümid, huviring, vennaskond"
 
-#: index.php:34 index.php:316 index.php:428 index.php:490 index.php:491
-#: index.php:492 index.php:537 index.php:538 index.php:539
+#: index.php:34 index.php:316 index.php:428 index.php:489 index.php:490
+#: index.php:491 index.php:536 index.php:537 index.php:538
 #: resources/php/php_oauth/AuthorizeMeHeader.php:25
 msgid "Викинги Вирумаа"
 msgstr "Virumaa Viikingid"
@@ -162,7 +162,7 @@ msgstr ""
 "huvitavate inimeste seltskonnas. Iga lahing on nagu kohtumine iidsetest "
 "lugudest ja legendidest pärit isikutega."
 
-#: index.php:474 index.php:520
+#: index.php:474 index.php:519
 msgid ""
 "Тренировки проводятся на любительском уровне. Изучение и отработка приёмов "
 "осуществляется на тренировочном снаряжении, приближенном к боевому. "
@@ -172,7 +172,76 @@ msgstr ""
 "toimuvad treeningvarustuses, mis on lahingvarustusele sarnane. "
 "Kontaktlahingud toimuvad pehmendatud relvadega."
 
-#: index.php:475 index.php:521
+#: index.php:475
+msgid ""
+"В холодное время года мы тренируемся в помещении, один раз в неделю. В "
+"теплое время года занятия проводятся на тренировочном полигоне, два раза в "
+"неделю."
+msgstr ""
+"Külmal aastaajal trennime üks kord nädalas ruumis. Soojemal aastaajal tunnid "
+"toimuvad harjutusväljakul kaks korda nädalas."
+
+#: index.php:476 index.php:522
+msgid ""
+"Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных "
+"тренировках."
+msgstr ""
+"Tunnid on tasuta. Uustulnukatele esitletakse proovitreeningutel osalemise "
+"varustust."
+
+#: index.php:481 index.php:528
+msgid "Регистрация на пробную тренировку"
+msgstr "Registreerimine proovitreeningule"
+
+#: index.php:482 index.php:529
+msgid "Необходимо указать реальное имя, фамилию, возраст и адрес эл. почты."
+msgstr ""
+"Teil tuleb märkida tegelik nimi, perekonnanimi, vanus ja e-posti aadress."
+
+#: index.php:483
+msgid ""
+"Подробная информация о месте проведения тренировки и материалы для "
+"ознакомления будут высланы Вам по электронной почте."
+msgstr ""
+"Täpne informatsioon treeningu toimumise koha ning tutvustavad materjalid "
+"saadetakse Teile e-posti teel."
+
+#: index.php:486 index.php:533
+msgid "Представьтесь, пожалуйста"
+msgstr "Palun tutvustage ennast"
+
+#: index.php:498 index.php:545 resources/php/php_oauth/AuthorizeMe.php:6
+msgid "Имя, фамилия"
+msgstr "Ees -ja perekonnanimi"
+
+#: index.php:499 index.php:546 index.php:583
+#: resources/php/php_oauth/AuthorizeMe.php:9
+msgid "Электропочта"
+msgstr "E-post"
+
+#: index.php:503 index.php:550
+msgid "Выберите подходящую тренировку"
+msgstr "Valige sobiv treening"
+
+#: index.php:504 index.php:551
+msgid "Место проведения, дата, время:"
+msgstr "Toimumiskoht, kuupäev ja kellaaeg:"
+
+#: index.php:509 index.php:556 index.php:591
+msgid "Отправить"
+msgstr "Saada"
+
+#: index.php:510 index.php:557
+msgid "<strong>Ошибка!</strong> Отправить заявку не удалось."
+msgstr "<strong>Viga!</strong>"
+
+#: index.php:511 index.php:558
+msgid ""
+"<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких "
+"дней."
+msgstr "<strong>Saadetud!</strong> Võtame Teiega ühendust paari päeva jooksul."
+
+#: index.php:520
 msgid ""
 "В холодное время года мы тренируемся в помещении, один раз в неделю. В "
 "теплое время года занятия проводятся на тренировочном полигоне, два раза в "
@@ -181,67 +250,7 @@ msgstr ""
 "Külmal aastaajal trennime üks kord nädalas ruumis. Soojemal aastaajal tunnid "
 "toimuvad harjutusväljakul kaks korda nädalas.\n"
 
-#: index.php:477 index.php:523
-msgid ""
-"Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных "
-"тренировках."
-msgstr ""
-"Tunnid on tasuta. Uustulnukatele esitletakse proovitreeningutel osalemise "
-"varustust."
-
-#: index.php:482 index.php:529
-msgid "Регистрация на пробную тренировку"
-msgstr "Registreerimine proovitreeningule"
-
-#: index.php:483 index.php:530
-msgid "Необходимо указать реальное имя, фамилию, возраст и адрес эл. почты."
-msgstr ""
-"Teil tuleb märkida tegelik nimi, perekonnanimi, vanus ja e-posti aadress."
-
-#: index.php:484
-msgid ""
-"Подробная информация о месте проведения тренировки и материалы для "
-"ознакомления будут высланы Вам по электронной почте."
-msgstr ""
-"Täpne informatsioon treeningu toimumise koha ning tutvustavad materjalid "
-"saadetakse Teile e-posti teel."
-
-#: index.php:487 index.php:534
-msgid "Представьтесь, пожалуйста"
-msgstr "Palun tutvustage ennast"
-
-#: index.php:499 index.php:546 resources/php/php_oauth/AuthorizeMe.php:6
-msgid "Имя, фамилия"
-msgstr "Ees -ja perekonnanimi"
-
-#: index.php:500 index.php:547 index.php:584
-#: resources/php/php_oauth/AuthorizeMe.php:9
-msgid "Электропочта"
-msgstr "E-post"
-
-#: index.php:504 index.php:551
-msgid "Выберите подходящую тренировку"
-msgstr "Valige sobiv treening"
-
-#: index.php:505 index.php:552
-msgid "Место проведения, дата, время:"
-msgstr "Toimumiskoht, kuupäev ja kellaaeg:"
-
-#: index.php:510 index.php:557 index.php:592
-msgid "Отправить"
-msgstr "Saada"
-
-#: index.php:511 index.php:558
-msgid "<strong>Ошибка!</strong> Отправить заявку не удалось."
-msgstr "<strong>Viga!</strong>"
-
-#: index.php:512 index.php:559
-msgid ""
-"<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких "
-"дней."
-msgstr "<strong>Saadetud!</strong> Võtame Teiega ühendust paari päeva jooksul."
-
-#: index.php:524 index.php:531
+#: index.php:523 index.php:530
 msgid ""
 "Подробная информация о месте проведения тренировки и материалы для "
 "ознакомления будут высланы Вам по электронной почте после регистрации."
@@ -249,7 +258,7 @@ msgstr ""
 "Täpne informatsioon treeningu toimumiskoha kohta ning tutvustavad materjalid "
 "saadame Teile e-posti teel."
 
-#: index.php:570
+#: index.php:569
 msgid ""
 "Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. "
 "Ниже указаны контактные данные координаторов сообщества."
@@ -257,27 +266,27 @@ msgstr ""
 "Kui teil on lisaküsimusi või -soove, võtke meiega ühendust. Allpool on "
 "toodud ühenduse koordinaatorite kontaktandmed. "
 
-#: index.php:571
+#: index.php:570
 msgid "Виктор Литвинков"
 msgstr "Viktor Litvinkov"
 
-#: index.php:571
+#: index.php:570
 msgid "Орг. вопросы сообщества в Йыхви"
 msgstr "Org. küsimused Jõhvi ühenduses"
 
-#: index.php:572
+#: index.php:571
 msgid "Антон Корнышенков"
 msgstr "Anton Kornõšenkov"
 
-#: index.php:572
+#: index.php:571
 msgid "LARP, тренировки в Йыхви"
 msgstr "LARP, treeningud Jõhvis"
 
-#: index.php:573
+#: index.php:572
 msgid "&copy; Братство &laquo;Викинги Вирумаа&raquo;, 2015 год"
 msgstr "&copy; &laquo;Virumaa Viikingite&raquo; vennaskond, 2015 a."
 
-#: index.php:573
+#: index.php:572
 msgid ""
 "Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, "
 "Д. Плюшко."
@@ -285,7 +294,7 @@ msgstr ""
 "Illustratsioonid: A. Kornõšenkov, A. Ivanenko<br/>Kodulehe arendamine: V. "
 "Litvinkov, D. Pljushko"
 
-#: index.php:576
+#: index.php:575
 msgid ""
 "Присоединиться к Братству могут юноши и девушки в возрасте от 14 до 23 лет, "
 "желающие принимать активное участие в жизни сообщества."
@@ -293,17 +302,17 @@ msgstr ""
 "Vennaskonnaga saavad ühineda 14-23-aastased noormehed ja neiud, kes soovivad "
 "ühenduse elust aktiivselt osa võtta."
 
-#: index.php:577
+#: index.php:576
 msgid ""
 "Лицам, не достигшим совершеннолетия необходимо разрешение родителей или "
 "опекунов."
 msgstr "Alaealiste puhul on vajalik vanemate või eestkostjate luba."
 
-#: index.php:577
+#: index.php:576
 msgid "Информация для родителей"
 msgstr "Teave lapsevanematele"
 
-#: index.php:578
+#: index.php:577
 msgid ""
 "Напишите нам о своём желании присоединиться к Братству - для этого "
 "воспользуйтесь формой обратной связи, расположенной справа. Укажите "
@@ -314,23 +323,23 @@ msgstr ""
 "lehekülje paremas servas asuvat tagasiside vormi. Näidake vastaval väljal "
 "ära korrektne e-posti aadress ja sõnumis mobiiltelefoni number."
 
-#: index.php:583
+#: index.php:582
 msgid "Обратная связь"
 msgstr "Tagasiside"
 
-#: index.php:585
+#: index.php:584
 msgid "Текст сообщения"
 msgstr "Sõnumi tekst"
 
-#: index.php:589
+#: index.php:588
 msgid "Верификация"
 msgstr "Verifitseerimine"
 
-#: index.php:593
+#: index.php:592
 msgid "<strong>Ошибка!</strong> Сообщение не удалось отправить."
 msgstr "<strong>Viga!</strong> Sõnum ei ole saadetud."
 
-#: index.php:594
+#: index.php:593
 msgid ""
 "<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение "
 "нескольких дней."
