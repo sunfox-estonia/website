@@ -1,8 +1,8 @@
 <?php
 include 'AuthorizeMeHeader.php';
-$query_par = array('code' => $_GET['code'],'client_id' => '700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com','client_secret' => 'EQJH6eb8yWTltfPVxwVY--yQ','redirect_uri' => 'https://v2.viruviking.club/resources/php/php_oauth/GoogleController.php','grant_type' => 'authorization_code');
+$query_par = array('code' => $_GET['code'],'client_id' => '700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com','client_secret' => 'EQJH6eb8yWTltfPVxwVY--yQ','redirect_uri' => 'https://viruviking.club/resources/php/php_oauth/GoogleController.php','grant_type' => 'authorization_code');
 $query_prep = http_build_query($query_par);
-$contextData = array ( 
+$contextData = array (
     'method' => 'POST',
     'header' => "Connection: close\r\n".
                 "Content-Length: ".strlen($query_prep)."\r\n".
@@ -12,17 +12,17 @@ $result=json_decode(file_get_contents('https://accounts.google.com/o/oauth2/toke
 $user_data=json_decode(file_get_contents('https://www.googleapis.com/oauth2/v1/userinfo?access_token='.$result->{'access_token'}));
 
 //object(stdClass)#2 (10) { 
-//  ["id"]=> string(21) "113695279168289954986" 
-//  ["email"]=> string(19) "riigikogu@gmail.com" 
-//  ["verified_email"]=> bool(true) 
+//  ["id"]=> string(21) "113695279168289954986"
+//  ["email"]=> string(19) "riigikogu@gmail.com"
+//  ["verified_email"]=> bool(true)
 //  ["name"]=> string(16) "Viktor Litvinkov"
-//  ["given_name"]=> string(6) "Viktor" 
-//  ["family_name"]=> string(9) "Litvinkov" 
+//  ["given_name"]=> string(6) "Viktor"
+//  ["family_name"]=> string(9) "Litvinkov"
 //  ["link"]=> string(40) "https://plus.google.com/+ViktorLitvinkov"
-//  ["picture"]=> string(92) "https://lh3.googleusercontent.com/-mHLkzXdU-7g/AAAAAAAAAAI/AAAAAAAAC6s/ary1QFhgfw0/photo.jpg" 
+//  ["picture"]=> string(92) "https://lh3.googleusercontent.com/-mHLkzXdU-7g/AAAAAAAAAAI/AAAAAAAAC6s/ary1QFhgfw0/photo.jpg"
 //  ["gender"]=> string(4) "male"
 //  ["locale"]=> string(2) "ru"
-//} 
+//}
 //
 // Docs: https://developers.google.com/+/web/api/rest/openidconnect/getOpenIdConnect?hl=vi
 

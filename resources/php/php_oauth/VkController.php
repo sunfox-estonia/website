@@ -1,6 +1,6 @@
 <?php
 include 'AuthorizeMeHeader.php';
-$pereq_data=json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=5293223&client_secret=CNa1SLBjPSPDgTJz2ytS&redirect_uri=https://v2.viruviking.club/resources/php/php_oauth/VkController.php&code=' . $_GET['code']),TRUE);
+$pereq_data=json_decode(file_get_contents('https://oauth.vk.com/access_token?client_id=5293223&client_secret=CNa1SLBjPSPDgTJz2ytS&redirect_uri=https://viruviking.club/resources/php/php_oauth/VkController.php&code=' . $_GET['code']),TRUE);
 $user_data_prep=json_decode(file_get_contents('https://api.vk.com/method/users.get?user_id=' . $pereq_data['user_id'] . '&fields=bdate,photo_200,domain,sex&v=5.45&access_token=' . $pereq_data['access_token']),TRUE);
 $user_data=$user_data_prep['response'][0];
 
