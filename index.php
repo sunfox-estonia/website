@@ -464,7 +464,6 @@ bind_textdomain_codeset($domain, 'UTF-8');
         <div class="clearfix"></div>
       </div>
     </div>
-
     <!-- Trainings adv + reg block -->
     <div class="container preadv_training"></div>
     <div class="container adv_training">
