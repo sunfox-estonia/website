@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: viruviking.club\n"
-"POT-Creation-Date: 2016-02-23 22:53+0300\n"
-"PO-Revision-Date: 2016-02-23 22:55+0300\n"
+"POT-Creation-Date: 2016-04-04 08:17+0300\n"
+"PO-Revision-Date: 2016-04-04 08:19+0300\n"
 "Last-Translator: Victor Litvinkov <victor.litvinkov@eesti.ee>\n"
 "Language-Team: \n"
 "Language: et_EE\n"
@@ -35,32 +35,33 @@ msgstr ""
 "Ida-Virumaa, Jõhvi, Narva, mõõgavõitluse treeninguid, ajaloolised "
 "rollikostüümid, huviring, vennaskond"
 
-#: index.php:34 index.php:49 index.php:134 index.php:135 index.php:136
+#: index.php:34 index.php:316 index.php:428 index.php:490 index.php:491
+#: index.php:492 index.php:537 index.php:538 index.php:539
 #: resources/php/php_oauth/AuthorizeMeHeader.php:25
 msgid "Викинги Вирумаа"
 msgstr "Virumaa Viikingid"
 
-#: index.php:34 index.php:49
+#: index.php:34 index.php:316 index.php:428
 msgid "Братство ролевиков"
 msgstr "Rollimängijate ja ajaloo"
 
-#: index.php:34 index.php:49
+#: index.php:34 index.php:316 index.php:428
 msgid "и исторических реконструкторов"
 msgstr "rekonstrueerijate vennaskond"
 
-#: index.php:54
+#: index.php:318
 msgid "Контактная информация"
 msgstr "Kontaktandmed"
 
-#: index.php:76
+#: index.php:336
 msgid "Вики-система Братства"
 msgstr "Vennaskonna Viki"
 
-#: index.php:77
+#: index.php:337
 msgid "Электронная почта"
 msgstr "Ametlik e-post"
 
-#: index.php:88
+#: index.php:444
 msgid ""
 "Братство Викингов Вирумаа объединяет молодежь, интересующуюся ролевыми "
 "играми живого действия и исторической реконструкцией."
@@ -68,7 +69,7 @@ msgstr ""
 "Virumaa Viikingite vennaskond ühendab noori, kes huvituvad aktiivsetest "
 "rollimängudest ja ajaloo taaselustamisest."
 
-#: index.php:88
+#: index.php:444
 msgid ""
 "Мы проводим тренировки по историческому фехтованию, изготавливаем "
 "исторические и ролевые костюмы, участвуем в полевых ролевках и организуем "
@@ -77,7 +78,7 @@ msgstr ""
 "Viime läbi ajaloolise mõõgavõitluse treeninguid, teeme ise valmis "
 "ajaloolised rollikostüümid ja korraldame oma mänge."
 
-#: index.php:89
+#: index.php:445
 msgid ""
 "LARP и историческая реконструкция — весьма интересное и достойное хобби. "
 "Вместе участники сообщества изучают историю, тренируются, учатся полезным "
@@ -92,11 +93,11 @@ msgstr ""
 "jääda. Nad kasvatavad endas kindlameelsust, tahet, iseloomu. Neiud õpivad "
 "õmblema ja mängitavale ajaloolisele epohile vastavaid toite valmistama."
 
-#: index.php:91 index.php:100 index.php:163
+#: index.php:447 index.php:456
 msgid "Йомсвикинги"
 msgstr "Jomsviikingid"
 
-#: index.php:92 index.php:101 index.php:164
+#: index.php:448 index.php:457
 msgid ""
 "История и традиции йомсборгских викингов, описанные в легендах, стали "
 "прообразом для Братства Викингов Вирумаа."
@@ -104,7 +105,7 @@ msgstr ""
 "Virumaa Viikingite vennaskonnale on eeskujuks Jomsborgi viikingite "
 "legendides kirjeldatud ajalugu ja traditsioonid."
 
-#: index.php:93 index.php:102 index.php:165
+#: index.php:449 index.php:458
 msgid ""
 "Из-за нехватки информации и отсутствия археологически подтверждёных фактов "
 "история братства йомсвикингов крайне запутана и противоречива. Согласно "
@@ -120,7 +121,7 @@ msgstr ""
 "kindluses. Sealt korraldasid viikingid rüüsteretki Norra, Rootsi, "
 "Inglismaale, Taani ja teistesse riikidesse."
 
-#: index.php:93 index.php:105 index.php:168
+#: index.php:449 index.php:461
 msgid ""
 "Йомсвикинги подчинялись жёстким правилам с целью поддержания строгой военной "
 "дисциплины в общине. Запрещались ссоры и даже грубое обращение друг другу "
@@ -135,7 +136,7 @@ msgstr ""
 "oleva vaenlase eest põgeneda. Kõik trofeed toodi lipu alla ja jagati "
 "vennaskonna liikmete vahel."
 
-#: index.php:94 index.php:106 index.php:169
+#: index.php:450 index.php:462
 msgid ""
 "В 1043 году король Норвегии Магнус I решил положить конец йомсвикингам. Он "
 "разграбил Йомсборг, сравнял крепость с землей и казнил уцелевших воинов "
@@ -145,11 +146,11 @@ msgstr ""
 "rüüstas Jomsborgi, tegi kindluse maatasa ja hukkas vennaskonna ellu jäänud "
 "sõdalased."
 
-#: index.php:117
+#: index.php:473
 msgid "Приходите на тренировки<br>по историческому фехтованию!"
 msgstr ""
 
-#: index.php:117
+#: index.php:473
 msgid ""
 "Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки "
 "использования щита в бою. Историческое фехтование - это незабываемый опыт и "
@@ -157,75 +158,82 @@ msgid ""
 "персонажей из древних преданий и легенд."
 msgstr ""
 
-#: index.php:118
+#: index.php:474 index.php:520
 msgid ""
 "Тренировки проводятся на любительском уровне. Изучение и отработка приёмов "
 "осуществляется на тренировочном снаряжении, приближенном к боевому. "
 "Контактные бои проводятся на гуманизированном оружии."
 msgstr ""
 
-#: index.php:119
+#: index.php:475 index.php:521
 msgid ""
 "В холодное время года мы тренируемся в помещении, один раз в неделю. В "
 "теплое время года занятия проводятся на тренировочном полигоне, два раза в "
 "неделю.\n"
 msgstr ""
 
-#: index.php:121
+#: index.php:477 index.php:523
 msgid ""
 "Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных "
 "тренировках."
 msgstr ""
 
-#: index.php:126
+#: index.php:482 index.php:529
 msgid "Регистрация на пробную тренировку"
 msgstr ""
 
-#: index.php:127
+#: index.php:483 index.php:530
 msgid "Необходимо указать реальное имя, фамилию, возраст и адрес эл. почты."
 msgstr ""
 
-#: index.php:128
+#: index.php:484
 msgid ""
 "Подробная информация о месте проведения тренировки и материалы для "
 "ознакомления будут высланы Вам по электронной почте."
 msgstr ""
 
-#: index.php:131
+#: index.php:487 index.php:534
 msgid "Представьтесь, пожалуйста"
 msgstr ""
 
-#: index.php:143 resources/php/php_oauth/AuthorizeMe.php:6
+#: index.php:499 index.php:546 resources/php/php_oauth/AuthorizeMe.php:6
 msgid "Имя, фамилия"
 msgstr "Ees -ja perekonnanimi"
 
-#: index.php:144 index.php:193 resources/php/php_oauth/AuthorizeMe.php:9
+#: index.php:500 index.php:547 index.php:584
+#: resources/php/php_oauth/AuthorizeMe.php:9
 msgid "Электропочта"
 msgstr "E-post"
 
-#: index.php:148
+#: index.php:504 index.php:551
 msgid "Выберите подходящую тренировку"
 msgstr ""
 
-#: index.php:149
+#: index.php:505 index.php:552
 msgid "Место проведения, дата, время:"
 msgstr ""
 
-#: index.php:154 index.php:201
+#: index.php:510 index.php:557 index.php:592
 msgid "Отправить"
 msgstr "Saada"
 
-#: index.php:155
+#: index.php:511 index.php:558
 msgid "<strong>Ошибка!</strong> Отправить заявку не удалось."
 msgstr "<strong>Viga!</strong>"
 
-#: index.php:156
+#: index.php:512 index.php:559
 msgid ""
 "<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких "
 "дней."
 msgstr ""
 
-#: index.php:179
+#: index.php:524 index.php:531
+msgid ""
+"Подробная информация о месте проведения тренировки и материалы для "
+"ознакомления будут высланы Вам по электронной почте после регистрации."
+msgstr ""
+
+#: index.php:570
 msgid ""
 "Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. "
 "Ниже указаны контактные данные координаторов сообщества."
@@ -233,27 +241,27 @@ msgstr ""
 "Kui teil on lisaküsimusi või -soove, võtke meiega ühendust. Allpool on "
 "toodud ühenduse koordinaatorite kontaktandmed. "
 
-#: index.php:180
+#: index.php:571
 msgid "Виктор Литвинков"
 msgstr "Viktor Litvinkov"
 
-#: index.php:180
+#: index.php:571
 msgid "Орг. вопросы сообщества в Йыхви"
 msgstr "Org. küsimused Jõhvi ühenduses"
 
-#: index.php:181
+#: index.php:572
 msgid "Антон Корнышенков"
 msgstr "Anton Kornõšenkov"
 
-#: index.php:181
+#: index.php:572
 msgid "LARP, тренировки в Йыхви"
 msgstr "LARP, treeningud Jõhvis"
 
-#: index.php:182
+#: index.php:573
 msgid "&copy; Братство &laquo;Викинги Вирумаа&raquo;, 2015 год"
 msgstr "&copy; &laquo;Virumaa Viikingite&raquo; vennaskond, 2015 a."
 
-#: index.php:182
+#: index.php:573
 msgid ""
 "Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, "
 "Д. Плюшко."
@@ -261,7 +269,7 @@ msgstr ""
 "Illustratsioonid: A. Kornõšenkov, A. Ivanenko<br/>Kodulehe arendamine: V. "
 "Litvinkov, D. Pljushko"
 
-#: index.php:185
+#: index.php:576
 msgid ""
 "Присоединиться к Братству могут юноши и девушки в возрасте от 14 до 23 лет, "
 "желающие принимать активное участие в жизни сообщества."
@@ -269,17 +277,17 @@ msgstr ""
 "Vennaskonnaga saavad ühineda 14-23-aastased noormehed ja neiud, kes soovivad "
 "ühenduse elust aktiivselt osa võtta."
 
-#: index.php:186
+#: index.php:577
 msgid ""
 "Лицам, не достигшим совершеннолетия необходимо разрешение родителей или "
 "опекунов."
 msgstr "Alaealiste puhul on vajalik vanemate või eestkostjate luba."
 
-#: index.php:186
+#: index.php:577
 msgid "Информация для родителей"
 msgstr "Teave lapsevanematele"
 
-#: index.php:187
+#: index.php:578
 msgid ""
 "Напишите нам о своём желании присоединиться к Братству - для этого "
 "воспользуйтесь формой обратной связи, расположенной справа. Укажите "
@@ -290,23 +298,23 @@ msgstr ""
 "lehekülje paremas servas asuvat tagasiside vormi. Näidake vastaval väljal "
 "ära korrektne e-posti aadress ja sõnumis mobiiltelefoni number."
 
-#: index.php:192
+#: index.php:583
 msgid "Обратная связь"
 msgstr "Tagasiside"
 
-#: index.php:194
+#: index.php:585
 msgid "Текст сообщения"
 msgstr "Sõnumi tekst"
 
-#: index.php:198
+#: index.php:589
 msgid "Верификация"
 msgstr "Verifitseerimine"
 
-#: index.php:202
+#: index.php:593
 msgid "<strong>Ошибка!</strong> Сообщение не удалось отправить."
 msgstr "<strong>Viga!</strong> Sõnum ei ole saadetud."
 
-#: index.php:203
+#: index.php:594
 msgid ""
 "<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение "
 "нескольких дней."
