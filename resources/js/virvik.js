@@ -47,7 +47,7 @@ Homepage Contact Form AJAX processing
 */
 $("form[name=FormContactUs]>button[type=submit]").click(function(){
   $("form[name=FormContactUs]>button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="Загрузка..." />').blur();
-  
+
   var value_mail = $("form[name=FormContactUs] input[name=contact_mail]").val();
   var value_message = $("form[name=FormContactUs] textarea[name=contact_message]").val();
   var value_response_captcha = $("form[name=FormContactUs] textarea[name=g-recaptcha-response]").val();
@@ -83,8 +83,9 @@ $("form[name=FormContactUs]>button[type=submit]").click(function(){
 Homepage Trainings Register Form AJAX processing
 */
 $("form[name='FormEventRegister']>button[type='submit']").click(function(){
-  $("form[name='FormEventRegister']>button[type='submit']").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="Загрузка..." />').blur();  
-  var training_datetime = $("form[name=FormEventRegister] select[name=client_training_datetime]").val();
+  $("form[name='FormEventRegister']>button[type='submit']").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="Загрузка..." />').blur();
+  var training_datetime = $(element).closest("form[name=FormEventRegister] select[name=client_training_datetime]").val();
+  alert(training_datetime);
   var dataString = 'client_training_datetime='+ training_datetime;
   $.ajax({
     type: "POST",
@@ -92,14 +93,14 @@ $("form[name='FormEventRegister']>button[type='submit']").click(function(){
     data: dataString,
     cache: false,
     success: function(response){
-      $("form[name=FormEventRegister]>button[type=submit]").hide();
+      $(element).closest("form[name=FormEventRegister]>button[type=submit]").hide();
       switch(response){
       case 'true':
-        $("form[name=FormEventRegister]>div#FormEventRegisterMessageOk").fadeIn('slow');
+        $(element).closest("form[name=FormEventRegister]>div#FormEventRegisterMessageOk").fadeIn('slow');
         $.removeCookie('UserDataTransfer');
       break;
       case 'false':
-        $("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
+        $(element).closest("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
         $.removeCookie('UserDataTransfer');
       break;
       default:
@@ -108,8 +109,8 @@ $("form[name='FormEventRegister']>button[type='submit']").click(function(){
       }
     },
     error:function(){
-      $("form[name=FormEventRegister]>button[type=submit]").hide();
-      $("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
+      $(element).closest("form[name=FormEventRegister]>button[type=submit]").hide();
+      $(element).closest("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
       $.removeCookie('UserDataTransfer');
     }
   });
