@@ -79,7 +79,6 @@ form div#FormEventRegister_ModalAnswer{display: none;}
 	body{font-size:13px; line-height: 18px;}
 	main div.intro{background: url(../img/intro/750/intro_full_750.png) no-repeat top center;height:373px;}
 	div!>form[name="FormContactUs"]{padding-top:0;}
-	.adv_training_image{}
 	.adv_training_title{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: 360px -20px, 360px -20px; background-repeat:no-repeat, repeat; overflow: hidden; color:#fff;text-shadow: 1px 1px 1px #16320C}
 	.adv_training_title h1,.adv_training_title h2{color:#fff;}
 	.adv_training_main{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29; color: #fff; text-shadow: 1px 1px 1px #2E2A1E; color:#C9B999;}
@@ -92,7 +91,6 @@ form div#FormEventRegister_ModalAnswer{display: none;}
 @media (min-width: 992px) {
 	body{font-size:13px; line-height: 18px;}
 	main div.intro{background: url(../img/intro/970/intro_full_970.png) no-repeat top center;height:450px; overflow: hidden;}
-	.adv_training_image{}
 	.adv_training_title{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: 470px -65px, 470px -65px; background-repeat:no-repeat, repeat; overflow: hidden; color:#fff;text-shadow: 1px 1px 1px #16320C}
 	.adv_training_title h1,.adv_training_title h2{color:#fff;}
 	.adv_training_main{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29; color: #fff; text-shadow: 1px 1px 1px #2E2A1E; color:#C9B999;}
@@ -109,8 +107,6 @@ form div#FormEventRegister_ModalAnswer{display: none;}
 	main div.intro div#intro_sechill{background: url(../img/intro/1170/intro_sechill_1170.png) 0px 0px no-repeat;height:582px;}
 	main div.intro div#intro_firsthill{background: url(../img/intro/1170/intro_firsthill_1170.png) 0px 30px no-repeat;height:582px;}
 	main div.intro div#intro_flag{background: url(../img/intro/1170/intro_flag_1170.png) 0px 10px no-repeat;height:582px;}
-	.adv_training_image{}
-	.adv_training_title{}
 	.adv_training_main{background-image: url(../img/adv_trainings/shield_bg.png), url(../img/adv_trainings/grass_bg.png); background-position: 750px center, 750px center; background-repeat:no-repeat, repeat; height:565px; overflow: hidden;color:#fff;text-shadow: 1px 1px 1px #16320C}
 	.adv_training_main>.row{background:none;border-bottom:none;}
 	.adv_training_main h1,.adv_training_main h2{color:#fff;}
