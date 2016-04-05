@@ -465,21 +465,25 @@ bind_textdomain_codeset($domain, 'UTF-8');
       </div>
     </div>
     <!-- Trainings adv + reg block -->
-    <div class="container preadv_training"></div>
-    <div class="container adv_training">
+    <div class="container adv_training_image visible-xs"><div class="row">
+      <div class="col-xs-12"></div></div></div>
+    <div class="container adv_training_title visible-md visible-sm"><div class="row">
+      <div class="col-sm-6 col-md-6"><h1><?=(_("Приходите на тренировки<br>по историческому фехтованию!"));?></h1><h2 style="margin-bottom:25px;"><?=(_("Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки использования щита в бою. Историческое фехтование - это незабываемый опыт и активный отдых в компании интересных людей. Каждый бой - словно встреча персонажей из древних преданий и легенд."));?></h2></div></div></div>
+    <div class="container adv_training_main">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-            <h1><?=(_("Приходите на тренировки<br>по историческому фехтованию!"));?></h1><h2 style="margin-bottom:25px;"><?=(_("Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки использования щита в бою. Историческое фехтование - это незабываемый опыт и активный отдых в компании интересных людей. Каждый бой - словно встреча персонажей из древних преданий и легенд."));?></h2>
-            <p class="visible-lg"><?=(_("Тренировки проводятся на любительском уровне. Изучение и отработка приёмов осуществляется на тренировочном снаряжении, приближенном к боевому. Контактные бои проводятся на гуманизированном оружии."));?></p>
-            <p class="visible-lg"><?=(_("В холодное время года мы тренируемся в помещении, один раз в неделю. В теплое время года занятия проводятся на тренировочном полигоне, два раза в неделю."));?></p>
-            <p class="visible-lg"><?=(_("Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных тренировках."));?></p>
+            <h1 class="visible-lg visible-xs"><?=(_("Приходите на тренировки<br>по историческому фехтованию!"));?></h1><h2 style="margin-bottom:25px;" class="visible-lg visible-xs"><?=(_("Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки использования щита в бою. Историческое фехтование - это незабываемый опыт и активный отдых в компании интересных людей. Каждый бой - словно встреча персонажей из древних преданий и легенд."));?></h2>
+            <p class="hidden-xs"><?=(_("Тренировки проводятся на любительском уровне. Изучение и отработка приёмов осуществляется на тренировочном снаряжении, приближенном к боевому. Контактные бои проводятся на гуманизированном оружии."));?></p>
+            <p class="hidden-xs"><?=(_("В холодное время года мы тренируемся в помещении, один раз в неделю. В теплое время года занятия проводятся на тренировочном полигоне, два раза в неделю."));?></p>
+            <p class="hidden-xs"><?=(_("Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных тренировках."));?></p>
+            <p class="hidden-lg hidden-xs"><?=(_("Подробная информация о месте проведения тренировки и материалы для ознакомления будут высланы Вам по электронной почте после регистрации."));?></p>
         </div>
-        <div class="col-lg-4 visible-lg">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
             <form action="" method="POST" name="FormEventRegister">
             <fieldset>
              <legend><?=(_("Регистрация на пробную тренировку"));?></legend>
              <p><?=(_("Необходимо указать реальное имя, фамилию, возраст и адрес эл. почты."));?></p>
-             <p><?=(_("Подробная информация о месте проведения тренировки и материалы для ознакомления будут высланы Вам по электронной почте."));?></p>
+             <p class="visible-xs visible-lg"><?=(_("Подробная информация о месте проведения тренировки и материалы для ознакомления будут высланы Вам по электронной почте."));?></p>
            </fieldset>
            <fieldset>
             <legend><?=(_("Представьтесь, пожалуйста"));?></legend>
@@ -509,56 +513,9 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <div class="alert alert-danger" role="alert" id="FormEventRegisterMessageErr"><?=(_("<strong>Ошибка!</strong> Отправить заявку не удалось."));?></div>
             <div class="alert alert-success" role="alert" id="FormEventRegisterMessageOk"><?=(_("<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
             </form>
+          </div>
         </div>
-    </div>
-</div>
-<div class="container subadv_training visible-xs visible-sm visible-md">
-    <div class="row">
-        <div class="col-sm-6 col-md-6 visible-sm visible-md">
-            <p><?=(_("Тренировки проводятся на любительском уровне. Изучение и отработка приёмов осуществляется на тренировочном снаряжении, приближенном к боевому. Контактные бои проводятся на гуманизированном оружии."));?></p>
-            <p><?=(_("В холодное время года мы тренируемся в помещении, один раз в неделю. В теплое время года занятия проводятся на тренировочном полигоне, два раза в неделю."));?></p>
-            <p><?=(_("Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных тренировках."));?></p>
-            <p><?=(_("Подробная информация о месте проведения тренировки и материалы для ознакомления будут высланы Вам по электронной почте после регистрации."));?></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <form action="" method="POST" name="FormEventRegister">
-            <fieldset>
-             <legend><?=(_("Регистрация на пробную тренировку"));?></legend>
-             <p><?=(_("Необходимо указать реальное имя, фамилию, возраст и адрес эл. почты."));?></p>
-             <p class="visible-xs"><?=(_("Подробная информация о месте проведения тренировки и материалы для ознакомления будут высланы Вам по электронной почте после регистрации."));?></p>
-           </fieldset>
-           <fieldset>
-            <legend><?=(_("Представьтесь, пожалуйста"));?></legend>
-            <?php if(!isset($_COOKIE['UserDataTransfer'])){?>
-            <p id="FormEventRegister_ModalRequest">
-                <a class="btn btn-sm btn-social btn-vk" onclick="PopupCenter('http://oauth.vk.com/authorize?client_id=5293223&redirect_uri=https://viruviking.club/resources/php/php_oauth/VkController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-vk"></span>vk.com</a>
-                <a class="btn btn-sm btn-social btn-google" onclick="PopupCenter('https://accounts.google.com/o/oauth2/auth?redirect_uri=https://viruviking.club/resources/php/php_oauth/GoogleController.php&response_type=code&client_id=700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile', '<?=(_("Викинги Вирумаа"));?>', 500, 650)"><span class="fa fa-google"></span>Google+</a><br/>
-                <a class="btn btn-sm btn-social btn-facebook" onclick="PopupCenter('https://www.facebook.com/dialog/oauth?client_id=1704584893161917&redirect_uri=https://viruviking.club/resources/php/php_oauth/FacebookController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-facebook"></span>facebook.com</a>
-            </p>
-            <?php
-            }
-            $UserData=(isset($_COOKIE['UserDataTransfer']) ? json_decode($_COOKIE['UserDataTransfer'], TRUE) : null );
-            ?>
-            <div id="FormEventRegister_ModalAnswer" style="<?=(isset($_COOKIE['UserDataTransfer']) ? 'display:block;' : null );?>" >
-                <label for="client_fullname"><?=(_("Имя, фамилия"));?></label><input class="input-large" type="text" name="client_fullname" value="<?=$UserData[0]['value'];?>" disabled>
-                <label for="client_email"><?=(_("Электропочта"));?></label><input class="input-large" type="email" name="client_email" value="<?=$UserData[2]['value'];?>" disabled>
-            </div>
-           </fieldset>
-           <fieldset>
-            <legend><?=(_("Выберите подходящую тренировку"));?></legend>
-            <label for="client_training_datetime"><?=(_("Место проведения, дата, время:"));?></label>
-            <?php
-            include './resources/php/php_yacal/yacal_parser.php';
-            ?>
-           </fieldset>
-            <button type="submit" class="btn-large" <?=(!isset($_COOKIE['UserDataTransfer']) ? 'disabled' : '');?>><?=(_("Отправить"));?></button>
-            <div class="alert alert-danger" role="alert" id="FormEventRegisterMessageErr"><?=(_("<strong>Ошибка!</strong> Отправить заявку не удалось."));?></div>
-            <div class="alert alert-success" role="alert" id="FormEventRegisterMessageOk"><?=(_("<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
-            </form>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
+      </div>
 </main>
 <footer>
     <div class="container"><a name="BlockContactUs"></a>

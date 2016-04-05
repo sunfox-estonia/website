@@ -84,8 +84,7 @@ Homepage Trainings Register Form AJAX processing
 */
 $("form[name='FormEventRegister']>button[type='submit']").click(function(){
   $("form[name='FormEventRegister']>button[type='submit']").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="Загрузка..." />').blur();
-  var training_datetime = $(element).closest("form[name=FormEventRegister] select[name=client_training_datetime]").val();
-  alert(training_datetime);
+  var training_datetime = $("form[name=FormEventRegister] select[name=client_training_datetime]").val();
   var dataString = 'client_training_datetime='+ training_datetime;
   $.ajax({
     type: "POST",
@@ -93,14 +92,14 @@ $("form[name='FormEventRegister']>button[type='submit']").click(function(){
     data: dataString,
     cache: false,
     success: function(response){
-      $(element).closest("form[name=FormEventRegister]>button[type=submit]").hide();
+      $("form[name=FormEventRegister]>button[type=submit]").hide();
       switch(response){
       case 'true':
-        $(element).closest("form[name=FormEventRegister]>div#FormEventRegisterMessageOk").fadeIn('slow');
+        $("form[name=FormEventRegister]>div#FormEventRegisterMessageOk").fadeIn('slow');
         $.removeCookie('UserDataTransfer');
       break;
       case 'false':
-        $(element).closest("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
+        $("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
         $.removeCookie('UserDataTransfer');
       break;
       default:
@@ -109,8 +108,8 @@ $("form[name='FormEventRegister']>button[type='submit']").click(function(){
       }
     },
     error:function(){
-      $(element).closest("form[name=FormEventRegister]>button[type=submit]").hide();
-      $(element).closest("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
+      $("form[name=FormEventRegister]>button[type=submit]").hide();
+      $("form[name=FormEventRegister]>div#FormEventRegisterMessageErr").fadeIn('slow');
       $.removeCookie('UserDataTransfer');
     }
   });
