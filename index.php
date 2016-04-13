@@ -547,7 +547,6 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <div class="alert alert-danger" role="alert" id="FormContactUsMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
             <div class="alert alert-success" role="alert" id="FormContactUsMessageOk"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
            </form>
-           <img src="http://stat.sunfox.me/piwik.php?idsite=2&rec=1" style="border:0" alt="" />
          </div>
       </div>
     </div>
@@ -577,4 +576,19 @@ $('document').ready(function() {
 });
 <?php } ?>
 </script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stat.sunfox.me/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 2]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stat.sunfox.me/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 </html>
