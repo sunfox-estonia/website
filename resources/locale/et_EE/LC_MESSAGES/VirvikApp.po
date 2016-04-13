@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VirvikApp\n"
 "POT-Creation-Date: 2016-04-13 22:25+0300\n"
-"PO-Revision-Date: 2016-04-13 22:25+0300\n"
+"PO-Revision-Date: 2016-04-13 22:29+0300\n"
 "Last-Translator: \n"
 "Language-Team: MFU Virumaa Viikingid <info@viruviking.club>\n"
 "Language: Estonian\n"
@@ -168,7 +168,6 @@ msgstr " Tulge ajaloolise<br>mõõgavõitluse treeningutele!"
 
 #: /home/victor/Documents/Dev/v1.viruviking.club/index.php:471
 #: /home/victor/Documents/Dev/v1.viruviking.club/index.php:475
-#, fuzzy
 msgid ""
 "Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки "
 "использования щита в бою. Историческое фехтование — это незабываемый опыт и "
