@@ -43,7 +43,6 @@ bind_textdomain_codeset($domain, 'UTF-8');
 </head>
 <body>
 <header>
-    <img src="http://stat.sunfox.me/piwik.php?idsite=2&rec=1" style="border:0" alt="" />
     <div class="container">
       <nav><div class="row">
         <div class="col-sm-1 visible-sm">
@@ -548,6 +547,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <div class="alert alert-danger" role="alert" id="FormContactUsMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
             <div class="alert alert-success" role="alert" id="FormContactUsMessageOk"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
            </form>
+           <img src="http://stat.sunfox.me/piwik.php?idsite=2&rec=1" style="border:0" alt="" />
          </div>
       </div>
     </div>
