@@ -465,7 +465,8 @@ bind_textdomain_codeset($domain, 'UTF-8');
       </div>
     </div>
     <!-- Trainings adv + reg block -->
-    <div class="container adv_training_image visible-xs"><a name="BlockProovi"></a><div class="row">
+    <a name="BlockProovi"></a>
+    <div class="container adv_training_image visible-xs"><div class="row">
       <div class="col-xs-12"></div></div></div>
     <div class="container adv_training_title visible-md visible-sm"><div class="row">
       <div class="col-sm-6 col-md-6"><h1><?=(_("Приходите на тренировки<br>по историческому фехтованию!"));?></h1><h2 style="margin-bottom:25px;"><?=(_("Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки использования щита в бою. Историческое фехтование — это незабываемый опыт и активный отдых в компании интересных людей. Каждый бой — словно встреча персонажей из древних преданий и легенд."));?></h2></div></div></div>
