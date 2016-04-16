@@ -34,7 +34,7 @@ footer p.imprint{font-style: italic; color: #666;}
 
 form{background:rgba(67,89,67,0.25); color: #607F60; border-radius:3px; padding: 0 10px 10px; margin: 9px 0px 18px;}
 form>fieldset>legend{margin-top:0px; margin-bottom:0px;color:#8FBF8F;line-height:35px;border-bottom:dotted 1px #8FBF8F;line-height:30px;font-size:17px; font-family:Mezzo Regular;}
-form>fieldset:first-child>legend{border-bottom:solid 1px #8FBF8F;font-size:18px; line-height: 30px; margin-top:10px;margin-bottom:5px;}
+form>fieldset:first-child>legend{border-bottom:solid 1px #8FBF8F;font-size:18px; line-height: 30px; padding-top:10px;margin-bottom:5px;}
 form label {color:#86B286;}
 form label, form>fieldset .g-recaptcha {margin-top:10px;margin-bottom:5px!important;}
 form>fieldset{margin-bottom:10px;}
