@@ -39,7 +39,8 @@ bind_textdomain_codeset($domain, 'UTF-8');
 <link href="/resources/css/forms.css" rel="stylesheet">
 <link href="/resources/css/virvik.css" rel="stylesheet">
 <link href="/resources/css/bootstrap-social.css" rel="stylesheet">
-<script src='https://www.google.com/recaptcha/api.js?hl=<?=$_SESSION['native'];?>'></script>
+<link href="/resources/css/freyfaxi.css" rel="stylesheet">
+<script src='<?=$_SESSION['native'];?>'></script>
 </head>
 <body>
 <header>
@@ -436,6 +437,23 @@ bind_textdomain_codeset($domain, 'UTF-8');
     </div>
 </header>
 <main>
+    <!-- Freyfaxi block -->
+    <? if (isset($_GET['test']) && $_SESSION['native']=="ru") { ?>
+    <div class="freyfaxi">
+      <div class="freyfaxi_video"><video autoplay="autoplay" poster="resources/img/freyfaxi/bg_1170.png" id="freyfaxi_video"><source src="resources\img\freyfaxi\ff_background.mp4" type="video/mp4"></video></div>
+      <div class="container">
+      <div class="row"><div class="col-md-6 col-lg-6">
+        <h1>Freyfaxi<small>Викинги Вирумаа собирают друзей</small></h1>
+        <h2>24 июля в 12:00&nbsp;&nbsp;<span class="glyphicon glyphicon-grain"></span>&nbsp;&nbsp;поселок Таммику, Йыхви</h2>
+      </div>
+      <div class="col-md-6 col-lg-6">
+        <h3>Дополнительная информация и регистрация участников:</h3>
+        <p><a class="btn btn-sm btn-social btn-vk"><span class="fa fa-vk"></span>vk.com</a>
+        <a class="btn btn-sm btn-social btn-facebook"><span class="fa fa-facebook"></span>facebook.com</a></p>
+      </div></div>
+    </div></div>
+    <? } ?>
+    <!-- / Freyfaxi block -->
     <!-- Intro block -->
     <div class="container preintro"></div>
     <div class="container intro">
@@ -553,7 +571,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
     </div>
 </footer>
 </body>
-<script src='/resources/js/jquery.min.js'></script><script src='/resources/js/jquery.cookies.js'></script><script src='/resources/js/virvik.js'></script><script type="text/javascript">
+<script src='/resources/js/jquery.min.js'></script><script src='/resources/js/jquery.cookies.js'></script><script src='/resources/js/virvik.js'></script><script src='/resources/js/freyfaxi.js'></script><script type="text/javascript">
 $(window).scroll(function () {
   intro_parallax();
 });
