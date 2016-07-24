@@ -1,7 +1,7 @@
 <?php
 /* Recaptcha settings */
 require ($_SERVER['DOCUMENT_ROOT'] . "/resources/php/php_plg_recaptcha/recaptchalib.php");
-// $publickey = "6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz";
+//$publickey = "6Ldj3_8SAAAAAMe37hbwbhvsn3DJMGZjTAT5Ihtz";
 $err = null;
 /* Site translation */
 session_start();
@@ -32,15 +32,8 @@ bind_textdomain_codeset($domain, 'UTF-8');
   <meta name="robots" content="all"/>
   <meta name="robots" content="noarchive"/>
   <title><?=(_("Викинги Вирумаа"));?> &ndash; <?=(_("Братство ролевиков"));?> <?=(_("и исторических реконструкторов"));?></title>
-<link href="/resources/css/normalize.css" rel="stylesheet">
-<link href="/resources/css/adaptive.css" rel="stylesheet">
-<link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet">
-<link href="/resources/css/alerts.css" rel="stylesheet">
-<link href="/resources/css/forms.css" rel="stylesheet">
-<link href="/resources/css/virvik.css" rel="stylesheet">
-<link href="/resources/css/bootstrap-social.css" rel="stylesheet">
-<link href="/resources/css/freyfaxi.css" rel="stylesheet">
-<script src='<?=$_SESSION['native'];?>'></script>
+<link href="/resources/css/normalize.css" rel="stylesheet"><link href="/resources/css/adaptive.css" rel="stylesheet"><link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet"><link href="/resources/css/alerts.css" rel="stylesheet"><link href="/resources/css/forms.css" rel="stylesheet"><link href="/resources/css/virvik.css" rel="stylesheet"><link href="/resources/css/bootstrap-social.css" rel="stylesheet"><link href="/resources/css/freyfaxi.css" rel="stylesheet">
+<script src='https://www.google.com/recaptcha/api.js?hl=<?=$_SESSION['native'];?>'></script>
 </head>
 <body>
 <header>
@@ -437,23 +430,6 @@ bind_textdomain_codeset($domain, 'UTF-8');
     </div>
 </header>
 <main>
-    <!-- Freyfaxi block -->
-    <? if (isset($_GET['test']) && $_SESSION['native']=="ru") { ?>
-    <div class="freyfaxi">
-      <div class="freyfaxi_video"><video autoplay="autoplay" poster="resources/img/freyfaxi/bg_1170.png" id="freyfaxi_video"><source src="resources\img\freyfaxi\ff_background.mp4" type="video/mp4"></video></div>
-      <div class="container">
-      <div class="row"><div class="col-md-6 col-lg-6">
-        <h1>Freyfaxi<small>Викинги Вирумаа собирают друзей</small></h1>
-        <h2>24 июля в 12:00&nbsp;&nbsp;<span class="glyphicon glyphicon-grain"></span>&nbsp;&nbsp;поселок Таммику, Йыхви</h2>
-      </div>
-      <div class="col-md-6 col-lg-6">
-        <h3>Дополнительная информация и регистрация участников:</h3>
-        <p><a class="btn btn-sm btn-social btn-vk"><span class="fa fa-vk"></span>vk.com</a>
-        <a class="btn btn-sm btn-social btn-facebook"><span class="fa fa-facebook"></span>facebook.com</a></p>
-      </div></div>
-    </div></div>
-    <? } ?>
-    <!-- / Freyfaxi block -->
     <!-- Intro block -->
     <div class="container preintro"></div>
     <div class="container intro">
@@ -571,7 +547,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
     </div>
 </footer>
 </body>
-<script src='/resources/js/jquery.min.js'></script><script src='/resources/js/jquery.cookies.js'></script><script src='/resources/js/virvik.js'></script><script src='/resources/js/freyfaxi.js'></script><script type="text/javascript">
+<script src='/resources/js/jquery.min.js'></script><script src='/resources/js/jquery.cookies.js'></script><script src='/resources/js/virvik.js'></script><script type="text/javascript">
 $(window).scroll(function () {
   intro_parallax();
 });
@@ -594,17 +570,14 @@ $('document').ready(function() {
     }, 2000);
 });
 <?php } ?>
-</script>
-<script>
 <!-- GA -->
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-}
-)(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-73697141-1', 'auto');
 ga('send', 'pageview');
 <!-- VK Retarget -->
 (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=NxB5kgUCB/xgZMbKSIZfl46O/pj*zjsMuYzA7A6fO6VD59exj369Q2KYVXlPtocPByQxzMUdRcNDrBvBZn3OdkDW*IrtJEhI80Lhl6iX/YYfm5ifu1FV9tN5D0LRRwphmvPEFwf8SIKHBomMo3yOEdLF4zvt2h5d9ivib*RnILI-';
-</script>
+</script><script src='/resources/js/freyfaxi.js'></script>
 </html>
