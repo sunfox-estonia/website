@@ -504,7 +504,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
             include './resources/php/php_yacal/yacal_parser.php';
             ?>
            </fieldset>
-            <button type="submit" class="btn-large" <?=(!isset($_COOKIE['UserDataTransfer']) ? 'disabled' : '');?>><?=(_("Отправить"));?></button>
+            <button type="submit" class="btn-large <?=(!isset($_COOKIE['UserDataTransfer']) ? 'disabled' : '');?>" <?=(!isset($_COOKIE['UserDataTransfer']) ? 'disabled' : '');?>><?=(_("Отправить"));?></button>
             <div class="alert alert-danger" role="alert" id="FormEventRegisterMessageErr"><?=(_("<strong>Ошибка!</strong> Отправить заявку не удалось."));?></div>
             <div class="alert alert-success" role="alert" id="FormEventRegisterMessageOk"><?=(_("<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
             </form>
