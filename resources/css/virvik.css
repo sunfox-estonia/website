@@ -46,7 +46,7 @@ form .help-block {color:#607F60;font-style: italic;font-size:13px; line-height: 
 form textarea+.help-block,form textarea+.help-block,form textarea+.help-block{margin-top: 5px; margin-bottom: 10px;}
 form .alert {display: none; margin-top: 9px;margin-bottom:3px;}
 form button[type="submit"]{border:2px solid #607F60;color:#263326; margin-top:5px;}
-form button[type="submit"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);}
+form button[type="submit"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);background-color:#F2F1F0;}
 form button[type="submit"]:focus{border:2px solid transparent; background:#fff;}
 form button[type="reset"]{border:2px solid #7F7E7E;color:#263326; margin-top:5px;}
 form button[type="reset"]:hover{box-shadow:0 0 7px rgba(38,51,38,1);}

@@ -518,7 +518,6 @@ bind_textdomain_codeset($domain, 'UTF-8');
         <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-0 col-lg-4">
           <p><?=(_("Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. Ниже указаны контактные данные координаторов сообщества."));?></p>
           <p><strong><?=(_("Виктор Литвинков"));?></strong><br/><i><?=(_("Орг. вопросы сообщества в Йыхви"));?></i><br/>+372 55 59 3171<br/><a href="mailto:victor@viruviking.club">victor@viruviking.club</a></p>
-          <p><strong><?=(_("Антон Корнышенков"));?></strong><br/><i><?=(_("LARP, тренировки в Йыхви"));?></i><br/><a href="mailto:anton@viruviking.club">anton@viruviking.club</a></p>
           <p class="imprint hidden-xs"><?=(_("&copy; Братство &laquo;Викинги Вирумаа&raquo;, 2015 год"));?><br><?=(_("Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, Д. Плюшко."));?></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">

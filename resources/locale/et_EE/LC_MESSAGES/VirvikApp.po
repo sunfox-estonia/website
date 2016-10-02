@@ -1,22 +1,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VirvikApp\n"
-"POT-Creation-Date: 2016-04-15 01:04+0300\n"
-"PO-Revision-Date: 2016-04-15 01:04+0300\n"
+"POT-Creation-Date: 2016-10-02 09:02+0300\n"
+"PO-Revision-Date: 2016-10-02 09:02+0300\n"
 "Last-Translator: \n"
 "Language-Team: MFU Virumaa Viikingid <info@viruviking.club>\n"
-"Language: Estonian\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: .\n"
+"X-Poedit-Basepath: ../../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: /home/victor/Documents/Dev/v1.viruviking.club\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:29
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMeHeader.php:20
+#: index.php:29 resources/php/php_oauth/AuthorizeMeHeader.php:20
 msgid ""
 "Братство ролевиков и исторических реконструкторов в Ида-Вирумаа, Эстония. "
 "Тренировки по фехтованию, исторические костюмы, LARP (ролевые игры живого "
@@ -26,8 +25,7 @@ msgstr ""
 "Mõõgavõitluse treeninguid, ajaloolised rollikostüümid, LARP (päris elus "
 "rollimängud)."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:30
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMeHeader.php:21
+#: index.php:30 resources/php/php_oauth/AuthorizeMeHeader.php:21
 msgid ""
 "LARP, ролевые игры, реконструкторы, историческая реконструкция, Ида-Вирумаа, "
 "Йыхви, Нарва, тренировки по фехтованию, исторические костюмы, кружок по "
@@ -37,41 +35,32 @@ msgstr ""
 "Ida-Virumaa, Jõhvi, Narva, mõõgavõitluse treeninguid, ajaloolised "
 "rollikostüümid, huviring, vennaskond"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:34
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:316
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:428
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:492
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:493
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:494
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMeHeader.php:25
+#: index.php:34 index.php:310 index.php:422 index.php:487 index.php:488
+#: index.php:489 resources/php/php_oauth/AuthorizeMeHeader.php:25
 msgid "Викинги Вирумаа"
 msgstr "Virumaa Viikingid"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:34
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:316
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:428
+#: index.php:34 index.php:310 index.php:422
 msgid "Братство ролевиков"
 msgstr "Rollimängijate ja ajaloo"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:34
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:316
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:428
+#: index.php:34 index.php:310 index.php:422
 msgid "и исторических реконструкторов"
 msgstr "rekonstrueerijate vennaskond"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:318
+#: index.php:312
 msgid "Контактная информация"
 msgstr "Kontaktandmed"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:336
+#: index.php:330
 msgid "Вики-система Братства"
 msgstr "Vennaskonna Viki"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:337
+#: index.php:331
 msgid "Электронная почта"
 msgstr "Ametlik e-post"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:444
+#: index.php:438
 msgid ""
 "Братство Викингов Вирумаа объединяет молодежь, интересующуюся ролевыми "
 "играми живого действия и исторической реконструкцией."
@@ -79,7 +68,7 @@ msgstr ""
 "Virumaa Viikingite vennaskond ühendab noori, kes huvituvad aktiivsetest "
 "rollimängudest ja ajaloo taaselustamisest."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:444
+#: index.php:438
 msgid ""
 "Мы проводим тренировки по историческому фехтованию, изготавливаем "
 "исторические и ролевые костюмы, участвуем в полевых ролевках и организуем "
@@ -88,7 +77,7 @@ msgstr ""
 "Viime läbi ajaloolise mõõgavõitluse treeninguid, teeme ise valmis "
 "ajaloolised rollikostüümid ja korraldame oma mänge."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:445
+#: index.php:439
 msgid ""
 "LARP и историческая реконструкция — весьма интересное и достойное хобби. "
 "Вместе участники сообщества изучают историю, тренируются, учатся полезным "
@@ -103,13 +92,11 @@ msgstr ""
 "jääda. Nad kasvatavad endas kindlameelsust, tahet, iseloomu. Neiud õpivad "
 "õmblema ja mängitavale ajaloolisele epohile vastavaid toite valmistama."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:447
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:456
+#: index.php:441 index.php:450
 msgid "Йомсвикинги"
 msgstr "Jomsviikingid"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:448
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:457
+#: index.php:442 index.php:451
 msgid ""
 "История и традиции йомсборгских викингов, описанные в легендах, стали "
 "прообразом для Братства Викингов Вирумаа."
@@ -117,8 +104,7 @@ msgstr ""
 "Virumaa Viikingite vennaskonnale on eeskujuks Jomsborgi viikingite "
 "legendides kirjeldatud ajalugu ja traditsioonid."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:449
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:458
+#: index.php:443 index.php:452
 msgid ""
 "Из-за нехватки информации и отсутствия археологически подтверждёных фактов "
 "история братства йомсвикингов крайне запутана и противоречива. Согласно "
@@ -134,8 +120,7 @@ msgstr ""
 "kindluses. Sealt korraldasid viikingid rüüsteretki Norra, Rootsi, "
 "Inglismaale, Taani ja teistesse riikidesse."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:449
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:461
+#: index.php:443 index.php:455
 msgid ""
 "Йомсвикинги подчинялись жёстким правилам с целью поддержания строгой военной "
 "дисциплины в общине. Запрещались ссоры и даже грубое обращение друг другу "
@@ -150,8 +135,7 @@ msgstr ""
 "oleva vaenlase eest põgeneda. Kõik trofeed toodi lipu alla ja jagati "
 "vennaskonna liikmete vahel."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:450
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:462
+#: index.php:444 index.php:456
 msgid ""
 "В 1043 году король Норвегии Магнус I решил положить конец йомсвикингам. Он "
 "разграбил Йомсборг, сравнял крепость с землей и казнил уцелевших воинов "
@@ -161,13 +145,11 @@ msgstr ""
 "rüüstas Jomsborgi, tegi kindluse maatasa ja hukkas vennaskonna ellu jäänud "
 "sõdalased."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:471
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:475
+#: index.php:466 index.php:470
 msgid "Приходите на тренировки<br>по историческому фехтованию!"
 msgstr " Tulge ajaloolise<br>mõõgavõitluse treeningutele!"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:471
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:475
+#: index.php:466 index.php:470
 msgid ""
 "Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки "
 "использования щита в бою. Историческое фехтование — это незабываемый опыт и "
@@ -179,7 +161,7 @@ msgstr ""
 "huvitavate inimeste seltskonnas. Iga lahing on nagu kohtumine iidsetest "
 "lugudest ja legendidest pärit isikutega."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:476
+#: index.php:471
 msgid ""
 "Тренировки проводятся на любительском уровне. Изучение и отработка приёмов "
 "осуществляется на тренировочном снаряжении, приближенном к боевому. "
@@ -189,7 +171,7 @@ msgstr ""
 "toimuvad treeningvarustusega, mis on lahingvarustusele sarnane. "
 "Kontaktlahingud toimuvad pehmendatud relvadega."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:477
+#: index.php:472
 msgid ""
 "В холодное время года мы тренируемся в помещении, один раз в неделю. В "
 "теплое время года занятия проводятся на тренировочном полигоне, два раза в "
@@ -198,7 +180,7 @@ msgstr ""
 "Külmal aastaajal trennime ruumis üks kord nädalas. Soojemal aastaajal "
 "toimuvad trennid harjutusväljakul kaks korda nädalas."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:478
+#: index.php:473
 msgid ""
 "Занятия бесплатные. Новичкам предоставляются снаряды для участия в пробных "
 "тренировках."
@@ -206,7 +188,7 @@ msgstr ""
 "Tunnid on tasuta. Uustulnukatele pakume varustust proovitreeningutel "
 "osalemiseks."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:479
+#: index.php:474
 msgid ""
 "Подробная информация о месте проведения тренировки и материалы для "
 "ознакомления будут высланы Вам по электронной почте после регистрации."
@@ -214,16 +196,16 @@ msgstr ""
 "Täpne informatsioon treeningu toimumiskoha kohta ning tutvustavad materjalid "
 "saadame Teile e-posti teel."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:484
+#: index.php:479
 msgid "Регистрация на пробную тренировку"
 msgstr "Registreerimine proovitreeningule"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:485
+#: index.php:480
 msgid "Необходимо указать реальное имя, фамилию, возраст и адрес эл. почты."
 msgstr ""
 "Teil tuleb märkida tegelik nimi, perekonnanimi, vanus ja e-posti aadress."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:486
+#: index.php:481
 msgid ""
 "Подробная информация о месте проведения тренировки и материалы для "
 "ознакомления будут высланы Вам по электронной почте."
@@ -231,45 +213,41 @@ msgstr ""
 "Täpne informatsioon treeningu toimumiskoha kohta ning tutvustavad materjalid "
 "saadame Teile e-posti teel."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:489
+#: index.php:484
 msgid "Представьтесь, пожалуйста"
 msgstr "Palun tutvustage ennast"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:501
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:6
+#: index.php:496 resources/php/php_oauth/AuthorizeMe.php:6
 msgid "Имя, фамилия"
 msgstr "Ees- ja perekonnanimi"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:502
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:538
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:9
+#: index.php:497 index.php:532 resources/php/php_oauth/AuthorizeMe.php:9
 msgid "Электропочта"
 msgstr "E-post"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:506
+#: index.php:501
 msgid "Выберите подходящую тренировку"
 msgstr "Valige sobiv treening"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:507
+#: index.php:502
 msgid "Место проведения, дата, время:"
 msgstr "Toimumiskoht, kuupäev ja kellaaeg:"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:512
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:546
+#: index.php:507 index.php:540
 msgid "Отправить"
 msgstr "Saada"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:513
+#: index.php:508
 msgid "<strong>Ошибка!</strong> Отправить заявку не удалось."
 msgstr "<strong>Viga!</strong> Vorm ei ole saadetud!"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:514
+#: index.php:509
 msgid ""
 "<strong>Заявка отправлена!</strong> Мы свяжемся с Вами в течение нескольких "
 "дней."
 msgstr "<strong>Saadetud!</strong> Võtame Teiega ühendust paari päeva jooksul."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:524
+#: index.php:519
 msgid ""
 "Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. "
 "Ниже указаны контактные данные координаторов сообщества."
@@ -277,27 +255,19 @@ msgstr ""
 "Kui teil on lisaküsimusi või -soove, võtke meiega ühendust. Allpool on "
 "toodud ühenduse koordinaatorite kontaktandmed. "
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:525
+#: index.php:520
 msgid "Виктор Литвинков"
 msgstr "Viktor Litvinkov"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:525
+#: index.php:520
 msgid "Орг. вопросы сообщества в Йыхви"
 msgstr "Org. küsimused Jõhvi ühenduses"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:526
-msgid "Антон Корнышенков"
-msgstr "Anton Kornõšenkov"
-
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:526
-msgid "LARP, тренировки в Йыхви"
-msgstr "LARP, treeningud Jõhvis"
-
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:527
+#: index.php:521
 msgid "&copy; Братство &laquo;Викинги Вирумаа&raquo;, 2015 год"
 msgstr "&copy;  &laquo;Virumaa Viikingite&raquo; vennaskond, 2015 a."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:527
+#: index.php:521
 msgid ""
 "Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, "
 "Д. Плюшко."
@@ -305,7 +275,7 @@ msgstr ""
 "Illustratsioonid: A. Kornõšenkov, A. Ivanenko<br/>Kodulehe arendamine: V. "
 "Litvinkov, D. Pljushko"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:530
+#: index.php:524
 msgid ""
 "Присоединиться к Братству могут юноши и девушки в возрасте от 14 до 23 лет, "
 "желающие принимать активное участие в жизни сообщества."
@@ -313,17 +283,17 @@ msgstr ""
 "Vennaskonnaga saavad ühineda 14-23-aastased noormehed ja neiud, kes soovivad "
 "ühenduse elust aktiivselt osa võtta. "
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:531
+#: index.php:525
 msgid ""
 "Лицам, не достигшим совершеннолетия необходимо разрешение родителей или "
 "опекунов."
 msgstr "Alaealiste puhul on vajalik vanemate või eestkostjate luba."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:531
+#: index.php:525
 msgid "Информация для родителей"
 msgstr "Teave lapsevanematele"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:532
+#: index.php:526
 msgid ""
 "Напишите нам о своём желании присоединиться к Братству - для этого "
 "воспользуйтесь формой обратной связи, расположенной справа. Укажите "
@@ -334,23 +304,23 @@ msgstr ""
 "lehekülje paremas servas asuvat tagasiside vormi. Näidake vastaval väljal "
 "ära korrektne e-posti aadress ja sõnumis mobiiltelefoni number."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:537
+#: index.php:531
 msgid "Обратная связь"
 msgstr "Tagasiside"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:539
+#: index.php:533
 msgid "Текст сообщения"
 msgstr "Sõnumi tekst"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:543
+#: index.php:537
 msgid "Верификация"
 msgstr "Verifitseerimine"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:547
+#: index.php:541
 msgid "<strong>Ошибка!</strong> Сообщение не удалось отправить."
 msgstr "<strong>Viga!</strong> Sõnum ei ole saadetud."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/index.php:548
+#: index.php:542
 msgid ""
 "<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение "
 "нескольких дней."
@@ -358,41 +328,41 @@ msgstr ""
 "<strong>Sõnum on saadetud!</strong> Võtame Teiega ühendust paari päeva "
 "jooksul."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:4
+#: resources/php/php_oauth/AuthorizeMe.php:4
 msgid "Идентификация"
 msgstr "Tuvastamine"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:7
+#: resources/php/php_oauth/AuthorizeMe.php:7
 msgid "Возраст"
 msgstr "Vanus"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:8
+#: resources/php/php_oauth/AuthorizeMe.php:8
 msgid ""
 "В мероприятиях сообщества могут принимать участие юноши и девушки в возрасте "
 "от 14 до 23 лет."
 msgstr ""
 "Vennaskonda üritustel saavad osaleda 14-23-aastased noormehed ja neiud."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:10
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:15
+#: resources/php/php_oauth/AuthorizeMe.php:10
+#: resources/php/php_oauth/AuthorizeMe.php:15
 msgid "Номер телефона"
 msgstr "Telefoni number"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:13
+#: resources/php/php_oauth/AuthorizeMe.php:13
 msgid "Контактные данные родителей или опекуна"
 msgstr " Vanemate või eestkostja kontaktandmed"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:14
+#: resources/php/php_oauth/AuthorizeMe.php:14
 msgid "Имя, отчество"
 msgstr "Ees- ja perekonnanimi"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:19
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:22
+#: resources/php/php_oauth/AuthorizeMe.php:19
+#: resources/php/php_oauth/AuthorizeMe.php:22
 msgid "Подтверждаю"
 msgstr "Kinnitan"
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:19
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:21
+#: resources/php/php_oauth/AuthorizeMe.php:19
+#: resources/php/php_oauth/AuthorizeMe.php:21
 msgid ""
 "<strong>Вы не можете зарегистрироваться</strong> на пробную тренировку! "
 "Свяжитесь с кооординаторами сообщества для уточнения данного вопроса."
@@ -400,10 +370,16 @@ msgstr ""
 " <strong>Te ei saa proovitreeningule registreeruda!</strong> Käesoleva "
 "küsimuse lahendamiseks võtke ühendust koordinaatoritega."
 
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:19
-#: /home/victor/Documents/Dev/v1.viruviking.club/resources/php/php_oauth/AuthorizeMe.php:22
+#: resources/php/php_oauth/AuthorizeMe.php:19
+#: resources/php/php_oauth/AuthorizeMe.php:22
 msgid "Закрыть"
 msgstr "Sulge"
+
+#~ msgid "Антон Корнышенков"
+#~ msgstr "Anton Kornõšenkov"
+
+#~ msgid "LARP, тренировки в Йыхви"
+#~ msgstr "LARP, treeningud Jõhvis"
 
 #, fuzzy
 #~ msgid ""
