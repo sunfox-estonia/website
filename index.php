@@ -32,7 +32,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
   <meta name="robots" content="all"/>
   <meta name="robots" content="noarchive"/>
   <title><?=(_("Викинги Вирумаа"));?> &ndash; <?=(_("Братство ролевиков"));?> <?=(_("и исторических реконструкторов"));?></title>
-<link href="/resources/css/normalize.css" rel="stylesheet"><link href="/resources/css/adaptive.css" rel="stylesheet"><link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet"><link href="/resources/css/alerts.css" rel="stylesheet"><link href="/resources/css/forms.css" rel="stylesheet"><link href="/resources/css/virvik.css" rel="stylesheet"><link href="/resources/css/bootstrap-social.css" rel="stylesheet"><link href="/resources/css/freyfaxi.css" rel="stylesheet">
+<link href="/resources/css/normalize.css" rel="stylesheet"><link href="/resources/css/adaptive.css" rel="stylesheet"><link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet"><link href="/resources/css/alerts.css" rel="stylesheet"><link href="/resources/css/forms.css" rel="stylesheet"><link href="/resources/css/virvik.css" rel="stylesheet"><link href="/resources/css/bootstrap-social.css" rel="stylesheet">
 <script src='https://www.google.com/recaptcha/api.js?hl=<?=$_SESSION['native'];?>'></script>
 </head>
 <body>
