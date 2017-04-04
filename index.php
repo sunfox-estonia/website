@@ -521,6 +521,18 @@ bind_textdomain_codeset($domain, 'UTF-8');
           <p class="hidden-lg"><?=(_("Напишите нам о своём желании присоединиться к Братству - для этого воспользуйтесь формой обратной связи, расположенной справа. Укажите корректный адрес эл. почты в соответствующем поле и номер мобильного телефона в сообщении."));?></p>
           <p><?=(_("Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. Ниже указаны контактные данные координаторов сообщества."));?></p>
           <p><strong><?=(_("Виктор Литвинков"));?></strong><br/><i><?=(_("Орг. вопросы сообщества в Йыхви"));?></i><br/>+372 55 59 3171<br/><a href="mailto:victor@viruviking.club">victor@viruviking.club</a></p>
+
+          <p class="hidden-xs"><img src="/resources/img/powered_by_sfx.png" alt="Powered by Sunfox Team."></p>
+
+          <p><strong>MTU Sunfox Team</strong><br/>
+          <?=(_("Рег. номер"));?>: 80415755</p>
+
+          <p>Tamme tn. 17, Tammiku alevik<br/>
+          Jõhvi vald, 41542<br/>
+          Ida-Viru maakond</p>
+
+          <p><a href="http://www.sunfox.ee">www.sunfox.ee</a></p>
+
           <p class="imprint hidden-xs"><?=(_("&copy; Братство &laquo;Викинги Вирумаа&raquo;"));?><br><?=(_("Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, Д. Плюшко."));?></p>
         </div>
         <div class="col-lg-4 hidden-xs hidden-sm hidden-md">
@@ -544,6 +556,9 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <div class="alert alert-danger" role="alert" id="FormContactUsMessageErr"><?=(_("<strong>Ошибка!</strong> Сообщение не удалось отправить."));?></div>
             <div class="alert alert-success" role="alert" id="FormContactUsMessageOk"><?=(_("<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение нескольких дней."));?></div>
            </form>
+         </div>
+         <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+           <p style="display:block;clear:both;text-align:center;"><img src="/resources/img/powered_by_sfx.png" alt="Powered by Sunfox Team."></p>
          </div>
       </div>
     </div>

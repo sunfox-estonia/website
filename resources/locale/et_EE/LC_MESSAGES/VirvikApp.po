@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VirvikApp\n"
-"POT-Creation-Date: 2016-10-05 21:09+0300\n"
-"PO-Revision-Date: 2016-10-05 21:10+0300\n"
+"POT-Creation-Date: 2017-04-05 01:33+0300\n"
+"PO-Revision-Date: 2017-04-05 01:34+0300\n"
 "Last-Translator: \n"
 "Language-Team: MFU Virumaa Viikingid <info@viruviking.club>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.0\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: ../../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -221,7 +221,7 @@ msgstr "Palun tutvustage ennast"
 msgid "Имя, фамилия"
 msgstr "Ees- ja perekonnanimi"
 
-#: index.php:497 index.php:535 resources/php/php_oauth/AuthorizeMe.php:9
+#: index.php:497 index.php:547 resources/php/php_oauth/AuthorizeMe.php:9
 msgid "Электропочта"
 msgstr "E-post"
 
@@ -233,7 +233,7 @@ msgstr "Valige sobiv treening"
 msgid "Место проведения, дата, время:"
 msgstr "Toimumiskoht, kuupäev ja kellaaeg:"
 
-#: index.php:507 index.php:543
+#: index.php:507 index.php:555
 msgid "Отправить"
 msgstr "Saada"
 
@@ -247,7 +247,7 @@ msgid ""
 "дней."
 msgstr "<strong>Saadetud!</strong> Võtame Teiega ühendust paari päeva jooksul."
 
-#: index.php:519 index.php:527
+#: index.php:519 index.php:539
 msgid ""
 "Присоединиться к Братству могут юноши и девушки в возрасте от 14 до 23 лет, "
 "желающие принимать активное участие в жизни сообщества."
@@ -255,17 +255,17 @@ msgstr ""
 "Vennaskonnaga saavad ühineda 14-23-aastased noormehed ja neiud, kes soovivad "
 "ühenduse elust aktiivselt osa võtta. "
 
-#: index.php:520 index.php:528
+#: index.php:520 index.php:540
 msgid ""
 "Лицам, не достигшим совершеннолетия необходимо разрешение родителей или "
 "опекунов."
 msgstr "Alaealiste puhul on vajalik vanemate või eestkostjate luba."
 
-#: index.php:520 index.php:528
+#: index.php:520 index.php:540
 msgid "Информация для родителей"
 msgstr "Teave lapsevanematele"
 
-#: index.php:521 index.php:529
+#: index.php:521 index.php:541
 msgid ""
 "Напишите нам о своём желании присоединиться к Братству - для этого "
 "воспользуйтесь формой обратной связи, расположенной справа. Укажите "
@@ -292,11 +292,15 @@ msgstr "Viktor Litvinkov"
 msgid "Орг. вопросы сообщества в Йыхви"
 msgstr "Org. küsimused Jõhvi ühenduses"
 
-#: index.php:524
+#: index.php:528
+msgid "Рег. номер"
+msgstr "Reg. nr."
+
+#: index.php:536
 msgid "&copy; Братство &laquo;Викинги Вирумаа&raquo;"
 msgstr "&copy;  &laquo;Virumaa Viikingite&raquo; vennaskond"
 
-#: index.php:524
+#: index.php:536
 msgid ""
 "Иллюстрации: А. Корнышенков, А. Иваненко<br/>Разработка сайта: В. Литвинков, "
 "Д. Плюшко."
@@ -304,23 +308,23 @@ msgstr ""
 "Illustratsioonid: A. Kornõšenkov, A. Ivanenko<br/>Kodulehe arendamine: V. "
 "Litvinkov, D. Pljushko"
 
-#: index.php:534
+#: index.php:546
 msgid "Обратная связь"
 msgstr "Tagasiside"
 
-#: index.php:536
+#: index.php:548
 msgid "Текст сообщения"
 msgstr "Sõnumi tekst"
 
-#: index.php:540
+#: index.php:552
 msgid "Верификация"
 msgstr "Verifitseerimine"
 
-#: index.php:544
+#: index.php:556
 msgid "<strong>Ошибка!</strong> Сообщение не удалось отправить."
 msgstr "<strong>Viga!</strong> Sõnum ei ole saadetud."
 
-#: index.php:545
+#: index.php:557
 msgid ""
 "<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение "
 "нескольких дней."
