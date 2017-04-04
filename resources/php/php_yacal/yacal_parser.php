@@ -29,7 +29,7 @@ switch ($_SESSION['native']) {
     $at_txt=' в ';
     break;
 }
-$yacal_feed_xml = file_get_contents('https://calendar.yandex.ru/export/rss.xml?private_token=c5e4bc75eb27a6d532ce46428a481693f4a0c165&tz_id=Europe/Tallinn&limit=5');
+$yacal_feed_xml = file_get_contents('https://calendar.yandex.ru/export/rss.xml?private_token=5261b9692aa4d48ad40f4767a13eb6ec4319a1ba&tz_id=Europe/Tallinn&limit=5');
 $events_xml=new SimpleXMLElement($yacal_feed_xml);
 /*
  * Show next events
