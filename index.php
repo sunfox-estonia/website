@@ -32,7 +32,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
   <meta name="robots" content="all"/>
   <meta name="robots" content="noarchive"/>
   <title><?=(_("Викинги Вирумаа"));?> &ndash; <?=(_("Братство ролевиков"));?> <?=(_("и исторических реконструкторов"));?></title>
-<link href="/resources/css/normalize.css" rel="stylesheet"><link href="/resources/css/adaptive.css" rel="stylesheet"><link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet"><link href="/resources/css/alerts.css" rel="stylesheet"><link href="/resources/css/forms.css" rel="stylesheet"><link href="/resources/css/virvik.css" rel="stylesheet"><link href="/resources/css/bootstrap-social.css" rel="stylesheet">
+<link href="/resources/css/normalize.css" rel="stylesheet"><link href="/resources/css/adaptive.css" rel="stylesheet"><link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet"><link href="/resources/css/alerts.css" rel="stylesheet"><link href="/resources/css/forms.css" rel="stylesheet"><link href="/resources/css/virvik.css" rel="stylesheet"><link href="/resources/css/bootstrap-social.css" rel="stylesheet"><link href="/resources/css/viirus.css" rel="stylesheet">
 <script src='https://www.google.com/recaptcha/api.js?hl=<?=$_SESSION['native'];?>'></script>
 </head>
 <body>
@@ -325,7 +325,8 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <p>
                 <a class="btn btn-social-icon btn-sm btn-vk" href="http://vk.com/viruviking" style="border-radius:15px;"><i class="fa fa-vk"></i></a>
                 <a class="btn btn-social-icon btn-sm btn-facebook" href="http://fb.com/viruviking" style="border-radius:15px;margin-left:2px;"><i class="fa fa-facebook"></i></a>
-                <a class="btn btn-social-icon btn-sm btn-google"  href="http://plus.google.com/+ViruvikingClub" style="border-radius:15px;margin-left:2px;"><i class="fa fa-google"></i></a></p>
+                <a class="btn btn-social-icon btn-sm btn-google"  href="http://plus.google.com/+ViruvikingClub" style="border-radius:15px;margin-left:2px;"><i class="fa fa-google"></i></a>
+                <a class="btn btn-social-icon btn-sm btn-instagram"  href="https://www.instagram.com/viruviking/" style="border-radius:15px;margin-left:2px;"><i class="fa fa-instagram"></i></a></p>
             <ul class="list-unstyled">
                 <li><a href="http://wiki.viruviking.club"><?=(_("Вики-система Братства"));?></a></li>
                 <li><a href="http://mail.viruviking.club"><?=(_("Электронная почта"));?></a></li>
@@ -423,13 +424,31 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <p>
                 <a class="btn btn-social-icon btn-sm btn-vk" href="http://vk.com/viruviking" style="border-radius:15px;"><i class="fa fa-vk"></i></a>
                 <a class="btn btn-social-icon btn-sm btn-facebook" href="http://fb.com/viruviking" style="border-radius:15px;margin-left:2px;"><i class="fa fa-facebook"></i></a>
-                <a class="btn btn-social-icon btn-sm btn-google"  href="http://plus.google.com/+ViruvikingClub" style="border-radius:15px;margin-left:2px;"><i class="fa fa-google"></i></a></p>
+                <a class="btn btn-social-icon btn-sm btn-google"  href="http://plus.google.com/+ViruvikingClub" style="border-radius:15px;margin-left:2px;"><i class="fa fa-google"></i></a>
+                <a class="btn btn-social-icon btn-sm btn-instagram"  href="https://www.instagram.com/viruviking/" style="border-radius:15px;margin-left:2px;"><i class="fa fa-instagram"></i></a></p>
         </div>
       </div>
       </nav>
     </div>
 </header>
 <main>
+
+    <!-- Freyfaxi block -->
+    <? if (isset($_GET['test']) && $_SESSION['native']=="ru") { ?>
+      <div class="container">
+      <div class="row viirus"><div class="col-md-6 col-lg-6">
+        <h1>Freyfaxi<small>Викинги Вирумаа собирают друзей</small></h1>
+        <h2>24 июля в 12:00&nbsp;&nbsp;<span class="glyphicon glyphicon-grain"></span>&nbsp;&nbsp;поселок Таммику, Йыхви</h2>
+      </div>
+      <div class="col-md-6 col-lg-6">
+        <h3>Дополнительная информация и регистрация участников:</h3>
+        <p><a class="btn btn-sm btn-social btn-vk"><span class="fa fa-vk"></span>vk.com</a>
+        <a class="btn btn-sm btn-social btn-facebook"><span class="fa fa-facebook"></span>facebook.com</a></p>
+      </div></div>
+    </div>
+    <? } ?>
+    <!-- / Freyfaxi block -->
+
     <!-- Intro block -->
     <div class="container preintro"></div>
     <div class="container intro">
