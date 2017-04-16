@@ -36,4 +36,5 @@ $User=array(
     'picture'=>'https://graph.facebook.com/'.$user_data['id'].'/picture?width=200&height=200',
     'profile_link'=>$user_data['link'],
     );
+    var_dump($User);
 include 'AuthorizeMe.php';

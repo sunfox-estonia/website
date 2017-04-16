@@ -434,16 +434,15 @@ bind_textdomain_codeset($domain, 'UTF-8');
 <main>
 
     <!-- Freyfaxi block -->
-    <? if (isset($_GET['test']) && $_SESSION['native']=="ru") { ?>
+    <? if ($_SESSION['native']=="ru") { ?>
       <div class="container">
-      <div class="row viirus"><div class="col-md-6 col-lg-6">
-        <h1>Freyfaxi<small>Викинги Вирумаа собирают друзей</small></h1>
-        <h2>24 июля в 12:00&nbsp;&nbsp;<span class="glyphicon glyphicon-grain"></span>&nbsp;&nbsp;поселок Таммику, Йыхви</h2>
+      <div class="row viirus hidden-xs"><div class="col-md-12 col-lg-offset-2 col-lg-8">
+        <iframe class="hidden-xs hidden-sm hidden-md" width="750" height="422" src="https://www.youtube.com/embed/pB8AlO-a4R0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe class="hidden-xs hidden-sm hidden-lg" width="940" height="529" src="https://www.youtube.com/embed/pB8AlO-a4R0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe class="hidden-xs hidden-md hidden-lg" width="720" height="405" src="https://www.youtube.com/embed/pB8AlO-a4R0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="col-md-6 col-lg-6">
-        <h3>Дополнительная информация и регистрация участников:</h3>
-        <p><a class="btn btn-sm btn-social btn-vk"><span class="fa fa-vk"></span>vk.com</a>
-        <a class="btn btn-sm btn-social btn-facebook"><span class="fa fa-facebook"></span>facebook.com</a></p>
+      <div class="col-xs-12">
+        <p><a href="https://wiki.viruviking.club/public:viirus2017">Дополнительная информация и регистрация участников</a></p>
       </div></div>
     </div>
     <? } ?>
@@ -505,7 +504,9 @@ bind_textdomain_codeset($domain, 'UTF-8');
             <p id="FormEventRegister_ModalRequest">
                 <a class="btn btn-sm btn-social btn-vk" onclick="PopupCenter('http://oauth.vk.com/authorize?client_id=5293223&redirect_uri=https://viruviking.club/resources/php/php_oauth/VkController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-vk"></span>vk.com</a>
                 <a class="btn btn-sm btn-social btn-google" onclick="PopupCenter('https://accounts.google.com/o/oauth2/auth?redirect_uri=https://viruviking.club/resources/php/php_oauth/GoogleController.php&response_type=code&client_id=700082934855-sdrba0vc2mf1dpf75ho869tdghtdrv0g.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile', '<?=(_("Викинги Вирумаа"));?>', 500, 650)"><span class="fa fa-google"></span>Google+</a><br/>
+                <? if (isset($_GET['test'])) { ?>
                 <a class="btn btn-sm btn-social btn-facebook" onclick="PopupCenter('https://www.facebook.com/dialog/oauth?client_id=1704584893161917&redirect_uri=https://viruviking.club/resources/php/php_oauth/FacebookController.php&response_type=code', '<?=(_("Викинги Вирумаа"));?>', 780, 650)"><span class="fa fa-facebook"></span>facebook.com</a>
+                <? } ?>
             </p>
             <?php
             }

@@ -1,14 +1,9 @@
-div.viirus{
-  height: 470px;
-  margin-bottom: 10px;
-  background: #410033;
-}
+div.viirus{margin-bottom: 10px; background: #410033;}
+div.viirus>div[class^=col-] p {text-align:center;margin-bottom:30px;}
+div.viirus a{font-size:18px;color:#fff;background:#0F0224;padding-left:5px; padding-right:5px;border-radius:4px;}
+div.viirus a:hover{text-decoration: none;}
 
-div.freyfaxi>div.container h1{font-family: 'Princess Sofia', cursive;color: #fff; font-size:75px; text-align: center; display: block; line-height: 110px;margin-top: 210px!important;}
-div.freyfaxi>div.container h1>small{font-family:Mezzo Regular;color: #fff; font-size:18px; line-height: 24px font-weight:100; text-align: center; display: block;}
-div.freyfaxi>div.container h2{font-family:Mezzo Regular;color: #fff; font-size:21px; line-height: 30px font-weight:100; text-align: center; display: block; margin-top: 36px;}
-div.freyfaxi>div.container h3{font-family:Mezzo Regular;color: #fff; font-size:18px; line-height: 26px font-weight:100; text-align: center; display: block;}
-div.freyfaxi>div.container p {display:block;clear:both;text-align:center; margin-top: 16px;}
+
 
 @media (max-width: 750px) {
   div.viirus{background: url(../img/virus/virus_bg_small.jpg) no-repeat center center;}
