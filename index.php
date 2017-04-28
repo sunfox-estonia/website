@@ -32,7 +32,7 @@ bind_textdomain_codeset($domain, 'UTF-8');
   <meta name="robots" content="all"/>
   <meta name="robots" content="noarchive"/>
   <title><?=(_("Викинги Вирумаа"));?> &ndash; <?=(_("Братство ролевиков"));?> <?=(_("и исторических реконструкторов"));?></title>
-<link href="/resources/css/normalize.css" rel="stylesheet"><link href="/resources/css/adaptive.css" rel="stylesheet"><link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet"><link href="/resources/css/alerts.css" rel="stylesheet"><link href="/resources/css/forms.css" rel="stylesheet"><link href="/resources/css/virvik.css" rel="stylesheet"><link href="/resources/css/bootstrap-social.css" rel="stylesheet"><link href="/resources/css/viirus.css" rel="stylesheet">
+<link href="/resources/css/normalize.css" rel="stylesheet"><link href="/resources/css/adaptive.css" rel="stylesheet"><link href="/resources/css/glyphicons.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet"><link href="/resources/css/alerts.css" rel="stylesheet"><link href="/resources/css/forms.css" rel="stylesheet"><link href="/resources/css/virvik.css" rel="stylesheet"><link href="/resources/css/bootstrap-social.css" rel="stylesheet">
 <script src='https://www.google.com/recaptcha/api.js?hl=<?=$_SESSION['native'];?>'></script>
 </head>
 <body>
@@ -432,22 +432,6 @@ bind_textdomain_codeset($domain, 'UTF-8');
     </div>
 </header>
 <main>
-
-    <!-- Freyfaxi block -->
-    <? if ($_SESSION['native']=="ru") { ?>
-      <div class="container">
-      <div class="row viirus hidden-xs"><div class="col-md-12 col-lg-offset-2 col-lg-8">
-        <iframe class="hidden-xs hidden-sm hidden-md" width="750" height="422" src="https://www.youtube.com/embed/pB8AlO-a4R0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        <iframe class="hidden-xs hidden-sm hidden-lg" width="940" height="529" src="https://www.youtube.com/embed/pB8AlO-a4R0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        <iframe class="hidden-xs hidden-md hidden-lg" width="720" height="405" src="https://www.youtube.com/embed/pB8AlO-a4R0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="col-xs-12">
-        <p><a href="https://wiki.viruviking.club/public:viirus2017">Дополнительная информация и регистрация участников</a></p>
-      </div></div>
-    </div>
-    <? } ?>
-    <!-- / Freyfaxi block -->
-
     <!-- Intro block -->
     <div class="container preintro"></div>
     <div class="container intro">
