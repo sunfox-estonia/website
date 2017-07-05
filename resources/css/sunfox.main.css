@@ -1,0 +1,141 @@
+/*
+Sunfox website CSS
+Author: Victor Litvinkov
+*/
+@font-face {font-family:Mezzo Bold;src: url(../fonts/mezzo_bd.otf);src: local(Mezzo), url(../fonts/mezzo_bd.otf);}
+@font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
+@font-face {font-family:Runic AltNo;src: url(../fonts/runic_altno.ttf);src: local(Runic), url(../fonts/runic_altno.ttf);}
+
+a{text-decoration:underline;}
+a:hover{text-decoration:none;}
+a:hover, a:active, a:focus {outline: 0;}
+.btn{text-decoration:none;}
+
+body{font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:13px; background: #efefef;color:#161616;
+background: -moz-linear-gradient(top, #efefef 0%, #fcfcfc 25%, #d8d8d8 100%);
+background: -webkit-linear-gradient(top, #efefef 0%,#fcfcfc 25%,#d8d8d8 100%);
+background: linear-gradient(to bottom, #efefef 0%,#fcfcfc 25%,#d8d8d8 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#d8d8d8',GradientType=0 );}
+
+h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;font-weight:100;}
+h1{font-size:30px;line-height:34px;}
+h2{font-size:22px;line-height:30px;}
+h3{font-size:18px;line-height:24px;}
+
+header {margin-top:20px;}
+header svg{display:block;margin:auto;}
+header h2, header h3 {text-align: center;}
+header h3 {margin-bottom: 40px;}
+
+.sfx_logo{position:absolute;top:86px;z-index:5;left:50%;margin-left:-181px;}
+.sfx_logo h1{display:inline-block;}
+.sfx_logo h1:nth-child(2){margin-left:180px;}
+
+div.viruviking{color:#B3B3B3;}
+div.viruviking p:first-of-type, .firefly p:first-of-type{margin-top:20px;}
+div.viruviking svg, .firefly svg{margin-top:20px;}
+div.viruviking h2, div.viruviking h3{color:#DACA97;}
+div.viruviking h2 small, .firefly h2 small{font-size:15px;line-height:21px;margin: 3px 0px 18px;display: block;}
+div.viruviking h2 small {color:#B3B3B3;}
+div.viruviking p.viruviking_proov, .firefly p.firefly_proov{margin-top:25px;text-align: center;}
+div.viruviking p.viruviking_proov>small, .firefly p.firefly_proov>small{display:block;clear: both;color:#7F7F7F;margin-top:5px;}
+div.viruviking div.vv_preintro h2, .firefly div.fa_preintro h2{display: block;clear: both;text-align: center;}
+div.viruviking div.vv_preintro svg, .firefly div.fa_preintro svg{display:block;margin:auto;}
+div.viruviking p.viruviking_proov a, .firefly div.fa_intro p a {text-shadow:none;}
+
+.firefly {margin-top:10px;}
+.firefly h2, .firefly h3{color:#FFFFFF;  text-shadow: 0px 0px 40px black, 0px 0px 20px black, 0px 0px 15px black, 1px 1px 2px #33352D}
+.firefly h2 small{color:#F2F2F2;text-shadow: 0px 0px 40px black, 0px 0px 20px black, 0px 0px 15px black, 1px 1px 2px #33352D}
+.firefly div.fa_intro {padding-bottom:20px;}
+.firefly div.fa_intro p {color:#E5E5E5;text-shadow: 0px 0px 40px black, 0px 0px 20px black}
+.firefly div.fa_preintro h2 {margin-top:10px;}
+.firefly div.fa_intro .row {background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 4%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 100%);
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.35) 4%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.35) 4%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );}
+.firefly div.fa_intro p a {box-shadow: 0px 0px 20px #33352D;}
+
+div.cometous {margin-top:10px;text-shadow: 0px 0px 5px #FCF6B2;}
+div.cometous>.container{background-image:url(../img/st_cometous/pinner.png),url(../img/st_cometous/ngo_terms_bg.jpg); background-position:center 30px,top center; background-repeat:no-repeat,repeat; border:1px solid #E3DEA1;box-shadow: 0px 3px 10px rgba(0,0,0,0.5);padding-top:85px;padding-bottom:20px;}
+div.cometous big {font-size:14px;}
+div.cometous u {text-decoration:none;text-shadow:none;display:inline-block;line-height:21px; padding-left:10px;padding-right:10px;background: rgb(255,209,58);background: linear-gradient(-75deg, rgba(255,255,255,0) 3%,rgba(255,196,0,0.7) 3%,rgba(255,209,58,0.7) 97%,rgba(255,255,255,0) 97%);}
+div.cometous p.text-center {margin-top:20px}
+div.cometous div.parents_file_download {background: url(/resources/img/st_cometous/document_download.png) no-repeat -10px top;margin-top:15px;padding-top:12px;padding-left:55px;padding-bottom:10px;}
+div.cometous div.parents_file_download u {text-decoration:none;text-shadow:none;display:inline-block;line-height:21px; padding-left:7px;padding-right:10px;background: rgb(118,215,247);background: linear-gradient(-75deg, rgba(255,255,255,0) 5%,rgba(107,210,244,0.7) 5%,rgba(164,224,244,0.7) 96%,rgba(255,255,255,0) 96%);}
+
+footer{padding-top:25px;padding-bottom:25px;}
+footer h3{margin-top:0px;font-family:Mezzo Bold;}
+footer address{margin-top:18px;}
+footer .imprint{margin-top:20px;font-size:12px;color:#454545;}
+
+p[class^="doclink"]{padding-left:55px;padding-top:3px;padding-bottom:10px;margin-bottom:10px;}
+p[class^="doclink"] small {display: block;}{padding-left:55px;}
+p.doclink_bkaart{background: url(/resources/img/footer/asutamisleping_img.png) no-repeat left top;}
+p.doclink_pxhikiri{background: url(/resources/img/footer/pxhikiri_img.png) no-repeat left top;}
+
+
+.btn-social {}
+.btn-social span{padding-left:2px;}
+.btn-social > :first-child {width:39px;top:auto;}
+
+form{display:block;padding:10px 15px 0px;border:2px solid #A5A5A5;}
+form .alert {display: none;margin-bottom:3px;}
+form legend{font-family:Mezzo Regular; font-size:18px;line-height:24px;margin-top:5px;border-bottom: dotted 1px #262626;}
+form label {font-weight: lighter;}
+form fieldset {font-weight: lighter;font-family: "Trebuchet MS", Helvetica, sans-serif;padding-left: 1px;font-size: 15px;line-height: 19px;color:#262626;}
+form fieldset p {margin-bottom:15px;}
+form fieldset button[type="submit"]{margin-top:10px;}
+form fieldset.submit{margin-bottom:20px;text-align:center;}
+
+form input {border: 2px solid #B1B1B1 !important;}
+form input:focus {border: 2px solid #989898 !important;}
+form textarea {border: 2px solid #B1B1B1 !important; width:100%; padding-left:3px;resize:vertical;min-height:100px;}
+form textarea:focus {border: 2px solid #989898 !important;}
+form .g-recaptcha {margin-bottom:7px;}
+
+
+nav .row{border-bottom:1px dotted #B3B3B3;padding-top:2px;padding-bottom:2px;}
+
+@media (max-width: 750px) {
+	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -65px;height:230px;}
+	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
+	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);padding-bottom:20px;}
+	.viruviking div.adv_training_image{background-image: url(../img/vv_intro/adv_trainings/shield_bg.png), url(../img/vv_intro/adv_trainings/grass_bg.png); background-position: center -110px, center -110px; background-repeat:no-repeat, repeat; overflow: hidden;height:200px;}
+	.viruviking div.adv_training_main{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29;}
+	.viruviking div.adv_training_main>.row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;padding-bottom:20px;}
+    .firefly div.fa_preintro{background: transparent url(../img/fa_intro/fa_intro_bg_xs.jpg) no-repeat center -50px;height:265px;overflow:hidden;padding-top:43px;}
+    .firefly div.fa_intro {background: transparent url(../img/fa_intro/fa_main_bg_xs.jpg) no-repeat center center;}
+}
+@media (min-width: 750px) {
+	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -50px;height:323px;padding-top:35px;}
+	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
+	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);padding-bottom:20px;}
+    form{margin-top:0px;}
+	.viruviking div.adv_training_image{background-image: url(../img/vv_intro/adv_trainings/shield_bg.png), url(../img/vv_intro/adv_trainings/grass_bg.png); background-position: center -110px, center -110px; background-repeat:no-repeat, repeat; overflow: hidden;height:200px;}
+	.viruviking div.adv_training_main{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29; color: #fff; text-shadow: 1px 1px 1px #2E2A1E; color:#C9B999;}
+	.adv_training_main>.row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;padding-bottom:20px;}
+    .firefly div.fa_preintro{background: transparent url(../img/fa_intro/fa_intro_bg_750.jpg) no-repeat center -40px;height:325px;overflow:hidden;padding-top:43px;}
+    .firefly div.fa_intro {background: transparent url(../img/fa_intro/fa_main_bg_970.jpg) no-repeat center center;}
+}
+@media (min-width: 992px) {
+	.viruviking div.vv_preintro{background: url(../img/vv_intro/970/intro_full_970.png) no-repeat 0px -65px;height:418px;padding-top:75px;}
+	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
+	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);}
+    .firefly div.fa_preintro{background: transparent url(../img/fa_intro/fa_intro_bg_970.jpg) no-repeat center center;height:425px;overflow:hidden;padding-top:90px;}
+    .firefly div.fa_intro {background: transparent url(../img/fa_intro/fa_main_bg_970.jpg) no-repeat center center;}
+}
+@media (min-width: 1200px) {
+	.viruviking div.vv_preintro{background: transparent url(../img/vv_intro/1170/intro_full_1170.png) no-repeat top center;height:525px;overflow:hidden;padding-top:125px;}
+    .viruviking div.vv_preintro>div.row{background:transparent;}
+    /*.viruviking div.vv_preintro div#intro_thirdhill{background: url(../img/vv_intro/1170/intro_thirdhill_1170.png) 0px -20px no-repeat;height:582px;}
+	.viruviking div.vv_preintro div#intro_sechill{background: url(../img/vv_intro/1170/intro_sechill_1170.png) 0px 0px no-repeat;height:582px;}
+	.viruviking div.vv_preintro div#intro_firsthill{background: url(../img/vv_intro/1170/intro_firsthill_1170.png) 0px 30px no-repeat;height:582px;}
+	.viruviking div.vv_preintro div#intro_flag{background: url(../img/vv_intro/1170/intro_flag_1170.png) 0px 10px no-repeat;height:582px;}*/
+	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
+	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);}
+    .firefly div.fa_preintro{background: transparent url(../img/fa_intro/fa_intro_bg_1170.jpg) no-repeat center center;height:525px;overflow:hidden;padding-top:165px;}
+    .firefly div.fa_intro {background: transparent url(../img/fa_intro/fa_main_bg_1170.jpg) no-repeat center center;}    
+    div.cometous div.eurocoins {background:url(../img/st_cometous/eurocoins.png) 765px 20px no-repeat;}
+    div.cometous div.parents_file_download {margin-top:55px;}
+}
+

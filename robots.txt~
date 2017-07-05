@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /resources/eventmarks/128/oauth_logo_120.png
+Disallow: /eventmarks
+Disallow: /fonts
+Disallow: /img
+Disallow: /js
+Disallow: /locale
+Disallow: /php
