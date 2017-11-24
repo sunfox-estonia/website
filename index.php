@@ -664,11 +664,6 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
                 <br/><a href="mailto:viktor@sunfox.ee">viktor@sunfox.ee</a>
                 <br/>+372 55 59 3171</p>
                 </div>
-                <div class="hidden-xs hidden-sm hidden-md col-lg-3">
-                <p><big><?=(_("Эрик Моораст"));?></big>
-                <br/><a href="mailto:erik@sunfox.ee">erik@sunfox.ee</a>
-                <br/>+372 58 06 1625</p>
-                </div>
                 <div class="hidden-xs hidden-sm col-md-6 col-lg-3">
                 <p><big><?=(_("Роберт Крузберг"));?></big>
                 <br/><?=(_("Член правления"));?>

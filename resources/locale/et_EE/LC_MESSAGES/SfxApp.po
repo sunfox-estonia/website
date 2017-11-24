@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SfxApp\n"
-"POT-Creation-Date: 2017-06-27 18:50+0300\n"
-"PO-Revision-Date: 2017-06-27 18:50+0300\n"
+"POT-Creation-Date: 2017-11-24 12:28+0200\n"
+"PO-Revision-Date: 2017-11-24 12:28+0200\n"
 "Last-Translator: Victor Litvinkov <victor@sunfox.ee>\n"
 "Language-Team: NGU Sunfox Team <info@sunfox.ee>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: ../../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -321,19 +321,15 @@ msgstr "ühenduse eesmärgid,<br>juhtimine, liikmelisus."
 msgid "Виктор Литвинков"
 msgstr "Viktor Litvinkov"
 
-#: index.php:663 index.php:674
+#: index.php:663 index.php:669
 msgid "Член правления"
 msgstr "Juhatuse liige"
 
 #: index.php:668
-msgid "Эрик Моораст"
-msgstr "Erik Moorast"
-
-#: index.php:673
 msgid "Роберт Крузберг"
 msgstr "Robert Kruzberg"
 
-#: index.php:679
+#: index.php:674
 msgid ""
 "Иллюстрации: А. Корнышенков, А. Иваненко, А. Дворник.<br/>Разработка сайта: "
 "В. Литвинков, Д. Плюшко."
@@ -341,37 +337,40 @@ msgstr ""
 "Illustratsioonid: A. Kornõšenkov, A. Ivanenko, A. Dvornik.<br/>Kodulehe "
 "arendamine: V. Litvinkov, D. Pljushko."
 
-#: index.php:684
+#: index.php:679
 msgid "Обратная связь"
 msgstr "Tagasiside"
 
-#: index.php:686
+#: index.php:681
 msgid "Электропочта"
 msgstr "E-post"
 
-#: index.php:689
+#: index.php:684
 msgid "Текст сообщения"
 msgstr "Sõnumi tekst"
 
-#: index.php:694
+#: index.php:689
 msgid "Верификация"
 msgstr "Verifitseerimine"
 
-#: index.php:700
+#: index.php:695
 msgid "Отправить"
 msgstr "Saada"
 
-#: index.php:701
+#: index.php:696
 msgid "<strong>Ошибка!</strong> Сообщение не удалось отправить."
 msgstr "<strong>Viga!</strong> Sõnum ei ole saadetud."
 
-#: index.php:702
+#: index.php:697
 msgid ""
 "<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение "
 "нескольких дней."
 msgstr ""
 "<strong>Sõnum on saadetud!</strong> Võtame Teiega ühendust paari päeva "
 "jooksul."
+
+#~ msgid "Эрик Моораст"
+#~ msgstr "Erik Moorast"
 
 #~ msgid ""
 #~ "<h1>Тинг<br>викингов<br>Вирумаа<small class='hidden-xs hidden-sm'>24-26 "
