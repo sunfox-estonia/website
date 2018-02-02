@@ -26,6 +26,7 @@ header {margin-top:20px;}
 header svg{display:block;margin:auto;}
 header h2, header h3 {text-align: center;}
 header h3 {margin-bottom: 40px;}
+header a, header a:hover, header a:active, header a:focus {color:#161616;}
 
 .sfx_logo{position:absolute;top:86px;z-index:5;left:50%;margin-left:-181px;}
 .sfx_logo h1{display:inline-block;}
@@ -66,6 +67,7 @@ div.cometous div.parents_file_download u {text-decoration:none;text-shadow:none;
 footer{padding-top:25px;padding-bottom:25px;}
 footer h3{margin-top:0px;font-family:Mezzo Bold;}
 footer address{margin-top:18px;}
+footer address .glyphicon-hand-right {margin-top:6px;}
 footer .imprint{margin-top:20px;font-size:12px;color:#454545;}
 
 p[class^="doclink"]{padding-left:55px;padding-top:3px;padding-bottom:10px;margin-bottom:10px;}
@@ -73,6 +75,9 @@ p[class^="doclink"] small {display: block;}{padding-left:55px;}
 p.doclink_bkaart{background: url(/resources/img/footer/asutamisleping_img.png) no-repeat left top;}
 p.doclink_pxhikiri{background: url(/resources/img/footer/pxhikiri_img.png) no-repeat left top;}
 
+.modal .center-pills {display: flex;justify-content:center;}
+.modal .nav-pills>li>a,.nav-pills>li>a:focus,.nav-pills>li>a:hover{text-decoration:none;}
+#ModalBusTimetable table {margin-top:25px;}
 
 .btn-social {}
 .btn-social span{padding-left:2px;}
@@ -105,6 +110,7 @@ nav .row{border-bottom:1px dotted #B3B3B3;padding-top:2px;padding-bottom:2px;}
 	.viruviking div.adv_training_main>.row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;padding-bottom:20px;}
     .firefly div.fa_preintro{background: transparent url(../img/fa_intro/fa_intro_bg_xs.jpg) no-repeat center -50px;height:265px;overflow:hidden;padding-top:43px;}
     .firefly div.fa_intro {background: transparent url(../img/fa_intro/fa_main_bg_xs.jpg) no-repeat center center;}
+    nav {text-align: center;}
 }
 @media (min-width: 750px) {
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -50px;height:323px;padding-top:35px;}

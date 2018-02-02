@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /resources/eventmarks/128/oauth_logo_120.png
 Disallow: /resources

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SfxApp\n"
-"POT-Creation-Date: 2017-11-24 12:28+0200\n"
-"PO-Revision-Date: 2017-11-24 12:28+0200\n"
+"POT-Creation-Date: 2018-01-31 23:49+0200\n"
+"PO-Revision-Date: 2018-02-02 20:45+0200\n"
 "Last-Translator: Victor Litvinkov <victor@sunfox.ee>\n"
 "Language-Team: NGU Sunfox Team <info@sunfox.ee>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: ../../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -47,13 +47,15 @@ msgstr "Vikisüsteem"
 
 #: index.php:423
 msgid ""
-"Sunfox Team управляет деятельностью сообществ Firefly Airsoft и Викинги "
-"Вирумаа. Мы создаём условия, способствующие развитию этих сообществ в "
-"частности, а также ролевизма и аирсофта в Ида-Вирумаа в целом."
+"Sunfox Team управляет деятельностью сообществ <a href=#firefly >Firefly "
+"Airsoft</a> и <a href=#viruviking >Викинги Вирумаа</a>. Мы создаём условия, "
+"способствующие развитию этих сообществ в частности, а также ролевизма и "
+"аирсофта в Ида-Вирумаа в целом."
 msgstr ""
-"Sunfox Team juhib ühingute Firefly Airsoft ja Virumaa Viikingid tegevust. "
-"Loome tingimusi, mis aitavad kaasa nende ühingute ning seikluslike "
-"rollimängude ja sõjamängu Airsoft arengule Ida-Virumaal."
+"Sunfox Team juhib ühingute <a href=#firefly >Firefly Airsoft</a> ja <a "
+"href=#viruviking >Virumaa Viikingid</a> tegevust. Loome tingimusi, mis "
+"aitavad kaasa nende ühingute ning seikluslike rollimängude ja sõjamängu "
+"Airsoft arengule Ida-Virumaal."
 
 #: index.php:423
 msgid ""
@@ -65,19 +67,19 @@ msgstr ""
 "avaldavad kaudset mõju seikluslike rollimängude ja sõjamängu Airsoft "
 "arengule ning populaarsuse suurendamisele Kirde-Eestis."
 
-#: index.php:518
+#: index.php:517
 msgid "Викинги Вирумаа"
 msgstr "Virumaa Viikingid"
 
-#: index.php:518
+#: index.php:517
 msgid "Братство ролевиков"
 msgstr "Rollimängijate ja ajaloo"
 
-#: index.php:518
+#: index.php:517
 msgid "и исторических реконструкторов"
 msgstr "taaselustajate vennaskond"
 
-#: index.php:528
+#: index.php:527
 msgid ""
 "Братство Викингов Вирумаа объединяет молодежь, интересующуюся ролевыми "
 "играми живого действия и исторической реконструкцией."
@@ -85,7 +87,7 @@ msgstr ""
 "Virumaa Viikingite vennaskond ühendab noori, kes huvituvad aktiivsetest "
 "rollimängudest ja ajaloo taaselustamisest."
 
-#: index.php:528
+#: index.php:527
 msgid ""
 "Мы проводим тренировки по историческому фехтованию, изготавливаем "
 "исторические и ролевые костюмы, участвуем в полевых ролевках и организуем "
@@ -94,7 +96,7 @@ msgstr ""
 "Viime läbi ajaloolise mõõgavõitluse treeninguid, teeme ise valmis "
 "ajaloolised rollikostüümid ja korraldame oma mänge."
 
-#: index.php:529
+#: index.php:528
 msgid ""
 "LARP и историческая реконструкция — весьма интересное и достойное хобби. "
 "Вместе участники сообщества изучают историю, тренируются, учатся полезным "
@@ -109,11 +111,11 @@ msgstr ""
 "jääda. Nad kasvatavad endas kindlameelsust, tahet, iseloomu. Neiud õpivad "
 "õmblema ja mängitavale ajaloolisele epohile vastavaid toite valmistama."
 
-#: index.php:531 index.php:538
+#: index.php:530 index.php:537
 msgid "Приходите на тренировки<br>по историческому фехтованию!"
 msgstr "Tulge ajaloolise<br>mõõgavõitluse treeningutele!"
 
-#: index.php:531 index.php:538
+#: index.php:530 index.php:537
 msgid ""
 "Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки "
 "использования щита в бою. Историческое фехтование — это незабываемый опыт и "
@@ -125,7 +127,7 @@ msgstr ""
 "huvitavate inimeste seltskonnas. Iga lahing on nagu kohtumine iidsetest "
 "lugudest ja legendidest pärit isikutega."
 
-#: index.php:532 index.php:539
+#: index.php:531 index.php:538
 msgid ""
 "Тренировки проводятся на любительском уровне. Изучение приёмов "
 "осуществляется на тренировочном снаряжении, приближенном к боевому. "
@@ -135,22 +137,22 @@ msgstr ""
 "toimuvad treeningvarustusega, mis on lahingvarustusele sarnane. "
 "Kontaktlahingud toimuvad pehmendatud relvadega."
 
-#: index.php:533
+#: index.php:532
 msgid ""
 "Пробное занятие - бесплатное, новичкам предоставляются тренировочные снаряды."
 msgstr ""
 "Proovitreening on tasuta. Uustulnukatele pakume varustust proovitreeningutel "
 "osalemiseks."
 
-#: index.php:534 index.php:540
+#: index.php:533 index.php:539
 msgid "Регистрация"
 msgstr "Registreerimine"
 
-#: index.php:534 index.php:540
+#: index.php:533 index.php:539
 msgid "Регистрация осуществляется посредством<br/>инфосистемы Йомсборг."
 msgstr "Registreeruda saab Jomsborg<br/>infosüsteemi kaudu."
 
-#: index.php:560
+#: index.php:559
 msgid "Сообщество молодых<br>страйкболистов Ида-Вирумаа"
 msgstr "Ida-Virumaa noorte<br>airsofterite ühing"
 
@@ -204,7 +206,7 @@ msgid ""
 "принимать активное участие в наших мероприятиях. Для этого потребуется "
 "выполнить несколько простых шагов, описанных далее."
 msgstr ""
-"Virumaa Viikingitega või Firefly Airsoft ühinguga võivad ühineda <u>14-26-"
+"Virumaa Viikingitega või Firefly Airsoft ühinguga võivad liituda <u>14-26-"
 "aastased</u>noored, kes soovivad meie üritustel aktiivselt osaleda. Selleks "
 "tuleb täita mõned  allpool loetletud tingimused:"
 
@@ -223,23 +225,29 @@ msgstr ""
 
 #: index.php:579
 msgid ""
-"Уважаемые родители, пожалуйста распечатайте <a href='/resources/docs/"
-"sfx_parents_agr.pdf'>форму соглашения</a>, заполните, подпишите её и "
+"Уважаемые родители, пожалуйста распечатайте <a href=\"https://drive.google."
+"com/viewerng/viewer?url=https://sunfox.ee/resources/docs/sfx_parents_agr.pdf"
+"\" target=\"_blank\">форму соглашения</a>, заполните, подпишите её и "
 "передайте нам."
 msgstr ""
-"Lugupeetud vanemad, printige palun  <a href='/resources/docs/sfx_parents_agr."
-"pdf'>avalduse vorm</a> välja, täitke see ära, allkirjastage ja toimetage "
-"meile."
+"Lugupeetud vanemad, printige palun <a href=\"https://drive.google.com/"
+"viewerng/viewer?url=https://sunfox.ee/resources/docs/sfx_parents_agr.pdf\" "
+"target=\"_blank\">avalduse vorm</a> välja, täitke see ära, allkirjastage ja "
+"toimetage meile."
 
 #: index.php:580
 msgid ""
-"<a href='/resources/docs/sfx_parents_agr.pdf'>Скачать</a> <u>соглашение,</u>"
+"<a href=\"https://drive.google.com/viewerng/viewer?url=https://sunfox.ee/"
+"resources/docs/sfx_parents_agr.pdf\" target=\"_blank\">Скачать</a> "
+"<u>соглашение,</u>"
 msgstr ""
-"<a href='/resources/docs/sfx_parents_agr.pdf'>Laadige</a> <u>avaldus</u>alla,"
+"<a href=\"https://drive.google.com/viewerng/viewer?url=https://sunfox.ee/"
+"resources/docs/sfx_parents_agr.pdf\" target=\"_blank\">Laege</a> <u>avaldus</"
+"u> alla"
 
 #: index.php:580
 msgid "распечатать и заполнить."
-msgstr "printige ja täitke."
+msgstr "printige ja täidke seda ära."
 
 #: index.php:634
 msgid "2. Зарегистрировать профиль в системе Йомсборг"
@@ -247,23 +255,21 @@ msgstr "2. Registreerida profiil Jomsborg süsteemis."
 
 #: index.php:635
 msgid ""
-"Инфосистема Йомсборг поможет<u>быть в курсе предстоящих мероприятий</u>и "
+"Инфосистема Йомсборг поможет быть в курсе<u>предстоящих мероприятий</u>и "
 "следить за успехами в покорении<u>Системы достижений.</u>Вся информация "
 "доступна как на сайте Йомсборга, так и в аккаунте социальной сети vk.com."
 msgstr ""
-"Infosüsteem Jomsborg aitab<u>olla kursis eelolevate üritustega</u>ja "
+"Infosüsteem Jomsborg aitab olla kursis<u>eelolevate üritustega</u>ja "
 "jälgida<u>saavutuste süsteemi</u>vallutamise edusamme. Kogu info on "
 "kättesaadav nii Jomsborgi veebilehel kui ka sotsiaalvõrgustiku vk.com kontol."
 
 #: index.php:636
 msgid ""
-"Регистрация на сайте <a href='https://jomsborg.viruviking.club'>jomsborg."
-"viruviking.club</a> — как для участников сообщества Firefly Airsoft, так и "
-"для Викингов Вирумаа."
+"Регистрация на сайте <a href='https://jbrg.sunfox.ee'>jbrg.sunfox.ee</a> — "
+"как для участников сообщества Firefly Airsoft, так и для Викингов Вирумаа."
 msgstr ""
-"Registreerumine veebilehel <a href='https://jomsborg.viruviking."
-"club'>jomsborg.viruviking.club</a> - nii ühingu Firefly Airsoft liikmetele "
-"kui ka Virumaa Viikingitele."
+"Registreerumine veebilehel <a href='https://jbrg.sunfox.ee'>jbrg.sunfox.ee</"
+"a> - nii ühingu Firefly Airsoft liikmetele kui ka Virumaa Viikingitele."
 
 #: index.php:638
 msgid "3. Оплатить членский взнос"
@@ -271,13 +277,13 @@ msgstr "3. Tasuda liikmetasu"
 
 #: index.php:639
 msgid ""
-"С июня 2017 года мы ввели небольшой<u>взнос для участников</u>наших "
-"сообществ. Сумма ежемесячного взноса —<u>5 евро.</u>Средства необходимо "
+"С марта 2018 года мы ввели небольшой<u>взнос для участников</u>наших "
+"сообществ. Сумма ежемесячного взноса —<u>10 евро.</u>Средства необходимо "
 "переводить<u>на банковский счет</u>организации используя персональный номер "
 "ссылки."
 msgstr ""
-"2017. aastal oleme kehtestanud meie ühingute liikmetele väikse <u>liikmetasu."
-"</u> Igakuine maks on<u>5 eurot.</u>Raha tuleb ülekanda <u>organisatsiooni "
+"2018. aastal oleme kehtestanud meie ühingute liikmetele väikse <u>liikmetasu."
+"</u> Igakuine maks on<u>10 eurot.</u>Raha tuleb ülekanda <u>organisatsiooni "
 "pangaarvele,</u>kasutades personaalset viitenumbrit."
 
 #: index.php:640
@@ -317,19 +323,27 @@ msgstr "Põhikiri"
 msgid "цели организации,<br>управление, членство."
 msgstr "ühenduse eesmärgid,<br>juhtimine, liikmelisus."
 
-#: index.php:662
+#: index.php:657
+msgid ""
+"<a href=\"https://goo.gl/maps/G5zaSQhNctA2\" target=\"_blank\">Карта</a> и "
+"<a href=\"#\">расписание автобуса</a> из Йыхви."
+msgstr ""
+"<a href=\"https://goo.gl/maps/G5zaSQhNctA2\" target=\"_blank\">Kaart</a> ja "
+"Jõhvi-Tammiku<a href=\"#\">bussi sõiduplaan</a>."
+
+#: index.php:663
 msgid "Виктор Литвинков"
 msgstr "Viktor Litvinkov"
 
-#: index.php:663 index.php:669
+#: index.php:664 index.php:670
 msgid "Член правления"
 msgstr "Juhatuse liige"
 
-#: index.php:668
+#: index.php:669
 msgid "Роберт Крузберг"
 msgstr "Robert Kruzberg"
 
-#: index.php:674
+#: index.php:675
 msgid ""
 "Иллюстрации: А. Корнышенков, А. Иваненко, А. Дворник.<br/>Разработка сайта: "
 "В. Литвинков, Д. Плюшко."
@@ -337,37 +351,44 @@ msgstr ""
 "Illustratsioonid: A. Kornõšenkov, A. Ivanenko, A. Dvornik.<br/>Kodulehe "
 "arendamine: V. Litvinkov, D. Pljushko."
 
-#: index.php:679
+#: index.php:680
 msgid "Обратная связь"
 msgstr "Tagasiside"
 
-#: index.php:681
+#: index.php:682
 msgid "Электропочта"
 msgstr "E-post"
 
-#: index.php:684
+#: index.php:685
 msgid "Текст сообщения"
 msgstr "Sõnumi tekst"
 
-#: index.php:689
+#: index.php:690
 msgid "Верификация"
 msgstr "Verifitseerimine"
 
-#: index.php:695
+#: index.php:696
 msgid "Отправить"
 msgstr "Saada"
 
-#: index.php:696
+#: index.php:697
 msgid "<strong>Ошибка!</strong> Сообщение не удалось отправить."
 msgstr "<strong>Viga!</strong> Sõnum ei ole saadetud."
 
-#: index.php:697
+#: index.php:698
 msgid ""
 "<strong>Сообщение отправлено!</strong> Мы свяжемся с Вами в течение "
 "нескольких дней."
 msgstr ""
 "<strong>Sõnum on saadetud!</strong> Võtame Teiega ühendust paari päeva "
 "jooksul."
+
+#~ msgid ""
+#~ "<a href='/resources/docs/sfx_parents_agr.pdf'>Скачать</a> <u>соглашение,</"
+#~ "u>"
+#~ msgstr ""
+#~ "<a href='/resources/docs/sfx_parents_agr.pdf'>Laadige</a> <u>avaldus</"
+#~ "u>alla,"
 
 #~ msgid "Эрик Моораст"
 #~ msgstr "Erik Moorast"

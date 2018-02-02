@@ -32,15 +32,14 @@ bind_textdomain_codeset($domain, 'UTF-8');
     <meta name="author" content="NGO Sunfox Team"/>
     <meta name="robots" content="all"/><meta name="robots" content="noarchive"/>
     <title>Sunfox Team</title>
-    <link href="/resources/css/bootstrap.min.css" rel="stylesheet"><link href="/resources/css/bootstrap-theme.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet">
-    <link href="/resources/css/bootstrap-social.css" rel="stylesheet"><link href="/resources/css/sunfox.main.css" rel="stylesheet">
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet"><link href="/resources/css/bootstrap-theme.css" rel="stylesheet"><link href="/resources/css/font-awesome.css" rel="stylesheet"><link href="/resources/css/bootstrap-social.css" rel="stylesheet"><link href="/resources/css/sunfox.main.css" rel="stylesheet">
     <script src='https://www.google.com/recaptcha/api.js?hl=<?=$_SESSION['native'];?>'></script>
   </head>
   <body>
     <div class="sfx_logo hidden-xs"><h1>Sunfox</h1><h1>Team</h1></div>
     <nav><div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6"><strong>Sunfox.ee</strong> | <a href="https://jomsborg.viruviking.club"><?=(_("Йомсборг"));?></a> | <a href="https://wiki.sunfox.ee"><?=(_("Вики-система"));?></a></div>
+            <div class="col-xs-12 col-sm-6"><strong>Sunfox.ee</strong> | <a href="https://jbrg.sunfox.ee"><?=(_("Йомсборг"));?></a> | <a href="https://wiki.sunfox.ee"><?=(_("Вики-система"));?></a></div>
             <div class="hidden-xs col-sm-6 text-right"><span class="glyphicon glyphicon-globe"></span>&nbsp;<?php
                 switch ($_SESSION['native']) {
                   case "et":
@@ -420,14 +419,18 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
 </svg>
             </div>
         </div><div class="row"><div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-        <h2><?=(_("Sunfox Team управляет деятельностью сообществ Firefly Airsoft и Викинги Вирумаа. Мы создаём условия, способствующие развитию этих сообществ в частности, а также ролевизма и аирсофта в Ида-Вирумаа в целом."));?></h2><h3><?=(_("Sunfox Team делает вклад в развитие тех сфер деятельности, которые оказывают косвенное влияние на развитие и повышение популярности ролевизма и аирсофта на Северо-востоке Эстонии."));?></h3>
+        <h2><?=(_("Sunfox Team управляет деятельностью сообществ <a href=#anchor_firefly >Firefly Airsoft</a> и <a href=#anchor_viruviking >Викинги Вирумаа</a>. Мы создаём условия, способствующие развитию этих сообществ в частности, а также ролевизма и аирсофта в Ида-Вирумаа в целом."));?></h2><h3><?=(_("Sunfox Team делает вклад в развитие тех сфер деятельности, которые оказывают косвенное влияние на развитие и повышение популярности ролевизма и аирсофта на Северо-востоке Эстонии."));?></h3>
         </div></div>
     </div></header>
+    
+    
+    <!-- Viking Stories block -->
+    
+    <!-- / Viking Stories -->
 
-    <div class="viruviking">
+    <div class="viruviking" name="anchor_viruviking">
         <div class="container vv_preintro"><div class="row"><div id="intro_thirdhill"><div id="intro_sechill"><div id="intro_firsthill"><div id="intro_flag">
           <div class="hidden-xs col-sm-offset-6 col-sm-6">
-
           <svg width="80px" viewBox="50 134 740 976" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <path fill="#F6F6F6" d=" M 129.51 134.38 C 147.33 131.42 165.29 134.80 183.05 136.57 C 192.85 137.31 202.37 139.88 211.96 141.88 C 220.71 144.27 229.20 147.52 237.89 150.09 C 255.03 153.70 271.57 160.28 286.41 169.61 C 292.22 173.60 296.11 179.75 299.03 186.05 C 304.48 197.35 311.67 207.72 316.87 219.14 C 321.76 229.81 327.00 240.32 332.17 250.86 C 335.54 258.63 338.87 266.44 342.94 273.88 C 349.85 286.71 355.43 300.28 363.62 312.39 C 368.53 320.65 372.78 329.29 377.35 337.74 C 388.56 356.90 397.38 377.34 408.34 396.64 C 423.20 421.68 435.42 448.15 449.06 473.86 C 454.36 485.19 459.75 496.48 464.98 507.84 C 470.50 519.41 475.47 531.32 482.32 542.20 C 486.65 536.23 489.59 529.43 492.87 522.86 C 499.11 509.91 505.20 496.87 512.50 484.47 C 516.87 477.12 521.23 469.76 525.06 462.11 C 531.03 451.18 537.48 440.51 543.79 429.78 C 550.26 419.77 555.80 409.20 562.16 399.12 C 573.50 381.71 582.30 362.82 592.95 344.99 C 601.36 330.70 609.58 316.31 618.05 302.06 C 627.88 287.05 636.82 271.50 646.15 256.18 C 650.20 249.43 655.06 243.06 657.80 235.60 C 660.81 228.04 666.86 221.56 667.61 213.20 C 666.89 210.44 664.62 208.47 663.03 206.21 C 658.94 206.95 654.60 207.58 651.24 210.23 C 649.29 211.44 647.20 213.93 644.76 212.33 C 642.97 210.29 644.26 207.44 644.19 205.03 C 644.49 194.46 645.40 183.84 647.77 173.52 C 648.12 171.16 650.58 170.43 652.43 169.54 C 657.57 167.47 662.29 164.24 667.91 163.54 C 673.95 162.65 679.78 160.45 685.93 160.30 C 696.24 159.15 706.63 158.99 717.00 158.72 C 724.65 159.34 732.33 159.25 740.00 159.71 C 752.78 161.35 765.68 164.46 776.75 171.31 C 780.45 173.35 781.01 177.96 782.17 181.61 C 784.20 190.56 786.51 199.70 785.50 208.94 C 785.32 210.11 785.51 211.70 784.00 211.98 C 777.60 210.33 771.59 207.11 764.96 206.42 C 752.15 205.80 740.02 211.67 729.71 218.74 C 725.22 222.57 719.94 225.56 716.21 230.20 C 702.39 249.44 691.53 270.60 682.11 292.29 C 679.24 297.94 676.53 303.71 672.85 308.90 C 668.82 315.66 665.01 322.55 661.41 329.54 C 654.72 341.37 647.19 352.71 640.82 364.72 C 637.55 371.33 633.49 377.51 630.13 384.07 C 625.20 393.67 619.65 402.93 614.45 412.38 C 595.77 447.22 575.22 481.02 557.36 516.31 C 552.65 524.70 548.99 533.64 543.92 541.83 C 539.11 550.94 535.10 560.56 528.92 568.89 C 522.72 577.40 518.52 587.10 513.09 596.07 C 507.69 605.93 501.77 615.51 496.66 625.53 C 493.72 631.47 489.73 636.79 486.53 642.58 C 479.04 655.76 471.53 668.94 464.27 682.25 C 455.23 699.46 446.48 716.84 436.85 733.74 C 430.58 745.04 423.01 755.70 418.63 767.95 C 411.26 764.78 409.88 755.99 406.37 749.63 C 402.52 739.97 396.68 731.34 391.69 722.27 C 387.94 714.88 385.33 706.97 381.28 699.73 C 376.46 690.95 371.78 682.08 366.34 673.68 C 364.04 669.84 362.33 665.68 360.09 661.81 C 357.51 657.31 354.70 652.93 352.65 648.15 C 350.05 642.09 346.33 636.62 343.11 630.89 C 335.67 615.01 326.80 599.85 318.57 584.38 C 313.82 576.35 310.36 567.61 305.14 559.86 C 297.84 546.84 290.44 533.86 283.15 520.83 C 279.62 514.06 276.26 507.20 272.55 500.51 C 268.85 493.23 265.78 485.60 261.28 478.75 C 256.66 471.84 253.05 464.34 248.91 457.16 C 237.49 438.34 227.66 418.62 216.17 399.84 C 208.81 387.74 202.35 375.14 195.00 363.04 C 190.62 355.89 187.16 348.23 183.23 340.84 C 177.21 327.84 172.78 314.16 166.61 301.23 C 162.29 292.44 158.96 283.19 154.52 274.46 C 150.84 267.38 148.08 259.86 144.19 252.89 C 138.41 240.39 133.21 227.35 124.45 216.56 C 120.05 211.59 115.08 206.73 108.86 204.16 C 97.12 200.12 84.56 201.78 72.47 202.67 C 70.81 193.20 71.85 183.54 71.00 174.00 C 70.77 170.03 70.20 166.03 70.69 162.05 C 71.74 159.25 74.39 157.48 76.57 155.58 C 86.71 147.85 98.42 142.36 110.55 138.55 C 116.72 136.53 123.21 135.88 129.51 134.38 Z" />
           <path fill="#0A1A70" d=" M 106.30 156.29 C 125.87 150.14 146.70 149.90 167.03 150.47 C 162.49 152.00 158.51 154.77 154.03 156.37 C 145.32 155.26 136.41 152.00 127.62 154.63 C 120.31 157.29 114.80 163.24 110.48 169.49 C 106.73 175.05 103.09 180.72 100.30 186.83 C 95.40 186.37 90.50 185.98 85.59 185.80 C 85.41 181.44 84.66 176.95 85.80 172.67 C 86.99 168.61 90.74 166.16 94.14 164.06 C 98.27 161.59 101.56 157.68 106.30 156.29 Z" />
@@ -531,17 +534,17 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
         <div class="hidden-xs hidden-sm col-md-6 col-lg-6"><h2><?=(_("Приходите на тренировки<br>по историческому фехтованию!"));?></h2><h3><?=(_("Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки использования щита в бою. Историческое фехтование — это незабываемый опыт и активный отдых в компании интересных людей. Каждый бой — словно встреча персонажей из древних преданий и легенд."));?></h3>
         <p><?=(_("Тренировки проводятся на любительском уровне. Изучение приёмов осуществляется на тренировочном снаряжении, приближенном к боевому. Контактные бои проводятся на гуманизированном оружии."));?></p>
         <p><?=(_("Пробное занятие - бесплатное, новичкам предоставляются тренировочные снаряды."));?></p>
-        <p class="viruviking_proov"><a class="btn btn-social btn-vk" href="#"><span class="fa fa-vk"></span>&nbsp;<?=(_("Регистрация"));?></a><small><?=(_("Регистрация осуществляется посредством<br/>инфосистемы Йомсборг."));?></small></p>
+        <p class="viruviking_proov"><a class="btn btn-social btn-vk" href="https://vk.me/viruviking"><span class="fa fa-vk"></span>&nbsp;<?=(_("Регистрация"));?></a><small><?=(_("Регистрация осуществляется посредством<br/>инфосистемы Йомсборг."));?></small></p>
         </div></div></div>
         <div class="container adv_training_image hidden-md hidden-lg"><div class="row"></div></div>
         <div class="container adv_training_main hidden-md hidden-lg"><div class="row">
         <div class="col-xs-12"><h2><?=(_("Приходите на тренировки<br>по историческому фехтованию!"));?></h2><h3><?=(_("Мы тренируемся на одноручных и двуручных мечах, приобретаем навыки использования щита в бою. Историческое фехтование — это незабываемый опыт и активный отдых в компании интересных людей. Каждый бой — словно встреча персонажей из древних преданий и легенд."));?></h3>
         <p><?=(_("Тренировки проводятся на любительском уровне. Изучение приёмов осуществляется на тренировочном снаряжении, приближенном к боевому. Контактные бои проводятся на гуманизированном оружии."));?></p>
-        <p class="viruviking_proov"><a class="btn btn-social btn-vk" href="#"><span class="fa fa-vk"></span>&nbsp;<?=(_("Регистрация"));?></a><small><?=(_("Регистрация осуществляется посредством<br/>инфосистемы Йомсборг."));?></small></p>
+        <p class="viruviking_proov"><a class="btn btn-social btn-vk" href="https://vk.me/viruviking"><span class="fa fa-vk"></span>&nbsp;<?=(_("Регистрация"));?></a><small><?=(_("Регистрация осуществляется посредством<br/>инфосистемы Йомсборг."));?></small></p>
         </div></div></div>
     </div>
     
-    <div class="firefly"><div class="container fa_preintro"><div class="row"><div class="hidden-xs col-sm-offset-6 col-sm-6"><svg width="200px" viewBox="0 0 1430 733" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <div class="firefly" name="anchor_firefly"><div class="container fa_preintro"><div class="row"><div class="hidden-xs col-sm-offset-6 col-sm-6"><svg width="200px" viewBox="0 0 1430 733" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <path fill="#F7F7F7" d=" M 663.33 59.32 C 665.26 57.87 667.28 55.93 669.92 56.24 C 672.53 56.13 674.39 58.24 675.56 60.33 C 684.90 76.01 694.31 91.64 703.61 107.35 C 704.28 108.39 704.94 109.50 705.99 110.25 C 714.01 110.38 722.03 110.22 730.06 110.31 C 740.65 93.40 750.47 75.99 760.98 59.02 C 762.86 55.82 767.56 55.32 770.26 57.76 C 787.08 70.91 803.74 84.28 820.59 97.40 C 822.60 99.05 825.21 100.40 826.00 103.07 C 827.60 107.64 829.33 112.20 830.33 116.94 C 830.56 119.41 827.49 120.46 825.66 119.26 C 821.70 117.25 817.81 115.13 813.94 112.96 C 809.32 110.17 811.42 103.00 806.89 100.13 C 794.26 90.58 781.83 80.75 769.14 71.27 C 761.09 91.44 752.85 111.54 744.99 131.77 C 743.93 139.11 744.56 146.63 743.35 153.97 C 742.34 157.64 737.39 158.89 734.62 156.35 C 729.16 151.45 724.81 145.46 719.42 140.49 C 718.44 140.29 717.46 140.18 716.47 140.16 C 711.35 145.47 706.46 151.01 701.17 156.15 C 698.52 159.20 693.14 157.55 692.26 153.74 C 690.49 145.22 692.86 135.99 689.19 127.83 C 681.54 108.98 674.20 90.00 666.36 71.24 C 653.75 81.02 641.04 90.68 628.43 100.44 C 624.21 103.52 626.25 110.68 621.38 113.21 C 617.65 115.18 613.95 117.20 610.22 119.16 C 608.82 120.09 607.17 119.48 605.68 119.26 C 604.79 115.54 606.77 112.08 607.73 108.60 C 608.96 105.41 609.41 101.56 612.43 99.47 C 629.45 86.16 646.39 72.75 663.33 59.32 Z" />
         <path fill="#F7F7F7" d=" M 425.00 145.64 C 495.51 145.17 566.02 143.58 636.53 143.37 C 642.74 151.81 650.08 159.36 656.18 167.87 C 649.32 174.06 643.33 181.23 635.96 186.83 C 632.15 182.99 629.29 178.35 625.51 174.47 C 622.66 171.58 620.29 168.27 617.80 165.07 C 612.01 165.76 606.73 168.46 601.24 170.25 C 584.82 176.40 568.10 181.71 551.62 187.68 C 532.96 195.36 513.26 200.04 494.45 207.34 C 481.62 212.21 468.96 217.54 455.99 222.06 C 440.12 227.47 424.56 233.74 409.04 240.07 C 398.85 244.55 388.19 247.79 377.86 251.90 C 354.09 263.32 328.49 270.16 304.18 280.24 C 274.01 291.43 243.88 302.73 213.68 313.85 C 194.46 320.85 175.39 328.27 156.08 334.99 C 125.25 313.78 94.38 292.65 63.63 271.34 C 54.11 264.96 45.35 257.53 35.77 251.23 C 30.70 248.40 25.70 245.43 20.93 242.10 C 32.35 230.08 42.04 216.52 53.95 204.96 C 61.46 197.74 67.74 189.41 74.63 181.62 C 81.13 174.46 86.93 166.65 93.94 159.96 C 97.37 156.72 100.08 152.76 103.71 149.73 C 122.79 148.95 141.91 149.49 161.00 148.93 C 185.34 148.69 209.67 148.28 234.01 148.20 C 242.66 147.54 251.34 147.84 260.00 147.69 C 315.01 147.12 370.01 146.36 425.00 145.64 Z" />
         <path fill="#F7F7F7" d=" M 798.26 150.33 C 799.27 149.15 800.06 147.23 801.97 147.58 C 838.65 147.54 875.32 147.79 912.00 147.81 C 927.99 148.51 944.00 148.08 960.00 148.23 C 1081.62 148.44 1203.24 149.13 1324.85 149.70 C 1330.79 156.24 1337.38 162.17 1343.07 168.93 C 1349.82 176.84 1356.99 184.38 1363.60 192.41 C 1369.86 199.47 1376.98 205.69 1383.23 212.76 C 1390.87 221.45 1398.32 230.30 1406.19 238.77 C 1399.14 243.99 1391.08 247.68 1384.27 253.24 C 1367.74 266.26 1350.31 278.06 1333.18 290.27 C 1313.43 304.00 1294.02 318.22 1274.10 331.69 C 1233.89 317.23 1193.55 303.12 1153.31 288.72 C 1143.36 284.97 1133.18 281.87 1123.36 277.80 C 1106.92 271.62 1090.10 266.54 1073.63 260.44 C 1064.93 257.52 1056.96 252.79 1048.21 249.98 C 1025.46 242.59 1003.73 232.38 980.91 225.19 C 963.38 219.25 946.29 212.13 928.77 206.19 C 913.64 201.36 898.25 197.29 883.46 191.42 C 868.79 186.43 854.08 181.57 839.31 176.88 C 832.34 174.18 825.18 172.05 818.07 169.77 C 815.71 173.13 813.29 176.47 810.44 179.44 C 806.78 183.31 804.11 188.00 800.23 191.66 C 793.21 185.83 787.05 179.04 780.14 173.08 C 786.04 165.38 792.44 158.09 798.26 150.33 Z" />
@@ -560,6 +563,7 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
         <h2>Firefly Airsoft<small><?=(_("Сообщество молодых<br>страйкболистов Ида-Вирумаа"));?></small></h2>
         <p class="text-center">
             <a class="btn btn-social-icon btn-sm btn-vk" href="http://vk.com/fireflyairsoft" style="border-radius:15px;"><i class="fa fa-vk"></i></a>
+            <a class="btn btn-social-icon btn-sm btn-instagram"  href="https://www.instagram.com/nord_airsoft/" style="border-radius:15px;margin-left:2px;"><i class="fa fa-instagram"></i></a>
         </p>
     </div></div></div>
     
@@ -567,17 +571,17 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
     <h2><?=(_("Firefly Airsoft объединяет молодых и активных страйкболистов Ида-Вирумаа."));?></h2><h3><?=(_("Страйкбол - военно-спортивная тактическая игра с применением пневматических реплик оружия, стреляющих пластиковыми шариками без красителя. Это экстремальный спорт, рассчитанный на людей, которые ценят активный отдых."));?></h3>
     <p><?=(_("На тренировках по страйкболу мы учимся обращаться с оружием, действовать в команде, маскироваться и оставаться незаметными в различных условиях. Ребята улучшают физическую подготовку и развивают выносливость, тренируют выдержку и учатся быстро принимать правильные решения в нужный момент."));?></p>
     <p><?=(_("Сообщите нам, если чувствуете интерес и желание участвовать в мероприятиях сообщества Firefly Airsoft. Координаторы пригласят Вас на очередное занятие, где Вы познакомитесь со страйкболом и нашим сообществом."));?></p>
-    <p class="firefly_proov"><a class="btn btn-social btn-vk" href="#"><span class="fa fa-vk"></span>&nbsp;<?=(_("Написать сообщение"));?></a></p>
+    <p class="firefly_proov"><a class="btn btn-social btn-vk" href="https://vk.me/fireflyairsoft"><span class="fa fa-vk"></span>&nbsp;<?=(_("Написать сообщение"));?></a></p>
     </div></div></div></div>
-    <!--
+    
     <div class="cometous"><div class="container">
            <div class="row"><div class="col-lg-12"><div class="row"><div class="col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
             <p class="text-center"><big><?=(_("Присоединиться к &laquo;Викингам Вирумаа&raquo; или к сообществу Firely Airsoft могут юноши и девушки в возрасте <u>от 14 до 26 лет,</u>желающие принимать активное участие в наших мероприятиях. Для этого потребуется выполнить несколько простых шагов, описанных далее."));?></big></p>
             </div></div><div class="row"><div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-7 col-lg-offset-0">
             <h2><?=(_("1. Получить разрешение родителей"));?></h2>
             <p><big><?=(_("Чтобы стать участниками сообщества &laquo;Викинги Вирумаа&raquo; или Firefly Airsoft, ребятам, не достигшим<u>совершеннолетия,</u>требуется письменное<u>разрешение родителей.</u>"));?></big></p>
-            <p><?=(_("Уважаемые родители, пожалуйста распечатайте <a href='/resources/docs/sfx_parents_agr.pdf'>форму соглашения</a>, заполните, подпишите её и передайте нам."));?></p>
-            </div><div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-10 col-xs-12"><div class="parents_file_download"><p><big><?=(_("<a href='/resources/docs/sfx_parents_agr.pdf'>Скачать</a> <u>соглашение,</u>"));?></big><br/><?=(_("распечатать и заполнить."));?></p></div></div>
+            <p><?=(_("Уважаемые родители, пожалуйста распечатайте <a href=\"https://drive.google.com/viewerng/viewer?url=https://sunfox.ee/resources/docs/sfx_parents_agr.pdf\" target=\"_blank\">форму соглашения</a>, заполните, подпишите её и передайте нам."));?></p>
+            </div><div class="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-10 col-xs-12"><div class="parents_file_download"><p><big><?=(_("<a href=\"https://drive.google.com/viewerng/viewer?url=https://sunfox.ee/resources/docs/sfx_parents_agr.pdf\" target=\"_blank\">Скачать</a> <u>соглашение,</u>"));?></big><br/><?=(_("распечатать и заполнить."));?></p></div></div>
             </div><div class="row"><div class="hidden-xs hidden-sm hidden-md col-lg-5">
 
             <svg width="150pt" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" style="margin:20px auto 0px;display:block;">
@@ -632,17 +636,17 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
 
             </div><div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-7 col-lg-offset-0">
             <h2><?=(_("2. Зарегистрировать профиль в системе Йомсборг"));?></h2>
-            <p><big><?=(_("Инфосистема Йомсборг поможет<u>быть в курсе предстоящих мероприятий</u>и следить за успехами в покорении<u>Системы достижений.</u>Вся информация доступна как на сайте Йомсборга, так и в аккаунте социальной сети vk.com."));?></big></p>
-            <p><?=(_("Регистрация на сайте <a href='https://jomsborg.viruviking.club'>jomsborg.viruviking.club</a> — как для участников сообщества Firefly Airsoft, так и для Викингов Вирумаа."));?></p>
+            <p><big><?=(_("Инфосистема Йомсборг поможет быть в курсе<u>предстоящих мероприятий</u>и следить за успехами в покорении<u>Системы достижений.</u>Вся информация доступна как на сайте Йомсборга, так и в аккаунте социальной сети vk.com."));?></big></p>
+            <p><?=(_("Регистрация на сайте <a href='https://jbrg.sunfox.ee'>jbrg.sunfox.ee</a> — как для участников сообщества Firefly Airsoft, так и для Викингов Вирумаа."));?></p>
             </div></div><div class="row eurocoins"><div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-7 col-lg-offset-0">
             <h2><?=(_("3. Оплатить членский взнос"));?></h2>
-            <p><big><?=(_("С июня 2017 года мы ввели небольшой<u>взнос для участников</u>наших сообществ. Сумма ежемесячного взноса —<u>5 евро.</u>Средства необходимо переводить<u>на банковский счет</u>организации используя персональный номер ссылки."));?></big></p>
+            <p><big><?=(_("С марта 2018 года мы ввели небольшой<u>взнос для участников</u>наших сообществ. Сумма ежемесячного взноса —<u>10 евро.</u>Средства необходимо переводить<u>на банковский счет</u>организации используя персональный номер ссылки."));?></big></p>
             <p><?=(_("В личном профиле инфосистемы Йомсборг доступна информация, необходимая для оформления постоянного платежного поручения в интернет-банке."));?></p>
             </div></div><div class="row"><div class="col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
             <p class="text-center"><big><?=(_("Свяжитесь с нами, если у Вас возникнут дополнительные вопросы или пожелания. Ниже указаны контактные данные координаторов сообществ и членов правления организации."));?></big></p>
         </div></div></div></div>
     </div></div>
--->
+
     <footer><div class="container"><div class="row">
       <div class="col-sm-6 col-lg-8">
             <h3>MTU Sunfox Team</h3>
@@ -653,7 +657,8 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
 
             <address>Tamme tn. 17, Tammiku alevik<br/>
             Jõhvi vald, 41542<br/>
-            Ida-Viru maakond</address>
+            Ida-Viru maakond<br/>
+            <span class="glyphicon glyphicon-hand-right"></span>&nbsp;<?=(_("<a href=\"https://goo.gl/maps/G5zaSQhNctA2\" target=\"_blank\">Карта</a> и <a href=\"#\" data-toggle=\"modal\" data-target=\"#ModalBusTimetable\">расписание автобуса</a> из Йыхви."));?></address>            
 
             <p><a href="mailto:info@sunfox.ee">info@sunfox.ee</a><br><a href="http://www.sunfox.ee">www.sunfox.ee</a></p>
 
@@ -699,19 +704,182 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
             </div></div>
           </form>
         </div></div></div></footer>
+        
+<!-- Modal Bus Timetable -->
+<div class="modal fade" id="ModalBusTimetable" tabindex="-1" role="dialog" aria-labelledby="ModalBusTimetable">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><?=(_("Расписание автобуса № 107"));?></h4>
+      </div>
+      <div class="modal-body"><div>        
+        <ul class="nav nav-pills center-pills" role="tablist">     
+        <li role="presentation" class="active"><a href="#toTammiku" aria-controls="toTammiku" role="tab" data-toggle="tab">Йыхви &rarr; Таммику</a></li>
+        <li role="presentation"><a href="#toJohvi" aria-controls="toJohvi" role="tab" data-toggle="tab">Таммику &rarr; Йыхви</a></li>
+        </ul>
+        <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="toTammiku">
+            <table class="table table-condenced">
+                <tr>
+                    <th>Jõhvi bussijaam</th>
+                    <td>6:00</td>
+                    <td>7:20</td>
+                    <td>9:00</td>
+                    <td>10:30</td>
+                    <td>12:00</td>
+                    <td>13:30</td>
+                    <td>15:00</td>
+                    <td>17:10</td>
+                </tr>
+                <tr>
+                    <th>Linda</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Meierei</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Jõhvi haigla</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Kutse</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Postkontor</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Kooli</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Ahtme kaubamaja</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Ahtme gümnaasium</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Puru haigla</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Tammiku alevik</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="toJohvi">To Johvi</div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</div>
+<!-- / Modal Bus Timetable -->
+ 
   </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> <script src="/resources/js/bootstrap.min.js"></script><script src="/resources/js/sunfox.js"></script><script type="text/javascript">
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="/resources/js/bootstrap.min.js"></script><script src="/resources/js/sunfox.js"></script><script type="text/javascript">
 $(window).scroll(function () {
   intro_parallax();
 });
-<!-- GA -->
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-73697141-1', 'auto');
-ga('send', 'pageview');
-<!-- VK Retarget -->
-(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=NxB5kgUCB/xgZMbKSIZfl46O/pj*zjsMuYzA7A6fO6VD59exj369Q2KYVXlPtocPByQxzMUdRcNDrBvBZn3OdkDW*IrtJEhI80Lhl6iX/YYfm5ifu1FV9tN5D0LRRwphmvPEFwf8SIKHBomMo3yOEdLF4zvt2h5d9ivib*RnILI-';
+
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2034055380184632');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2034055380184632&ev=PageView&noscript=1"
+/></noscript>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-73697141-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-73697141-2');
 </script>
 </html>

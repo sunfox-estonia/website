@@ -3,6 +3,22 @@ Viruviking main JS file
 Author: Victor Litvinkov
 */
 /*
+Local href onclick autoscroll to the anchor
+*/
+$('a[href^="#anchor_"]')
+  .click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 600);
+        return false;
+      }
+    }
+});
+/*
 Home page intro paralax
 More info: http://stackoverflow.com/questions/15465481/is-there-a-way-to-make-parallax-work-within-a-div
 */
