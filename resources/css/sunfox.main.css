@@ -11,11 +11,7 @@ a:hover{text-decoration:none;}
 a:hover, a:active, a:focus {outline: 0;}
 .btn{text-decoration:none;}
 
-body{font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:13px; background: #efefef;color:#161616;
-background: -moz-linear-gradient(top, #efefef 0%, #fcfcfc 25%, #d8d8d8 100%);
-background: -webkit-linear-gradient(top, #efefef 0%,#fcfcfc 25%,#d8d8d8 100%);
-background: linear-gradient(to bottom, #efefef 0%,#fcfcfc 25%,#d8d8d8 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#d8d8d8',GradientType=0 );}
+body{font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:13px; background:#d8d8d8;color:#161616;}
 
 h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;font-weight:100;}
 h1{font-size:30px;line-height:34px;}
@@ -75,11 +71,20 @@ p[class^="doclink"] small {display: block;}{padding-left:55px;}
 p.doclink_bkaart{background: url(/resources/img/footer/asutamisleping_img.png) no-repeat left top;}
 p.doclink_pxhikiri{background: url(/resources/img/footer/pxhikiri_img.png) no-repeat left top;}
 
-.modal .center-pills {display: flex;justify-content:center;}
+.modal .center-pills {display: flex;justify-content:center;margin-top:17px;}
 .modal .nav-pills>li>a,.nav-pills>li>a:focus,.nav-pills>li>a:hover{text-decoration:none;}
-#ModalBusTimetable table {margin-top:25px;}
+#ModalBusTimetable table {margin-top:25px;border-collapse:collapse;}
+#ModalBusTimetable table tr {border:none;}
+#ModalBusTimetable tbody td, #ModalBusTimetable thead td {text-align: center;}
+#ModalBusTimetable thead td, #ModalBusTimetable tbody th {white-space:nowrap; font-weight: bolder;}
+#ModalBusTimetable table td, #ModalBusTimetable table th {border-right: solid 1px #ddd;border-top:none;}
+#ModalBusTimetable table tr>td:last-child {border-right:none;}
+#ModalBusTimetable td.in5min{background-color:#FFBD67;}
+#ModalBusTimetable td.in10min{background-color:#FED6A3;}
+#ModalBusTimetable td.in15min{background-color:#FFE6C1;}
+#ModalBusTimetable td.TrainTime{white-space:nowrap;}
+#ModalBusTimetable td.TrainTime sup{margin-left:1px;}
 
-.btn-social {}
 .btn-social span{padding-left:2px;}
 .btn-social > :first-child {width:39px;top:auto;}
 
@@ -98,8 +103,8 @@ form textarea {border: 2px solid #B1B1B1 !important; width:100%; padding-left:3p
 form textarea:focus {border: 2px solid #989898 !important;}
 form .g-recaptcha {margin-bottom:7px;}
 
-
-nav .row{border-bottom:1px dotted #B3B3B3;padding-top:2px;padding-bottom:2px;}
+nav {display:block;clear:both;background-color:#F2F2F2;font-size:15px;font-family:Mezzo Regular;}
+nav .row{padding-top:4px;padding-bottom:4px;}
 
 @media (max-width: 750px) {
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -65px;height:230px;}

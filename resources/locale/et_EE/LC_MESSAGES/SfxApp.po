@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SfxApp\n"
-"POT-Creation-Date: 2018-02-03 00:03+0200\n"
-"PO-Revision-Date: 2018-02-03 00:04+0200\n"
+"POT-Creation-Date: 2018-02-06 22:30+0200\n"
+"PO-Revision-Date: 2018-02-06 23:16+0200\n"
 "Last-Translator: Victor Litvinkov <victor@sunfox.ee>\n"
 "Language-Team: NGU Sunfox Team <info@sunfox.ee>\n"
 "Language: et\n"
@@ -247,7 +247,7 @@ msgstr ""
 
 #: index.php:584
 msgid "распечатать и заполнить."
-msgstr "printige ja täidke seda ära."
+msgstr "printige ja täitke seda ära."
 
 #: index.php:638
 msgid "2. Зарегистрировать профиль в системе Йомсборг"
@@ -385,9 +385,41 @@ msgstr ""
 "<strong>Sõnum on saadetud!</strong> Võtame Teiega ühendust paari päeva "
 "jooksul."
 
-#: index.php:714
+#: index.php:716
 msgid "Расписание автобуса № 107"
+msgstr "Bussi nr. 107 sõiduplaan"
+
+#: index.php:719
+msgid ""
+"Из города Йыхви в поселок Таммику ходит автобус №107. Рейсы совершаются по "
+"рабочим дням и в субботу. Стоимость проезда - 50 евроцентов, скидки "
+"отсуствуют."
 msgstr ""
+"Jõhvist Tammiku alevisse käib liinibuss nr. 107. Reisid toimuvad tööpäeviti "
+"ning laupäeviti. Sõidu hind - 50 eurosenti, soodustused puuduvad."
+
+#: index.php:719
+msgid ""
+"возможность пересадки с поезда/на поезд в сторону Нарвы или Таллинна. "
+"Проверь расписание поездов:"
+msgstr "rongist/rongile ümberistumise võimalus. Vaata ka rongi sõiduplaani:"
+
+#: index.php:722
+msgid "Йыхви &rarr; Таммику"
+msgstr "Jõhvi &rarr; Tammiku"
+
+#: index.php:723
+msgid "Таммику &rarr; Йыхви"
+msgstr "Tammiku &rarr; Jõhvi"
+
+#: index.php:731 index.php:736 index.php:847 index.php:852
+msgid "Пн-Пт"
+msgstr "E-R"
+
+#: index.php:732 index.php:733 index.php:734 index.php:735 index.php:848
+#: index.php:849 index.php:850 index.php:851
+msgid "Пн-Сб"
+msgstr "E-L"
 
 #~ msgid ""
 #~ "<a href='/resources/docs/sfx_parents_agr.pdf'>Скачать</a> <u>соглашение,</"

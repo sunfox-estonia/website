@@ -5,8 +5,7 @@ Author: Victor Litvinkov
 /*
 Local href onclick autoscroll to the anchor
 */
-$('a[href^="#anchor_"]')
-  .click(function() {
+$('a[href^="#anchor_"]').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -18,6 +17,7 @@ $('a[href^="#anchor_"]')
       }
     }
 });
+
 /*
 Home page intro paralax
 More info: http://stackoverflow.com/questions/15465481/is-there-a-way-to-make-parallax-work-within-a-div
@@ -77,4 +77,48 @@ $("form[name=FormContactUs] button[type=submit]").click(function(){
     }
   });
   return false;
+});
+/*
+Bus timetable
+*/
+$('#ModalBusTimetable table tbody td').each(function() {
+    var BusTime = $(this).html();
+    var FormattedTime = new moment(BusTime, 'HH:mm');
+    var CurrentTime = moment();
+    // var CurrentTime = moment('17:10', 'HH:mm');
+    var Duration = CurrentTime.diff(FormattedTime, 'minutes');    
+    
+    if (FormattedTime < CurrentTime) {
+      $(this).addClass('text-muted');
+    } else if(FormattedTime.isAfter(CurrentTime) && Duration > -5) {
+      $(this).addClass('in5min');
+    } else if(FormattedTime.isAfter(CurrentTime) && Duration > -10) {
+      $(this).addClass('in10min'); 
+    } else if(FormattedTime.isAfter(CurrentTime) && Duration > -15) {
+      $(this).addClass('in15min');
+    }
+    
+    var TodayNumber = moment().isoWeekday(); 
+    // var TodayNumber = 6;
+    switch (TodayNumber) {
+      case 6:
+        $("#ModalBusTimetable tbody tr td:first-child").addClass('text-muted');
+        $("#ModalBusTimetable tbody tr td.in5min:first-child").css('background-color', '#b3b3b3');
+        $("#ModalBusTimetable tbody tr td.in10min:first-child").css('background-color', '#cecece');
+        $("#ModalBusTimetable tbody tr td.in15min:first-child").css('background-color', '#e3e3e3');
+            
+        $("#ModalBusTimetable tbody tr td:last-child").addClass('text-muted');
+        $("#ModalBusTimetable tbody tr td.in5min:last-child").css('background-color', '#b3b3b3');
+        $("#ModalBusTimetable tbody tr td.in10min:last-child").css('background-color', '#cecece');
+        $("#ModalBusTimetable tbody tr td.in15min:last-child").css('background-color', '#e3e3e3');
+        break;
+      case 7:
+        $("#ModalBusTimetable tbody td").addClass('text-muted');
+        $("#ModalBusTimetable tbody tr td.in5min").css('background-color', '#b3b3b3');
+        $("#ModalBusTimetable tbody tr td.in10min").css('background-color', '#cecece');
+        $("#ModalBusTimetable tbody tr td.in15min").css('background-color', '#e3e3e3');            
+        break;
+      default:
+        break;
+    }
 });
