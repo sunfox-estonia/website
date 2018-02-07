@@ -723,224 +723,36 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
         <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="toTammiku">
             <table class="table table-condenced">
-                <thead>
-                    <tr>
-                        <td></td>
-                        <td><?=(_("Пн-Пт"));?></td>
-                        <td><?=(_("Пн-Сб"));?></td>
-                        <td><?=(_("Пн-Сб"));?></td>
-                        <td><?=(_("Пн-Сб"));?></td>
-                        <td><?=(_("Пн-Сб"));?></td>
-                        <td><?=(_("Пн-Пт"));?></td>
-                    </tr>
-                </thead>
+                <thead><tr><td></td><td><?=(_("Пн-Пт"));?></td><td><?=(_("Пн-Сб"));?></td><td><?=(_("Пн-Сб"));?></td><td><?=(_("Пн-Сб"));?></td><td><?=(_("Пн-Сб"));?></td><td><?=(_("Пн-Пт"));?></td></tr></thead>
                 <tbody>
-                <tr>
-                    <th>Jõhvi bussijaam</th>
-                    <td>6:00</td>
-                    <td>7:20</td>
-                    <td>9:00</td>
-                    <td>10:30</td>
-                    <td>15:00</td>
-                    <td>17:10</td>
-                </tr>
-                <tr>
-                    <th>Linda</th>
-                    <td></td>
-                    <td>7:24</td>
-                    <td>9:04</td>
-                    <td>10:34</td>
-                    <td>15:04</td>
-                    <td>17:14</td>
-                </tr>
-                <tr>
-                    <th>Meierei</th>
-                    <td></td>
-                    <td>7:28</td>
-                    <td>9:08</td>
-                    <td>10:38</td>
-                    <td>15:08</td>
-                    <td>17:18</td>
-                </tr>
-                <tr>
-                    <th>Jõhvi haigla</th>
-                    <td></td>
-                    <td>7:31</td>
-                    <td>9:11</td>
-                    <td>10:41</td>
-                    <td>15:11</td>
-                    <td>17:21</td>
-                </tr>
-                <tr>
-                    <th>Kutse</th>
-                    <td></td>
-                    <td>7:33</td>
-                    <td>9:13</td>
-                    <td>10:43</td>
-                    <td>15:13</td>
-                    <td>17:23</td>
-                </tr>
-                <tr>
-                    <th>Postkontor</th>
-                    <td></td>
-                    <td>7:35</td>
-                    <td>9:15</td>
-                    <td>10:45</td>
-                    <td class="TrainTime">15:15<sup><span class="glyphicon glyphicon-link"></span></sup></td>
-                    <td class="TrainTime">17:25<sup><span class="glyphicon glyphicon-link"></span></sup></td>
-                </tr>
-                <tr>
-                    <th>Kooli</th>
-                    <td></td>
-                    <td>7:40</td>
-                    <td>9:20</td>
-                    <td>10:50</td>
-                    <td>15:20</td>
-                    <td>17:30</td>
-                </tr>
-                <tr>
-                    <th>Ahtme kaubamaja</th>
-                    <td></td>
-                    <td>7:45</td>
-                    <td>9:25</td>
-                    <td>10:55</td>
-                    <td>15:25</td>
-                    <td>17:35</td>
-                </tr>
-                <tr>
-                    <th>Ahtme gümnaasium</th>
-                    <td></td>
-                    <td>7:47</td>
-                    <td>9:27</td>
-                    <td>10:57</td>
-                    <td>15:27</td>
-                    <td>17:37</td>
-                </tr>
-                <tr>
-                    <th>Puru haigla</th>
-                    <td></td>
-                    <td>7:50</td>
-                    <td>9:30</td>
-                    <td>11:00</td>
-                    <td>15:30</td>
-                    <td>17:40</td>
-                </tr>
-                <tr>
-                    <th>Tammiku alevik</th>
-                    <td>6:15</td>
-                    <td>7:55</td>
-                    <td>9:35</td>
-                    <td>11:05</td>
-                    <td>15:35</td>
-                    <td>17:45</td>
-                </tr>
+                <tr><th>Jõhvi bussijaam</th><td>6:00</td><td>7:20</td><td>9:00</td><td>10:30</td><td>15:00</td><td>17:10</td></tr>
+                <tr><th>Linda</th><td></td><td>7:24</td><td>9:04</td><td>10:34</td><td>15:04</td><td>17:14</td></tr>
+                <tr><th>Meierei</th><td></td><td>7:28</td><td>9:08</td><td>10:38</td><td>15:08</td><td>17:18</td></tr>
+                <tr><th>Jõhvi haigla</th><td></td><td>7:31</td><td>9:11</td><td>10:41</td><td>15:11</td><td>17:21</td></tr>
+                <tr><th>Kutse</th><td></td><td>7:33</td><td>9:13</td><td>10:43</td><td>15:13</td><td>17:23</td></tr>
+		<tr><th>Postkontor</th><td></td><td>7:35</td><td>9:15</td><td>10:45</td><td class="TrainTime">15:15<sup><span class="glyphicon glyphicon-link"></span></sup></td><td class="TrainTime">17:25<sup><span class="glyphicon glyphicon-link"></span></sup></td></tr>
+		<tr><th>Kooli</th><td></td><td>7:40</td><td>9:20</td><td>10:50</td><td>15:20</td><td>17:30</td></tr>
+		<tr><th>Ahtme kaubamaja</th><td></td><td>7:45</td><td>9:25</td><td>10:55</td><td>15:25</td><td>17:35</td></tr>
+		<tr><th>Ahtme gümnaasium</th> <td></td><td>7:47</td><td>9:27</td><td>10:57</td><td>15:27</td><td>17:37</td></tr>
+		<tr><th>Puru haigla</th> <td></td><td>7:50</td><td>9:30</td><td>11:00</td><td>15:30</td><td>17:40</td></tr>
+		<tr><th>Tammiku alevik</th><td>6:15</td><td>7:55</td><td>9:35</td><td>11:05</td><td>15:35</td><td>17:45</td></tr>
                 </tbody>
             </table>
         </div>
         <div role="tabpanel" class="tab-pane" id="toJohvi">
             <table class="table table-condenced">
-                <thead>
-                    <tr>
-                        <td></td>
-                        <td><?=(_("Пн-Пт"));?></td>
-                        <td><?=(_("Пн-Сб"));?></td>
-                        <td><?=(_("Пн-Сб"));?></td>
-                        <td><?=(_("Пн-Сб"));?></td>
-                        <td><?=(_("Пн-Сб"));?></td>
-                        <td><?=(_("Пн-Пт"));?></td>
-                    </tr>
-                </thead>
+            <thead><tr><td></td><td><?=(_("Пн-Пт"));?></td><td><?=(_("Пн-Сб"));?></td><td><?=(_("Пн-Сб"));?></td><td><?=(_("Пн-Сб"));?></td><td><?=(_("Пн-Сб"));?></td><td><?=(_("Пн-Пт"));?></td></tr></thead>
             <tbody>
-                <tr>
-                    <th>Tammiku alevik</th>
-                    <td>6:20</td>
-                    <td>8:10</td>
-                    <td>9:40</td>
-                    <td>11:15</td>
-                    <td>15:40</td>
-                    <td>17:50</td>
-                </tr>
-                <tr>
-                    <th>Puru haigla</th>
-                    <td>6:25</td>
-                    <td>8:15</td>
-                    <td>9:45</td>
-                    <td>11:20</td>
-                    <td>15:45</td>
-                    <td>17:55</td>
-                </tr>
-                <tr>
-                    <th>Ahtme gümnaasium</th>
-                    <td>6:27</td>
-                    <td>8:17</td>
-                    <td>9:47</td>
-                    <td>11:22</td>
-                    <td>15:47</td>
-                    <td>17:57</td>
-                </tr>
-                <tr>
-                    <th>Ahtme kaubamaja</th>
-                    <td>6:30</td>
-                    <td>8:20</td>
-                    <td>9:50</td>
-                    <td>11:25</td>
-                    <td>15:50</td>
-                    <td>18:00</td>
-                </tr>
-                <tr>
-                    <th>Kooli</th>
-                    <td>6:35</td>
-                    <td>8:25</td>
-                    <td>9:55</td>
-                    <td>11:30</td>
-                    <td>15:55</td>
-                    <td>18:05</td>
-                </tr>
-                <tr>
-                    <th>Postkontor</th>
-                    <td>6:37</td>
-                    <td>8:27</td>
-                    <td>9:57</td>
-                    <td>11:32</td>
-                    <td>15:57</td>
-                    <td class="TrainTime">18:07<sup><span class="glyphicon glyphicon-link"></span></sup></td>
-                </tr>
-                <tr>
-                    <th>Jõhvi haigla</th>
-                    <td>6:40</td>
-                    <td>8:30</td>
-                    <td>10:00</td>
-                    <td>11:35</td>
-                    <td>16:00</td>
-                    <td>18:10</td>
-                </tr>
-                <tr>
-                    <th>Meierei</th>
-                    <td>6:42</td>
-                    <td>8:32</td>
-                    <td>10:02</td>
-                    <td>11:37</td>
-                    <td>16:02</td>
-                    <td>18:12</td>
-                </tr>
-                <tr>
-                    <th>Linda</th>
-                    <td>6:47</td>
-                    <td>8:37</td>
-                    <td>10:07</td>
-                    <td>11:42</td>
-                    <td>16:07</td>
-                    <td>18:17</td>
-                </tr>
-                <tr>
-                    <th>Jõhvi bussijaam</th>
-                    <td>6:50</td>
-                    <td>8:40</td>
-                    <td>10:10</td>
-                    <td>11:45</td>
-                    <td>16:10</td>
-                    <td>18:20</td>
-                </tr>
+		<tr><th>Tammiku alevik</th> <td>6:20</td><td>8:10</td><td>9:40</td><td>11:15</td><td>15:40</td><td>17:50</td></tr>
+		<tr><th>Puru haigla</th><td>6:25</td><td>8:15</td><td>9:45</td><td>11:20</td><td>15:45</td><td>17:55</td></tr>
+		<tr><th>Ahtme gümnaasium</th><td>6:27</td><td>8:17</td><td>9:47</td><td>11:22</td><td>15:47</td><td>17:57</td></tr>
+		<tr><th>Ahtme kaubamaja</th> <td>6:30</td><td>8:20</td><td>9:50</td><td>11:25</td><td>15:50</td><td>18:00</td></tr>
+		<tr><th>Kooli</th><td>6:35</td><td>8:25</td><td>9:55</td><td>11:30</td><td>15:55</td><td>18:05</td></tr>
+		<tr><th>Postkontor</th><td>6:37</td><td>8:27</td><td>9:57</td><td>11:32</td><td>15:57</td><td class="TrainTime">18:07<sup><span class="glyphicon glyphicon-link"></span></sup></td></tr>
+		<tr><th>Jõhvi haigla</th> <td>6:40</td><td>8:30</td><td>10:00</td><td>11:35</td><td>16:00</td><td>18:10</td></tr>
+		<tr><th>Meierei</th> <td>6:42</td><td>8:32</td><td>10:02</td><td>11:37</td><td>16:02</td><td>18:12</td></tr>
+		<tr><th>Linda</th> <td>6:47</td><td>8:37</td><td>10:07</td><td>11:42</td><td>16:07</td><td>18:17</td></tr>
+		<tr><th>Jõhvi bussijaam</th> <td>6:50</td><td>8:40</td><td>10:10</td><td>11:45</td><td>16:10</td><td>18:20</td></tr>
             </tbody>
             </table>
         </div>
@@ -953,7 +765,7 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
  
   </body>
   
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="/resources/js/bootstrap.min.js"></script><script src="/resources/js/moment.js"></script><script src="/resources/js/sunfox.js"></script><script type="text/javascript">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="/resources/js/bootstrap.min.js"></script><script src="/resources/js/moment.min.js"></script><script src="/resources/js/sunfox.js"></script><script type="text/javascript">
 $(window).scroll(function () {
   intro_parallax();
 });
