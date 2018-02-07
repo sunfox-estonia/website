@@ -11,7 +11,7 @@ a:hover{text-decoration:none;}
 a:hover, a:active, a:focus {outline: 0;}
 .btn{text-decoration:none;}
 
-body{font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:13px; background:#d8d8d8;color:#161616;}
+body{font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:13px; background:#dbdbdb;color:#161616;}
 
 h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;font-weight:100;}
 h1{font-size:30px;line-height:34px;}

@@ -714,7 +714,7 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
         <h4 class="modal-title" id="myModalLabel"><?=(_("Расписание автобуса № 107"));?></h4>
       </div>
       <div class="modal-body">
-        <p><?=(_("Из города Йыхви в поселок Таммику ходит автобус №107. Рейсы совершаются по рабочим дням и в субботу. Стоимость проезда - 50 евроцентов, скидки отсуствуют."));?></p><p><span class="glyphicon glyphicon-link"></span> &mdash; <?=(_("возможность пересадки с поезда/на поезд в сторону Нарвы или Таллинна. Проверь расписание поездов:"));?> <a href="http://www.elron.ee/" target="_blank">www.elron.ee</a></p>
+        <p><?=(_("Из города Йыхви в поселок Таммику ходит автобус №107. Рейсы совершаются по рабочим дням и в субботу. Стоимость проезда - 50 евроцентов, скидки отсутствуют."));?></p><p><span class="glyphicon glyphicon-link"></span> &mdash; <?=(_("возможность пересадки с поезда/на поезд в сторону Нарвы или Таллинна. Проверь расписание поездов:"));?> <a href="http://www.elron.ee/" target="_blank">www.elron.ee</a></p>
         <div>        
         <ul class="nav nav-pills center-pills" role="tablist">     
         <li role="presentation" class="active"><a href="#toTammiku" aria-controls="toTammiku" role="tab" data-toggle="tab"><?=(_("Йыхви &rarr; Таммику"));?></a></li>
