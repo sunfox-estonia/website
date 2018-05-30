@@ -24,7 +24,7 @@ header h2, header h3 {text-align: center;}
 header h3 {margin-bottom: 40px;}
 header a, header a:hover, header a:active, header a:focus {color:#161616;}
 
-.sfx_logo{position:absolute;top:86px;z-index:5;left:50%;margin-left:-181px;}
+.sfx_logo{position:absolute;top:92px;z-index:5;left:50%;margin-left:-181px;}
 .sfx_logo h1{display:inline-block;}
 .sfx_logo h1:nth-child(2){margin-left:180px;}
 
@@ -102,7 +102,7 @@ form textarea:focus {border: 2px solid #989898 !important;}
 form .g-recaptcha {margin-bottom:7px;}
 
 nav {display:block;clear:both;background-color:#F2F2F2;font-size:15px;font-family:Mezzo Regular;}
-nav .row{padding-top:4px;padding-bottom:4px;}
+nav .row{padding-top:4px;padding-bottom:3px;}
 
 @media (max-width: 750px) {
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -65px;height:230px;}
