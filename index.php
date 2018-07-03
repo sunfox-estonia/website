@@ -651,9 +651,16 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
       <div class="col-sm-6 col-lg-8">
             <h3>MTU Sunfox Team</h3>
             <p><?=(_("Рег. номер"));?>: 80415755</p>
-
-            <p class="doclink_bkaart hidden-xs" style="margin-top:20px;"><a href="https://wiki.sunfox.ee/public:ngo_bkaart"><?=(_("B-карта"));?></a> <small>– <?=(_("выписка из регистра предприятий<br>и организаций Эстонии."));?></small></p>
-            <p class="doclink_pxhikiri hidden-xs"><a href="https://wiki.sunfox.ee/public:ngo_pohikiri"><?=(_("Устав"));?></a> <small>– <?=(_("цели организации,<br>управление, членство."));?></small></p>
+            
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p class="doclink_bkaart hidden-xs" style="margin-top:20px;"><a href="https://wiki.sunfox.ee/public:ngo_bkaart"><?=(_("B-карта"));?></a> <small>– <?=(_("выписка из регистра предприятий<br>и организаций Эстонии."));?></small></p>
+                    <p class="doclink_pxhikiri hidden-xs"><a href="https://wiki.sunfox.ee/public:ngo_pohikiri"><?=(_("Устав"));?></a> <small>– <?=(_("цели организации,<br>управление, членство."));?></small></p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <p class="doclink_aruanned hidden-xs" style="margin-top:20px;"><a href="https://wiki.sunfox.ee/public:ngo_aruanned"><?=(_("Годовые отчеты"));?></a> <small>– <?=(_("ежегодные отчеты о финансовой и хозяйственной деятельности организации"));?></small></p>
+                </div>
+            </div>
 
             <address>Tamme tn. 17, Tammiku alevik<br/>
             Jõhvi vald, 41542<br/>
