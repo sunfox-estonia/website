@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SfxApp\n"
-"POT-Creation-Date: 2018-07-03 21:29+0300\n"
-"PO-Revision-Date: 2018-07-03 21:29+0300\n"
+"POT-Creation-Date: 2018-07-03 21:32+0300\n"
+"PO-Revision-Date: 2018-07-03 21:33+0300\n"
 "Last-Translator: Victor Litvinkov <victor@sunfox.ee>\n"
 "Language-Team: NGU Sunfox Team <info@sunfox.ee>\n"
 "Language: et\n"
@@ -328,8 +328,8 @@ msgid "Годовые отчеты"
 msgstr "Majandusaasta aruanded"
 
 #: index.php:661
-msgid "отчеты о хозяйственной деятельности организации."
-msgstr "aruanded organisatsiooni majandustegevuse kohta."
+msgid "отчеты о хозяйственной<br/>деятельности организации."
+msgstr "aruanded mittetulundusühingu<br/>majandusliku tegevuste kohta."
 
 #: index.php:668
 msgid ""
@@ -423,6 +423,9 @@ msgstr "E-R"
 #: index.php:854 index.php:855 index.php:856
 msgid "Пн-Сб"
 msgstr "E-L"
+
+#~ msgid "отчеты о хозяйственной деятельности организации."
+#~ msgstr "aruanded mittetulundusühingu<br/>majandustegevuse kohta."
 
 #~ msgid "отчет о хозяйственной деятельности организации."
 #~ msgstr "aruanded organisatsiooni majandustegevuse kohta."

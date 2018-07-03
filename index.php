@@ -658,7 +658,7 @@ l36 -41 -49 0 c-70 0 -263 31 -263 42 0 30 141 268 159 268 4 0 12 -26 18 -57z"/>
                     <p class="doclink_pxhikiri hidden-xs"><a href="https://wiki.sunfox.ee/public:ngo_pohikiri"><?=(_("Устав"));?></a> <small>– <?=(_("цели организации,<br>управление, членство."));?></small></p>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <p class="doclink_aruanned hidden-xs"><a href="https://wiki.sunfox.ee/public:ngo_aruanned"><?=(_("Годовые отчеты"));?></a> <small>– <?=(_("отчеты о хозяйственной деятельности организации."));?></small></p>
+                    <p class="doclink_aruanned hidden-xs"><a href="https://wiki.sunfox.ee/public:ngo_aruanned"><?=(_("Годовые отчеты"));?></a> <small>– <?=(_("отчеты о хозяйственной<br/>деятельности организации."));?></small></p>
                 </div>
             </div>
 
