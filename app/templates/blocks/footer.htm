@@ -1,0 +1,64 @@
+<footer><div class="container"><div class="row">
+  <div class="col-sm-6 col-lg-8">
+        <h3>MTU Sunfox Team</h3>
+        <p>{{ @footer_regnr }}: 80415755</p>
+
+        <div class="row hidden-xs" style="margin-top:30px; margin-bottom:0px;">
+            <div class="col-md-6 col-sm-12">
+                <p class="doclink_bkaart"><a href="https://wiki.sunfox.ee/public:ngo_bkaart">{{ @footer_bkaart }}</a> <small>– {{ @footer_bkaart_descr | raw }}</small></p>
+                <p class="doclink_pxhikiri"><a href="https://wiki.sunfox.ee/public:ngo_pohikiri">{{ @footer_pxhikiri }}</a> <small>– {{ @footer_pxhikiri_descr | raw }}</small></p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <p class="doclink_aruanned"><a href="https://wiki.sunfox.ee/public:ngo_aruanned">{{ @footer_aruanned }}</a> <small>– {{ @footer_aruanned_descr | raw }}</small></p>
+            </div>
+        </div>
+
+        <address>Tamme tn. 17, Tammiku alevik<br/>
+        Jõhvi vald, 41542<br/>
+        Ida-Viru maakond<br/>
+        <span class="glyphicon glyphicon-hand-right"></span>&nbsp;{{ @joinus_step2_text3 | raw }}</address>            
+
+        <p><a href="mailto:info@sunfox.ee">info@sunfox.ee</a><br><a href="http://www.sunfox.ee">www.sunfox.ee</a></p>
+
+        <div class="row" style="margin-top:30px;">
+            <div class="hidden-xs col-md-6 col-lg-3">
+            <p><big>{{ @footer_jkond_victorlitvinkov }}</big>
+            <br/>{{ @footer_jkond_victorlitvinkov_descr }}
+            <br/><a href="mailto:viktor@sunfox.ee">viktor@sunfox.ee</a>
+            <br/>+372 55 59 3171</p>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-6 col-lg-3">
+            <p><big>{{ @footer_jkond_robertkruzberg }}</big>
+            <br/>{{ @footer_jkond_robertkruzberg_descr }}
+            <br/><a href="mailto:robert@sunfox.ee">robert@sunfox.ee</a>
+            <br/>+372 53 73 1824</p>
+            </div>
+        </div>
+        <p class="imprint hidden-xs">&copy; MTÜ Sunfox Team<br>{{ @footer_imprint | raw }}</p>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <form action="/actions/message4us" method="POST" name="FormContactUs">
+        <div class="row"><div class="col-lg-12">
+            <fieldset><legend>{{ @footer_contactus_header }}</legend>
+            <div class="row"><div class="col-lg-8"><div class="form-group">
+                <label for="message_from">{{ @footer_contactus_email }}</label>
+                <input type="email" class="form-control" id="message_from" name="message_from" placeholder="username@domain.tld" required>
+            </div></div></div><div class="row"><div class="col-lg-11"><div class="form-group">
+                <label for="message_text">{{ @footer_contactus_message }}</label>
+                <textarea class="form-control" name="message_text" rows="3" required ></textarea>
+            </div></div></div>
+            </fieldset>
+            <fieldset>
+            <legend>{{ @footer_contactus_verif }}</legend>
+            <div class="g-recaptcha form-field" data-sitekey="{{ @gcaptcha_siteKey }}"></div>
+            </fieldset>
+        </div></div>
+        <div class="row"><div class="col-lg-12">
+            <fieldset class="submit">
+            <button type="submit" class="btn btn-lg btn-default">{{ @footer_contactus_send }}</button>
+            <div class="alert alert-danger" role="alert" id="FormContactUsMessageErr">{{ @footer_contactus_answer_err | raw }}</div>
+            <div class="alert alert-success" role="alert" id="FormContactUsMessageOk">{{ @footer_contactus_answer_ok  | raw }}</div>
+            </fieldset>
+        </div></div>
+      </form>
+    </div></div></div></footer>

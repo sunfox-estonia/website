@@ -1,0 +1,16 @@
+<nav><div class="container">
+    <div class="row">
+        <div class="col-xs-8 col-sm-4 text-left"><check if="{{ @PATH=='/' }}"><true><strong>Sunfox.ee</strong></true><false><a href="/"><strong>Sunfox.ee</strong></a></false></check> | <a href="https://wiki.sunfox.ee">{{ @nav_link_wiki }}</a></div>
+        <div class="hidden-xs col-sm-4 text-center"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<check if="{{ @PATH=='/' }}"><true><a href="#anchor_joinus">{{ @nav_link_joinus }}</a></true><false><a href="/#joinus">{{ @nav_link_joinus }}</a></false></check></div>
+        <div class="col-xs-4 col-sm-4 text-right"><span class="glyphicon glyphicon-globe"></span>
+        <check if="{{ @SESSION.native=='et' }}">
+            <true>
+                <a href="/lang/ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a>
+            </true>
+            <false>
+                <a href="/lang/et">Eesti keeles</a>
+            </false>
+        </check>
+        </div>
+    </div>
+</div></nav>

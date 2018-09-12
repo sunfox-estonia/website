@@ -19,65 +19,54 @@ $('a[href^="#anchor_"]').click(function() {
 });
 
 /*
-Home page intro paralax
-More info: http://stackoverflow.com/questions/15465481/is-there-a-way-to-make-parallax-work-within-a-div
+Homepage Calendar requests handler
 */
-function intro_parallax() {
-    var ev = {
-        scrollTop: document.body.scrollTop || document.documentElement.scrollTop
-    };
-    ev.ratioScrolled = ev.scrollTop / (document.body.scrollHeight - document.documentElement.clientHeight);
-    intro_parallax_render(ev);
-}
-function intro_parallax_render(ev) {
-    var t = ev.scrollTop;
-    var thirdhill_val = Math.round(t*0.05-20);
-    var sechill_val = Math.round(t*0.025);
-    var firsthill_val = Math.round(t*(-0.04)+30);
-    var flag_val_ver = Math.round(t*(-0.03)+10);
-    var flag_val_hor = Math.round(t*(-0.005));
-    $('div#intro_thirdhill').css('background-position', '0px ' + thirdhill_val + 'px');
-    $('div#intro_sechill').css('background-position', '0 ' + sechill_val + 'px');
-    $('div#intro_firsthill').css('background-position', '0 ' + firsthill_val + 'px');
-    $('div#intro_flag').css('background-position', flag_val_hor + 'px ' + flag_val_ver + 'px');
-}
+$('div.event').on('click', function(e){
+    $('#ModalEventAuth').find('.modal-content').load($(this).attr('data-eventid'));
+    $('#ModalEventAuth').modal('show');
+});
+$("#ModalEventAuth").on('hidden.bs.modal', function () {
+    $('#ModalEventAuth').find('.modal-content').empty();
+});
 /*
 Homepage Contact Form AJAX processing
-*/
-$("form[name=FormContactUs] button[type=submit]").click(function(){
-  $("form[name=FormContactUs] button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="Загрузка..." />').blur();
+*/		
+$("form[name=FormContactUs]").submit(function(event){
+    /* stop form from submitting normally */
+    event.preventDefault();
+    $("form[name=FormContactUs] button[type=submit]").prop( "disabled", true ).html('<img src="/resources/img/ico/preloader.gif" alt="Загрузка..." />').blur();
 
-  var value_mail = $("form[name=FormContactUs] input[name=contact_mail]").val();
-  var value_message = $("form[name=FormContactUs] textarea[name=contact_message]").val();
-  var value_response_captcha = $("form[name=FormContactUs] textarea[name=g-recaptcha-response]").val();
-  var dataString = 'contact_mail='+ value_mail + '&contact_message='+ value_message + '&recaptcha_response_field='+ value_response_captcha;
-  $.ajax({
-    type: "POST",
-    url: "/resources/php/php_plg_mailer/sunfox.mailer.php",
-    data: dataString,
-    cache: false,
-    success: function(response){
-      $("form[name=FormContactUs] div.g-recaptcha").hide();
-      $("form[name=FormContactUs] button[type=submit]").hide();
-      switch(response){
-      case 'true':
-        $("form[name=FormContactUs] div#FormContactUsMessageOk").fadeIn('slow');
-      break;
-      case 'false':
-        $("form[name=FormContactUs] div#FormContactUsMessageErr").fadeIn('slow');
-      break;
-      default:
-        $("form[name=FormContactUs] div#FormContactUsMessageErr").fadeIn('slow');
-      }
-    },
-    error:function(){
-      $("form[name=FormContactUs] button[type=submit]").hide();
-      $("form[name=FormContactUs] div.g-recaptcha").hide();
-      $("form[name=FormContactUs] div#FormContactUsMessageErr").fadeIn('slow');
+    /* setup post function vars */
+    var url = $(this).attr('action');
+    var postdata = $(this).serialize();    
+
+    /* send the data using post and put the results in a div with id="result" */
+    /* post(url, postcontent, callback, datatype returned) */
+
+    var request = $.post(
+        url,
+        postdata,
+        formpostcompleted,
+        "json"            
+    ); // end post function     
+
+    function formpostcompleted(data, status)
+    {   
+        $("form[name=FormContactUs] div.g-recaptcha").hide();
+        $("form[name=FormContactUs] button[type=submit]").hide();
+        switch(data){
+            case true :
+              $("form[name=FormContactUs] div#FormContactUsMessageOk").fadeIn('fast');
+            break;
+            case false :
+              $("form[name=FormContactUs] div#FormContactUsMessageErr").fadeIn('fast');
+            break;
+            default:
+              $("form[name=FormContactUs] div#FormContactUsMessageErr").fadeIn('fast');
+        }
     }
-  });
-  return false;
 });
+
 /*
 Bus timetable
 */

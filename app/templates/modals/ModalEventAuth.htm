@@ -1,0 +1,21 @@
+<div class="event">
+<div class="row"><div class="col-xs-12">
+      <h4 class="e_datetitle">{{ @event.time_daymonth }} &mdash; {{ @event.title }}</h4>
+      <p class="e_timeplace"><span class="glyphicon glyphicon-time"></span>&nbsp;{{ @event.time_timeonly }} &mdash; <span class="glyphicon glyphicon-map-marker"></span>&nbsp;{{ @event.location }}</p>
+</div></div>
+</div>
+<p class="text-center">{{ @joinus_register2event_social }}</p>
+
+<check if="{{ @SESSION.native=='et' }}">
+    <true><div align="center" style="margin-top:13px;margin-bottom:16px;">
+        <script async src="https://telegram.org/js/telegram-widget.js?4" data-telegram-login="sfxmuninnbot" data-size="large" data-radius="4" data-auth-url="http://beta.sunfox.ee/actions/register2event/{{ @event.id }}" data-request-access="write"></script>
+    </div></true>
+    <false>
+        <div id="event_go_auth_vk"></div>
+        <script type="text/javascript">
+          VK.Widgets.Auth("event_go_auth_vk", {"width":250,"authUrl":"actions/register2event/{{ @event.id }}"});
+        </script>
+    </false>
+</check>
+
+

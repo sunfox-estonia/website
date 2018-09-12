@@ -1,0 +1,30 @@
+<p><big>{{ @joinus_step2_calendar_title | raw }}</big></p>
+
+<check if="{{ @events }}">
+<true>
+    <repeat group="{{ @events }}" value="{{ @singleEvent }}">
+    <div class="event" data-eventid="/event/{{ @singleEvent.id }}">
+        <div class="row">
+            <div class="col-xs-3 col-sm-4">
+                <h4 class="e_date">{{ @singleEvent.time_dayonly }}<check if="{{ @SESSION.native=='et' }}"><true>.</true></check> {{ @singleEvent.time_monthonly_word }}</h4>
+                <p class="e_time"><span class="glyphicon glyphicon-time"></span>&nbsp;{{ @singleEvent.time_timeonly }}</p>
+            </div>
+            <div class="col-xs-9 col-sm-8">
+                <h4 class="e_title">{{ @singleEvent.title }}</h4>
+                <p class="e_place"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;{{ @singleEvent.location }}</p>
+            </div>
+        </div>
+    </div>
+    </repeat>
+</true>
+<false>
+    <div class="event_null">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <p class="text-center">{{ @joinus_step2_calendar_nodata }}</p>
+            </div>
+        </div>
+    </div>
+</false>
+</check>
+<p><small><a href="https://wiki.sunfox.ee/public:agr_conf" target="_blank">{{ @joinus_step2cal_agr }}</a></small></p>
