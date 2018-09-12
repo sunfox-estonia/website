@@ -16,6 +16,7 @@ $f3->set('gcaptcha_siteKey', '6LeN-CEUAAAAACwqSSN-UKBVCj-MCqmpTU5OXbg2');
 $f3->set('gcaptcha_secret', '6LeN-CEUAAAAAJEKcUXmRWmVEDL6bQvJGmT-9xYa');  
 
 $f3->set('ONERROR',function($f3){
+    $f3->set('LANGUAGE',$f3->get('SESSION.native'));
     $user_lang = $f3->get('SESSION.native');
     $f3->set('FALLBACK','ru');
     echo Template::instance()->render('error.htm');
@@ -140,7 +141,7 @@ $f3->route('GET /actions/register2event/@id',
     $hash=uniqid(NULL,TRUE);
     $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'c24BTNv7qMavXc4Q' );
     $smtp->set('From', '"Sunfox.ee Bot" <muninn@sunfox.ee>');
-    $smtp->set('To', '"Sunfox Team" <victor@sunfox.ee>');
+    $smtp->set('To', '"Sunfox Team" <all@sunfox.ee>');
     $smtp->set('Content-Type', 'multipart/alternative; boundary="'.$hash.'"');    
     $smtp->set('Subject', 'Уведомление с сайта sunfox.ee');
         
