@@ -141,7 +141,7 @@ $f3->route('GET /actions/register2event/@id',
     $hash=uniqid(NULL,TRUE);
     $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'c24BTNv7qMavXc4Q' );
     $smtp->set('From', '"Sunfox.ee Bot" <muninn@sunfox.ee>');
-    $smtp->set('To', '"Sunfox Team" <all@sunfox.ee>');
+    $smtp->set('To', '"Sunfox Team" <victor@sunfox.ee>');
     $smtp->set('Content-Type', 'multipart/alternative; boundary="'.$hash.'"');    
     $smtp->set('Subject', 'Уведомление с сайта sunfox.ee');
         
