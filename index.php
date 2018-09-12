@@ -102,6 +102,7 @@ $f3->route('GET /event/@id',
 
 $f3->route('GET /actions/register2event/@id',
     function($f3,$params) {
+    $f3->set('LANGUAGE',$f3->get('SESSION.native'));
     $events = new \Events;
     $EventsPrepare = $events->listEvents(2);    
     $event_id = $params['id'];
