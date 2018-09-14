@@ -8,7 +8,7 @@ class vkcom {
     const VK_API_ACCESS_TOKEN = '43c16eee15b83eba742c024c62f55ef752ec428ee09d007b42596d4b0437ceefec1a439f9b0a9a00b77ba'; //Ключ доступа сообщества
 
     // API settings
-    const VK_API_VERSION = '5.67';
+    const VK_API_VERSION = '5.70';
     const VK_API_ENDPOINT = 'https://api.vk.com/method/';
     
     // Log settings
@@ -139,7 +139,7 @@ class Muninn extends vkcom {
     // Chat Requests handler
     public function callback_handleEvent() {
         $request = $this->_callback_getRequest();
-        
+        error_log("Payload command recieved", 0);
         try {
             switch ($request->type) {
             //Подтверждение сервера
@@ -160,9 +160,9 @@ class Muninn extends vkcom {
             case 'message_new':
                 $req_user = $request->object->user_id;  
                 $req_peer_id = $request->object->id;  
-                $req_payload = ($request->object->payload) ? json_decode($data->object->payload, true) : null;
+                $req_payload = ($request->object->payload) ? json_decode($data->object->payload, true) : null;   
                 if ($req_payload){
-                    // Run commands script
+                    
                     break;
                 }                    
                 $req_msg = mb_strtolower($request->object->body);
