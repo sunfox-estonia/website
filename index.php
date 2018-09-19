@@ -104,86 +104,58 @@ $f3->route('GET /event/@id',
 $f3->route('GET /actions/register2event/@id',
     function($f3,$params) {
     $f3->set('LANGUAGE',$f3->get('SESSION.native'));
-    $events = new \Events;
-    $EventsPrepare = $events->listEvents(2);    
-    $event_id = $params['id'];
-
-    $event4web = array(
-        'id' => $EventsPrepare[$event_id]['id'],
-        'title' => $EventsPrepare[$event_id]['title'],
-        'time_timeonly' => date("H:i", $EventsPrepare[$event_id]['time']), // 12:00
-        'time_dayonly' => date("j", $EventsPrepare[$event_id]['time']), // 1-31
-        'time_monthonly_number' => date("m", $EventsPrepare[$event_id]['time']), // 01-12
-        'time_daymonth' => date("j", $EventsPrepare[$event_id]['time']) . "/" . date("m", $EventsPrepare[$event_id]['time']), // 1/08
-        'location' => $EventsPrepare[$event_id]['loc'],
-        'description' => $EventsPrepare[$event_id]['descr'],
-    );
-        
-    $client_firstname = $f3->get('GET.first_name');
-    $client_lastname = $f3->get('GET.last_name');
     if($f3->get('GET.uid')){
         $client_profile = 'https://vk.me/' . $f3->get('GET.uid');
     } else {
         $client_profile = 'https://telegram.me/' . $f3->get('GET.username');
-    }
-        
-    $msg_text = ""; 
-
-    $msg_html = '<html>';
-    $msg_html .= '<p>Привет!</p><p>Поступила новая заявка на участие в мероприятии <strong>' . $event4web['time_daymonth'] . ' - ' . $event4web['title'] . '</strong></p>';
-    $msg_html .= '<p>Заявка отправлена посетителем сайта Sunfox.ee:';
-    $msg_html .= '<br>- имя, фамилия: <strong>'.$client_firstname.' '.$client_lastname . '</strong>';
-    $msg_html .= '<br>- родной язык: '.$f3->get('SESSION.native');
-    $msg_html .= '<br>- профиль: '. $client_profile . '</p>';
-    $msg_html .= '<p>Это письмо отправлено ботом Sunfox.ee. Отвечать на него не следует.</p>';
-    $msg_html .= '</body></html>';
-    
-    $hash=uniqid(NULL,TRUE);
-    $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'c24BTNv7qMavXc4Q' );
-    $smtp->set('From', '"Sunfox.ee Bot" <muninn@sunfox.ee>');
-    $smtp->set('To', '"Sunfox Team" <victor@sunfox.ee>');
-    $smtp->set('Content-Type', 'multipart/alternative; boundary="'.$hash.'"');    
-    $smtp->set('Subject', 'Уведомление с сайта sunfox.ee');
-        
-    $eol="\r\n";
-    $msg_body  = '--'.$hash.$eol;
-    $msg_body .= 'Content-Type: text/plain; charset=UTF-8'.$eol;
-    $msg_body .= $msg_text.$eol.$eol;
-    $msg_body .= '--'.$hash.$eol;
-    $msg_body .= 'Content-Type: text/html; charset=UTF-8'.$eol.$eol;
-    $msg_body .= $msg_html.$eol;
-
-    $sent = $smtp->send($msg_body, TRUE);
-        
-    if($sent) {
-        $f3->set('event', $event4web);    
-        echo Template::instance()->render('joinus/register2event.htm');
-    } else {
-        $logger = new \Log('/app/log/sfx-app.log');
-        $logger->write(date("Y-m-d H:i:s") . ' ' . 'Email sending error (Sunfox.ee -> info@sunfox.ee, Уведомление с сайта sunfox.ee)');
-    }
+    }    
+    $event = new \Events;
+    $event->register2Event($params['id'],$f3->get('GET.first_name'),$f3->get('GET.last_name'),$f3->get('SESSION.native'), $client_profile);
+    $event4web=$event->getEvent($params['id']);    
+    $f3->set('event', $event4web);    
+    echo Template::instance()->render('joinus/register2event.htm');
 });
 
 $f3->route('POST /actions/message4us',
     function($f3) {
         // Recieve data
         $msg_from = $f3->get('POST.message_from');
-        $msg_text = $f3->get('POST.message_text');
+        $message = $f3->get('POST.message_text');
         $msg_captcha = $f3->get('POST.g-recaptcha-response');
         
         $recaptcha = new \ReCaptcha\ReCaptcha($f3->get('gcaptcha_secret'));
         $resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])->verify($msg_captcha, $_SERVER['REMOTE_ADDR']);
-        if ($resp->isSuccess()){
-            // If the response is a success, that's it!
-            $Mail = new PHPMailer\PHPMailer\PHPMailer;
-            $Mail->From     = $msg_from;
-            $Mail->FromName = 'Посетитель sunfox.ee';
-            $Mail->CharSet  = "utf-8";
-            $Mail->Subject  = 'Сообщение с sunfox.ee';
-            $Mail->Body     = $msg_text;
-            $Mail->AddAddress('info@sunfox.ee');
-            if(!$Mail->Send()) {
+        if ($resp->isSuccess()){   
+            $msg_text = ""; 
+
+            $msg_html = '<html>';
+            $msg_html .= '<p>Привет!</p><p>Поступило новое сообщение с сайта Sunfox.ee</p>';
+            $msg_html .= '<p><u>Отправитель</u>: ' . $msg_from;
+            $msg_html .= '<br><u>Текст сообщения</u>:';
+            $msg_html .= '<br>' .  $message . '</p>';
+            $msg_html .= '<p>Это письмо отправлено ботом Sunfox.ee. Отвечать на него не следует.</p>';
+            $msg_html .= '</body></html>';
+
+            $hash=uniqid(NULL,TRUE);
+            $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'c24BTNv7qMavXc4Q' );
+            $smtp->set('From', '"Sunfox.ee Bot" <muninn@sunfox.ee>');
+            $smtp->set('To', '"Sunfox Team" <victor@sunfox.ee>');
+            $smtp->set('Reply-To', '"Sunfox.ee user" <'.$msg_from.'>');
+            $smtp->set('Content-Type', 'multipart/alternative; boundary="'.$hash.'"');    
+            $smtp->set('Subject', 'VV - Сообщение с сайта Sunfox.ee');
+
+            $eol="\r\n";
+            $msg_body  = '--'.$hash.$eol;
+            $msg_body .= 'Content-Type: text/plain; charset=UTF-8'.$eol;
+            $msg_body .= $msg_text.$eol.$eol;
+            $msg_body .= '--'.$hash.$eol;
+            $msg_body .= 'Content-Type: text/html; charset=UTF-8'.$eol.$eol;
+            $msg_body .= $msg_html.$eol;
+
+            $sent = $smtp->send($msg_body, TRUE);
+            if(!$sent) {
               $return = "false";
+              error_log(date("Y-m-d H:i:s") . ' ' . 'Email sending error (Sunfox.ee -> info@sunfox.ee, Сообщение с сайта Sunfox.ee)', 0);
             } else {
               $return = "true";
             }
@@ -194,10 +166,10 @@ $f3->route('POST /actions/message4us',
 });
 
 /*
-* $f3->route('GET /actions/phpinfo', function() {
-*     echo phpinfo();
-* });
-*/
+*/ $f3->route('GET /actions/phpinfo', function() {
+     echo phpinfo();
+ });
+
 
 $f3->route('POST /muninn/vkbot', 'Muninn->go');
 
