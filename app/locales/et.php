@@ -33,7 +33,7 @@ return array(
     "joinus_step2_text1"    => "Proovitrennid korraldatakse Tammiku alevis. Varustus proovitreeningutel osalemiseks on uustulnukatele tasuta. Proovitrennil osalemiseks on vaja eelnevalt registreeruda.",
     "joinus_step2_text2"    => "Külastage meid!",
     "joinus_step2_text3"    => "<a href=\"https://goo.gl/maps/KPTS8Fy18sC2\" target=\"_blank\">Kaart</a> ja Jõhvi-Tammiku <a href=\"#\" data-toggle=\"modal\" data-target=\"#ModalBusTimetable\">bussi sõiduplaan</a>.",
-    "joinus_step2_calendar_title" => "Meie ühingute<mark>&nbsp;tulevased üritused:&nbsp;</mark>",
+    "joinus_step2_calendar_title" => "Meie kogukondade<mark>&nbsp;tulevased üritused:&nbsp;</mark>",
     "joinus_step2_calendar_nodata" => "Praegu tulevasi üritusi pole. Palun võtke meiega ühendust et saaksime pakkuda Teile sobiva proovikuhtumise kuupäeva.",
     "joinus_register2event_title" => "Täname registreerimise eest!",
     "joinus_register2event_intro" => "Olete registreerunud üritusele:",
