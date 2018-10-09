@@ -17,7 +17,7 @@ return array(
     "vv_about_p2_sublead"   => "Trennime ühe- ja kahekäemõõkadega, omandame kilbi kasutamise oskusi. Ajalooline mõõgavõitlus – see on unustamatu kogemus ja aktiivne puhkus huvitavate inimeste seltskonnas. Iga lahing on nagu kohtumine iidsetest lugudest ja legendidest pärit isikutega.",
     "vv_about_p2_text1"     => "Treeningud toimuvad harrastajate tasemel. Võtete õppimine ja viimistlemine toimuvad treeningvarustusega, mis on lahingvarustusele sarnane. Kontaktlahingud toimuvad pehmendatud relvadega.",
     "vv_about_p2_text2"     => "Proovitreening on tasuta. Uustulnukatele pakume varustust proovitreeningutel osalemiseks.",
-    "er_intro_subtitle"     => "Ida-Virumaa noorte<br>airsofterite ühing",
+    "er_intro_subtitle"     => "Ida-Virumaa noorte<br>airsofterite kogukond",
     "er_about_p1_lead"      => "Einherjar ühendab noori ja aktiivseid airsoft´i mängijaid Ida-Virumaal.",
     "er_about_p1_sublead"   => "Airsoft on taktikaline sõjalis-sportlik mäng, kus kasutatakse tõeliste tulirelvade koopiaid, mis tulistavad suruõhuga ilma värvaineta plastkuule. See on ekstreemsport aktiivset puhkust hindavatele inimestele.",
     "er_about_p1_text1"     => "Airsoft´i treeningutel õpime relva käsitsemist, meeskonnatööd, maskeerumist ja mitmesugustes olukordades märkamatuks jäämist. Noored parandavad oma füüsilist ettevalmistust, arendavad vastupidavust ja õpivad vajalikul hetkel õigeid otsuseid langetama.",
