@@ -165,12 +165,6 @@ $f3->route('POST /actions/message4us',
         echo $return;	
 });
 
-/*
-*/ $f3->route('GET /actions/phpinfo', function() {
-     echo phpinfo();
- });
-
-
 $f3->route('POST /muninn/vkbot', 'Muninn->go');
 
 $f3->run();
