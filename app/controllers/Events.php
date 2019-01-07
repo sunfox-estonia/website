@@ -73,7 +73,7 @@ class Events {
         $msg_html .= '</body></html>';
 
         $hash=uniqid(NULL,TRUE);
-        $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'elDplIAmdXoQh9m4ory6Y4ZQ' );
+        $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'c24BTNv7qMavXc4Q' );
         $smtp->set('From', '"Sunfox.ee Bot" <muninn@sunfox.ee>');
         $smtp->set('To', '"Sunfox Team" <victor@sunfox.ee>');
         $smtp->set('Content-Type', 'multipart/alternative; boundary="'.$hash.'"');    

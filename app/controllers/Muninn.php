@@ -279,4 +279,5 @@ class MuninnCommands extends Muninn {
         $message = "Спасибо за регистрацию! Наш координатор свяжется с тобой в ближайшее время чтобы уточнить детали. Пожалуйста, включи возможность писать тебе в ЛС, если она отключена в данный момент!";
         $this->vkApi_keyboardSend($this->user_id, $message, [[self::BTN_HOME]], $one_time=TRUE);
     }
+
 }

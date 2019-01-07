@@ -6,6 +6,8 @@ Author: Victor Litvinkov
 @font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
 @font-face {font-family:Runic AltNo;src: url(../fonts/runic_altno.ttf);src: local(Runic), url(../fonts/runic_altno.ttf);}
 
+html {scroll-behavior:smooth;}
+
 a{text-decoration:underline;}
 a:hover{text-decoration:none;}
 a:hover, a:active, a:focus {outline: 0;}
