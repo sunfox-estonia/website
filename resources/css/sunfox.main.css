@@ -86,7 +86,7 @@ div.event_go_auth div.event:first-of-type {margin-top:10px;}
 div.event_go_auth div.event:last-of-type {margin-bottom:3px;}
 div.event_go_auth div.event h4{display:block;clear:both;white-space:nowrap;overflow:hidden;margin:8px 8px 13px;}
 div.event_go_auth div.event div[class^="col-"]{padding-left:9px;padding-right:9px;text-align:center;}
-div.event_go_auth div.event p {display:block;clear:both;white-space:nowrap;overflow:hidden;margin: 0 0 9px;padding-top:12px;border-top:1px dashed #b8b3ad;}
+div.event_go_auth div.event p {display:block;clear:both;white-space:nowrap;overflow:hidden;margin: 0 0 9px;padding:14px 0 0 8px;border-top:1px dashed #b8b3ad;}
 div.event_go_auth div.event p.e_description {display:block;clear:both;white-space:pre-wrap;word-wrap:normal;margin: 0 0 9px;padding-top:12px;padding-left:15px;padding-right:15px;border-top:1px dashed #b8b3ad;}
 div.event_go_auth #event_go_auth_vk{margin:13px auto 16px;}
 
