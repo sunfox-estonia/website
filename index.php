@@ -137,7 +137,7 @@ $f3->route('POST /actions/message4us',
             $msg_html .= '</body></html>';
 
             $hash=uniqid(NULL,TRUE);
-            $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'XXXXXX' );
+            $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'jzjlmcraqvkoiebu' );
             $smtp->set('From', '"Sunfox.ee Bot" <muninn@sunfox.ee>');
             $smtp->set('To', '"Sunfox Team" <victor@sunfox.ee>');
             $smtp->set('Reply-To', '"Sunfox.ee user" <'.$msg_from.'>');
