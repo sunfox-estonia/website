@@ -46,6 +46,7 @@ return array(
     "joinus_step3_text1"    => "Inernetipangas püsimakselepingu sõlmimiseks vajaliku informatsiooni saab leida meie vikisüsteemis või küsida koordinaatorite käest.",
     "joinus_conclusion"     => "Kui Teil on lisaküsimusi või -soove, võtke meiega ühendust. Allpool on toodud ühenduse juhatajate ning koordinaatorite kontaktandmed.",
     "joinus_step2cal_agr"   => "Isikuandmete töötlemise põhimõtted",
+    "sfx_calendar_title" => "Tulevased üritused:",
     "sfx_action_register"   => "Registreerumine",
     "sfx_action_writeus"    => "Kirjuta meile",
     "footer_contactus_header" => "Tagasiside",

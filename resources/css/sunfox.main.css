@@ -67,15 +67,16 @@ div.joinus div.calendar>p mark {text-decoration:none;text-shadow:none;display:in
 
 div.calendar div.event_null {display:block;clear:both;border:2px dashed #b8b3ad;border-radius:8px;padding:0px 6px; margin-bottom:5px;text-shadow:none;}
 div.calendar div.event_null p {margin-top:15px;margin-bottom:15px;}
-div.calendar div.event {display:block;clear:both;border:1px solid #b8b3ad;border-radius:4px;padding:0px 6px;background:#E0DEDB url(../img/st_cometous/events_bg_paper.png) repeat-x left top;margin-bottom:5px;text-shadow:none;}
-div.calendar div.event:hover {cursor:pointer; box-shadow:0px 3px 4px rgba(0,0,0,0.3);}
+div.calendar div.event {display:block;clear:both;border:1px solid #b8b3ad;border-radius:4px;padding:0px 6px;background:#F4F3F7;margin-bottom:5px;text-shadow:none;}
+div.calendar_live div.event:hover {cursor:pointer; box-shadow:0px 3px 4px rgba(0,0,0,0.3);}
 div.calendar div.event:first-of-type {margin-top:10px;}
 div.calendar div.event:last-of-type {margin-bottom:3px;}
 div.calendar div.event h4{display:block;clear:both;white-space:nowrap;overflow:hidden;margin-bottom:9px;}
 div.calendar div.event div[class^="col-"]{padding-left:9px;padding-right:9px;}
-div.calendar div.event div[class^="col-"]:nth-child(1){padding-left:19px;border-right: 1px dashed #b8b3ad;}
-div.calendar div.event div[class^="col-"]:nth-child(2){padding-right:19px;}
-div.calendar div.event p {display:block;clear:both;white-space:nowrap;overflow:hidden;margin: 0 0 10px;}
+div.calendar div.event div[class^="col-"]:nth-child(1){padding-left:19px;}
+div.calendar div.event div[class^="col-"]:nth-child(2){padding-right:19px;border-left: 1px dashed #b8b3ad;}
+div.calendar_live div.event p {display:block;clear:both;white-space:nowrap;overflow:hidden;margin: 0 0 10px;}
+
 
 div.minipage_header {background-image: url(../img/minipage/minipage_header.png); background-position: -5px bottom; background-repeat: repeat-x; height:36px;}
 div.minipage_content {background-image: url(../img/minipage/minipage_content.png); background-position: -5px top; background-repeat: repeat-x; padding-top:45px; padding-bottom:30px; box-shadow: 0px 3px 10px rgba(0,0,0,0.5);}

@@ -6,7 +6,7 @@ require_once('/var/www/virvik/sunfox.ee/app/controllers/Events.php');
 class vkcom {
     // API keys
     const CALLBACK_API_CONFIRMATION_TOKEN = 'a87a1db0'; //Строка для подтверждения адреса сервера из настроек Callback API
-    const VK_API_ACCESS_TOKEN = '43c16eee15b83eba742c024c62f55ef752ec428ee09d007b42596d4b0437ceefec1a439f9b0a9a00b77ba'; //Ключ доступа сообщества
+    const VK_API_ACCESS_TOKEN = 'XXXXXX'; //Ключ доступа сообщества
 
     // API settings
     const VK_API_VERSION = '5.70';
