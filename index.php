@@ -1,6 +1,7 @@
 <?php 
 // composer autoloader for required packages and dependencies
 require_once('lib/autoload.php');
+require_once('config.php');
 
 /** @var \Base $f3 */
 $f3 = \Base::instance();
@@ -11,9 +12,10 @@ $f3->set('DEBUG',3);
 $f3->set('AUTOLOAD', 'app/controllers/');
 $f3->set('UI','app/templates/');
 $f3->set('LOCALES','app/locales/');
+$f3->set('DB',new DB\SQL('mysql:host=localhost;port=3306;dbname='.HUGINN_DBNAME,HUGINN_DBUSER,HUGINN_DBPASS));
 
-$f3->set('gcaptcha_siteKey', '6LeN-CEUAAAAACwqSSN-UKBVCj-MCqmpTU5OXbg2');
-$f3->set('gcaptcha_secret', '6LeN-CEUAAAAAJEKcUXmRWmVEDL6bQvJGmT-9xYa');  
+$f3->set('gcaptcha_siteKey', GCAPTCHA_KEY);
+$f3->set('gcaptcha_secret', GCAPTCHA_SECRET);  
 
 $f3->set('ONERROR',function($f3){
     $f3->set('LANGUAGE',$f3->get('SESSION.native'));
@@ -34,7 +36,7 @@ $f3->route('GET /',
         $f3->set('FALLBACK','ru');        
         
         $events = new \Events;
-        $EventsPrepare = $events->listEvents(2);
+        $EventsPrepare = $events->listEvents(5);
             
         switch ($f3->get('SESSION.native')) {
           case "et":
@@ -50,53 +52,18 @@ $f3->route('GET /',
         }else{
             $cr = 0;
             foreach($EventsPrepare as $EventSingle){
-                $events4web[$cr] = array (
-                    'id' => $cr,
-                    'title' => $EventSingle['title'],
-                    'time_timeonly' => date("H:i", $EventSingle['time']), // 12:00
-                    'time_dayonly' => date("j", $EventSingle['time']), // 1-31
-                    'time_monthonly_number' => date("m", $EventSingle['time']), // 01-12
-                    'time_monthonly_word' => $month4date[date("n", $EventSingle['time'])], // января
-                    'time_daymonth' => date("j", $EventSingle['time']) . "/" . date("m", $EventSingle['time']), // 1/08
-                    'location' => $EventSingle['loc']
-                );
-                $cr++;
-            }
-        }
-        
-        $f3->set('events', $events4web);        
-        $f3->set('user_lang',$f3->get('SESSION.native'));
-        echo Template::instance()->render('homepage.htm');
-    }
-);
-
-$f3->route('GET /lang/@language',
-    function($f3,$params) {
-        $set_lang = $params['language'];
-        $user_lang = ($set_lang=="ru"||$set_lang=="et") ? $set_lang : "ru";
-        $f3->set('SESSION.native', $user_lang);
-        $f3->reroute('/');
-    }
-);
-$f3->route('GET /events/@lang/@quantity/@scheme',
-    function ($f3,$params){
-        $events = new \Events;
-        $EventsPrepare = $events->listEvents($params['quantity']);
-
-        switch ($params['lang']) {
-            case "et":
-                $month4date = array(1 => 'jaanuar', 2 => 'veebruar', 3 => 'märts', 4 => 'aprill', 5 => 'mai', 6 => 'juuni', 7 => 'juuli', 8 => 'august', 9 => 'september', 10 => 'oktoober', 11 => 'november', 12 => 'detsember');
-                break;
-            default:
-                $month4date = array(1 => 'января', 2 => 'февраля', 3 => 'марта', 4 => 'апреля', 5 => 'мая', 6 => 'июня', 7 => 'июля', 8 => 'августа', 9 => 'сентября', 10 => 'октября', 11 => 'ноября', 12 => 'декабря');
-                break;
-        }
-
-        if(is_null($EventsPrepare)){
-            $f3->set('events', null);
-        }else{
-            $cr = 0;
-            foreach($EventsPrepare as $EventSingle){
+                if($cr<2){
+                    $events4reg[$cr] = array (
+                        'id' => $cr,
+                        'title' => $EventSingle['title'],
+                        'time_timeonly' => date("H:i", $EventSingle['time']), // 12:00
+                        'time_dayonly' => date("j", $EventSingle['time']), // 1-31
+                        'time_monthonly_number' => date("m", $EventSingle['time']), // 01-12
+                        'time_monthonly_word' => $month4date[date("n", $EventSingle['time'])], // января
+                        'time_daymonth' => date("j", $EventSingle['time']) . "/" . date("m", $EventSingle['time']), // 1/08
+                        'location' => $EventSingle['loc'],
+                    );
+                }                
                 $events4web[$cr] = array (
                     'id' => $cr,
                     'title' => $EventSingle['title'],
@@ -111,10 +78,78 @@ $f3->route('GET /events/@lang/@quantity/@scheme',
                 $cr++;
             }
         }
-        $f3->set('events', $events4web);
-        $f3->set('lang', $params['lang']);
-        $f3->set('style', $params['scheme']);
-        echo Template::instance()->render('events.htm');
+        
+        $drd_conn = curl_init();
+        
+        curl_setopt_array($drd_conn, array(
+            CURLOPT_URL            => 'https://discordapp.com/api/v6/guilds/'.HUGINN_GUILDID.'/members?limit=1000',
+            CURLOPT_HTTPHEADER     => array('Authorization: Bot '.HUGINN_BOTTOKEN),
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_FOLLOWLOCATION => 1,
+            CURLOPT_SSL_VERIFYPEER => 0,
+        ));
+        $discord_guild = curl_exec($drd_conn);       
+        
+        $db_members = $f3->get('DB')->exec('SELECT `uid`, `level`, `count` FROM `drd_users` LEFT JOIN (SELECT `user_id`, COUNT(*) AS `count` FROM `drd_usr_ach` GROUP BY `user_id`) `achievements` ON `drd_users`.`uid`=`achievements`.`user_id` ORDER BY `count` DESC LIMIT 10');
+        $db_levels = $f3->get('DB')->exec('SELECT COUNT(*) as `lvl_count`  FROM `drd_achievements` WHERE `community` = "viruviking" GROUP BY `level` LIMIT 10');
+                
+        $cr=0;
+        foreach($db_members as $m){
+            if(in_array_r($m['uid'],$discord_guild)){
+                if($cr==5) break;
+                curl_setopt_array($drd_conn, array(
+                    CURLOPT_URL            => 'https://discordapp.com/api/v6/users/'.$m['uid'],
+                    CURLOPT_HTTPHEADER     => array('Authorization: Bot '.HUGINN_BOTTOKEN),
+                    CURLOPT_RETURNTRANSFER => 1,
+                    CURLOPT_FOLLOWLOCATION => 1,
+                    CURLOPT_SSL_VERIFYPEER => 0,
+                ));
+                $drd_response = curl_exec($drd_conn);       
+                $discord_user = json_decode($drd_response, true);           
+
+
+                $discord_user['avatar'] = (empty($discord_user['avatar'])) ? 'false' : $discord_user['avatar'] ;
+                
+                $stats = $f3->get('DB')->exec('SELECT WEEK(`date`) as `week`, COUNT(*) as `count`  FROM `drd_usr_ach` WHERE `user_id` =  ? AND `date` >= last_day(now()) + interval 1 day - interval 5 month GROUP BY `week`',$m['uid']);
+                
+                $ach_sum =  $db_levels[$m['level']]['lvl_count'];
+                
+                $x_axis = 0;
+                $user_graph = '';
+                foreach($stats as $s){
+                    $graph_palcement = 10 - $s['count'];                    
+                    $user_graph .=  '<rect width="1" height="' . $s['count'] . '" x="' . $x_axis . '" y="' . $graph_palcement . '" style="fill:#B3B3B3;"></rect>';
+                    $x_axis++;
+                }
+
+                $members4web[$cr] = array(
+                    'id' => $m['uid'],
+                    'avatar' => $discord_user['avatar'],
+                    'nickname' => $discord_user['username'],
+                    'level' => $m['level'],
+                    'a_count' => $m['count'],
+                    'a_sum' => $ach_sum,
+                    'graph' => $user_graph
+                );
+                $cr++;
+            }
+        }
+        curl_close($drd_conn); 
+        
+        $f3->set('members', $members4web);
+        $f3->set('events4web', $events4web);        
+        $f3->set('events4reg', $events4reg);        
+        $f3->set('user_lang',$f3->get('SESSION.native'));
+        echo Template::instance()->render('homepage.htm');
+    }
+);
+
+$f3->route('GET /lang/@language',
+    function($f3,$params) {
+        $set_lang = $params['language'];
+        $user_lang = ($set_lang=="ru"||$set_lang=="et") ? $set_lang : "ru";
+        $f3->set('SESSION.native', $user_lang);
+        $f3->reroute('/');
     }
 );
 
@@ -122,7 +157,7 @@ $f3->route('GET /event/@id',
     function ($f3,$params){
         $f3->set('LANGUAGE',$f3->get('SESSION.native'));
         $events = new \Events;
-        $EventsPrepare = $events->listEvents(2);
+        $EventsPrepare = $events->listEvents(5);
         
         $event_id = $params['id'];
 
@@ -176,7 +211,7 @@ $f3->route('POST /actions/message4us',
             $msg_html .= '</body></html>';
 
             $hash=uniqid(NULL,TRUE);
-            $smtp = new SMTP ('smtp.yandex.ru', '465', 'ssl', 'muninn@sunfox.ee', 'XXXXXX' );
+            $smtp = new SMTP (MAIL_SERVER, '465', 'ssl', MAIL_USER, MAIL_PASSWORD );
             $smtp->set('From', '"Sunfox.ee Bot" <muninn@sunfox.ee>');
             $smtp->set('To', '"Sunfox Team" <victor@sunfox.ee>');
             $smtp->set('Reply-To', '"Sunfox.ee user" <'.$msg_from.'>');
@@ -207,3 +242,7 @@ $f3->route('POST /actions/message4us',
 $f3->route('POST /muninn/vkbot', 'Muninn->go');
 
 $f3->run();
+
+function in_array_r($item , $array){
+    return preg_match('/"'.preg_quote($item, '/').'"/i' , $array);
+}

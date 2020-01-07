@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {font-family:Mezzo Regular;font-weight:100;}
 h1{font-size:30px;line-height:34px;}
 h2{font-size:22px;line-height:30px;}
 h3{font-size:18px;line-height:24px;}
+table{margin-top:12px;}
 
 header {margin-top:20px;}
 header svg{display:block;margin:auto;}
@@ -31,6 +32,8 @@ header a, header a:hover, header a:active, header a:focus {color:#161616;}
 .sfx_logo h1{display:inline-block;}
 .sfx_logo h1:nth-child(2){margin-left:180px;}
 
+div.data_null {display:block;clear:both;border:2px dashed #b8b3ad;border-radius:8px;padding:0px 6px; margin-bottom:5px;text-shadow:none;}
+div.data_null p {margin-top:15px;margin-bottom:15px;}
 
 div.animeet h2,div.animeet h3{color:#BAB080;}
 div.animeet h3 small{font-size:15px;line-height:21px;margin:14px 0px 18px;display: block;}
@@ -48,7 +51,7 @@ div.viruviking div.vv_preintro svg, div.einherjar div.er_preintro svg{display:bl
 div.viruviking p.viruviking_proov a, div.einherjar div.er_intro p a {text-shadow:none;}
 
 div.einherjar {margin-top:10px;}
-div.einherjar h2, div.einherjar h3{color:#FFFFFF;  text-shadow: 0px 0px 40px black, 0px 0px 20px black, 0px 0px 15px black, 1px 1px 2px #33352D}
+div.einherjar h2, div.einherjar h3{color:#FFFFFF; text-shadow: 0px 0px 40px black, 0px 0px 20px black, 0px 0px 15px black, 1px 1px 2px #33352D}
 div.einherjar h2 small{color:#F2F2F2;text-shadow: 0px 0px 40px black, 0px 0px 20px black, 0px 0px 15px black, 1px 1px 2px #33352D}
 div.einherjar div.er_intro {padding-bottom:20px; background:#040301;}
 div.einherjar div.er_intro p {color:#E5E5E5;}
@@ -65,17 +68,16 @@ div.joinus div.calendar {margin-top:25px; margin-bottom:5px;}
 div.joinus div.calendar>p {display:block;clear:both;text-align:center;}
 div.joinus div.calendar>p mark {text-decoration:none;text-shadow:none;display:inline-block;line-height:21px; padding-left:7px;padding-right:10px;background: rgb(118,215,247);background: linear-gradient(-75deg, rgba(255,255,255,0) 5%,rgba(107,210,244,0.7) 5%,rgba(164,224,244,0.7) 96%,rgba(255,255,255,0) 96%);}
 
-div.calendar div.event_null {display:block;clear:both;border:2px dashed #b8b3ad;border-radius:8px;padding:0px 6px; margin-bottom:5px;text-shadow:none;}
-div.calendar div.event_null p {margin-top:15px;margin-bottom:15px;}
+div.calendar svg{height:75px;width:75px;margin-top:25px;}
+div.calendar h3{margin-top:10px;}
 div.calendar div.event {display:block;clear:both;border:1px solid #b8b3ad;border-radius:4px;padding:0px 6px;background:#F4F3F7;margin-bottom:5px;text-shadow:none;}
-div.calendar_live div.event:hover {cursor:pointer; box-shadow:0px 3px 4px rgba(0,0,0,0.3);}
+div.calendar div.event:hover {cursor:pointer; box-shadow:0px 3px 4px rgba(0,0,0,0.3);}
 div.calendar div.event:first-of-type {margin-top:10px;}
 div.calendar div.event:last-of-type {margin-bottom:3px;}
 div.calendar div.event h4{display:block;clear:both;white-space:nowrap;overflow:hidden;margin-bottom:9px;}
 div.calendar div.event div[class^="col-"]{padding-left:9px;padding-right:9px;}
 div.calendar div.event div[class^="col-"]:nth-child(1){padding-left:19px;}
 div.calendar div.event div[class^="col-"]:nth-child(2){padding-right:19px;border-left: 1px dashed #b8b3ad;}
-div.calendar_live div.event p {display:block;clear:both;white-space:nowrap;overflow:hidden;margin: 0 0 10px;}
 
 
 div.minipage_header {background-image: url(../img/minipage/minipage_header.png); background-position: -5px bottom; background-repeat: repeat-x; height:36px;}
@@ -140,6 +142,25 @@ form .g-recaptcha {margin-bottom:7px;}
 nav {display:block;clear:both;background-color:#F2F2F2;font-size:15px;font-family:Mezzo Regular;}
 nav .row{padding-top:4px;padding-bottom:3px;}
 
+/* Ratings system */
+
+div.ratings {color:#B3B3B3;}
+div.ratings a {color:#E5E5E5;}
+div.ratings a:hover {color:#E5E5E5;}
+div.ratings table {color:#E5E5E5}
+div.ratings table thead {color:#f4a627;}
+div.ratings table>tbody td {vertical-align:middle;}
+div.ratings svg{height:90px;width:90px;margin-left:5px;}
+div.ratings svg:first-of-type{margin-left:0;}
+div.ratings{display:block;clear:both;background:#4F271A url(../img/ratings/bg.png) repeat -45px;margin-top:10px;padding-top:35px;}
+div.ratings .row:nth-child(3){background: -moz-linear-gradient(top,  rgba(46,23,17,0) 0%, rgba(46,23,17,1) 100%); background: -webkit-linear-gradient(top,  rgba(46,23,17,0) 0%,rgba(46,23,17,1) 100%);background: linear-gradient(to bottom,  rgba(46,23,17,0) 0%,rgba(46,23,17,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002e1711', endColorstr='#2e1711',GradientType=0 ); border-radius:0px 0px 5px 5px;padding-bottom:20px;}
+div.ratings .data_null {margin-top:15px;margin-bottom:25px;}
+div.ratings h2, div.ratings h3{color:#fff0b7; text-shadow: 0px 0px 1px #2e1711;}
+div.ratings .table > tbody > tr > td,div.ratings .table > tbody > tr > th,div.ratings .table > thead > tr > td,div.ratings .table > thead > tr > th{border-top: 1px dotted #d5c2a0;}
+div.ratings .drd_avatar {height:50px;}
+
+/* --- */
+
 @media (max-width: 750px) {
 	.animeet{background: url(../img/animeet/ani_bg_full_750.jpg) no-repeat center -300px;}div.ani_preintro{background: url(../img/animeet/ani_solidarity_logo_750.png) no-repeat center bottom}div.ani_preintro>div.row>div{height:800px;background: url(../img/animeet/ani_logo_970.png) no-repeat center center;padding-top:450px;}
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -65px;height:230px;}
@@ -148,7 +169,9 @@ nav .row{padding-top:4px;padding-bottom:3px;}
 	.viruviking div.adv_training_image{background-image: url(../img/vv_intro/adv_trainings/shield_bg.png), url(../img/vv_intro/adv_trainings/grass_bg.png); background-position: center -110px, center -110px; background-repeat:no-repeat, repeat; overflow: hidden;height:200px;}
 	.viruviking div.adv_training_main{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29;}
 	.viruviking div.adv_training_main>.row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;padding-bottom:20px;}
-        .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_xs.jpg) no-repeat center -50px;height:310px;}
+    .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_xs.jpg) no-repeat center -50px;height:310px;}
+    div.ratings{border-radius:0px;}
+    div.calendar{padding-bottom:8px;}
 }
 @media (min-width: 750px) {
 	.animeet{background: url(../img/animeet/ani_bg_full_750.jpg) no-repeat center -300px;}div.ani_preintro{background: url(../img/animeet/ani_solidarity_logo_970.png) no-repeat left bottom}div.ani_preintro>div.row>div{height:600px;background: url(../img/animeet/ani_logo_970.png) no-repeat center center;padding-top:357px;}
@@ -159,14 +182,17 @@ nav .row{padding-top:4px;padding-bottom:3px;}
 	.viruviking div.adv_training_image{background-image: url(../img/vv_intro/adv_trainings/shield_bg.png), url(../img/vv_intro/adv_trainings/grass_bg.png); background-position: center -110px, center -110px; background-repeat:no-repeat, repeat; overflow: hidden;height:200px;}
 	.viruviking div.adv_training_main{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29; color: #fff; text-shadow: 1px 1px 1px #2E2A1E; color:#C9B999;}
 	.adv_training_main>.row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;padding-bottom:20px;}
-        .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_750.jpg) no-repeat center -40px;height:365px;overflow:hidden;padding-top:105px;}
+    .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_750.jpg) no-repeat center -40px;height:365px;overflow:hidden;padding-top:105px;}
+    div.ratings{border-radius:5px;}
+    div.calendar{padding-bottom:20px;}
 }
 @media (min-width: 992px) {
 	.animeet{background: url(../img/animeet/ani_bg_full_970.jpg) no-repeat center -375px;}div.ani_preintro{background: url(../img/animeet/ani_solidarity_logo_1170.png) no-repeat left bottom}div.ani_preintro>div.row>div{height:600px;background: url(../img/animeet/ani_logo_1170.png) no-repeat center center;padding-top:375px}
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/970/intro_full_970.png) no-repeat 0px -65px;height:418px;padding-top:75px;}
 	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
 	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);}
-        .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_970.jpg) no-repeat center center;height:425px;overflow:hidden;padding-top:125px;}
+    .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_970.jpg) no-repeat center center;height:425px;overflow:hidden;padding-top:125px;}
+    div.calendar{padding-bottom:20px;}
 }
 @media (min-width: 1200px) {
 	.animeet{background: url(../img/animeet/ani_bg_full_1170.jpg) no-repeat center -485px;}div.ani_preintro{background: url(../img/animeet/ani_solidarity_logo_1170.png) no-repeat left bottom}div.ani_preintro>div.row>div{height:650px;background: url(../img/animeet/ani_logo_1170.png) no-repeat center center;padding-top:400px;}
@@ -174,8 +200,9 @@ nav .row{padding-top:4px;padding-bottom:3px;}
 	.viruviking div.vv_preintro>div.row{background:transparent;}
 	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
 	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);}
-        .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_1170.jpg) no-repeat center center;height:525px;overflow:hidden;padding-top:165px;}
-        div.joinus div.eurocoins {background:url(../img/st_cometous/eurocoins.png) 765px 20px no-repeat;}
-        div.joinus div.parents_file_download {margin-top:55px;}
+    .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_1170.jpg) no-repeat center center;height:525px;overflow:hidden;padding-top:165px;}
+    div.joinus div.eurocoins {background:url(../img/st_cometous/eurocoins.png) 765px 20px no-repeat;}
+    div.joinus div.parents_file_download {margin-top:55px;}
+    div.calendar{padding-bottom:0;}
 }
 

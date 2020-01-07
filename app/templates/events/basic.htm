@@ -1,8 +1,6 @@
-<p><big>{{ @joinus_step2_calendar_title | raw }}</big></p>
-
-<check if="{{ @events }}">
+<check if="{{ @events4reg }}">
 <true>
-    <repeat group="{{ @events }}" value="{{ @singleEvent }}">
+    <repeat group="{{ @events4reg }}" value="{{ @singleEvent }}">
     <div class="event" data-eventid="/event/{{ @singleEvent.id }}">
         <div class="row">
             <div class="col-xs-3 col-sm-4">
@@ -18,7 +16,7 @@
     </repeat>
 </true>
 <false>
-    <div class="event_null">
+    <div class="data_null">
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1">
                 <p class="text-center">{{ @joinus_step2_calendar_nodata }}</p>
