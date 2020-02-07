@@ -9,7 +9,7 @@
     <check if="{{ @events4web }}">
         <true>
             <repeat group="{{ @events4web }}" value="{{ @singleEvent }}">
-                <div class="event" data-eventid="/event/{{ @singleEvent.id }}">
+                <div class="event event-wd-{{ @singleEvent.time_weekday_number }}" data-eventid="/event/{{ @singleEvent.id }}">
                     <div class="row">
                         <div class="col-xs-3 col-sm-4">
                             <h4 class="e_date">{{ @singleEvent.time_dayonly }}<check if="{{ @SESSION.native=='et' }}"><true>.</true></check>  {{ @singleEvent.time_monthonly_word }}</h4>
@@ -22,7 +22,11 @@
                                     <p class="e_description">{{ @singleEvent.description | raw }}</p>
                                 </true>
                             </check>
-                            <p class="e_place"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;{{ @singleEvent.location }}</p>
+                            <check if="{{ @singleEvent.location!='' }}">
+                                <true>
+                                    <p class="e_place"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;{{ @singleEvent.location }}</p>
+                                </true>                            
+                            </check>
                         </div>
                     </div>
                 </div>

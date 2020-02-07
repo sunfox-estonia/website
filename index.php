@@ -69,6 +69,7 @@ $f3->route('GET /',
                     'title' => $EventSingle['title'],
                     'time_timeonly' => date("H:i", $EventSingle['time']), // 12:00
                     'time_dayonly' => date("j", $EventSingle['time']), // 1-31
+                    'time_weekday_number' => date("N", $EventSingle['time']), // 1-7
                     'time_monthonly_number' => date("m", $EventSingle['time']), // 01-12
                     'time_monthonly_word' => $month4date[date("n", $EventSingle['time'])], // января
                     'time_daymonth' => date("j", $EventSingle['time']) . "/" . date("m", $EventSingle['time']), // 1/08
@@ -82,7 +83,7 @@ $f3->route('GET /',
         $drd_conn = curl_init();
         
         curl_setopt_array($drd_conn, array(
-            CURLOPT_URL            => 'https://discordapp.com/api/v6/guilds/'.HUGINN_GUILDID.'/members?limit=1000',
+            CURLOPT_URL            => 'https://discordapp.com/api/v6/guilds/'.HUGINN_GUILDID.'/members?limit=100',
             CURLOPT_HTTPHEADER     => array('Authorization: Bot '.HUGINN_BOTTOKEN),
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_FOLLOWLOCATION => 1,
@@ -90,13 +91,13 @@ $f3->route('GET /',
         ));
         $discord_guild = curl_exec($drd_conn);       
         
-        $db_members = $f3->get('DB')->exec('SELECT `uid`, `level`, `count` FROM `drd_users` LEFT JOIN (SELECT `user_id`, COUNT(*) AS `count` FROM `drd_usr_ach` GROUP BY `user_id`) `achievements` ON `drd_users`.`uid`=`achievements`.`user_id` ORDER BY `count` DESC LIMIT 10');
+        $db_members = $f3->get('DB')->exec('SELECT `uid`, `level`, `count` FROM `drd_users` LEFT JOIN (SELECT `user_id`, COUNT(*) AS `count` FROM `drd_usr_ach` GROUP BY `user_id`) `achievements` ON `drd_users`.`uid`=`achievements`.`user_id` ORDER BY `count` DESC LIMIT 10'); // Rows counter
         $db_levels = $f3->get('DB')->exec('SELECT COUNT(*) as `lvl_count`  FROM `drd_achievements` WHERE `community` = "viruviking" GROUP BY `level` LIMIT 10');
                 
         $cr=0;
         foreach($db_members as $m){
             if(in_array_r($m['uid'],$discord_guild)){
-                if($cr==5) break;
+                if($cr==5) break; // Rows counter
                 curl_setopt_array($drd_conn, array(
                     CURLOPT_URL            => 'https://discordapp.com/api/v6/users/'.$m['uid'],
                     CURLOPT_HTTPHEADER     => array('Authorization: Bot '.HUGINN_BOTTOKEN),
