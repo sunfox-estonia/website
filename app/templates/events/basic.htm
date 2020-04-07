@@ -8,8 +8,12 @@
                 <p class="e_time"><span class="glyphicon glyphicon-time"></span>&nbsp;{{ @singleEvent.time_timeonly }}</p>
             </div>
             <div class="col-xs-9 col-sm-8">
-                <h4 class="e_title">{{ @singleEvent.title }}</h4>
-                <p class="e_place"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;{{ @singleEvent.location }}</p>
+                <h4 class="e_title">{{ @singleEvent.title }}</h4>                
+                <check if="{{ @singleEvent.location!='' }}">
+                    <true>
+                        <p class="e_place"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;{{ @singleEvent.location }}</p>
+                    </true>                            
+                </check>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@ return array(
     "header_intro"          => "Sunfox Team juhib <a href=#anchor_einherjar >Einherjar</a> ja <a href=#anchor_viruviking >Virumaa Viikingid</a> kogukondade tegevust. Loome tingimusi, mis aitavad kaasa nende kogukondade ning seikluslike rollimängude ja sõjamängu Airsoft arengule Ida-Virumaal.",
     "header_subintro"       => "Sunfox Team annab oma panuse nende tegevusvaldkondade arengusse, mis avaldavad kaudset mõju seikluslike rollimängude ja sõjamängu Airsoft arengule ning populaarsuse suurendamisele Kirde-Eestis.",
     "ani_intro_title"       => "Minifestival AniMeet on mõeldud noorte animefännidele ja rollimängijatele kogu Ida-Virumaalt.",
-    "ani_intro_subtitle"    => "Esimene AniMeet toimus augusti lõpus Jõhvi linnas, üritusel on osalenud rohkem kui 200 noort nii Ida-Virumaalt kui ka mujalt Eestist.<span class=\"hidden-xs visible-lg\"> Järgmine festival toimub 2020 a. veebruari lõpus.</span>",
+    "ani_intro_subtitle"    => "Esimene AniMeet toimus augusti lõpus Jõhvi linnas, üritusel on osalenud rohkem kui 200 noort nii Ida-Virumaalt kui ka mujalt Eestist.<span class=\"hidden-xs visible-lg\"> Järgmine festival toimub 2020 a. augusti lõpus.</span>",
     "vv_intro_title"        => "Virumaa Viikingid",
     "vv_intro_subtitle"     => "Rollimängijate ja ajaloo<br>taaselustajate vennaskond",
     "vv_about_p1_lead"      => "Virumaa Viikingite vennaskond ühendab noori, kes huvituvad aktiivsetest rollimängudest ja ajaloo taaselustamisest.",
