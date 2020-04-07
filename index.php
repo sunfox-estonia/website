@@ -154,46 +154,6 @@ $f3->route('GET /lang/@language',
     }
 );
 
-$f3->route('GET /events/@lang/@quantity/@scheme',
-    function ($f3,$params){
-        $events = new \Events;
-        $EventsPrepare = $events->listEvents($params['quantity']);
-
-        switch ($params['lang']) {
-            case "et":
-                $month4date = array(1 => 'jaanuar', 2 => 'veebruar', 3 => 'märts', 4 => 'aprill', 5 => 'mai', 6 => 'juuni', 7 => 'juuli', 8 => 'august', 9 => 'september', 10 => 'oktoober', 11 => 'november', 12 => 'detsember');
-                break;
-            default:
-                $month4date = array(1 => 'января', 2 => 'февраля', 3 => 'марта', 4 => 'апреля', 5 => 'мая', 6 => 'июня', 7 => 'июля', 8 => 'августа', 9 => 'сентября', 10 => 'октября', 11 => 'ноября', 12 => 'декабря');
-                break;
-        }
-
-        if(is_null($EventsPrepare)){
-            $f3->set('events', null);
-        }else{
-            $cr = 0;
-            foreach($EventsPrepare as $EventSingle){
-                $events4web[$cr] = array (
-                    'id' => $cr,
-                    'title' => $EventSingle['title'],
-                    'time_timeonly' => date("H:i", $EventSingle['time']), // 12:00
-                    'time_dayonly' => date("j", $EventSingle['time']), // 1-31
-                    'time_monthonly_number' => date("m", $EventSingle['time']), // 01-12
-                    'time_monthonly_word' => $month4date[date("n", $EventSingle['time'])], // января
-                    'time_daymonth' => date("j", $EventSingle['time']) . "/" . date("m", $EventSingle['time']), // 1/08
-                    'location' => $EventSingle['loc'],
-                    'description' => $EventSingle['descr'],
-                );
-                $cr++;
-            }
-        }
-        $f3->set('events', $events4web);
-        $f3->set('lang', $params['lang']);
-        $f3->set('style', $params['scheme']);
-        echo Template::instance()->render('events/basic.htm');
-    }
-);
-
 $f3->route('GET /event/@id',
     function ($f3,$params){
         $f3->set('LANGUAGE',$f3->get('SESSION.native'));
