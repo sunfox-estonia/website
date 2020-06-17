@@ -50,7 +50,7 @@ return array(
     "joinus_register2event_concl" => "Liituge meiega ka sotsiaalvõrgustikes:",
     "joinus_register2event_social" => "Registreeri kasutades oma sotsiaalvõrgustiku konto:",    
     "joinus_step3_title"    => "3. Tasuda liikmetasu",
-    "joinus_step3_lead"     => "2018. aastal oleme kehtestanud ühekordse<mark>sisseastumise tasu</mark>Einherjar ühingu liikmetele, ning<mark>igakuised liikmemaksed</mark>Virumaa Viikingite tegevustes osalevatele noortele. Raha tuleb ülekanda<mark>organisatsiooni pangaarvele,</mark>märkides ka isikliku viitenumbri.",
+    "joinus_step3_lead"     => "2018. aastal oleme kehtestanud <mark>igakuised liikmemaksed</mark>Virumaa Viikingite tegevustes osalevatele noortele. Raha tuleb ülekanda<mark>organisatsiooni pangaarvele,</mark>märkides ka isikliku viitenumbri.",
     "joinus_step3_text1"    => "Inernetipangas püsimakselepingu sõlmimiseks vajaliku informatsiooni saab leida meie vikisüsteemis või küsida koordinaatorite käest.",
     "joinus_conclusion"     => "Kui Teil on lisaküsimusi või -soove, võtke meiega ühendust. Allpool on toodud ühenduse juhatajate ning koordinaatorite kontaktandmed.",
     "joinus_step2cal_agr"   => "Isikuandmete töötlemise põhimõtted",
