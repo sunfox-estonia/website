@@ -26,6 +26,7 @@ $f3->set('ONERROR',function($f3){
 
 $f3->route('GET /',
     function($f3) {
+        // Set language
         $native = $f3->get('SESSION.native');
         if (!isset($native)) {
             $recognize_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);                
@@ -35,93 +36,36 @@ $f3->route('GET /',
         $f3->set('LANGUAGE',$f3->get('SESSION.native'));
         $f3->set('FALLBACK','ru');        
         
-        $events = new \Events;
-        $EventsPrepare = $events->listEvents(5);
-            
-        switch ($f3->get('SESSION.native')) {
-          case "et":
-            $month4date = array(1 => 'jaanuar', 2 => 'veebruar', 3 => 'märts', 4 => 'aprill', 5 => 'mai', 6 => 'juuni', 7 => 'juuli', 8 => 'august', 9 => 'september', 10 => 'oktoober', 11 => 'november', 12 => 'detsember');
-            break;
-          default:
-            $month4date = array(1 => 'января', 2 => 'февраля', 3 => 'марта', 4 => 'апреля', 5 => 'мая', 6 => 'июня', 7 => 'июля', 8 => 'августа', 9 => 'сентября', 10 => 'октября', 11 => 'ноября', 12 => 'декабря');
-            break;
-        }
-        
-        if(is_null($EventsPrepare)){
-             $f3->set('events', null);
-        }else{
-            $cr = 0;
-            foreach($EventsPrepare as $EventSingle){
-                if($cr<2){
-                    $events4reg[$cr] = array (
-                        'id' => $cr,
-                        'title' => $EventSingle['title'],
-                        'time_timeonly' => date("H:i", $EventSingle['time']), // 12:00
-                        'time_dayonly' => date("j", $EventSingle['time']), // 1-31
-                        'time_monthonly_number' => date("m", $EventSingle['time']), // 01-12
-                        'time_monthonly_word' => $month4date[date("n", $EventSingle['time'])], // января
-                        'time_daymonth' => date("j", $EventSingle['time']) . "/" . date("m", $EventSingle['time']), // 1/08
-                        'location' => $EventSingle['loc'],
-                    );
-                }                
-                $events4web[$cr] = array (
-                    'id' => $cr,
-                    'title' => $EventSingle['title'],
-                    'time_timeonly' => date("H:i", $EventSingle['time']), // 12:00
-                    'time_dayonly' => date("j", $EventSingle['time']), // 1-31
-                    'time_weekday_number' => date("N", $EventSingle['time']), // 1-7
-                    'time_monthonly_number' => date("m", $EventSingle['time']), // 01-12
-                    'time_monthonly_word' => $month4date[date("n", $EventSingle['time'])], // января
-                    'time_daymonth' => date("j", $EventSingle['time']) . "/" . date("m", $EventSingle['time']), // 1/08
-                    'location' => $EventSingle['loc'],
-                    'description' => $EventSingle['descr'],
-                );
-                $cr++;
-            }
-        }
-        
+        // Get Discrod data and list rating
         $drd_conn = curl_init();
         
         curl_setopt_array($drd_conn, array(
-            CURLOPT_URL            => 'https://discordapp.com/api/v6/guilds/'.HUGINN_GUILDID.'/members?limit=100',
+            CURLOPT_URL            => 'https://discordapp.com/api/v7/guilds/'.HUGINN_GUILDID.'/members?limit=100',
             CURLOPT_HTTPHEADER     => array('Authorization: Bot '.HUGINN_BOTTOKEN),
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_FOLLOWLOCATION => 1,
-            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_VERBOSE        => 1
         ));
-        $discord_guild = curl_exec($drd_conn);       
-        
-        $db_members = $f3->get('DB')->exec('SELECT `uid`, `level`, `count` FROM `drd_users` LEFT JOIN (SELECT `user_id`, COUNT(*) AS `count` FROM `drd_usr_ach` GROUP BY `user_id`) `achievements` ON `drd_users`.`uid`=`achievements`.`user_id` ORDER BY `count` DESC LIMIT 10'); // Rows counter
-        $db_levels = $f3->get('DB')->exec('SELECT COUNT(*) as `lvl_count`  FROM `drd_achievements` WHERE `community` = "viruviking" GROUP BY `level` LIMIT 10');
-                
+        $discord_guild = curl_exec($drd_conn);      
+        $db_members = $f3->get('DB')->exec('SELECT `uid`, `level`, `count`, `coins` FROM `drd_users` LEFT JOIN (SELECT `user_id`, COUNT(*) AS `count` FROM `drd_usr_ach` GROUP BY `user_id`) `achievements` ON `drd_users`.`uid`=`achievements`.`user_id` ORDER BY `count` DESC LIMIT 10'); // Rows counter
+        $f3->get('DB')->exec('SELECT * FROM `drd_achievements` WHERE `community` = "viruviking"');
+        $ach_count = $f3->get('DB')->count();
+            
         $cr=0;
         foreach($db_members as $m){
             if(in_array_r($m['uid'],$discord_guild)){
                 if($cr==5) break; // Rows counter
                 curl_setopt_array($drd_conn, array(
-                    CURLOPT_URL            => 'https://discordapp.com/api/v6/users/'.$m['uid'],
+                    CURLOPT_URL            => 'https://discordapp.com/api/v7/users/'.$m['uid'],
                     CURLOPT_HTTPHEADER     => array('Authorization: Bot '.HUGINN_BOTTOKEN),
                     CURLOPT_RETURNTRANSFER => 1,
                     CURLOPT_FOLLOWLOCATION => 1,
                     CURLOPT_SSL_VERIFYPEER => 0,
                 ));
                 $drd_response = curl_exec($drd_conn);       
-                $discord_user = json_decode($drd_response, true);           
-
-
+                $discord_user = json_decode($drd_response, true);
                 $discord_user['avatar'] = (empty($discord_user['avatar'])) ? 'false' : $discord_user['avatar'] ;
-                
-                $stats = $f3->get('DB')->exec('SELECT WEEK(`date`) as `week`, COUNT(*) as `count`  FROM `drd_usr_ach` WHERE `user_id` =  ? AND `date` >= last_day(now()) + interval 1 day - interval 5 month GROUP BY `week`',$m['uid']);
-                
-                $ach_sum =  $db_levels[$m['level']]['lvl_count'];
-                
-                $x_axis = 0;
-                $user_graph = '';
-                foreach($stats as $s){
-                    $graph_palcement = 10 - $s['count'];                    
-                    $user_graph .=  '<rect width="1" height="' . $s['count'] . '" x="' . $x_axis . '" y="' . $graph_palcement . '" style="fill:#B3B3B3;"></rect>';
-                    $x_axis++;
-                }
+
 
                 $members4web[$cr] = array(
                     'id' => $m['uid'],
@@ -129,18 +73,36 @@ $f3->route('GET /',
                     'nickname' => $discord_user['username'],
                     'level' => $m['level'],
                     'a_count' => $m['count'],
-                    'a_sum' => $ach_sum,
-                    'graph' => $user_graph
+                    'a_sum' => $ach_count,
+                    'coins' => $m['coins']
                 );
                 $cr++;
             }
         }
         curl_close($drd_conn); 
-        
-        $f3->set('members', $members4web);
-        $f3->set('events4web', $events4web);        
-        $f3->set('events4reg', $events4reg);        
+
+        // Get Instagram posts but from VK.com
+        $vk_query = file_get_contents("https://api.vk.com/method/photos.get?owner_id=-85213325&album_id=276383442&extended=1&need_covers=1&photo_sizes=1&access_token=" . VKAPP_TOKEN . "&v=5.126");
+        $vk_result = json_decode($vk_query,false);
+
+        $ig_logo = $vk_result->response->items{0}->sizes{0}->url;
+        $ig_posts = array();
+
+        for ($i = 0; $i <= 9; $i++) {
+            $cntr = $i+1;
+            $photo_img_sm = $vk_result->response->items{$cntr}->sizes{6}->url;
+            $photo_img_lg = $vk_result->response->items{$cntr}->sizes{7}->url;
+            $photo_txt = $vk_result->response->items{$cntr}->text;
+            $photo_date = $vk_result->response->items{$cntr}->date;
+            $photo_likes = $vk_result->response->items{$cntr}->likes->count;
+
+            $ig_posts[$i] = array('img_sm'=>$photo_img_sm,'img_lg'=>$photo_img_lg, 'txt'=>$photo_txt,'date'=> date('d.m.Y', $photo_date),'likes'=>$photo_likes);
+        }
+        $f3->set('members', $members4web);  
+        $f3->set('ig_logo', $ig_logo); 
+        $f3->set('ig_photos', $ig_posts);    
         $f3->set('user_lang',$f3->get('SESSION.native'));
+
         echo Template::instance()->render('homepage.htm');
     }
 );
@@ -153,43 +115,6 @@ $f3->route('GET /lang/@language',
         $f3->reroute('/');
     }
 );
-
-$f3->route('GET /event/@id',
-    function ($f3,$params){
-        $f3->set('LANGUAGE',$f3->get('SESSION.native'));
-        $events = new \Events;
-        $EventsPrepare = $events->listEvents(5);
-        
-        $event_id = $params['id'];
-
-        $event4web = array(
-            'id' => $EventsPrepare[$event_id]['id'],
-            'title' => $EventsPrepare[$event_id]['title'],
-            'time_timeonly' => date("H:i", $EventsPrepare[$event_id]['time']), // 12:00
-            'time_dayonly' => date("j", $EventsPrepare[$event_id]['time']), // 1-31
-            'time_monthonly_number' => date("m", $EventsPrepare[$event_id]['time']), // 01-12
-            'time_daymonth' => date("j", $EventsPrepare[$event_id]['time']) . "/" . date("m", $EventsPrepare[$event_id]['time']), // 1/08
-            'location' => $EventsPrepare[$event_id]['loc']
-        );
-        $f3->set('event', $event4web);
-        echo Template::instance()->render('modals/ModalEventAuth.htm');
-    } 
-);
-
-$f3->route('GET /actions/register2event/@id',
-    function($f3,$params) {
-    $f3->set('LANGUAGE',$f3->get('SESSION.native'));
-    if($f3->get('GET.uid')){
-        $client_profile = 'https://vk.me/' . $f3->get('GET.uid');
-    } else {
-        $client_profile = 'https://telegram.me/' . $f3->get('GET.username');
-    }    
-    $event = new \Events;
-    $event->register2Event($params['id'],$f3->get('GET.first_name'),$f3->get('GET.last_name'),$f3->get('SESSION.native'), $client_profile);
-    $event4web=$event->getEvent($params['id']);    
-    $f3->set('event', $event4web);    
-    echo Template::instance()->render('joinus/register2event.htm');
-});
 
 $f3->route('POST /actions/message4us',
     function($f3) {
@@ -239,8 +164,6 @@ $f3->route('POST /actions/message4us',
         }
         echo $return;	
 });
-
-$f3->route('POST /muninn/vkbot', 'Muninn->go');
 
 $f3->run();
 

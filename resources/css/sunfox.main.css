@@ -35,9 +35,6 @@ header a, header a:hover, header a:active, header a:focus {color:#161616;}
 div.data_null {display:block;clear:both;border:2px dashed #b8b3ad;border-radius:8px;padding:0px 6px; margin-bottom:5px;text-shadow:none;}
 div.data_null p {margin-top:15px;margin-bottom:15px;}
 
-div.animeet h2,div.animeet h3{color:#BAB080;}
-div.animeet h3 small{font-size:15px;line-height:21px;margin:14px 0px 18px;display: block;}
-
 div.viruviking{color:#B3B3B3;margin-top:10px;}
 div.viruviking p:first-of-type, div.einherjar p:first-of-type{margin-top:20px;}
 div.viruviking svg, div.einherjar svg{margin-top:20px;}
@@ -50,15 +47,9 @@ div.viruviking div.vv_preintro h2, div.einherjar div.er_preintro h2{display: blo
 div.viruviking div.vv_preintro svg, div.einherjar div.er_preintro svg{display:block;margin:auto;}
 div.viruviking p.viruviking_proov a, div.einherjar div.er_intro p a {text-shadow:none;}
 
-div.einherjar {margin-top:10px;}
-div.einherjar h2, div.einherjar h3{color:#FFFFFF; text-shadow: 0px 0px 40px black, 0px 0px 20px black, 0px 0px 15px black, 1px 1px 2px #33352D}
-div.einherjar h2 small{color:#F2F2F2;text-shadow: 0px 0px 40px black, 0px 0px 20px black, 0px 0px 15px black, 1px 1px 2px #33352D}
-div.einherjar div.er_intro {padding-bottom:20px; background:#040301;}
-div.einherjar div.er_intro p {color:#E5E5E5;}
-div.einherjar div.er_preintro h2 {margin-top:10px;}
 
 div.joinus {margin-top:10px;text-shadow: 0px 0px 5px #FCF6B2;}
-div.joinus>.container{background-image:url(../img/st_cometous/pinner.png),url(../img/st_cometous/ngo_terms_bg.jpg); background-position:center 30px,top center; background-repeat:no-repeat,repeat; border:1px solid #E3DEA1;box-shadow: 0px 3px 10px rgba(0,0,0,0.5);padding-top:85px;padding-bottom:20px;}
+div.joinus{background-image:url(../img/st_cometous/ngo_terms_bg.jpg); background-position:top center; background-repeat:repeat; border:1px solid #E3DEA1;box-shadow: 0px 3px 10px rgba(0,0,0,0.5);padding-top:20px;padding-bottom:20px;}
 div.joinus big {font-size:14px;line-height:21px;}
 div.joinus mark {text-decoration:none;text-shadow:none;display:inline-block;line-height:21px; padding-left:10px;padding-right:10px;background: rgb(255,209,58);background: linear-gradient(-75deg, rgba(255,255,255,0) 3%,rgba(255,196,0,0.7) 3%,rgba(255,209,58,0.7) 97%,rgba(255,255,255,0) 97%);}
 div.joinus p.text-center {margin-top:20px}
@@ -67,17 +58,6 @@ div.joinus div.parents_file_download mark {text-decoration:none;text-shadow:none
 div.joinus div.calendar {margin-top:25px; margin-bottom:5px;}
 div.joinus div.calendar>p {display:block;clear:both;text-align:center;}
 div.joinus div.calendar>p mark {text-decoration:none;text-shadow:none;display:inline-block;line-height:21px; padding-left:7px;padding-right:10px;background: rgb(118,215,247);background: linear-gradient(-75deg, rgba(255,255,255,0) 5%,rgba(107,210,244,0.7) 5%,rgba(164,224,244,0.7) 96%,rgba(255,255,255,0) 96%);}
-
-div.calendar svg{height:75px;width:75px;margin-top:25px;}
-div.calendar h3{margin-top:10px;}
-div.calendar div.event {display:block;clear:both;border:1px solid #b8b3ad;border-radius:4px;padding:0px 6px;background:#F4F3F7;margin-bottom:5px;text-shadow:none;}
-div.calendar div.event:hover {cursor:pointer; box-shadow:0px 3px 4px rgba(0,0,0,0.3);}
-div.calendar div.event:first-of-type {margin-top:10px;}
-div.calendar div.event:last-of-type {margin-bottom:3px;}
-div.calendar div.event h4{display:block;clear:both;white-space:nowrap;overflow:hidden;margin-bottom:9px;}
-div.calendar div.event div[class^="col-"]{padding-left:9px;padding-right:9px;}
-div.calendar div.event div[class^="col-"]:nth-child(1){padding-left:19px;}
-div.calendar div.event div[class^="col-"]:nth-child(2){padding-right:19px;border-left: 1px dashed #b8b3ad;}
 
 div.minipage_header {background-image: url(../img/minipage/minipage_header.png); background-position: -5px bottom; background-repeat: repeat-x; height:36px;}
 div.minipage_content {background-image: url(../img/minipage/minipage_content.png); background-position: -5px top; background-repeat: repeat-x; padding-top:45px; padding-bottom:30px; box-shadow: 0px 3px 10px rgba(0,0,0,0.5);}
@@ -110,15 +90,6 @@ p.doclink_aruanned{background: url(/resources/img/footer/aruanned_img.png) no-re
 
 .modal .center-pills {display: flex;justify-content:center;margin-top:17px;}
 .modal .nav-pills>li>a,.nav-pills>li>a:focus,.nav-pills>li>a:hover{text-decoration:none;}
-#ModalBusTimetable table {margin-top:25px;border-collapse:collapse;}
-#ModalBusTimetable table tr {border:none;}
-#ModalBusTimetable tbody td, #ModalBusTimetable thead td {text-align: center;}
-#ModalBusTimetable thead td, #ModalBusTimetable tbody th {white-space:nowrap; font-weight: bolder;}
-#ModalBusTimetable table td, #ModalBusTimetable table th {border-right: solid 1px #ddd;border-top:none;}
-#ModalBusTimetable table tr>td:last-child {border-right:none;}
-#ModalBusTimetable td.in5min{background-color:#FFBD67;}
-#ModalBusTimetable td.in10min{background-color:#FED6A3;}
-#ModalBusTimetable td.in15min{background-color:#FFE6C1;}
 
 .btn-social span{padding-left:2px;}
 .btn-social > :first-child {width:39px;top:auto;}
@@ -151,57 +122,85 @@ div.ratings table thead {color:#f4a627;}
 div.ratings table>tbody td {vertical-align:middle;}
 div.ratings svg{height:90px;width:90px;margin-left:5px;}
 div.ratings svg:first-of-type{margin-left:0;}
-div.ratings{display:block;clear:both;background:#4F271A url(../img/ratings/bg.png) repeat -45px;margin-top:10px;padding-top:35px;}
-div.ratings .row:nth-child(3){background: -moz-linear-gradient(top,  rgba(46,23,17,0) 0%, rgba(46,23,17,1) 100%); background: -webkit-linear-gradient(top,  rgba(46,23,17,0) 0%,rgba(46,23,17,1) 100%);background: linear-gradient(to bottom,  rgba(46,23,17,0) 0%,rgba(46,23,17,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002e1711', endColorstr='#2e1711',GradientType=0 ); border-radius:0px 0px 5px 5px;padding-bottom:20px;}
+div.ratings{display:block;clear:both; background: linear-gradient(to bottom,  rgba(46,23,17,0) 0%,rgba(46,23,17,1) 100%) no-repeat, url(../img/ratings/bg.png) repeat top center; margin-top:10px;padding-top:35px;}
+div.ratings .row:nth-child(3){padding-bottom:20px;}
 div.ratings .data_null {margin-top:15px;margin-bottom:25px;}
 div.ratings h2, div.ratings h3{color:#fff0b7; text-shadow: 0px 0px 1px #2e1711;}
 div.ratings .table > tbody > tr > td,div.ratings .table > tbody > tr > th,div.ratings .table > thead > tr > td,div.ratings .table > thead > tr > th{border-top: 1px dotted #d5c2a0;}
 div.ratings .drd_avatar {height:50px;}
+div.ratings .coins {display:block;line-height:38px;width:40px;border: 2px solid #AD7418; border-radius:20px;text-align:center;font-size:13px;color:#F5A422;}
+
+/* Instagram photos */
+.vv_instagram{background:#fff; display: block; border-radius:10px; margin-top:10px;padding:27px 0px 15px;overflow:hidden;}
+.vv_instagram h3{margin-top:8px;margin-bottom:25px;}
+.vv_instagram .img-circle{width:100px; border:1px solid #d8d8d8;}
+.ig_feed_container{width:100%;margin:0 auto;font-family:Arial, Helvetica, sans-serif;}
+.ig_post_container{border: 2px solid #d8d8d8; margin-bottom:25px; float:left;  overflow-y: hidden; border-radius:6px; position:relative;}
+.ig_post_date{display:block; clear:both; margin-bottom:6px;}
+.ig_post_container img{width:100%;}
+.ig_post_details{padding: 13px 12px;}
+.ig_post_overlay{position:absolute;width:100%;top:0;color:#fff;padding-left:13px;font-size:17px;background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,1) 100%);background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,1) 100%);}
+.ig_feed_overlay{position:absolute;width:100%;top:0;right: 0px;background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,1) 100%); background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,1) 100%); background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,1) 100%);}
 
 /* --- */
 
 @media (max-width: 750px) {
-	.animeet{background: url(../img/animeet/ani_bg_full_750.jpg) no-repeat center -300px;}div.ani_preintro{background: url(../img/animeet/ani_solidarity_logo_750.png) no-repeat center bottom}div.ani_preintro>div.row>div{height:800px;background: url(../img/animeet/ani_logo_970.png) no-repeat center center;padding-top:450px;}
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -65px;height:230px;}
 	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
 	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);padding-bottom:20px;}
 	.viruviking div.adv_training_image{background-image: url(../img/vv_intro/adv_trainings/shield_bg.png), url(../img/vv_intro/adv_trainings/grass_bg.png); background-position: center -110px, center -110px; background-repeat:no-repeat, repeat; overflow: hidden;height:200px;}
 	.viruviking div.adv_training_main{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29;}
 	.viruviking div.adv_training_main>.row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;padding-bottom:20px;}
-    .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_xs.jpg) no-repeat center -50px;height:310px;}
-    div.ratings{border-radius:0px;}
-    div.calendar{padding-bottom:8px;}
+	div.ratings{border-radius:0px;}
+	div.calendar{padding-bottom:8px;}
+	div.calendar div.event div.visible-xs-block{padding-left:19px;}
+	div.calendar div.event h4{display:block;clear:both;white-space:normal;margin-bottom:9px;line-height:24px;}
+	div.agenda > .container > .row {background:#0D0D0D url(../img/sfx_events/bg_1_1170.JPG) 0px 0px no-repeat; }
+	div.agenda > .container > .row > .col-xs-12 {background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 85%, rgba(0,0,0,1) 100%);
+		background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 85%,rgba(0,0,0,1) 100%);
+		background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 85%,rgba(0,0,0,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 );
+		 height:730px; overflow-y:hidden;}
+	div.agenda h3 {color:#f4f3f7;}
+	#ratings_n_join > .row > .col-xs-12 {padding-left:0;padding-right:0;}
 }
 @media (min-width: 750px) {
-	.animeet{background: url(../img/animeet/ani_bg_full_750.jpg) no-repeat center -300px;}div.ani_preintro{background: url(../img/animeet/ani_solidarity_logo_970.png) no-repeat left bottom}div.ani_preintro>div.row>div{height:600px;background: url(../img/animeet/ani_logo_970.png) no-repeat center center;padding-top:357px;}
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -50px;height:323px;padding-top:35px;}
 	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
 	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);padding-bottom:20px;}
-        form{margin-top:0px;}
+    form{margin-top:0px;}
 	.viruviking div.adv_training_image{background-image: url(../img/vv_intro/adv_trainings/shield_bg.png), url(../img/vv_intro/adv_trainings/grass_bg.png); background-position: center -110px, center -110px; background-repeat:no-repeat, repeat; overflow: hidden;height:200px;}
 	.viruviking div.adv_training_main{background: rgb(63,58,41);background: -moz-linear-gradient(left, rgba(63,58,41,1) 0%, rgba(102,94,67,1) 50%, rgba(63,58,41,1) 100%);background: -webkit-linear-gradient(left, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);background: linear-gradient(to right, rgba(63,58,41,1) 0%,rgba(102,94,67,1) 50%,rgba(63,58,41,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3a29', endColorstr='#3f3a29',GradientType=1 ); border-top: 1px solid #3F3A29; color: #fff; text-shadow: 1px 1px 1px #2E2A1E; color:#C9B999;}
 	.adv_training_main>.row{background: -moz-linear-gradient(top, rgba(50,46,33,0) 0%, rgba(50,46,33,1) 100%);background: -webkit-linear-gradient(top, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);background: linear-gradient(to bottom, rgba(50,46,33,0) 0%,rgba(50,46,33,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00322e21', endColorstr='#322e21',GradientType=0 );border-bottom:1px solid #2E2A1E;padding-bottom:20px;}
-    .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_750.jpg) no-repeat center -40px;height:365px;overflow:hidden;padding-top:105px;}
-    div.ratings{border-radius:5px;}
-    div.calendar{padding-bottom:20px;}
+	div.ratings{border-radius:5px;}
+	#ratings_n_join > .row > .col-xs-12 {padding-left:0;padding-right:0;}
+	.vv_instagram{height:1100px;}
+	.ig_post_container{margin-left:10px; margin-right:10px; width:290px; height:425px;}
+	.ig_post_overlay{height:425px;padding-top:250px;}
+	.ig_feed_overlay{height:920px;top:0;padding-top:840px;}
 }
-@media (min-width: 992px) {
-	.animeet{background: url(../img/animeet/ani_bg_full_970.jpg) no-repeat center -375px;}div.ani_preintro{background: url(../img/animeet/ani_solidarity_logo_1170.png) no-repeat left bottom}div.ani_preintro>div.row>div{height:600px;background: url(../img/animeet/ani_logo_1170.png) no-repeat center center;padding-top:375px}
+@media (min-width: 992px) {	
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/970/intro_full_970.png) no-repeat 0px -65px;height:418px;padding-top:75px;}
 	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
 	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);}
-    .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_970.jpg) no-repeat center center;height:425px;overflow:hidden;padding-top:125px;}
-    div.calendar{padding-bottom:20px;}
+	.einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_970.jpg) no-repeat center center;height:425px;overflow:hidden;padding-top:125px;}
+	#ratings_n_join > .row > .col-md-6:first-child {padding-left:0;padding-right:7px;}
+	#ratings_n_join > .row > .col-md-6:last-child {padding-right:0;padding-left:7px;}
+	#ratings_n_join > .row {display:flex;align-items:stretch;}
+	#ratings_n_join > .row > .col-md-6 {display:flex;align-items:stretch;}
+	.vv_instagram{height:950px;}
+	.ig_post_container{margin-left:10px; margin-right:10px; width:247px; height:400px;}
+	.ig_post_overlay{height:400px;padding-top:210px;}
+	.ig_feed_overlay{height:765px;top:0;padding-top:700px;}
 }
-@media (min-width: 1200px) {
-	.animeet{background: url(../img/animeet/ani_bg_full_1170.jpg) no-repeat center -485px;}div.ani_preintro{background: url(../img/animeet/ani_solidarity_logo_1170.png) no-repeat left bottom}div.ani_preintro>div.row>div{height:650px;background: url(../img/animeet/ani_logo_1170.png) no-repeat center center;padding-top:400px;}
+@media (min-width: 1200px) {	
 	.viruviking div.vv_preintro{background: transparent url(../img/vv_intro/1170/intro_full_1170.png) no-repeat top center;height:525px;overflow:hidden;padding-top:125px;}
 	.viruviking div.vv_preintro>div.row{background:transparent;}
 	.viruviking div.vv_intro{background: rgb(4,57,141);background: -moz-linear-gradient(top,  rgba(4,57,141,1) 0%, rgba(2,31,78,1) 25%, rgba(1,14,39,1) 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,57,141,1)), color-stop(25%,rgba(2,31,78,1)), color-stop(100%,rgba(1,14,39,1)));background: -webkit-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -o-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: -ms-linear-gradient(top,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);background: linear-gradient(to bottom,  rgba(4,57,141,1) 0%,rgba(2,31,78,1) 25%,rgba(1,14,39,1) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04398d', endColorstr='#010e27',GradientType=0 );}
-	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);}
-    .einherjar div.er_preintro{background: transparent url(../img/er_intro/fa_intro_bg_1170.jpg) no-repeat center center;height:525px;overflow:hidden;padding-top:165px;}
-    div.joinus div.eurocoins {background:url(../img/st_cometous/eurocoins.png) 765px 20px no-repeat;}
-    div.joinus div.parents_file_download {margin-top:55px;}
-    div.calendar{padding-bottom:0;}
+	.viruviking div.vv_intro>div.row{background: -moz-linear-gradient(left,  rgba(2,20,51,1) 0%, rgba(2,20,51,0) 40%, rgba(2,20,51,0) 60%, rgba(2,20,51,1) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(2,20,51,1)), color-stop(40%,rgba(2,20,51,0)), color-stop(60%,rgba(2,20,51,0)), color-stop(100%,rgba(2,20,51,1))); background: -webkit-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -o-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: -ms-linear-gradient(left,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); background: linear-gradient(to right,  rgba(2,20,51,1) 0%,rgba(2,20,51,0) 40%,rgba(2,20,51,0) 60%,rgba(2,20,51,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021433', endColorstr='#021433',GradientType=1);}	
+	.vv_instagram{height:1200px;}
+	.ig_post_container{margin-left:15px; margin-right:15px; width:293px; height:435px;}
+	.ig_post_overlay{height:435px;padding-top:253px;}
+	.ig_feed_overlay{height:1020px;top:0;padding-top:950px;}
 }
 

@@ -1,0 +1,28 @@
+<check if="{{ @ig_photos }}">
+<div class="container vv_instagram hidden-xs">
+    <div class="row">
+        <div class="col-xs-12 text-center"><img src="{{ @ig_logo }}" class="img-circle"><h3>@viruviking</h3></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="ig_feed_container">
+                <repeat group="{{ @ig_photos }}" value="{{ @p }}"></repeat>
+                <div class='ig_post_container'>
+                    <div><img src="{{ @p.img_lg }}" /></div>
+                    <div class='ig_post_details'>
+                    <div class="ig_post_date text-muted"><i>{{ @p.date }}</i></div>    
+                    {{ nl2br(@p.txt) | raw }}</div>
+                    <div class="ig_post_overlay">
+                        <check if="{{ @p.likes }} > 0">&#10084;&nbsp;{{ @p.likes }}</check>
+                    </div>
+                </div>
+                </repeat>
+            </div>
+            <div class="ig_feed_overlay">
+                <p class="text-center"><a class="btn btn-social btn-vk" href="https://vk.me/viruviking"><span class="fa fa-vk"></span>&nbsp;{{ @sfx_action_signup | raw }}</a>&nbsp;<a class="btn btn-social btn-instagram" href="https://www.instagram.com/viruviking"><span class="fa fa-instagram"></span>&nbsp;{{ @sfx_action_follow | raw }}</a></p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</check>
