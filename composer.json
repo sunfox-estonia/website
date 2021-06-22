@@ -7,7 +7,7 @@
 	"require": {
 		"bcosca/fatfree-core": "dev-master",
 		"respect/validation": "^0.9.1",
-		"phpmailer/phpmailer": "6.0.5",
+		"phpmailer/phpmailer": "6.5.0",
 		"google/recaptcha": "1.2.1"
 	}
 }
