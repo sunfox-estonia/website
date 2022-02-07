@@ -57,7 +57,7 @@ return array(
     "sfx_calendar_title" => "Tulevased üritused:",
     "sfx_action_register"   => "Registreerumine",
     "sfx_action_follow"   => "Follow",
-    "sfx_action_signup"   => "Registreeri",
+    "sfx_action_signup"   => "Liitu rühmaga",
     "sfx_action_writeus"    => "Kirjuta meile",
     "footer_contactus_header" => "Tagasiside",
     "footer_contactus_email" => "E-post",

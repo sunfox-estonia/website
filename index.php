@@ -47,9 +47,22 @@ $f3->route('GET /',
             CURLOPT_VERBOSE        => 1
         ));
         $discord_guild = curl_exec($drd_conn);      
-        $db_members = $f3->get('DB')->exec('SELECT `uid`, `level`, `count`, `coins` FROM `drd_users` LEFT JOIN (SELECT `user_id`, COUNT(*) AS `count` FROM `drd_usr_ach` GROUP BY `user_id`) `achievements` ON `drd_users`.`uid`=`achievements`.`user_id` ORDER BY `count` DESC LIMIT 10'); // Rows counter
+        $db_members = $f3->get('DB')->exec('SELECT `uid`, `drd_users`.`level`, IFNULL(`lvl_count`,0) as `lvl_count`, `lvl_sum`, `coins` 
+        FROM `drd_users` 
+            LEFT JOIN (
+                SELECT `user_id`, `sub_achievements`.`level`, COUNT(*) AS `lvl_count`
+                FROM `drd_usr_ach`
+                LEFT JOIN (SELECT * FROM `drd_achievements`) `sub_achievements` ON `sub_achievements`.`code`=`drd_usr_ach`.`ach_id`
+                GROUP BY `user_id`, `sub_achievements`.`level`
+                ) 
+            `achievements` ON `drd_users`.`uid`=`achievements`.`user_id` AND `drd_users`.`level`=`achievements`.`level`
+            LEFT JOIN (
+                SELECT `level`, COUNT(*) AS `lvl_sum`
+                FROM `drd_achievements`	
+                GROUP BY `level`) 
+            `grades` ON `drd_users`.`level`=`grades`.`level`
+        ORDER BY `level` DESC, lvl_count DESC, coins DESC LIMIT 15'); // Rows counter
         $f3->get('DB')->exec('SELECT * FROM `drd_achievements` WHERE `community` = "viruviking"');
-        $ach_count = $f3->get('DB')->count();
             
         $cr=0;
         foreach($db_members as $m){
@@ -72,8 +85,8 @@ $f3->route('GET /',
                     'avatar' => $discord_user['avatar'],
                     'nickname' => $discord_user['username'],
                     'level' => $m['level'],
-                    'a_count' => $m['count'],
-                    'a_sum' => $ach_count,
+                    'a_count' => $m['lvl_count'],
+                    'a_sum' => $m['lvl_sum'],
                     'coins' => $m['coins']
                 );
                 $cr++;
