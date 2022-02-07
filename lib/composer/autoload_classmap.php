@@ -14,6 +14,7 @@ return array(
     'CLI\\Agent' => $vendorDir . '/bcosca/fatfree-core/cli/ws.php',
     'CLI\\WS' => $vendorDir . '/bcosca/fatfree-core/cli/ws.php',
     'Cache' => $vendorDir . '/bcosca/fatfree-core/base.php',
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DB\\Cursor' => $vendorDir . '/bcosca/fatfree-core/db/cursor.php',
     'DB\\Jig' => $vendorDir . '/bcosca/fatfree-core/db/jig.php',
     'DB\\Jig\\Mapper' => $vendorDir . '/bcosca/fatfree-core/db/jig/mapper.php',
