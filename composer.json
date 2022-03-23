@@ -6,6 +6,7 @@
 		"bcosca/fatfree-core": "dev-master",
 		"respect/validation": "^0.9.1",
 		"phpmailer/phpmailer": "6.5.0",
-		"google/recaptcha": "1.2.1"
+		"google/recaptcha": "1.2.1",
+		"madcoda/php-youtube-api": "1.2.5"
 	}
 }

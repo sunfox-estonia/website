@@ -9,4 +9,5 @@ return array(
     'Respect\\Validation\\' => array($vendorDir . '/respect/validation/library'),
     'ReCaptcha\\' => array($vendorDir . '/google/recaptcha/src/ReCaptcha'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'Madcoda\\Youtube\\' => array($vendorDir . '/madcoda/php-youtube-api/src'),
 );

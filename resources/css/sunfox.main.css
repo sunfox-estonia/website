@@ -142,7 +142,32 @@ div.ratings .coins {display:block;line-height:38px;width:40px;border: 2px solid 
 .ig_post_overlay{position:absolute;width:100%;top:0;color:#fff;padding-left:13px;font-size:17px;background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%);background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,1) 100%);background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,1) 100%);}
 .ig_feed_overlay{position:absolute;width:100%;top:0;right: 0px;background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,1) 100%); background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,1) 100%); background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 75%,rgba(255,255,255,1) 100%);}
 
-/* --- */
+/* Youtubel videos */
+.vv_youtube {background:#181818; display: block; margin-top:10px;overflow:hidden;}
+.vv_youtube>.row>div{padding-right:0px;padding-left:0px;}
+div.vv_youtube p,div.vv_youtube h2{padding-right:15px;padding-left:15px;}
+div.vv_youtube h2{color:#DACA97;}
+div.vv_youtube p{margin-top:10px;}
+.vv_youtube iframe{width:877px;height:405px;}
+.vv_youtube ul {padding:0;margin:15px auto 0px;}
+.vv_youtube ul li {display:block;border-top: 1px solid #383838;border-left: 1px solid #383838;background-repeat: no-repeat;background-position:left top;background-size:cover;}
+.vv_youtube ul li a {display:block;clear:both;text-decoration:none;padding:12px 15px 10px 15px;color:#fff;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-size:14px;text-shadow: 0px 0px 2px #181818;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#161616+0,202020+50,202020+100&0.9+0,0.6+50,0.3+100 */
+background: -moz-linear-gradient(top,  rgba(22,22,22,0.9) 0%, rgba(32,32,32,0.6) 75%, rgba(32,32,32,0.3) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(22,22,22,0.9) 0%,rgba(32,32,32,0.6) 75%,rgba(32,32,32,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(22,22,22,0.9) 0%,rgba(32,32,32,0.6) 75%,rgba(32,32,32,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6161616', endColorstr='#4d202020',GradientType=0 ); /* IE6-9 */
+}
+.vv_youtube ul li a small {display:block;margin-top:6px;padding-bottom:5px;}
+.vv_youtube ul li a:hover{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#161616+0,202020+50,202020+100&0.9+0,0.4+50,0.01+100 */
+background: -moz-linear-gradient(top,  rgba(22,22,22,0.9) 0%, rgba(32,32,32,0.4) 60%, rgba(32,32,32,0.01) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(22,22,22,0.9) 0%,rgba(32,32,32,0.4) 60%,rgba(32,32,32,0.01) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(22,22,22,0.9) 0%,rgba(32,32,32,0.4) 60%,rgba(32,32,32,0.01) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6161616', endColorstr='#03202020',GradientType=0 ); /* IE6-9 */
+}
+.vv_youtube ul li:last-child {border-bottom: 1px solid #383838;}
+
 
 @media (max-width: 750px) {
 	.viruviking div.vv_preintro{background: url(../img/vv_intro/750/intro_full_750.png) no-repeat 0px -65px;height:230px;}
@@ -202,5 +227,6 @@ div.ratings .coins {display:block;line-height:38px;width:40px;border: 2px solid 
 	.ig_post_container{margin-left:15px; margin-right:15px; width:293px; height:435px;}
 	.ig_post_overlay{height:435px;padding-top:253px;}
 	.ig_feed_overlay{height:1020px;top:0;padding-top:950px;}
+	.vv_youtube{height:407px;overflow-y:hidden;}
 }
 

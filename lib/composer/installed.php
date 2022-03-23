@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'af45aa311e1616622ee79f9a16b7ad2352cf2832',
+        'reference' => '4db5d13b3ded02323b8e327676f91e5ab18ec0ec',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'af45aa311e1616622ee79f9a16b7ad2352cf2832',
+            'reference' => '4db5d13b3ded02323b8e327676f91e5ab18ec0ec',
             'dev_requirement' => false,
         ),
         'bcosca/fatfree-core' => array(
@@ -37,6 +37,15 @@
             'install_path' => __DIR__ . '/../google/recaptcha',
             'aliases' => array(),
             'reference' => 'e7add3be59211482ecdb942288f52da64a35f61a',
+            'dev_requirement' => false,
+        ),
+        'madcoda/php-youtube-api' => array(
+            'pretty_version' => 'v1.2.5',
+            'version' => '1.2.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../madcoda/php-youtube-api',
+            'aliases' => array(),
+            'reference' => 'eac4b82e9f6d4377964e0e735aba59c51e42bd5e',
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(

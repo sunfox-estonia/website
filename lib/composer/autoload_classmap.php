@@ -29,6 +29,7 @@ return array(
     'ISO' => $vendorDir . '/bcosca/fatfree-core/base.php',
     'Image' => $vendorDir . '/bcosca/fatfree-core/image.php',
     'Log' => $vendorDir . '/bcosca/fatfree-core/log.php',
+    'Madcoda\\compat' => $vendorDir . '/madcoda/php-youtube-api/src/compat.php',
     'Magic' => $vendorDir . '/bcosca/fatfree-core/magic.php',
     'Markdown' => $vendorDir . '/bcosca/fatfree-core/markdown.php',
     'Matrix' => $vendorDir . '/bcosca/fatfree-core/matrix.php',
