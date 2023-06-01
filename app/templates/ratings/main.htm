@@ -19,7 +19,7 @@
         </thead>
         <tbody>
         <repeat group="{{ @members }}" value="{{ @m }}">
-            <tr>
+            <tr data-discord-id="{{ @m.id }}" >
                 <td>
                     <check if="{{ @m.avatar=='false' }}"><true>
                         <img src="../../../resources/img/ratings/no_avatar.png" alt="{{ @m.nickname }}" class="drd_avatar img-circle">

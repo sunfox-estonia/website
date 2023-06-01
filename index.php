@@ -111,35 +111,7 @@ $f3->route(
             $c++;
         }
 
-        // Get Instagram posts but from VK.com
-        $vk_query = file_get_contents("https://api.vk.com/method/photos.get?owner_id=-85213325&album_id=276383442&extended=1&need_covers=1&photo_sizes=1&access_token=" . VKAPP_TOKEN . "&v=5.126");
-        $vk_result = json_decode($vk_query, false);
-
-        $ig_logo = $vk_result->response->items{
-            0}->sizes{
-            0}->url;
-        $ig_posts = array();
-
-        for ($i = 0; $i <= 9; $i++) {
-            $cntr = $i + 1;
-            $photo_img_sm = $vk_result->response->items{
-                $cntr}->sizes{
-                6}->url;
-            $photo_img_lg = $vk_result->response->items{
-                $cntr}->sizes{
-                7}->url;
-            $photo_txt = $vk_result->response->items{
-                $cntr}->text;
-            $photo_date = $vk_result->response->items{
-                $cntr}->date;
-            $photo_likes = $vk_result->response->items{
-                $cntr}->likes->count;
-
-            $ig_posts[$i] = array('img_sm' => $photo_img_sm, 'img_lg' => $photo_img_lg, 'txt' => $photo_txt, 'date' => date('d.m.Y', $photo_date), 'likes' => $photo_likes);
-        }
         $f3->set('members', $members4web);
-        $f3->set('ig_logo', $ig_logo);
-        $f3->set('ig_photos', $ig_posts);
         $f3->set('yt_playlist', $yt_playlist);
         $f3->set('user_lang', $f3->get('SESSION.native'));
         echo Template::instance()->render('homepage.htm');
