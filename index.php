@@ -201,16 +201,19 @@ $f3->route('GET /profile/signin', function ($f3, $params) {
     // $f3->set('LANGUAGE', $f3->get('SESSION.native'));
     // $f3->set('FALLBACK', 'ru');
     // $f3->set('user_lang', $f3->get('SESSION.native'));
-    $f3->set('discord_client_id', DISCORD_CLIENT_ID);
+    $redirectURL = 'https://sunfox.ee/profile/oauth/discord';
+    $req_params = array(
+        'client_id' => DISCORD_CLIENT_ID,
+        'redirect_uri' => $redirectURL,
+        'response_type' => 'code',
+        'scope' => 'identify guilds'
+    );
+
+    $f3->set('discord_auth_url', "https://discord.com/api/oauth2/authorize" . "?" . http_build_query($req_params));
     echo Template::instance()->render('profile/signin.htm');
 });
 
-$f3->route('GET /oauth/discord', function ($f3) {
-    $code = $f3->get('GET.code');
-    $resp = file_get_contents('https://discord.com/api/v8/oauth2/token?client_id=' . DISCORD_CLIENT_ID . '&client_secret=' . DISCORD_CLIENT_SECRET . '&grant_type=authorization_code&redirect_uri=https://sunfox.ee/oauth/discord&code=' . $code);
-    $data = json_decode($resp, true);
-    echo ($data);
-    break;
+$f3->route('GET /profile/oauth/discord', function ($f3) {
 });
 
 $f3->route('GET /profile/lang/@language', function ($f3, $params) {
