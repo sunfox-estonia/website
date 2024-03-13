@@ -189,7 +189,8 @@ $f3->route(
 $f3->route('GET /profile', function ($f3) {
     if ($f3->get('SESSION.discord_token')) {
         $OAuth_UserData = new Web\OAuth2();
-        echo $OAuth_UserData->request('https://discord.com/api/users/@me', 'GET', $f3->get('SESSION.discord_token'));
+        $UserData = $OAuth_UserData->request('https://discord.com/api/users/@me', 'GET', $f3->get('SESSION.discord_token'));
+        var_dump($UserData);
         // echo Template::instance()->render('profile/profile.htm');
     } else {
         $f3->reroute('/profile/signin');
