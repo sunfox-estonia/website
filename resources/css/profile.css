@@ -6,7 +6,6 @@ body {
     background: url('/resources/img/profile/bg_signin.jpg') center center no-repeat;
     background-size: cover;     
 }
-
 .btn-discord {
     --bs-btn-color: #fff;
     --bs-btn-bg: #5b6eb0;
