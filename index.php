@@ -215,7 +215,7 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
         $OAuth_Token->set('client_secret', DISCORD_CLIENT_SECRET);
         $OAuth_Token->set('grant_type', 'authorization_code');
         $OAuth_Token->set('code', $f3->get('GET.code'));
-        $OAuth_Token->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile');
+        $OAuth_Token->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
 
         $token = $OAuth_Token->request('https://discord.com/api/oauth2/token', 'POST');
 
