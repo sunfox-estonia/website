@@ -220,7 +220,7 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
         $token = $OAuth_Token->request('https://discord.com/api/oauth2/token', 'POST');
 
         //$_SESSION['access_token'] = $token->access_token;
-        var_dump($token->access_token);
+        var_dump($token["access_token"]);
 
         //  $f3->reroute('/profile');
     }
