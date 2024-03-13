@@ -216,8 +216,6 @@ $f3->route('GET /profile/signin', function ($f3) {
 
 $f3->route('GET /profile/signout', function ($f3) {
     if ($f3->get('SESSION.discord_token')) {
-        $f3->reroute('/profile/signin');
-    } else {
         $OAuth_Logout = new Web\OAuth2();
         $OAuth_Logout->set('client_id', DISCORD_CLIENT_ID);
         $OAuth_Logout->set('client_secret', DISCORD_CLIENT_SECRET);
@@ -225,6 +223,8 @@ $f3->route('GET /profile/signout', function ($f3) {
         $OAuth_Logout->request('https://discord.com/api/oauth2/token/revoke', 'POST');
         $f3->clear('SESSION.discord_token');
         $f3->reroute('/profile');
+    } else {
+        $f3->reroute('/profile/signin');
     }
 });
 
