@@ -4,7 +4,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: url('/resources/img/profile/bg_signin.jpg') center center no-repeat;
-    background-size: contain;     
+    background-size: cover;     
 }
 
 .btn-discord {
