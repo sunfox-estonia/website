@@ -14,8 +14,6 @@ $f3->set('UI', 'app/templates/');
 $f3->set('LOCALES', 'app/locales/');
 $f3->set('DB', new DB\SQL('mysql:host=localhost;port=3306;dbname=' . HUGINN_DBNAME, HUGINN_DBUSER, HUGINN_DBPASS));
 
-$f3->set('OAUTH', new Web\OAuth2());
-
 $f3->set('gcaptcha_siteKey', GCAPTCHA_KEY);
 $f3->set('gcaptcha_secret', GCAPTCHA_SECRET);
 
@@ -198,27 +196,31 @@ $f3->route('GET /profile', function ($f3) {
 });
 
 $f3->route('GET /profile/signin', function ($f3) {
-    $f3->get('OAUTH')->set('client_id', DISCORD_CLIENT_ID);
-    $f3->get('OAUTH')->set('client_id', DISCORD_CLIENT_ID);
-    $f3->get('OAUTH')->set('scope', 'identify');
-    $f3->get('OAUTH')->set('response_type', 'code');
-    $f3->get('OAUTH')->set('access_type', 'online');
-    $f3->get('OAUTH')->set('approval_prompt', 'auto');
-    $f3->get('OAUTH')->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
+    $OAuth = new Web\OAuth2();
+    $OAuth->set('client_id', DISCORD_CLIENT_ID);
+    $OAuth->set('scope', 'identify');
+    $OAuth->set('response_type', 'code');
+    $OAuth->set('access_type', 'online');
+    $OAuth->set('approval_prompt', 'auto');
+    $OAuth->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
 
-    $f3->set('discord_auth_url', $f3->get('OAUTH')->uri('https://discord.com/api/oauth2/authorize', true));
+    $f3->set('discord_auth_url', $OAuth->uri('https://discord.com/api/oauth2/authorize', true));
     echo Template::instance()->render('profile/signin.htm');
 });
 
 $f3->route('GET /profile/oauth/discord', function ($f3) {
     if ($f3->get('GET.code')) {
-        $tokenURL = 'https://discord.com/api/oauth2/token';
-        $req_params = array(
-            'client_id' => DISCORD_CLIENT_ID,
-            'client_secret' => DISCORD_CLIENT_SECRET,
-            'grant_type' => 'authorization_code',
-            'code' => $f3->get('GET.code')
-        );
+        $OAuth_Token = new Web\OAuth2();
+        $OAuth_Token->set('client_id', DISCORD_CLIENT_ID);
+        $OAuth_Token->set('client_secret', OAUTH2_CLIENT_SECRET);
+        $OAuth_Token->set('grant_type', 'authorization_code');
+        $OAuth_Token->set('code', $f3->get('GET.code'));
+
+        $token = $OAuth_Token->request('https://discord.com/api/oauth2/token', 'POST');
+
+        var_dump($token);
+
+        //$_SESSION['access_token'] = $token;
     }
 });
 
