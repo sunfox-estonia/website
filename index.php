@@ -197,7 +197,8 @@ $f3->route('GET /profile/signin', function ($f3, $params) {
     // }
     // $f3->set('LANGUAGE', $f3->get('SESSION.native'));
     // $f3->set('FALLBACK', 'ru');
-    echo Template::instance()->render('profile/singin.htm');
+    // $f3->set('user_lang', $f3->get('SESSION.native'));
+    echo Template::instance()->render('profile/signin.htm');
 });
 
 $f3->route('GET /profile/lang/@language', function ($f3, $params) {
