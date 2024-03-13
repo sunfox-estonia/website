@@ -2,8 +2,8 @@
 @font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
 body {
     background-image: url('/resources/img/profile/bg_signin.jpg');
-    background-size: cover;     
-    background-position: center;
+    background-size: contain;     
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
