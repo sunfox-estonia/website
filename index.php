@@ -187,7 +187,24 @@ $f3->route(
  */
 
 $f3->route('GET /profile', function ($f3, $params) {
+
+
+    if ($f3->get('SESSION.access_token')) {
+        $apiURLBase = 'https://discord.com/api/users/@me';
+        $user = apiRequest($apiURLBase);
+        echo '<h3>Logged In</h3>';
+        echo '<h4>Welcome, ' . $user->username . '</h4>';
+        echo '<pre>';
+        print_r($user);
+        echo '</pre>';
+    } else {
+        echo '<h3>Not logged in</h3>';
+        echo '<p><a href="?action=login">Log In</a></p>';
+    }
+
     // echo Template::instance()->render('profile/profile.htm');
+
+
 });
 
 $f3->route('GET /profile/signin', function ($f3, $params) {
@@ -214,58 +231,19 @@ $f3->route('GET /profile/signin', function ($f3, $params) {
 });
 
 $f3->route('GET /profile/oauth/discord', function ($f3) {
-    $redirectURL = 'https://sunfox.ee/profile/oauth/discord';
-    $req_params = array(
-        'client_id' => DISCORD_CLIENT_ID,
-        'client_secret' => DISCORD_CLIENT_SECRET,
-        'grant_type' => 'authorization_code',
-        'code' => $f3->get('GET.code'),
-        'redirect_uri' => $redirectURL,
-        'scope' => 'identify'
-    );
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://discord.com/api/oauth2/token');
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($req_params));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $server_output = curl_exec($ch);
-    curl_close($ch);
-
-    $response = json_decode($server_output, true);
-    $access_token = $response['access_token'];
-    $token_type = $response['token_type'];
-    $expires_in = $response['expires_in'];
-    $refresh_token = $response['refresh_token'];
-    $scope = $response['scope'];
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://discord.com/api/users/@me');
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: ' . $token_type . ' ' . $access_token));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $server_output = curl_exec($ch);
-    curl_close($ch);
-
-    $response = json_decode($server_output, true);
-
-    var_dump($response);
-
-    $user_id = $response['id'];
-    $username = $response['username'];
-    $discriminator = $response['discriminator'];
-    $avatar = $response['avatar'];
-    $locale = $response['locale'];
-    $mfa_enabled = $response['mfa_enabled'];
-    $verified = $response['verified'];
-    $email = $response['email'];
-
-    $f3->set('user_id', $user_id);
-    $f3->set('username', $username);
-    $f3->set('discriminator', $discriminator);
-    $f3->set('avatar', $avatar);
-    $f3->set('locale', $locale);
-    $f3->set('mfa_enabled', $mfa_enabled);
-    $f3->set('verified', $verified);
+    $tokenURL = 'https://discord.com/api/oauth2/token';
+    if ($f3->get('GET.code')) {
+        // Exchange the auth code for a token
+        $token = apiRequest($tokenURL, array(
+            "grant_type" => "authorization_code",
+            'client_id' => DISCORD_CLIENT_ID,
+            'client_secret' => DISCORD_CLIENT_SECRET,
+            'code' => $f3->get('GET.code')
+        ));
+        $logout_token = $token->access_token;
+        $f3->set('SESSION.access_token', $token->access_token);
+        $f3->reroute('/profile');
+    }
 });
 
 $f3->route('GET /profile/lang/@language', function ($f3, $params) {
@@ -280,4 +258,27 @@ $f3->run();
 function in_array_r($item, $array)
 {
     return preg_match('/"' . preg_quote($item, '/') . '"/i', $array);
+}
+
+function apiRequest($url, $post = FALSE, $headers = array())
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+
+    $response = curl_exec($ch);
+
+
+    if ($post)
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
+
+    $headers[] = 'Accept: application/json';
+
+    if (session('access_token'))
+        $headers[] = 'Authorization: Bearer ' . session('access_token');
+
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+    $response = curl_exec($ch);
+    return json_decode($response);
 }
