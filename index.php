@@ -186,9 +186,9 @@ $f3->route(
  *
  */
 
-$f3->route('GET /profile', function ($f3, $params) {
+$f3->route('GET /profile', function ($f3) {
 
-
+    var_dump($f3->get('SESSION.access_token'));
     if ($f3->get('SESSION.access_token')) {
         $apiURLBase = 'https://discord.com/api/users/@me';
         $user = apiRequest($f3, $apiURLBase);
