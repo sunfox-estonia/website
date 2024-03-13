@@ -206,7 +206,7 @@ $f3->route('GET /profile/signin', function ($f3, $params) {
         'client_id' => DISCORD_CLIENT_ID,
         'redirect_uri' => $redirectURL,
         'response_type' => 'code',
-        'scope' => 'identify guilds'
+        'scope' => 'identify'
     );
 
     $f3->set('discord_auth_url', "https://discord.com/api/oauth2/authorize" . "?" . http_build_query($req_params));
