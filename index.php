@@ -202,7 +202,13 @@ $f3->route('GET /profile/signin', function ($f3, $params) {
     echo Template::instance()->render('profile/signin.htm');
 });
 
-
+$f3->route('GET /oauth/discord', function ($f3) {
+    $code = $f3->get('GET.code');
+    $resp = file_get_contents('https://discord.com/api/v8/oauth2/token?client_id=' . DISCORD_CLIENT_ID . '&client_secret=' . DISCORD_CLIENT_SECRET . '&grant_type=authorization_code&redirect_uri=https://sunfox.ee/oauth/discord&code=' . $code);
+    $data = json_decode($resp, true);
+    echo ($data);
+    break;
+});
 
 $f3->route('GET /profile/lang/@language', function ($f3, $params) {
     $set_lang = $params['language'];
