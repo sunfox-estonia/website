@@ -5,7 +5,6 @@ require_once('config.php');
 
 /** @var \Base $f3 */
 $f3 = \Base::instance();
-$Oauth = new Web\OAuth2();
 //$f3->set('CACHE','folder=tmp/');
 $f3->set('CACHE', FALSE);
 $f3->set('DEBUG', 3);
@@ -197,6 +196,7 @@ $f3->route('GET /profile', function ($f3) {
 });
 
 $f3->route('GET /profile/signin', function ($f3) {
+    $Oauth = new Web\OAuth2();
     $Oauth->set('client_id', DISCORD_CLIENT_ID);
     $Oauth->set('scope', 'identify');
     $Oauth->set('response_type', 'code');
