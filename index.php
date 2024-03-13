@@ -253,7 +253,7 @@ $f3->route('GET /profile/lang/@language', function ($f3, $params) {
     $f3->reroute('/profile');
 });
 
-
+$f3->run();
 
 function in_array_r($item, $array)
 {
@@ -274,8 +274,8 @@ function apiRequest($url, $post = FALSE, $headers = array())
 
     $headers[] = 'Accept: application/json';
 
-    if ($f3->get('SESSION.access_token'))
-        $headers[] = 'Authorization: Bearer ' . $f3->get('SESSION.access_token');
+    if (session('access_token'))
+        $headers[] = 'Authorization: Bearer ' . session('access_token');
 
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
@@ -283,4 +283,7 @@ function apiRequest($url, $post = FALSE, $headers = array())
     return json_decode($response);
 }
 
-$f3->run();
+function session($key, $default = NULL)
+{
+    return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
+}
