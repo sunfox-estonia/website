@@ -241,6 +241,7 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
             'code' => $f3->get('GET.code')
         ));
         // $logout_token = $token->access_token;
+        echo var_dump($token->access_token);
         $f3->set('SESSION.access_token', $token->access_token);
         $f3->reroute('/profile');
     }
