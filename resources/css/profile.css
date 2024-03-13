@@ -1,6 +1,8 @@
 @font-face {font-family:Mezzo Bold;src: url(../fonts/mezzo_bd.otf);src: local(Mezzo), url(../fonts/mezzo_bd.otf);}
 @font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
 body {
+    width: 100vw;
+    height: 100vh;
     background: url('/resources/img/profile/bg_signin.jpg') center center no-repeat;
     background-size: contain;     
 }
