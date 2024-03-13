@@ -14,6 +14,9 @@ body {
     text-decoration: none;
 }
 .btn-discord {
+    background-color: #5b6eb0;
+    border-color: #51629c;
+    color: #FFF;
     --bs-btn-color: #fff;
     --bs-btn-bg: #5b6eb0;
     --bs-btn-border-color: #51629c;
