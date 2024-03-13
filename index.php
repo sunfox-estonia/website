@@ -5,6 +5,7 @@ require_once('config.php');
 
 /** @var \Base $f3 */
 $f3 = \Base::instance();
+$Oauth = new Web\OAuth2();
 //$f3->set('CACHE','folder=tmp/');
 $f3->set('CACHE', FALSE);
 $f3->set('DEBUG', 3);
@@ -188,62 +189,34 @@ $f3->route(
 
 $f3->route('GET /profile', function ($f3) {
 
-    var_dump($f3->get('SESSION.access_token'));
-    if ($f3->get('SESSION.access_token')) {
-        $apiURLBase = 'https://discord.com/api/users/@me';
-        $user = apiRequest($f3, $apiURLBase);
-        echo '<h3>Logged In</h3>';
-        echo '<h4>Welcome, ' . $user->username . '</h4>';
-        echo '<pre>';
-        print_r($user);
-        echo '</pre>';
-    } else {
-        echo '<h3>Not logged in</h3>';
-        echo '<p><a href="?action=login">Log In</a></p>';
-    }
+
 
     // echo Template::instance()->render('profile/profile.htm');
 
 
 });
 
-$f3->route('GET /profile/signin', function ($f3, $params) {
-    // JWT
-    // $native = $f3->get('SESSION.native');
-    // if (!isset($native)) {
-    //     $recognize_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-    //     $user_lang = ($recognize_lang == "ru" || $recognize_lang == "et" || $recognize_lang == "en") ? $recognize_lang : "ru";
-    //     $f3->set('SESSION.native', $user_lang);
-    // }
-    // $f3->set('LANGUAGE', $f3->get('SESSION.native'));
-    // $f3->set('FALLBACK', 'ru');
-    // $f3->set('user_lang', $f3->get('SESSION.native'));
-    $redirectURL = 'https://sunfox.ee/profile/oauth/discord';
-    $req_params = array(
-        'client_id' => DISCORD_CLIENT_ID,
-        'redirect_uri' => $redirectURL,
-        'response_type' => 'code',
-        'scope' => 'identify'
-    );
+$f3->route('GET /profile/signin', function ($f3) {
+    $Oauth->set('client_id', DISCORD_CLIENT_ID);
+    $Oauth->set('scope', 'identify');
+    $Oauth->set('response_type', 'code');
+    $Oauth->set('access_type', 'online');
+    $Oauth->set('approval_prompt', 'auto');
+    $Oauth->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
 
-    $f3->set('discord_auth_url', "https://discord.com/api/oauth2/authorize" . "?" . http_build_query($req_params));
+    $f3->set('discord_auth_url', $Oauth->uri('https://discord.com/api/oauth2/authorize', true));
     echo Template::instance()->render('profile/signin.htm');
 });
 
 $f3->route('GET /profile/oauth/discord', function ($f3) {
-    $tokenURL = 'https://discord.com/api/oauth2/token';
     if ($f3->get('GET.code')) {
-        // Exchange the auth code for a token
-        $token = apiRequest($f3, $tokenURL, array(
-            "grant_type" => "authorization_code",
+        $tokenURL = 'https://discord.com/api/oauth2/token';
+        $req_params = array(
             'client_id' => DISCORD_CLIENT_ID,
             'client_secret' => DISCORD_CLIENT_SECRET,
+            'grant_type' => 'authorization_code',
             'code' => $f3->get('GET.code')
-        ));
-        // $logout_token = $token->access_token;
-        echo var_dump($token->access_token);
-        $f3->set('SESSION.access_token', $token->access_token);
-        //$f3->reroute('/profile');
+        );
     }
 });
 
@@ -259,27 +232,4 @@ $f3->run();
 function in_array_r($item, $array)
 {
     return preg_match('/"' . preg_quote($item, '/') . '"/i', $array);
-}
-
-function apiRequest($f3, $url, $post = FALSE, $headers = array())
-{
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-
-    $response = curl_exec($ch);
-
-
-    if ($post)
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
-
-    $headers[] = 'Accept: application/json';
-
-    if ($f3->get('SESSION.access_token'))
-        $headers[] = 'Authorization: Bearer ' . $f3->get('SESSION.access_token');
-
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
-    $response = curl_exec($ch);
-    return json_decode($response);
 }
