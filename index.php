@@ -191,7 +191,7 @@ $f3->route('GET /profile', function ($f3, $params) {
 
     if ($f3->get('SESSION.access_token')) {
         $apiURLBase = 'https://discord.com/api/users/@me';
-        $user = apiRequest($apiURLBase);
+        $user = apiRequest($f3, $apiURLBase);
         echo '<h3>Logged In</h3>';
         echo '<h4>Welcome, ' . $user->username . '</h4>';
         echo '<pre>';
@@ -234,7 +234,7 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
     $tokenURL = 'https://discord.com/api/oauth2/token';
     if ($f3->get('GET.code')) {
         // Exchange the auth code for a token
-        $token = apiRequest($tokenURL, array(
+        $token = apiRequest($f3, $tokenURL, array(
             "grant_type" => "authorization_code",
             'client_id' => DISCORD_CLIENT_ID,
             'client_secret' => DISCORD_CLIENT_SECRET,
@@ -260,7 +260,7 @@ function in_array_r($item, $array)
     return preg_match('/"' . preg_quote($item, '/') . '"/i', $array);
 }
 
-function apiRequest($url, $post = FALSE, $headers = array())
+function apiRequest($f3, $url, $post = FALSE, $headers = array())
 {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
