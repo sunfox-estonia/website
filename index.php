@@ -187,12 +187,13 @@ $f3->route(
  */
 
 $f3->route('GET /profile', function ($f3) {
-
-
-
-    // echo Template::instance()->render('profile/profile.htm');
-
-
+    if ($f3->get('SESSION.discord_token')) {
+        $OAuth_UserData = new Web\OAuth2();
+        echo $OAuth_UserData->request('https://discord.com/api/users/@me', 'GET', $f3->get('SESSION.discord_token'));
+        // echo Template::instance()->render('profile/profile.htm');
+    } else {
+        $f3->reroute('/profile/signin');
+    }
 });
 
 $f3->route('GET /profile/signin', function ($f3) {
@@ -218,11 +219,8 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
         $OAuth_Token->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
 
         $token = $OAuth_Token->request('https://discord.com/api/oauth2/token', 'POST');
-
-        //$_SESSION['access_token'] = $token->access_token;
-        var_dump($token["access_token"]);
-
-        //  $f3->reroute('/profile');
+        $f3->set('SESSION.discord_token', $token["access_token"]);
+        $f3->reroute('/profile');
     }
 });
 
