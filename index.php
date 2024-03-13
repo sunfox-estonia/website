@@ -199,27 +199,34 @@ $f3->route('GET /profile', function ($f3) {
 });
 
 $f3->route('GET /profile/signin', function ($f3) {
-    $OAuth = new Web\OAuth2();
-    $OAuth->set('client_id', DISCORD_CLIENT_ID);
-    $OAuth->set('scope', 'identify');
-    $OAuth->set('response_type', 'code');
-    $OAuth->set('access_type', 'online');
-    $OAuth->set('approval_prompt', 'auto');
-    $OAuth->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
+    if ($f3->get('SESSION.discord_token')) {
+        $f3->reroute('/profile');
+    } else {
+        $OAuth = new Web\OAuth2();
+        $OAuth->set('client_id', DISCORD_CLIENT_ID);
+        $OAuth->set('scope', 'identify');
+        $OAuth->set('response_type', 'code');
+        $OAuth->set('access_type', 'online');
+        $OAuth->set('approval_prompt', 'auto');
+        $OAuth->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
 
-    $f3->set('discord_auth_url', $OAuth->uri('https://discord.com/api/oauth2/authorize', true));
-    echo Template::instance()->render('profile/signin.htm');
+        $f3->set('discord_auth_url', $OAuth->uri('https://discord.com/api/oauth2/authorize', true));
+        echo Template::instance()->render('profile/signin.htm');
+    }
 });
 
 $f3->route('GET /profile/signout', function ($f3) {
-    $OAuth_Logout = new Web\OAuth2();
-    $OAuth_Logout->set('client_id', DISCORD_CLIENT_ID);
-    $OAuth_Logout->set('client_secret', DISCORD_CLIENT_SECRET);
-    $OAuth_Logout->set('token', $f3->get('SESSION.discord_token'));
-    $OAuth_Logout->request('https://discord.com/api/oauth2/token/revoke', 'POST');
-    $f3->clear('SESSION.discord_token');
-
-    $f3->reroute('/profile');
+    if ($f3->get('SESSION.discord_token')) {
+        $f3->reroute('/profile/signin');
+    } else {
+        $OAuth_Logout = new Web\OAuth2();
+        $OAuth_Logout->set('client_id', DISCORD_CLIENT_ID);
+        $OAuth_Logout->set('client_secret', DISCORD_CLIENT_SECRET);
+        $OAuth_Logout->set('token', $f3->get('SESSION.discord_token'));
+        $OAuth_Logout->request('https://discord.com/api/oauth2/token/revoke', 'POST');
+        $f3->clear('SESSION.discord_token');
+        $f3->reroute('/profile');
+    }
 });
 
 $f3->route('GET /profile/oauth/discord', function ($f3) {
@@ -234,6 +241,8 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
         $token = $OAuth_Token->request('https://discord.com/api/oauth2/token', 'POST');
         $f3->set('SESSION.discord_token', $token["access_token"]);
         $f3->reroute('/profile');
+    } else {
+        $f3->reroute('/profile/signin');
     }
 });
 
