@@ -1,43 +1,20 @@
 @font-face {font-family:Mezzo Bold;src: url(../fonts/mezzo_bd.otf);src: local(Mezzo), url(../fonts/mezzo_bd.otf);}
 @font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100vw; height: 100vh; 
     background: url('/resources/img/profile/bg_signin.jpg') center center no-repeat;
     background-size: cover;
-    font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;
-    font-size:14px; 
-    color:#161616;
+    font-family:Lucida Sans Unicode,Lucida Grande,sans-serif; font-size:14px; color:#161616;
 }
 
-.btn {
-    text-decoration: none;
-}
-.btn-discord {
-    background-color: #5b6eb0;
-    border-color: #51629c;
-    color: #FFF;
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #5b6eb0;
-    --bs-btn-border-color: #51629c;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #51629c;
-    --bs-btn-hover-border-color: #445282;
-    --bs-btn-focus-shadow-rgb: 81, 98, 165;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #3d4975;
-    --bs-btn-active-border-color: #28314e;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #7289DA;
-    --bs-btn-disabled-border-color: #51629c;
-}
+.btn {text-decoration: none;}
+.btn-discord {background-color: #5b6eb0; border-color: #51629c; color: #FFF;}
+.btn-discord:hover {color: #fff; background-color: #51629c; border-color: #445282;}
+.btn-discord:active {color: #fff; background-color: #3d4975; border-color: #28314e;}
+.btn-discord:disabled {color: #fff; background-color: #7289DA; border-color: #51629c;}
+.btn-discord:active{box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);}
 
-.signin{
-    background: #fff;
-    border-radius: 10px;
-    text-align: center;
-}
+.signin{background: #fff; border-radius: 10px; text-align: center;}
 
 .signin_logo {
     background-color: #111111;
