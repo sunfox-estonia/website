@@ -212,7 +212,7 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
     if ($f3->get('GET.code')) {
         $OAuth_Token = new Web\OAuth2();
         $OAuth_Token->set('client_id', DISCORD_CLIENT_ID);
-        $OAuth_Token->set('client_secret', OAUTH2_CLIENT_SECRET);
+        $OAuth_Token->set('client_secret', DISCORD_CLIENT_SECRET);
         $OAuth_Token->set('grant_type', 'authorization_code');
         $OAuth_Token->set('code', $f3->get('GET.code'));
 
