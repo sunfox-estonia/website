@@ -240,7 +240,7 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
             'client_secret' => DISCORD_CLIENT_SECRET,
             'code' => $f3->get('GET.code')
         ));
-        $logout_token = $token->access_token;
+        // $logout_token = $token->access_token;
         $f3->set('SESSION.access_token', $token->access_token);
         $f3->reroute('/profile');
     }
@@ -266,6 +266,8 @@ function apiRequest($f3, $url, $post = FALSE, $headers = array())
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     $access_token = $f3->get('SESSION.access_token');
+
+    var_dump($access_token);
 
     $response = curl_exec($ch);
 
