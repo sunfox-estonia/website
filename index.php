@@ -211,6 +211,19 @@ $f3->route('GET /profile/signin', function ($f3) {
     echo Template::instance()->render('profile/signin.htm');
 });
 
+$f3->route('GET /profile/signout', function ($f3) {
+    $OAuth_Logout = new Web\OAuth2();
+    $OAuth_Logout->set('client_id', DISCORD_CLIENT_ID);
+    $OAuth_Logout->set('client_secret', DISCORD_CLIENT_SECRET);
+    $OAuth_Logout->set('token', $f3->get('SESSION.discord_token'));
+    $OAuth_Logout->set('token_type_hint', $f3->get('SESSION.discord_token'));
+    $OAuth_Logout->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
+    $OAuth_Logout->request('https://discord.com/api/oauth2/token/revoke', 'POST');
+    $f3->clear('SESSION.discord_token');
+
+    $f3->reroute('/');
+});
+
 $f3->route('GET /profile/oauth/discord', function ($f3) {
     if ($f3->get('GET.code')) {
         $OAuth_Token = new Web\OAuth2();
