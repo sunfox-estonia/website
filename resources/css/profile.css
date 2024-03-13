@@ -23,7 +23,15 @@ body {
     --bs-btn-disabled-border-color: #51629c;
 }
 
+.signin{
+    background: #fff;
+    border-radius: 6px;
+}
 
+.signin_logo {
+    background-color: #111111;
+    border-radius: 6px;
+}
 
 
 @media screen and (701px < width < 760px){
