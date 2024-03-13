@@ -18,10 +18,13 @@ $f3->set('gcaptcha_siteKey', GCAPTCHA_KEY);
 $f3->set('gcaptcha_secret', GCAPTCHA_SECRET);
 
 $f3->set('ONERROR', function ($f3) {
-    $f3->set('LANGUAGE', $f3->get('SESSION.native'));
-    $user_lang = $f3->get('SESSION.native');
-    $f3->set('FALLBACK', 'ru');
-    echo Template::instance()->render('error.htm');
+    // $f3->set('LANGUAGE', $f3->get('SESSION.native'));
+    // $user_lang = $f3->get('SESSION.native');
+    // $f3->set('FALLBACK', 'ru');
+    echo $f3->get('ERROR.code') . '<br>';
+    echo $f3->get('ERROR.text') . '<br>';
+    echo $f3->get('ERROR.trace') . '<br>';
+    // echo Template::instance()->render('error.htm');
 });
 
 $f3->route(
