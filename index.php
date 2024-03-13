@@ -198,6 +198,7 @@ $f3->route('GET /profile/signin', function ($f3, $params) {
     // $f3->set('LANGUAGE', $f3->get('SESSION.native'));
     // $f3->set('FALLBACK', 'ru');
     // $f3->set('user_lang', $f3->get('SESSION.native'));
+    $f3->set('discord_client_id', DISCORD_CLIENT_ID);
     echo Template::instance()->render('profile/signin.htm');
 });
 
