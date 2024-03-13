@@ -183,6 +183,7 @@ $f3->route(
 );
 
 /* Profile routes
+ * Profile system is based on Discord user profiles.
  *
  */
 
