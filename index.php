@@ -179,6 +179,34 @@ $f3->route(
     }
 );
 
+/* Profile routes
+ *
+ */
+
+$f3->route('GET /profile', function ($f3, $params) {
+    echo Template::instance()->render('profile/profile.htm');
+});
+
+$f3->route('GET /profile/signin', function ($f3, $params) {
+    // JWT
+    // $native = $f3->get('SESSION.native');
+    // if (!isset($native)) {
+    //     $recognize_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+    //     $user_lang = ($recognize_lang == "ru" || $recognize_lang == "et" || $recognize_lang == "en") ? $recognize_lang : "ru";
+    //     $f3->set('SESSION.native', $user_lang);
+    // }
+    // $f3->set('LANGUAGE', $f3->get('SESSION.native'));
+    // $f3->set('FALLBACK', 'ru');
+    echo Template::instance()->render('profile/singin.htm');
+});
+
+$f3->route('GET /profile/lang/@language', function ($f3, $params) {
+    $set_lang = $params['language'];
+    $user_lang = ($set_lang == "ru" || $set_lang == "et" || $set_lang == "en") ? $set_lang : "ru";
+    $f3->set('SESSION.native', $user_lang);
+    $f3->reroute('/profile');
+});
+
 $f3->run();
 
 function in_array_r($item, $array)
