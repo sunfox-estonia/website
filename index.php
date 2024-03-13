@@ -14,6 +14,8 @@ $f3->set('UI', 'app/templates/');
 $f3->set('LOCALES', 'app/locales/');
 $f3->set('DB', new DB\SQL('mysql:host=localhost;port=3306;dbname=' . HUGINN_DBNAME, HUGINN_DBUSER, HUGINN_DBPASS));
 
+$f3->set('OAUTH', new Web\OAuth2());
+
 $f3->set('gcaptcha_siteKey', GCAPTCHA_KEY);
 $f3->set('gcaptcha_secret', GCAPTCHA_SECRET);
 
@@ -196,15 +198,15 @@ $f3->route('GET /profile', function ($f3) {
 });
 
 $f3->route('GET /profile/signin', function ($f3) {
-    $Oauth = new Web\OAuth2();
-    $Oauth->set('client_id', DISCORD_CLIENT_ID);
-    $Oauth->set('scope', 'identify');
-    $Oauth->set('response_type', 'code');
-    $Oauth->set('access_type', 'online');
-    $Oauth->set('approval_prompt', 'auto');
-    $Oauth->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
+    $f3->get('OAUTH')->set('client_id', DISCORD_CLIENT_ID);
+    $f3->get('OAUTH')->set('client_id', DISCORD_CLIENT_ID);
+    $f3->get('OAUTH')->set('scope', 'identify');
+    $f3->get('OAUTH')->set('response_type', 'code');
+    $f3->get('OAUTH')->set('access_type', 'online');
+    $f3->get('OAUTH')->set('approval_prompt', 'auto');
+    $f3->get('OAUTH')->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');
 
-    $f3->set('discord_auth_url', $Oauth->uri('https://discord.com/api/oauth2/authorize', true));
+    $f3->set('discord_auth_url', $f3->get('OAUTH')->uri('https://discord.com/api/oauth2/authorize', true));
     echo Template::instance()->render('profile/signin.htm');
 });
 
