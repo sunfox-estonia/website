@@ -187,7 +187,7 @@ $f3->route(
  */
 
 $f3->route('GET /profile', function ($f3, $params) {
-    echo Template::instance()->render('profile/profile.htm');
+    // echo Template::instance()->render('profile/profile.htm');
 });
 
 $f3->route('GET /profile/signin', function ($f3, $params) {
