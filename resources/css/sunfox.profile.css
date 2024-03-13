@@ -36,6 +36,7 @@ a:hover, a:active, a:focus {outline: 0;}
 /* Small devices (portrait phones less than 577px) */
 @media (max-width: 577px) {
     .signin {margin-top:10px;margin-bottom:10px;}
+    .signin_body{background-size: contain;}
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {}
