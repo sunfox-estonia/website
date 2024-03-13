@@ -234,7 +234,7 @@ $f3->route('GET /profile/oauth/discord', function ($f3) {
     $tokenURL = 'https://discord.com/api/oauth2/token';
     if ($f3->get('GET.code')) {
         // Exchange the auth code for a token
-        $token = apiRequest($f3, $tokenURL, array(
+        $token = apiRequest($tokenURL, array(
             "grant_type" => "authorization_code",
             'client_id' => DISCORD_CLIENT_ID,
             'client_secret' => DISCORD_CLIENT_SECRET,
@@ -261,14 +261,11 @@ function in_array_r($item, $array)
     return preg_match('/"' . preg_quote($item, '/') . '"/i', $array);
 }
 
-function apiRequest($f3, $url, $post = FALSE, $headers = array())
+function apiRequest($url, $post = FALSE, $headers = array())
 {
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-    $access_token = $f3->get('SESSION.access_token');
-
-    var_dump($access_token);
 
     $response = curl_exec($ch);
 
@@ -278,11 +275,16 @@ function apiRequest($f3, $url, $post = FALSE, $headers = array())
 
     $headers[] = 'Accept: application/json';
 
-    if ($access_token)
-        $headers[] = 'Authorization: Bearer ' . $access_token;
+    if (session('access_token'))
+        $headers[] = 'Authorization: Bearer ' . session('access_token');
 
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $response = curl_exec($ch);
     return json_decode($response);
+}
+
+function session($key, $default = NULL)
+{
+    return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
 }
