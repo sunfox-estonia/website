@@ -5,7 +5,11 @@ body {
     height: 100vh;
     background: url('/resources/img/profile/bg_signin.jpg') center center no-repeat;
     background-size: cover;
+    font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;
+    font-size:13px; 
+    color:#161616;
 }
+
 .btn {
     text-decoration: none;
 }
@@ -40,10 +44,19 @@ body {
     margin: auto;
 }
 
+/* Small devices (portrait phones less than 577px) */
+@media (max-width: 577px) {}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
 
-@media screen and (701px < width < 760px){
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
 
-}
-@media screen and (width <700px){
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
 
-}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
