@@ -219,7 +219,7 @@ $f3->route('GET /profile/signout', function ($f3) {
     $OAuth_Logout->request('https://discord.com/api/oauth2/token/revoke', 'POST');
     $f3->clear('SESSION.discord_token');
 
-    $f3->reroute('/');
+    $f3->reroute('/profile');
 });
 
 $f3->route('GET /profile/oauth/discord', function ($f3) {
