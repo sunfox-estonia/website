@@ -2,9 +2,9 @@
 Sunfox website CSS
 Author: Victor Litvinkov
 */
-@font-face {font-family:Mezzo Bold;src: url(../fonts/mezzo_bd.otf);src: local(Mezzo), url(../fonts/mezzo_bd.otf);}
-@font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
-@font-face {font-family:Runic AltNo;src: url(../fonts/runic_altno.ttf);src: local(Runic), url(../fonts/runic_altno.ttf);}
+@font-face {font-family:Mezzo Bold;src: url(https://r.snfx.ee/resources/fonts/mezzo_bd.otf);src: local(Mezzo), url(https://r.snfx.ee/resources/fonts/mezzo_bd.otf);}
+@font-face {font-family:Mezzo Regular;src: url(https://r.snfx.ee/resources/mezzo_rg.otf);src: local(Mezzo), url(https://r.snfx.ee/resources/fonts/mezzo_rg.otf);}
+@font-face {font-family:Runic AltNo;src: url(https://r.snfx.ee/resources/runic_altno.ttf);src: local(Runic), url(https://r.snfx.ee/resources/fonts/runic_altno.ttf);}
 
 html {scroll-behavior:smooth;}
 
