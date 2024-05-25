@@ -1,5 +1,7 @@
-@font-face {font-family:Mezzo Bold;src: url(../fonts/mezzo_bd.otf);src: local(Mezzo), url(../fonts/mezzo_bd.otf);}
-@font-face {font-family:Mezzo Regular;src: url(../fonts/mezzo_rg.otf);src: local(Mezzo), url(../fonts/mezzo_rg.otf);}
+@font-face {font-family:Mezzo Bold;src: url(https://r.snfx.ee/fonts/mezzo_bd.otf);src: local(Mezzo), url(https://r.snfx.ee/fonts/mezzo_bd.otf);}
+@font-face {font-family:Mezzo Regular;src: url(https://r.snfx.ee/mezzo_rg.otf);src: local(Mezzo), url(https://r.snfx.ee/fonts/mezzo_rg.otf);}
+@font-face {font-family:Runic AltNo;src: url(https://r.snfx.ee/runic_altno.ttf);src: local(Runic), url(https://r.snfx.ee/fonts/runic_altno.ttf);}
+
 body {
     font-family:Lucida Sans Unicode,Lucida Grande,sans-serif; color:#161616;
     font-size: 0.85em;
