@@ -24,11 +24,11 @@
             <div class="row">
                 <div class="col d-flex align-self-start">
                     <div class="align-self-stretch">
-                        <div class="userpic" style="background-image: url('https://cdn.discordapp.com/avatars/363400912733208587/e6c50443585b2dd2ae4148c1a523be7c.png');"></div>
+                        <div class="userpic" style="background-image: url('{{ @user_picture }}');"></div>
                     </div>
                     <div class="align-self-stretch">
-                        <h5>Vitgor Sunfox</h5>
-                        <span class="drd_role_title role_color_1190663023547920494">Хранитель</span>
+                        <h5>{{ @user_name }}</h5>
+                        <span class="drd_role_title role_color_{{ @user_role_id }}">{{ @user_role_title }}</span>
                     </div>
                 </div>
                 <div class="col">
@@ -44,171 +44,58 @@
             <div class="row">
                 <div class="col pb-3 pt-4"><h1>Мои достижения</h1></div>
             </div>
-            <div class="row pb-3">
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card snfx_achievement_rare mb-2"><div id="ChristmasMysteriesGuard"></div><div class="card-body">
-                        <h5 class="card-title">Защитник Рождественских Тайн</h5>
-                        <p class="card-text">Участие в событии "Тайный Санта 2023"</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card sot_achievement_rare mb-2"><div id="LegendaryHelm"></div><div class="card-body">
-                        <h5 class="card-title">Повелитель морей</h5>
-                        <p class="card-text">5 раз принять участие в успешном ролле рейда Sea of Thieves, используя сервис vpn.snfx.ee</p>
-                    </div>
-                    </div>
-                </div>
+            <div class="row gx-2 gy-1 d-flex flex-wrap">
+                <repeat group="{{ @achievements }}" value="{{ @record }}">
+                    <check if="{{ @record.comedation_type=='rare' AND @record.achievement_done!=''  }}">
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3"><div class="card achievement_rare_<check if="{{ @record.steam_game_code!=''}}"><true>{{ @record.steam_game_code }}</true><false>snfx</false></check> mb-2"><div style="background-image: url('https://reineke.snfx.ee/img/comedations/{{ @record.comedation_code }}.png');"></div><div class="card-body">
+                        <h5 class="card-title">{{ @record.comedation_title }}</h5>
+                        <p class="card-text">{{ @record.comedation_description}}</p>
+                    </div></div></div>
+                    </check>
+                </repeat>
             </div>
-            <div class="row">
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-
-                    <div class="card sfx_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Посвящение в клоуны</h5>
-                        <p class="card-text">Отправить 5 мемов в чат #memes</p>
-                    </div>
-                    </div>
-
-                    <div class="card sfx_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Общее дело</h5>
-                        <p class="card-text">Набрать 5 :dubloonssot: эмодзи под сообщениями от модераторов сервера</p>
-                    </div>
-                    </div>
-
-                    <div class="card sfx_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">От одного раза ничего не будет</h5>
-                        <p class="card-text">Первый раз принять участие в событии сервера</p>
-                    </div>
-                    </div>
-                    
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-
-                    <div class="card sfx_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">Зависимый</h5>
-                        <p class="card-text">Принять участие в 2 событиях, организованных на сервере</p>
-                    </div>
-                    </div>
-
-                    <div class="card sfx_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Хороший тамада</h5>
-                        <p class="card-text">Инициировать и провести одно событие на сервере </p>
-                    </div>
-                    </div>
-
-                    <div class="card sfx_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">Художник-любитель</h5>
-                        <p class="card-text">Собрать 10 эмодзи под сообщениями, опубликовав результаты своего тверчества в чате #art</p>
-                    </div>
-                    </div>
-
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-
-                    <div class="card sfx_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Творец</h5>
-                        <p class="card-text">Собрать в сумме 10 :goldsot:, разместив результаты своего творчества в чате #art</p>
-                    </div>
-                    </div>
-
-                    <div class="card sfx_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">Чарт-лист</h5>
-                        <p class="card-text">Поделиться 5 любимыми музыкальными треками в чате #music</p>
-                    </div>
-                    </div>
-
-                    <div class="card sfx_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">О вкусах не спорят</h5>
-                        <p class="card-text">Собрать в сумме 30 :goldsot: от модерации и участников сервера к трекам, отправленным в чате #music</p>
-                    </div>
-                    </div>
-
-                </div>
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-
-                    <div class="card sfx_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Последователь</h5>
-                        <p class="card-text">Пригласить одного друга на сервер</p>
-                    </div>
-                    </div>
-
-                    <div class="card sfx_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Сектант</h5>
-                        <p class="card-text">Пригласить второго друга на сервер</p>
-                    </div>
-                    </div>
-
-                </div>
-
+            <div class="row gx-2 gy-1 d-flex flex-wrap">
+                <repeat group="{{ @achievements }}" value="{{ @record }}">
+                    <check if="{{ (@record.steam_game_code=='' AND @record.comedation_type=='common') OR (@record.steam_game_code=='' AND @record.comedation_type=='rare' AND @record.achievement_done=='')  }}"><true>
+                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3"><div class="card achievement_common_snfx <check if="{{ @record.achievement_done==''  }}">locked</check> mb-2"><div class="card-body">
+                            <h5 class="card-title">{{ @record.comedation_title }}</h5>
+                            <p class="card-text">{{ @record.comedation_description}}</p>
+                        </div></div></div>
+                    </true></check>
+                </repeat>
             </div>
+
             <div class="row">
                 <div class="col pb-2 pt-4">
                     <h2>Glitterbeard Sailors</h2>
                 </div>
             </div>
-            <div class="row">
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card sot_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Легендарный рулевой</h5>
-                        <p class="card-text">15 победных боёв в PVP в команде GS в качестве рулевого</p>
-                    </div>
-                    </div>
-
-                    <div class="card sot_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">Проклятый Фармила</h5>
-                        <p class="card-text">Зачистить 20 FotD в составе экипажа на корабле, принадлежащем гильдии GS.</p>
-                    </div>
-                    </div>
-
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card sot_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">Легендарный канонир</h5>
-                        <p class="card-text">15 победных боёв в PVP в команде GS в качестве мейна (канонира)</p>
-                    </div>
-                    </div>
-
-                    <div class="card sot_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Истинный капитан</h5>
-                        <p class="card-text">Собрать 5 экипажей кораблей, используя команду /ship</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card sot_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Легендарный суппорт</h5>
-                        <p class="card-text">15 победных боёв в PVP в команде GS в качестве суппорта</p>
-                    </div>
-                    </div>
-                </div>
-
+            <div class="row gx-2 gy-1 d-flex flex-wrap">
+                <repeat group="{{ @achievements }}" value="{{ @record }}">
+                    <check if="{{ (@record.steam_game_code=='1172620' AND @record.comedation_type=='common') OR (@record.steam_game_code=='1172620' AND @record.comedation_type=='rare' AND @record.achievement_done=='')  }}">
+                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3"><div class="card achievement_common_1172620 <check if="{{ @record.achievement_done==''  }}">locked</check> mb-2"><div class="card-body">
+                            <h5 class="card-title">{{ @record.comedation_title }}</h5>
+                            <p class="card-text">{{ @record.comedation_description}}</p>
+                        </div></div></div>
+                    </check>
+                </repeat>
             </div>
+
 
             <div class="row">
                 <div class="col pb-2 pt-4">
                     <h2>Deep Rock Galatic</h2>
                 </div>
             </div>
-            <div class="row">
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card drg_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Тёмные недра</h5>
-                        <p class="card-text">Вместе с участниками сообщества выполнить 3 миссии подряд, не ниже 3 уровня сложности</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">                    
-                    <div class="card drg_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">Дворфов не бросать!</h5>
-                        <p class="card-text">Помочь другому участнику сообщества завершить выполнение поручения, отправившись на миссии вместе с ним</p>
-                    </div>
-                    </div>
-                </div>
+            <div class="row gx-2 gy-1 d-flex flex-wrap">
+                <repeat group="{{ @achievements }}" value="{{ @record }}">
+                    <check if="{{ (@record.steam_game_code=='548430' AND @record.comedation_type=='common') OR (@record.steam_game_code=='548430' AND @record.comedation_type=='rare' AND @record.achievement_done=='')  }}">
+                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3"><div class="card achievement_common_548430 <check if="{{ @record.achievement_done==''  }}">locked</check> mb-2"><div class="card-body">
+                            <h5 class="card-title">{{ @record.comedation_title }}</h5>
+                            <p class="card-text">{{ @record.comedation_description}}</p>
+                        </div></div></div>
+                    </true></check>
+                </repeat>
             </div>
 
             <div class="row">
@@ -216,87 +103,16 @@
                     <h2>Euro Truck Simulator</h2>
                 </div>
             </div>
-            <div class="row">
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card ets_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Душа конвоя</h5>
-                        <p class="card-text">Провести 5 совместных поездок в конвое с несколькими участниками сервера</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">                    
-                    <div class="card ets_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">Дальнобойщик</h5>
-                        <p class="card-text">Завершить рейс на расстояние не менее 900 километров совместно с другими участниками сервера</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">                    
-                    <div class="card ets_achievement_common mb-2"><div class="card-body">
-                        <h5 class="card-title">Водитель со стажем</h5>
-                        <p class="card-text">Проехать не нарушив правил, установленных лидером конвоя</p>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">                    
-                    <div class="card ets_achievement_common locked mb-2"><div class="card-body">
-                        <h5 class="card-title">Надежный поставщик</h5>
-                        <p class="card-text">Проехать по Дороге Дураков от Дортмунда до Кале в TruckersMP, сохранив груз.</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-11 col-xl-10 align-self-center">
-                    <!-- Banner for supporters -->
-                    <div class="banner mt-5 mb-3 p-3" id="NotificationsSubscribe">
-                        <h2>Подпишись на уведомления о событиях<br/>сервера Sunfox.ee! &#x1F447;</h2>
-                        <p>Уведомления приходит за час до ивента &mdash; Ты не упустишь самое интересное</p>
-                        <a href="#" class="btn btn-primary btn-lg float-end" role="button" data-bs-toggle="button" aria-pressed="false" onclick="return false;">Хочу получать уведомления!</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col pb-3 pt-4"><h1>Мои сервисы</h1></div>
-            </div>
-            <div class="row pb-3">
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="card mb-3" id="ServiceVpnUs">
-                        <div class="row g-0">
-                          <div class="offset-4 col-8">
-                            <div class="card-body">
-                              <h5 class="card-title">US.vpn.snfx.ee</h5>
-                              <p class="card-text">Скачайте файл для подключения и настройте сервис VPN США, следуя инструции.</p>
-                              <p class="card-text"><a href="" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ModalServiceVpnUs">Подключить</a></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="card locked mb-3" id="ServiceVpnEe">
-                        <div class="row g-0">
-                          <div class="offset-4 col-8">
-                            <div class="card-body">
-                              <h5 class="card-title">EE.vpn.snfx.ee</h5>
-                              <p class="card-text">Скачайте файл для подключения и настройте сервис VPN Эстония, следуя инструции.</p>
-                              <p class="card-text"><a href="" class="btn btn-outline-secondary btn-sm disabled" data-bs-toggle="modal" data-bs-target="#ModalServiceVpnEe">Подключить</a></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-
-
-
+            <div class="row gx-2 gy-1 d-flex flex-wrap">
+                <repeat group="{{ @achievements }}" value="{{ @record }}">
+                    <check if="{{ (@record.steam_game_code=='227300' AND @record.comedation_type=='common') OR (@record.steam_game_code=='227300' AND @record.comedation_type=='rare' AND @record.achievement_done=='')  }}">
+                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3"><div class="card achievement_common_227300 <check if="{{ @record.achievement_done==''  }}">locked</check> mb-2"><div class="card-body">
+                            <h5 class="card-title">{{ @record.comedation_title }}</h5>
+                            <p class="card-text">{{ @record.comedation_description}}</p>
+                        </div></div></div>
+                    </true></check>
+                </repeat>
+            </div>           
     </main>
     
     <footer>
@@ -673,7 +489,7 @@
               </p></div>
               <div class="d-flex d-none d-xl-flex flex-fill justify-content-end"><div class="justify-content-end align-self-center">
                   <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="58px" height="73px" viewBox="0 0 190.000000 240.000000" preserveAspectRatio="xMidYMid meet" style="background-color:#ffffff;">
-                  <g transform="translate(0.000000,240.000000) scale(0.050000,-0.050000)" fill="#26292d" stroke="none">
+                  <g transform="translate(0.000000,240.000000) scale(0.050000,-0.050000)" fill="#202226" stroke="none">
                   <path d="M0 2400 l0 -2400 1900 0 1900 0 0 2400 0 2400 -1900 0 -1900 0 0 -2400z m1605 2133 c-20 -183 91 -293 295 -293 206 0 312 105 297 294 -7 82 -5 86 48 86 226 0 419 -224 575 -670 148 -418 318 -511 555 -303 l72 63 -14 -98 c-28 -205 -161 -414 -313 -491 -146 -74 -186 -69 -353 40 -255 166 -360 189 -867 189 -508 0 -612 -23 -869 -190 l-155 -102 -109 32 c-187 54 -317 205 -380 440 -43 163 -38 188 28 125 231 -222 420 -126 563 287 157 451 347 676 575 678 62 0 62 -1 52 -87z m765 -1344 c383 -66 481 -174 490 -536 0 -28 -63 32 -103 97 -26 43 -37 50 -37 24 0 -57 76 -191 164 -286 l81 -88 -174 -190 c-194 -210 -186 -208 -367 -147 -128 44 -182 42 -307 -11 -25 -11 -35 1 -46 61 -63 333 -279 333 -342 0 -11 -60 -21 -72 -46 -61 -129 55 -185 57 -309 12 -175 -62 -170 -64 -368 151 l-179 195 68 58 c76 65 185 242 185 300 0 27 -18 14 -61 -47 -80 -110 -85 -100 -52 107 32 198 53 230 199 293 228 98 836 133 1204 68z m-1513 -1138 c342 -179 261 -717 -103 -685 -171 15 -291 155 -262 307 26 139 177 236 155 100 -21 -127 106 -212 189 -129 133 133 -113 340 -294 247 -283 -147 -92 -625 242 -607 193 10 271 89 354 354 104 334 429 433 653 200 98 -102 252 -178 359 -176 74 1 76 3 25 18 -148 45 -267 161 -200 197 315 167 593 72 686 -235 97 -320 306 -453 529 -337 291 151 245 615 -61 615 -136 0 -250 -191 -165 -276 82 -82 207 -5 191 116 -13 96 22 107 94 29 112 -121 73 -315 -78 -389 -372 -179 -626 327 -300 596 308 253 715 -12 711 -464 -4 -548 -607 -816 -904 -402 -84 117 -97 100 -30 -39 95 -193 301 -331 496 -331 97 0 96 -21 -2 -76 -108 -61 -254 -59 -347 4 l-71 48 -35 -78 c-66 -147 -89 -140 -89 26 0 454 -313 750 -715 677 -523 -96 -515 -861 9 -865 230 -2 377 261 220 396 -148 127 -362 -26 -297 -213 26 -72 -6 -79 -83 -19 -154 121 -115 422 68 530 417 246 852 -357 568 -787 -254 -384 -934 -266 -1102 192 -1 3 -34 -8 -74 -25 -176 -73 -390 -30 -543 111 -120 111 -115 122 31 77 273 -85 536 20 568 227 21 139 86 319 149 414 67 100 67 110 -1 84 -69 -27 -126 -99 -167 -211 -172 -464 -794 -443 -975 32 -174 460 217 948 601 747z"/>
                   <path d="M1645 4071 c-71 -72 -28 -166 65 -143 30 8 58 -4 91 -39 l47 -50 -69 -59 c-38 -32 -88 -59 -112 -59 -79 -2 -114 -121 -35 -121 15 0 28 -14 28 -31 0 -86 106 -11 129 91 32 141 231 126 231 -17 0 -106 68 -131 149 -56 74 69 57 123 -43 138 -22 4 -70 31 -106 62 l-65 55 46 49 c29 31 59 45 82 38 102 -32 148 70 67 148 -64 60 -115 49 -141 -33 -12 -36 -41 -85 -65 -109 l-44 -44 -44 44 c-24 24 -53 73 -65 109 -26 81 -83 91 -146 27z"/>
                   <path d="M1234 2752 c-73 -68 -85 -135 -41 -226 130 -266 567 -186 567 104 0 61 -5 69 -33 53 -42 -23 -118 -2 -232 65 -112 65 -193 67 -261 4z"/>
@@ -686,54 +502,11 @@
             </div>
         </div></div></div></div>
     </footer>
-
-<!--== MODALS ==-->
-<div class="modal" id="ModalServiceVpnUs" tabindex="-1" aria-labelledby="ModalServiceVpnUs" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="ModalServiceVpnUs">Подключение US.vpn.snfx.ee</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6>Шаг 1</h6>
-                <p>Скачайте клиент OpenVPN и подключите *.ovpn файл, воспользовавшись инструкцией из <a href="https://wiki.sunfox.ee/glitterbeard:vpn" target="_blank">wiki-системы сообщества</a>.<br/>
-                <a href="#" class="btn btn-outline-primary btn-sm mt-2">Скачать файл для подключения</a></p>
-                <h6>Шаг 2</h6>
-                <p>Скопируйте и введите пароль для подключения в клиент OpenVPN.<br/>
-                <button id="copyPasswordBtn" type="button" class="btn btn-outline-primary btn-sm mt-2">Скопировать пароль</button></p>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <p class="card-text"><a href="#" id="copyPasswordBtn" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Готово</a></p>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> 
 
-<script>
-    $(document).ready(function(){
-        $('#copyPasswordBtn').click(function(){
-            var copyme = '3t47s8y06l';
-            var $btn = $(this);
-            navigator.clipboard.writeText(copyme).then(function() {
-                $btn.popover({
-                    content: 'Пароль скопирован!',
-                    placement: 'bottom',
-                    trigger: 'manual'
-                });
-                $btn.popover('show');
-                setTimeout(function(){
-                    $btn.popover('hide');
-                }, 3000);
-            }, function(err) {
-                console.error('Failed to copy: ', err);
-            });
-        });
-    });
-    </script>
+
 
 </html>

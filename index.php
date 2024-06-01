@@ -2,6 +2,7 @@
 // composer autoloader for required packages and dependencies
 require_once('lib/autoload.php');
 require_once('config.php');
+require_once('profile.config.php');
 
 /** @var \Base $f3 */
 $f3 = \Base::instance();
@@ -13,14 +14,15 @@ $f3->set('AUTOLOAD', 'app/controllers/');
 $f3->set('UI', 'app/templates/');
 $f3->set('LOCALES', 'app/locales/');
 $f3->set('DB', new DB\SQL('mysql:host=localhost;port=3306;dbname=' . HUGINN_DBNAME, HUGINN_DBUSER, HUGINN_DBPASS));
+$f3->set('REINEKE_DB', new DB\SQL('mysql:host=' . REINEKE_DBHOST . ';port=3306;dbname=' . REINEKE_DBNAME, REINEKE_DBUSER, REINEKE_DBPASS));
 
 $f3->set('gcaptcha_siteKey', GCAPTCHA_KEY);
 $f3->set('gcaptcha_secret', GCAPTCHA_SECRET);
 
 $f3->set('ONERROR', function ($f3) {
-    // $f3->set('LANGUAGE', $f3->get('SESSION.native'));
-    // $user_lang = $f3->get('SESSION.native');
-    // $f3->set('FALLBACK', 'ru');
+     $f3->set('LANGUAGE', $f3->get('SESSION.native'));
+     $user_lang = $f3->get('SESSION.native');
+     $f3->set('FALLBACK', 'ru');
     echo $f3->get('ERROR.code') . '<br>';
     echo $f3->get('ERROR.text') . '<br>';
     echo $f3->get('ERROR.trace') . '<br>';
@@ -189,8 +191,111 @@ $f3->route(
 
 $f3->route('GET /profile', function ($f3) {
     if ($f3->get('SESSION.discord_token')) {
-        $OAuth_UserData = new Web\OAuth2();
-        $UserData = $OAuth_UserData->request('https://discord.com/api/users/@me', 'GET', $f3->get('SESSION.discord_token'));
+        // $OAuth_Data = new Web\OAuth2();
+        // $UserData = $OAuth_Data->request('https://discord.com/api/users/@me', 'GET', $f3->get('SESSION.discord_token'));
+        // $UserConnections = $OAuth_Data->request('https://discordapp.com/api/v6/users/@me/connections', 'GET', $f3->get('SESSION.discord_token'));
+        // $UserRoles = $OAuth_Data->request('https://discordapp.com/api/v6/users/@me/guilds/' . REINEKE_GUILDID . '/member', 'GET', $f3->get('SESSION.discord_token'));
+
+
+        // $user_req = new DB\SQL\Mapper($f3->get('REINEKE_DB'), 'users');
+        // $user_req->load(array('user_discord_uid = ?', $UserData['id']));
+
+        $f3->set('user_name', "Vitgor Sunfox");
+        $user_discord_uid = "363400912733208587";
+        $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/e6c50443585b2dd2ae4148c1a523be7c.png');
+
+        // if ($user_req->dry()) {
+        //     $user_req->reset();
+        //     $is_steam_connected = array_search('steam', array_column($UserConnections, 'type'));
+        //     if ($is_steam_connected) {
+        //         $steam_uid = $UserConnections[$is_steam_connected]['id'];
+        //     } else {
+        //         $steam_uid = "";
+        //     }
+    
+        //     $is_xbox_connected = array_search('xbox', array_column($UserConnections, 'type'));
+        //     if ($is_steam_connected) {
+        //         $xbox_uid = $UserConnections[$is_xbox_connected]['name'];
+        //     } else {
+        //         $xbox_uid = "";
+        //     }
+        //     $user_req->user_discord_uid = $UserData['id'];
+        //     $user_req->user_name = $UserRoles['nick'];
+        //     $user_req->user_landing = "common";
+        //     $user_req->user_timezone = "Europe/Tallinn";
+        //     $user_req->user_steam_uid = $steam_uid;
+        //     $user_req->user_xbox_uid = $xbox_uid;
+        //     $user_req->save();
+
+        //     $f3->set('user_name', $UserRoles['nick']);
+        //     $user_discord_uid = $UserData['id'];
+        //     $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/'. $UserData['avatar'] . '.png');
+        // } else {
+        //     $f3->set('user_name', $user_req->user_name);
+        //     $user_discord_uid = $user_req->user_discord_uid;
+        //     $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/'. $UserData['avatar'] . '.png');
+        // }
+
+
+        // $user_roles_arr = $UserRoles['roles'];
+        // if (in_array("1190662270460624986", $user_roles_arr)) {
+        //     $f3->set('user_role_id', '1190662270460624986');
+        //     $f3->set('user_role_title', 'Путник Затерянных Земель');
+        // }
+        // if (in_array("1190662726473756692", $user_roles_arr)) {
+        //     $f3->set('user_role_id', '1190662726473756692');
+        //     $f3->set('user_role_title', 'Новобранец Лесного Союза');
+        // }
+        // if (in_array("1190662766286077982", $user_roles_arr)) {
+        //     $f3->set('user_role_id', '1190662766286077982');
+        //     $f3->set('user_role_title', 'Ученик Лесных Тайн');
+        // }
+        // if (in_array("1190662823567695932", $user_roles_arr)) {
+        //     $f3->set('user_role_id', '1190662823567695932');
+        //     $f3->set('user_role_title', 'Воин Вихревого Ветра');
+        // }
+        // if (in_array("1190662871227576381", $user_roles_arr)) {
+        //     $f3->set('user_role_id', '1190662871227576381');
+        //     $f3->set('user_role_title', 'Адепт Огненной Войны');
+        // }
+        // if (in_array("1190662963053473885", $user_roles_arr)) {
+        //     $f3->set('user_role_id', '1190662963053473885');
+        //     $f3->set('user_role_title', 'Капитан Теневого Ковчега');
+        // }
+        // if (in_array("1190663023547920494", $user_roles_arr)) {
+        //     $f3->set('user_role_id', '1190663023547920494');
+        //     $f3->set('user_role_title', 'Хранитель');
+        // }
+        // if (in_array("1203782300383580232", $user_roles_arr)) {
+        //     $f3->set('user_role_id', '1203782300383580232');
+        //     $f3->set('user_role_title', 'Практикант');
+        // }
+
+        // $user_req->reset();
+
+        $achievements_req = $f3->get('REINEKE_DB')->exec(
+            'SELECT 
+            `dir_comedations`.`comedation_code`, 
+            `dir_comedations`.`comedation_title`, 
+            `dir_comedations`.`comedation_description`, 
+            `dir_comedations`.`comedation_type`, 
+            `dir_comedations`.`comedation_pp`, 
+            `dir_comedations`.`steam_game_code`,
+            `user_achievements`.`achievement_done` 
+            FROM `dir_comedations` 
+            LEFT JOIN (
+                SELECT DISTINCT 
+                `user_comedations`.`user_discord_uid`, `user_comedations`.`comedation_code`, `user_comedations`.`date_created` AS `achievement_done` 
+                FROM `user_comedations` 
+            ) `user_achievements` 
+            ON `dir_comedations`.`comedation_code` = `user_achievements`.`comedation_code` 
+            AND `user_achievements`.`user_discord_uid` = ?',
+            $user_discord_uid
+        );
+
+        $f3->set('achievements', $achievements_req);
+
+
         echo Template::instance()->render('profile/profile.htm');
     } else {
         $f3->reroute('/profile/signin');
@@ -202,8 +307,8 @@ $f3->route('GET /profile/signin', function ($f3) {
         $f3->reroute('/profile');
     } else {
         $OAuth = new Web\OAuth2();
-        $OAuth->set('client_id', DISCORD_CLIENT_ID);
-        $OAuth->set('scope', 'identify');
+        $OAuth->set('client_id', REINEKE_CLIENT_ID);
+        $OAuth->set('scope', 'identify guilds.members.read connections');
         $OAuth->set('response_type', 'code');
         $OAuth->set('access_type', 'online');
         $OAuth->set('approval_prompt', 'auto');
@@ -217,8 +322,8 @@ $f3->route('GET /profile/signin', function ($f3) {
 $f3->route('GET /profile/signout', function ($f3) {
     if ($f3->get('SESSION.discord_token')) {
         $OAuth_Logout = new Web\OAuth2();
-        $OAuth_Logout->set('client_id', DISCORD_CLIENT_ID);
-        $OAuth_Logout->set('client_secret', DISCORD_CLIENT_SECRET);
+        $OAuth_Logout->set('client_id', REINEKE_CLIENT_ID);
+        $OAuth_Logout->set('client_secret', REINEKE_CLIENT_SECRET);
         $OAuth_Logout->set('token', $f3->get('SESSION.discord_token'));
         $OAuth_Logout->request('https://discord.com/api/oauth2/token/revoke', 'POST');
         $f3->clear('SESSION.discord_token');
@@ -231,8 +336,8 @@ $f3->route('GET /profile/signout', function ($f3) {
 $f3->route('GET /profile/oauth/discord', function ($f3) {
     if ($f3->get('GET.code')) {
         $OAuth_Token = new Web\OAuth2();
-        $OAuth_Token->set('client_id', DISCORD_CLIENT_ID);
-        $OAuth_Token->set('client_secret', DISCORD_CLIENT_SECRET);
+        $OAuth_Token->set('client_id', REINEKE_CLIENT_ID);
+        $OAuth_Token->set('client_secret', REINEKE_CLIENT_SECRET);
         $OAuth_Token->set('grant_type', 'authorization_code');
         $OAuth_Token->set('code', $f3->get('GET.code'));
         $OAuth_Token->set('redirect_uri', $f3->SCHEME . '://' . $_SERVER['HTTP_HOST'] . '/profile/oauth/discord');

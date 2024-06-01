@@ -1,0 +1,88 @@
+<div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-11 col-xl-10 align-self-center">
+        <!-- Banner for supporters -->
+        <div class="banner mt-5 mb-3 p-3" id="NotificationsSubscribe">
+            <h2>Подпишись на уведомления о событиях<br/>сервера Sunfox.ee! &#x1F447;</h2>
+            <p>Уведомления приходит за час до ивента &mdash; Ты не упустишь самое интересное</p>
+            <a href="#" class="btn btn-primary btn-lg float-end" role="button" data-bs-toggle="button" aria-pressed="false" onclick="return false;">Хочу получать уведомления!</a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col pb-3 pt-4"><h1>Мои сервисы</h1></div>
+</div>
+<div class="row pb-3">
+    <div class="col-12 col-md-6 col-xl-4">
+        <div class="card mb-3" id="ServiceVpnUs">
+            <div class="row g-0">
+              <div class="offset-4 col-8">
+                <div class="card-body">
+                  <h5 class="card-title">US.vpn.snfx.ee</h5>
+                  <p class="card-text">Скачайте файл для подключения и настройте сервис VPN США, следуя инструции.</p>
+                  <p class="card-text"><a href="" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ModalServiceVpnUs">Подключить</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-12 col-md-6 col-xl-4">
+        <div class="card locked mb-3" id="ServiceVpnEe">
+            <div class="row g-0">
+              <div class="offset-4 col-8">
+                <div class="card-body">
+                  <h5 class="card-title">EE.vpn.snfx.ee</h5>
+                  <p class="card-text">Скачайте файл для подключения и настройте сервис VPN Эстония, следуя инструции.</p>
+                  <p class="card-text"><a href="" class="btn btn-outline-secondary btn-sm disabled" data-bs-toggle="modal" data-bs-target="#ModalServiceVpnEe">Подключить</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
+
+<!--== MODALS ==-->
+<div class="modal" id="ModalServiceVpnUs" tabindex="-1" aria-labelledby="ModalServiceVpnUs" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="ModalServiceVpnUs">Подключение US.vpn.snfx.ee</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <h6>Шаг 1</h6>
+              <p>Скачайте клиент OpenVPN и подключите *.ovpn файл, воспользовавшись инструкцией из <a href="https://wiki.sunfox.ee/glitterbeard:vpn" target="_blank">wiki-системы сообщества</a>.<br/>
+              <a href="#" class="btn btn-outline-primary btn-sm mt-2">Скачать файл для подключения</a></p>
+              <h6>Шаг 2</h6>
+              <p>Скопируйте и введите пароль для подключения в клиент OpenVPN.<br/>
+              <button id="copyPasswordBtn" type="button" class="btn btn-outline-primary btn-sm mt-2">Скопировать пароль</button></p>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+              <p class="card-text"><a href="#" id="copyPasswordBtn" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Готово</a></p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+      $('#copyPasswordBtn').click(function(){
+          var copyme = '3t47s8y06l';
+          var $btn = $(this);
+          navigator.clipboard.writeText(copyme).then(function() {
+              $btn.popover({
+                  content: 'Пароль скопирован!',
+                  placement: 'bottom',
+                  trigger: 'manual'
+              });
+              $btn.popover('show');
+              setTimeout(function(){
+                  $btn.popover('hide');
+              }, 3000);
+          }, function(err) {
+              console.error('Failed to copy: ', err);
+          });
+      });
+  });
+  </script>

@@ -119,7 +119,14 @@ footer h4 {
 }
 
 /* Roles styles */
+.role_color_1190662270460624986 {background-color: #2ecc71;color: #000}
+.role_color_1190662726473756692 {background-color: #1f8b4c;color: #fff}
+.role_color_1190662766286077982 {background-color: #1abc9c;color: #000}
+.role_color_1190662823567695932 {background-color: #11806a;color: #fff}
+.role_color_1190662871227576381 {background-color: #9b59b6;color: #fff}
+.role_color_1190662963053473885 {background-color: #9b59b6;color: #fff}
 .role_color_1190663023547920494 {background-color: #e3c40f;color: #000}
+.role_color_1203782300383580232 {background-color: #c27c0e;color: #fff}
 
 /* Achievements styles 
    Create CSS backgrund styles: https://superdesigner.co/tools/css-backgrounds
@@ -134,7 +141,7 @@ footer h4 {
 */
 .card-body {background-color: #fff; border-radius: 4px 4px 4px 4px;}
 
-.snfx_achievement_rare {
+.achievement_rare_snfx {
     padding-top: 0px;
     background: linear-gradient(45deg,transparent 34%, #c76528 35%, #c76528 40%, transparent 41%, transparent 59%, #c76528  60%, #c76528 65%, transparent 66%),linear-gradient(135deg,transparent 34%, #c76528 35%, #c76528 40%, transparent 41%, transparent 59%, #c76528  60%, #c76528 65%, transparent 66%);
     background-size: 3em 3em;
@@ -142,7 +149,7 @@ footer h4 {
     opacity: 1
 }
 
-.sfx_achievement_common {
+.achievement_common_snfx {
     padding-top: 15px;
     background: linear-gradient(45deg,transparent 34%, #a55421 35%, #a55421 40%, transparent 41%, transparent 59%, #a55421  60%, #a55421 65%, transparent 66%),linear-gradient(135deg,transparent 34%, #a55421 35%, #a55421 40%, transparent 41%, transparent 59%, #a55421  60%, #a55421 65%, transparent 66%);
     background-size: 3em 3em;
@@ -150,7 +157,7 @@ footer h4 {
     opacity: 1
 }
 
-.sot_achievement_rare {
+.achievement_rare_1172620 {
     padding-top: 0px;
     background: linear-gradient(45deg, #3E6AA4 25%, transparent 25%), linear-gradient(315deg, #3E6AA4 25%, transparent 25%),linear-gradient(45deg, transparent 24%,#4E85CE 25%, #4E85CE 45%, transparent 45%), linear-gradient(315deg, transparent 24%,#4E85CE 25%, #4E85CE 45%, transparent 45%);
     background-size: 3em 3em;
@@ -158,7 +165,7 @@ footer h4 {
     opacity: 1
 }
 
-.sot_achievement_common {
+.achievement_common_1172620 {
     padding-top: 15px;
     background: linear-gradient(45deg, #3E6AA4 25%, transparent 25%), linear-gradient(315deg, #3E6AA4 25%, transparent 25%) ,linear-gradient(45deg, transparent 24%,#3E6AA4 25%, #3E6AA4 30%, transparent 31%, transparent 39%,#3E6AA4 40%, #3E6AA4 45%, transparent 45%),linear-gradient(315deg, transparent 24%,#3E6AA4 25%, #3E6AA4 30%, transparent 31%, transparent 39%,#3E6AA4 40%, #3E6AA4 45%, transparent 45%);
     background-size: 3em 3em;
@@ -166,7 +173,7 @@ footer h4 {
     opacity: 1
 }
 
-.drg_achievement_rare {
+.achievement_rare_548430 {
     padding-top: 0px;
     background: radial-gradient(circle at top left,transparent 9%, #98CC64 10% ,#98CC64 15% , transparent 16%) , radial-gradient(circle at bottom left,transparent 9%, #98CC64 10% ,#98CC64 15% , transparent 16%), radial-gradient(circle at top right ,transparent 9%, #98CC64 10% ,#98CC64 15% , transparent 16%) , radial-gradient(circle at bottom right,transparent 9%, #98CC64 10% ,#98CC64 15% , transparent 16%),radial-gradient(circle, transparent 25%, #80A55E  26%),linear-gradient(45deg, transparent 46%, #98CC64 47%, #98CC64 52%, transparent 53%), linear-gradient(135deg, transparent 46%, #98CC64 47%, #98CC64 52%, transparent 53%);
     background-size: 3em 3em;
@@ -174,7 +181,7 @@ footer h4 {
     opacity: 1
 }
 
-.drg_achievement_common {
+.achievement_common_548430 {
     padding-top: 15px;
     background: linear-gradient(45deg , #80A55E 10%,transparent 11%, transparent 89% , #80A55E 90%),linear-gradient(135deg , #80A55E 10%,transparent 11%, transparent 89% , #80A55E 90%),radial-gradient(circle, transparent 25%, #607B46  26%),linear-gradient(45deg, transparent 46%, #80A55E 47%, #80A55E 52%, transparent 53%), linear-gradient(135deg, transparent 46%, #80A55E 47%, #80A55E 52%, transparent 53%);
     background-size: 3em 3em;
@@ -182,7 +189,7 @@ footer h4 {
     opacity: 1
 }
 
-.ets_achievement_rare {
+.achievement_rare_227300 {
     padding-top: 0px;
     background: linear-gradient(45deg, #E0797E 0%, #E0797E 5%,transparent 5%, transparent 10%, #E0797E 10%, #E0797E 15%,transparent 15%,transparent 20%, #E0797E 20%, #E0797E 25%,transparent 25%,transparent 30%, #E0797E 30%, #E0797E 35%,transparent 35%,transparent 40%, #E0797E 40%, #E0797E 45%,transparent 45%,transparent 50%, #E0797E 50%, #E0797E 100%,transparent 55%,transparent 60%, #E0797E 60%, #E0797E 65%,transparent 65%,transparent 70%, #E0797E 70%, #E0797E 75%,transparent 70%,transparent 80%, #E0797E 80%, #E0797E 85%,transparent 85%,transparent 90%, #E0797E 90%, #E0797E 95%,transparent 95%), linear-gradient(135deg, #E0797E 0%, #E0797E 5%,transparent 5%, transparent 10%, #E0797E 10%, #E0797E 15%,transparent 15%,transparent 20%, #E0797E 20%, #E0797E 25%,transparent 25%,transparent 30%, #E0797E 30%, #E0797E 35%,transparent 35%,transparent 40%, #E0797E 40%, #E0797E 45%,transparent 45%,transparent 50%, #E0797E 50%, #E0797E 55%,transparent 55%,transparent 60%, #E0797E 60%, #E0797E 65%,transparent 65%,transparent 70%, #E0797E 70%, #E0797E 75%,transparent 70%,transparent 80%, #E0797E 80%, #E0797E 85%,transparent 85%,transparent 90%, #E0797E 90%, #E0797E 95%,transparent 95%);
     background-size: 3em 3em;
@@ -190,7 +197,7 @@ footer h4 {
     opacity: 1
 }
 
-.ets_achievement_common {
+.achievement_common_227300 {
     padding-top: 15px;
     background: linear-gradient(45deg, #BE676B 0%, #BE676B 5%,transparent 5%, transparent 10%, #BE676B 10%, #BE676B 15%,transparent 15%,transparent 20%, #BE676B 20%, #BE676B 25%,transparent 25%,transparent 30%, #BE676B 30%, #BE676B 35%,transparent 35%,transparent 40%, #BE676B 40%, #BE676B 45%,transparent 45%,transparent 50%, #BE676B 50%, #BE676B 100%,transparent 55%,transparent 60%, #BE676B 60%, #BE676B 65%,transparent 65%,transparent 70%, #BE676B 70%, #BE676B 75%,transparent 70%,transparent 80%, #BE676B 80%, #BE676B 85%,transparent 85%,transparent 90%, #BE676B 90%, #BE676B 95%,transparent 95%), linear-gradient(135deg, #BE676B 0%, #BE676B 5%,transparent 5%, transparent 10%, #BE676B 10%, #BE676B 15%,transparent 15%,transparent 20%, #BE676B 20%, #BE676B 25%,transparent 25%,transparent 30%, #BE676B 30%, #BE676B 35%,transparent 35%,transparent 40%, #BE676B 40%, #BE676B 45%,transparent 45%,transparent 50%, #BE676B 50%, #BE676B 55%,transparent 55%,transparent 60%, #BE676B 60%, #BE676B 65%,transparent 65%,transparent 70%, #BE676B 70%, #BE676B 75%,transparent 70%,transparent 80%, #BE676B 80%, #BE676B 85%,transparent 85%,transparent 90%, #BE676B 90%, #BE676B 95%,transparent 95%);
     background-size: 3em 3em;
@@ -198,7 +205,7 @@ footer h4 {
     opacity: 1
 }
 
-div.card>div[id] {
+div.card>div[style] {
     display: block;
     clear: both;
     height: 150px;
@@ -207,12 +214,6 @@ div.card>div[id] {
     background-position: center -25px;
     background-size: auto 200px;
 }
-
-/* Backgrounds for achievements by id */
-
-#ChristmasMysteriesGuard {background-image: url('/resources/img/profile/achievements/sfx_1.png') ;}
-#SausageParty {background-image: url('/resources/img/profile/achievements/sfx_2.png');}
-#LegendaryHelm {background-image: url('/resources/img/profile/achievements/sot_1.png');}
 
 /* Locked achievements */
 
