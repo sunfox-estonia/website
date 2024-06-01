@@ -191,87 +191,87 @@ $f3->route(
 
 $f3->route('GET /profile', function ($f3) {
     if ($f3->get('SESSION.discord_token')) {
-        // $OAuth_Data = new Web\OAuth2();
-        // $UserData = $OAuth_Data->request('https://discord.com/api/users/@me', 'GET', $f3->get('SESSION.discord_token'));
-        // $UserConnections = $OAuth_Data->request('https://discordapp.com/api/v6/users/@me/connections', 'GET', $f3->get('SESSION.discord_token'));
-        // $UserRoles = $OAuth_Data->request('https://discordapp.com/api/v6/users/@me/guilds/' . REINEKE_GUILDID . '/member', 'GET', $f3->get('SESSION.discord_token'));
+        $OAuth_Data = new Web\OAuth2();
+        $UserData = $OAuth_Data->request('https://discord.com/api/users/@me', 'GET', $f3->get('SESSION.discord_token'));
+        $UserConnections = $OAuth_Data->request('https://discordapp.com/api/v6/users/@me/connections', 'GET', $f3->get('SESSION.discord_token'));
+        $UserRoles = $OAuth_Data->request('https://discordapp.com/api/v6/users/@me/guilds/' . REINEKE_GUILDID . '/member', 'GET', $f3->get('SESSION.discord_token'));
 
 
-        // $user_req = new DB\SQL\Mapper($f3->get('REINEKE_DB'), 'users');
-        // $user_req->load(array('user_discord_uid = ?', $UserData['id']));
+        $user_req = new DB\SQL\Mapper($f3->get('REINEKE_DB'), 'users');
+        $user_req->load(array('user_discord_uid = ?', $UserData['id']));
 
-        $f3->set('user_name', "Vitgor Sunfox");
-        $user_discord_uid = "363400912733208587";
-        $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/e6c50443585b2dd2ae4148c1a523be7c.png');
+        // $f3->set('user_name', "Vitgor Sunfox");
+        // $user_discord_uid = "363400912733208587";
+        // $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/e6c50443585b2dd2ae4148c1a523be7c.png');
 
-        // if ($user_req->dry()) {
-        //     $user_req->reset();
-        //     $is_steam_connected = array_search('steam', array_column($UserConnections, 'type'));
-        //     if ($is_steam_connected) {
-        //         $steam_uid = $UserConnections[$is_steam_connected]['id'];
-        //     } else {
-        //         $steam_uid = "";
-        //     }
+        if ($user_req->dry()) {
+            $user_req->reset();
+            $is_steam_connected = array_search('steam', array_column($UserConnections, 'type'));
+            if ($is_steam_connected) {
+                $steam_uid = $UserConnections[$is_steam_connected]['id'];
+            } else {
+                $steam_uid = "";
+            }
     
-        //     $is_xbox_connected = array_search('xbox', array_column($UserConnections, 'type'));
-        //     if ($is_steam_connected) {
-        //         $xbox_uid = $UserConnections[$is_xbox_connected]['name'];
-        //     } else {
-        //         $xbox_uid = "";
-        //     }
-        //     $user_req->user_discord_uid = $UserData['id'];
-        //     $user_req->user_name = $UserRoles['nick'];
-        //     $user_req->user_landing = "common";
-        //     $user_req->user_timezone = "Europe/Tallinn";
-        //     $user_req->user_steam_uid = $steam_uid;
-        //     $user_req->user_xbox_uid = $xbox_uid;
-        //     $user_req->save();
+            $is_xbox_connected = array_search('xbox', array_column($UserConnections, 'type'));
+            if ($is_steam_connected) {
+                $xbox_uid = $UserConnections[$is_xbox_connected]['name'];
+            } else {
+                $xbox_uid = "";
+            }
+            $user_req->user_discord_uid = $UserData['id'];
+            $user_req->user_name = $UserRoles['nick'];
+            $user_req->user_landing = "common";
+            $user_req->user_timezone = "Europe/Tallinn";
+            $user_req->user_steam_uid = $steam_uid;
+            $user_req->user_xbox_uid = $xbox_uid;
+            $user_req->save();
 
-        //     $f3->set('user_name', $UserRoles['nick']);
-        //     $user_discord_uid = $UserData['id'];
-        //     $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/'. $UserData['avatar'] . '.png');
-        // } else {
-        //     $f3->set('user_name', $user_req->user_name);
-        //     $user_discord_uid = $user_req->user_discord_uid;
-        //     $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/'. $UserData['avatar'] . '.png');
-        // }
+            $f3->set('user_name', $UserRoles['nick']);
+            $user_discord_uid = $UserData['id'];
+            $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/'. $UserData['avatar'] . '.png');
+        } else {
+            $f3->set('user_name', $user_req->user_name);
+            $user_discord_uid = $user_req->user_discord_uid;
+            $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/'. $UserData['avatar'] . '.png');
+        }
 
 
-        // $user_roles_arr = $UserRoles['roles'];
-        // if (in_array("1190662270460624986", $user_roles_arr)) {
-        //     $f3->set('user_role_id', '1190662270460624986');
-        //     $f3->set('user_role_title', 'Путник Затерянных Земель');
-        // }
-        // if (in_array("1190662726473756692", $user_roles_arr)) {
-        //     $f3->set('user_role_id', '1190662726473756692');
-        //     $f3->set('user_role_title', 'Новобранец Лесного Союза');
-        // }
-        // if (in_array("1190662766286077982", $user_roles_arr)) {
-        //     $f3->set('user_role_id', '1190662766286077982');
-        //     $f3->set('user_role_title', 'Ученик Лесных Тайн');
-        // }
-        // if (in_array("1190662823567695932", $user_roles_arr)) {
-        //     $f3->set('user_role_id', '1190662823567695932');
-        //     $f3->set('user_role_title', 'Воин Вихревого Ветра');
-        // }
-        // if (in_array("1190662871227576381", $user_roles_arr)) {
-        //     $f3->set('user_role_id', '1190662871227576381');
-        //     $f3->set('user_role_title', 'Адепт Огненной Войны');
-        // }
-        // if (in_array("1190662963053473885", $user_roles_arr)) {
-        //     $f3->set('user_role_id', '1190662963053473885');
-        //     $f3->set('user_role_title', 'Капитан Теневого Ковчега');
-        // }
-        // if (in_array("1190663023547920494", $user_roles_arr)) {
-        //     $f3->set('user_role_id', '1190663023547920494');
-        //     $f3->set('user_role_title', 'Хранитель');
-        // }
-        // if (in_array("1203782300383580232", $user_roles_arr)) {
-        //     $f3->set('user_role_id', '1203782300383580232');
-        //     $f3->set('user_role_title', 'Практикант');
-        // }
+        $user_roles_arr = $UserRoles['roles'];
+        if (in_array("1190662270460624986", $user_roles_arr)) {
+            $f3->set('user_role_id', '1190662270460624986');
+            $f3->set('user_role_title', 'Путник Затерянных Земель');
+        }
+        if (in_array("1190662726473756692", $user_roles_arr)) {
+            $f3->set('user_role_id', '1190662726473756692');
+            $f3->set('user_role_title', 'Новобранец Лесного Союза');
+        }
+        if (in_array("1190662766286077982", $user_roles_arr)) {
+            $f3->set('user_role_id', '1190662766286077982');
+            $f3->set('user_role_title', 'Ученик Лесных Тайн');
+        }
+        if (in_array("1190662823567695932", $user_roles_arr)) {
+            $f3->set('user_role_id', '1190662823567695932');
+            $f3->set('user_role_title', 'Воин Вихревого Ветра');
+        }
+        if (in_array("1190662871227576381", $user_roles_arr)) {
+            $f3->set('user_role_id', '1190662871227576381');
+            $f3->set('user_role_title', 'Адепт Огненной Войны');
+        }
+        if (in_array("1190662963053473885", $user_roles_arr)) {
+            $f3->set('user_role_id', '1190662963053473885');
+            $f3->set('user_role_title', 'Капитан Теневого Ковчега');
+        }
+        if (in_array("1190663023547920494", $user_roles_arr)) {
+            $f3->set('user_role_id', '1190663023547920494');
+            $f3->set('user_role_title', 'Хранитель');
+        }
+        if (in_array("1203782300383580232", $user_roles_arr)) {
+            $f3->set('user_role_id', '1203782300383580232');
+            $f3->set('user_role_title', 'Практикант');
+        }
 
-        // $user_req->reset();
+        $user_req->reset();
 
         $achievements_req = $f3->get('REINEKE_DB')->exec(
             'SELECT 
