@@ -10,7 +10,7 @@
     <meta name="robots" content="all"/>
     <meta name="robots" content="noarchive"/>
     <meta name="googlebot" content="all" />
-    <title>Sunfox.ee Community .: Profile</title>
+    <include href="profile/opengraph.htm"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/resources/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/resources/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/resources/img/favicon/favicon-16x16.png"> 
@@ -39,10 +39,13 @@
     </header>
 
     <main>
-
         <div class="container">
-            <div class="row">
-                <div class="col pb-3 pt-4"><h1>Мои достижения</h1></div>
+            <div class="row pt-4">
+                <div class="col pb-3">
+                    <div class="d-flex"><div class="d-flex bg-light rounded mb-3 p-2"><p class="mb-0">
+                        <img src="https://cdn.discordapp.com/app-icons/1187871033282265088/3b13037ed20955ecf55e41b1111c5514.png?size=24" class="rounded-circle"><span class="badge badge-bg-bot ms-1 me-1">БОТ</span><strong>Reineke:</strong>&nbsp;Друг, ищешь <a href="#SectionGifts">подарки</a> или <a href="#SectionServices">сервисы</a>?
+                    </p></div></div>
+                    <h1>Мои достижения</h1></div>
             </div>
             <div class="row gx-2 gy-1 d-flex flex-wrap">
                 <repeat group="{{ @achievements }}" value="{{ @record }}">
@@ -112,7 +115,78 @@
                         </div></div></div>
                     </true></check>
                 </repeat>
-            </div>           
+            </div> 
+            <check if="{{ @gifts_empty=='true' }}"><false>
+            <div class="row">
+                <a name="SectionGifts"></a>
+                <div class="col pb-3 pt-4"><h1>Мои подарки</h1>
+                    <div class="d-flex"><div class="d-flex bg-light rounded mb-1 p-2"><p class="mb-0">
+                        <img src="https://cdn.discordapp.com/app-icons/1187871033282265088/3b13037ed20955ecf55e41b1111c5514.png?size=24" class="rounded-circle"><span class="badge badge-bg-bot ms-1 me-1">БОТ</span><strong>Reineke:</strong>&nbsp;Чтобы активировать код, воспользуйся инструкцией из <a href="https://wiki.sunfox.ee/glitterbeard:codes" target="_blank">wiki-системы сообщества</a>.
+                    </p></div></div>
+                </div>
+            </div>
+            <div class="row gx-2 gy-1 d-flex flex-wrap">
+                <repeat group="{{ @gifts }}" value="{{ @record }}">
+                <div class="col-12 col-md-6 col-xl-6">
+                    <div class="card mb-3" id="Gift_{{ @record.gift_code }}">
+                        <div class="row g-0">
+                            <div class="offset-4 col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ @record.gift_title }}</h5>
+                                    <p class="card-text">{{ @record.gift_description }}</p>
+                                    <div class="d-flex flex-row align-items-stretch">
+                                        <div class="align-self-center">
+                                            <button type="button" data-secret="{{ @record.gift_key }}" class="btn btn-outline-primary copySecretBtn" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Ключ скопирован!">Скопировать ключ</button>
+                                        </div>
+                                        <div class="ms-2 align-self-center">
+                                            <div class="form-text gift_date">Получен: {{ @finedate(@record.date_created,"d.m.Y") }}</div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                </repeat>
+            </div>
+            </false></check>
+
+            <div class="row">
+                <a name="SectionServices"></a>
+                <div class="col pb-3 pt-4"><h1>Мои сервисы</h1></div>
+            </div>
+            <div class="row pb-3">
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card <check if="{{ @services.101.status=='0' }}">locked</check> mb-3" id="ServiceVpnUs">
+                        <div class="row g-0">
+                          <div class="offset-4 col-8">
+                            <div class="card-body">
+                              <h5 class="card-title">US.vpn.snfx.ee</h5>
+                              <p class="card-text">Скачайте файл для подключения и настройте сервис VPN США, следуя инструкции.</p>
+                              <p class="card-text">
+                                <button type="button" <check if="{{ @services.101.status!='0' }}">onclick="ModalServiceData('101');" data-secret="{{ @services.101.pass }}"</check> class="btn btn-sm <check if="{{ @services.101.status=='0' }}"><true>btn-outline-secondary disabled</true><false>btn-outline-primary</false></check>">Подключить</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card <check if="{{ @services.103.status=='0' }}">locked</check> mb-3" id="ServiceVpnVless">
+                        <div class="row g-0">
+                          <div class="offset-4 col-8">
+                            <div class="card-body">
+                              <h5 class="card-title">VLESS.vpn.snfx.ee</h5>
+                              <p class="card-text">Скачайте файл для подключения и настройте сервис VLESS VPN, <a href="https://wiki.sunfox.ee/glitterbeard:vpn/vless" target="_blank">следуя инструкции</a>.</p>
+                              <p class="card-text">
+                                <a href="<check if="{{ @services.103.status!='0' }}">https://sunfox.ee/profile/vless/{{ @user_uid }}.vless</check>" target="_blank" class="btn btn-sm <check if="{{ @services.103.status=='0' }}"><true>btn-outline-secondary disabled</true><false>btn-outline-primary</false></check>">Скачать *.vless файл</a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            </div>
     </main>
     
     <footer>
@@ -502,11 +576,86 @@
             </div>
         </div></div></div></div>
     </footer>
+
+<!--== MODALS ==-->
+<check if="{{ (@services.101.status!='0') OR (@services.102.status!='0') }}">
+<div class="modal" id="ModalServiceVpn" tabindex="-1" aria-labelledby="ModalServiceVpnUs" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalServiceVpnUs">Подключение <span id="PlaceholderServiceTitle"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Шаг 1</h6>
+                <p>Скачайте клиент OpenVPN и подключите *.ovpn файл, воспользовавшись инструкцией из wiki:<br/>- <a href="https://wiki.sunfox.ee/glitterbeard:vpn/ru" target="_blank">для пользователей из РФ</a>;<br/>- <a href="https://wiki.sunfox.ee/glitterbeard:vpn/eu" target="_blank">для пользователей из других стран</a>.<br/>
+                <a class="btn btn-outline-primary btn-sm mt-2" id="PlaceholderServiceUrl" target="_blank">Скачать файл для подключения</a></p>
+                <h6>Шаг 2</h6>
+                <p class="mb-1">Скопируйте и введите пароль для подключения в клиент OpenVPN.<br/>
+                <div class="row">
+                    <div class="col-6"><input type="text" class="form-control form-control-lg mt-1" id="copySecretInput" value readonly></div>
+                    <div class="col-6">
+                       <p class="mt-1 text-secondary">Скопировать:<br/><kbd>Ctrl</kbd> + <kbd>С</kbd></p>
+                    </div>
+                </div>                
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <p class="card-text"><a href="#" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Готово</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</check>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> 
+<script >
 
-
-
+<check if="{{ (@gifts_empty!='true') OR (@services.101.status!='0') OR (@services.102.status!='0') }}">
+$(document).ready(function(){
+    $('.copySecretBtn').click(function(){
+        var copyme = $(this).data('secret');
+        console.log(copyme);
+        var $btn = $(this);
+        navigator.clipboard.writeText(copyme).then(function() {
+            $btn.popover({
+                trigger: 'manual'
+            });
+            $btn.popover('show');
+            setTimeout(function(){
+                $btn.popover('hide');
+            }, 3000);
+        }, function(err) {
+            console.error('Failed to copy: ', err);
+        });
+    });
+});
+</check>
+<check if="{{ (@services.101.status!='0') OR (@services.102.status!='0') }}">
+function ModalServiceData(servce_id) {
+    switch (servce_id) {
+        <check if="{{ (@services.101.status!='0') }}">
+        case '101':
+            $('#ModalServiceVpn').find('#PlaceholderServiceTitle').text('US.vpn.snfx.ee');
+            $('#ModalServiceVpn').find('#PlaceholderServiceUrl').attr('href', 'https://sunfox.ee/profile/ovpn/us_{{ @user_uid }}.ovpn');
+            $('#ModalServiceVpn').find('#copySecretInput').attr('value','{{ @services.101.pass }}');
+            $('#ModalServiceVpn').modal('show');
+            break;
+        </check>
+        <check if="{{ (@services.102.status!='0') }}">
+        case '102':
+            $('#ModalServiceVpn').find('#PlaceholderServiceTitle').text('EE.vpn.snfx.ee');
+            $('#ModalServiceVpn').find('#PlaceholderServiceUrl').attr('href', 'https://sunfox.ee/profile/ovpn/ee_{{ @user_uid }}.ovpn');
+            $('#ModalServiceVpn').find('#copySecretInput').attr('value','{{ @services.102.pass }}');
+            $('#ModalServiceVpn').modal('show');
+            break;
+        </check>
+        default:
+            break;
+    }
+}
+</check>
+$(document).on('click','input[type=text]',function(){ this.select(); })
+</script>
 </html>

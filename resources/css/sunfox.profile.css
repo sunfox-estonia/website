@@ -6,6 +6,7 @@ body {
     font-family:Lucida Sans Unicode,Lucida Grande,sans-serif; color:#161616;
     font-size: 0.85em;
 }
+
 .signin_body {
     width: 100vw; height: 100vh; 
     background: url('/resources/img/profile/bg_signin.jpg') center center no-repeat;
@@ -205,6 +206,26 @@ footer h4 {
     opacity: 1
 }
 
+div#Gift_20243 {
+    background: url('https://reineke.snfx.ee/img/gifts/20242.png') -20px center no-repeat, 
+                linear-gradient(to right,  rgba(43,23,54,0) 0%,rgba(43,23,54,0) 5%,rgba(43,23,54,1) 15%,rgba(43,23,54,1) 100%);
+    background-size: 40%, 100%;
+    background-color: #2B1736;
+}
+
+div#Gift_20242 {
+    background: url('https://reineke.snfx.ee/img/gifts/20242.png') -20px center no-repeat, 
+                linear-gradient(to right,  rgba(43,23,54,0) 0%,rgba(43,23,54,0) 5%,rgba(43,23,54,1) 15%,rgba(43,23,54,1) 100%);
+    background-size: 40%, 100%;
+    background-color: #2B1736;
+}
+div#Gift_20241 {
+    background:  url('https://reineke.snfx.ee/img/gifts/20241.png') 0px center no-repeat,
+                linear-gradient(to right,  rgba(43,23,54,0) 0%,rgba(43,23,54,0) 5%,rgba(43,23,54,1) 15%,rgba(43,23,54,1) 100%);
+    background-size: 35%, 100%;
+    background-color: #2B1736;
+}
+
 div.card>div[style] {
     display: block;
     clear: both;
@@ -242,6 +263,12 @@ div.card.locked>div[id] {
     background-size: 25%;
 }
 
+#ServiceVpnVless{
+    background: url('/resources/img/profile/services/vpn_vless.png') -15px -25px repeat;
+    background-size: 25%;
+}
+
+
 /* Banners */
 .banner {
     display: inline-block;
@@ -262,21 +289,39 @@ div.card.locked>div[id] {
     text-shadow: 0 0 8px rgba(225,175,209,1);
 }
 
+.badge-bg-bot {
+    background-color: #5865f2;
+}
+
+/* Integrations block */
+.alert-integrations {
+    background: #fff;
+    background-image: url('/resources/img/profile/bg_profile_integrations.png');
+    background-image: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,0) 100%), url('/resources/img/profile/bg_profile_integrations.png'); 
+    background-position: left top, top right, left top;
+    background-repeat: no-repeat, repeat-y, no-repeat;
+
+}
+
 /* Small devices (portrait phones less than 577px) */
 @media (max-width: 577px) {
     #NotificationsSubscribe {
         background: radial-gradient(circle at top left,transparent 25%,#e6b9d5 25.5%, #e6b9d5 36%, transparent 37%, transparent 100%),radial-gradient(circle at bottom right,transparent 34%,#e6b9d5 34.5%, #e6b9d5 45.5%, transparent 46%, transparent 100%), linear-gradient(135deg, rgba(173,136,198,0.9) 0%,rgba(225,175,209,0) 70%) no-repeat border-box, linear-gradient(45deg, rgba(225,175,209,0.05) 0%,rgba(225,175,209,1) 100%) no-repeat border-box, #FFE6E6;
     }
+    .gift_date {display: none;}
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     #NotificationsSubscribe {
         background: radial-gradient(circle at top left,transparent 25%,#e6b9d5 25.5%, #e6b9d5 36%, transparent 37%, transparent 100%),radial-gradient(circle at bottom right,transparent 34%,#e6b9d5 34.5%, #e6b9d5 45.5%, transparent 46%, transparent 100%), linear-gradient(135deg, rgba(173,136,198,0.9) 0%,rgba(225,175,209,0) 70%) no-repeat border-box, linear-gradient(45deg, rgba(225,175,209,0.05) 0%,rgba(225,175,209,1) 100%) no-repeat border-box, #FFE6E6;
     }
+    .gift_date {display: none;}
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .gift_date {display: none;}
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -284,6 +329,7 @@ div.card.locked>div[id] {
         background: no-repeat 140% center / 50% url('/resources/img/profile/notificaition_banner_img.png'), radial-gradient(circle at top left,transparent 25%,#e6b9d5 25.5%, #e6b9d5 36%, transparent 37%, transparent 100%),radial-gradient(circle at bottom right,transparent 34%,#e6b9d5 34.5%, #e6b9d5 45.5%, transparent 46%, transparent 100%), linear-gradient(135deg, rgba(173,136,198,0.9) 0%,rgba(225,175,209,0) 70%) no-repeat border-box, linear-gradient(45deg, rgba(225,175,209,0.05) 0%,rgba(225,175,209,1) 100%) no-repeat border-box, #FFE6E6;
     }
     #NotificationsSubscribe h2, #NotificationsSubscribe p, #NotificationsSubscribe a {margin-right: 250px;}
+    .gift_date {display: contents;}
 }
 
 /* X-Large devices (large desktops, 1200px and up) */

@@ -23,10 +23,16 @@ $f3->set('ONERROR', function ($f3) {
      $f3->set('LANGUAGE', $f3->get('SESSION.native'));
      $user_lang = $f3->get('SESSION.native');
      $f3->set('FALLBACK', 'ru');
-    echo $f3->get('ERROR.code') . '<br>';
-    echo $f3->get('ERROR.text') . '<br>';
-    echo $f3->get('ERROR.trace') . '<br>';
-    // echo Template::instance()->render('error.htm');
+    // echo $f3->get('ERROR.code') . '<br>';
+    // echo $f3->get('ERROR.text') . '<br>';
+    // echo $f3->get('ERROR.trace') . '<br>';
+    echo Template::instance()->render('error.htm');
+});
+
+$f3->set('finedate', function ($source, $format) {
+    $p = date_parse($source);
+    $r = date($format, mktime($p['hour'], $p['minute'], $p['second'], $p['month'], $p['day'], $p['year']));
+    return $r;
 });
 
 $f3->route(
@@ -191,6 +197,7 @@ $f3->route(
 
 $f3->route('GET /profile', function ($f3) {
     if ($f3->get('SESSION.discord_token')) {
+
         $OAuth_Data = new Web\OAuth2();
         $UserData = $OAuth_Data->request('https://discord.com/api/users/@me', 'GET', $f3->get('SESSION.discord_token'));
         $UserConnections = $OAuth_Data->request('https://discordapp.com/api/v6/users/@me/connections', 'GET', $f3->get('SESSION.discord_token'));
@@ -229,13 +236,54 @@ $f3->route('GET /profile', function ($f3) {
 
             $f3->set('user_name', $UserRoles['nick']);
             $user_discord_uid = $UserData['id'];
+            $f3->set('user_uid', $user_discord_uid);
             $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/'. $UserData['avatar'] . '.png');
+        } elseif (!is_null($user_req->user_date_deleted)) {
+            $f3->reroute('/error');
         } else {
             $f3->set('user_name', $user_req->user_name);
+
+            if ($user_req->services_vpn_us !== '0' && strlen($user_req->services_vpn_us) > 2) {
+                $f3->set('services.101.status', '1');
+                $f3->set('services.101.pass', $user_req->services_vpn_us);
+            } else {
+                $f3->set('services.101.status', '0');
+            }
+
+            if ($user_req->services_vpn_ee !== '0' && strlen($user_req->services_vpn_ee) > 2) {
+                $f3->set('services.102.status', '1');
+                $f3->set('services.102.pass', $user_req->services_vpn_ee);
+            } else {
+                $f3->set('services.102.status', '0');
+            }
+
+            if ($user_req->services_vpn_vless !== '0') {
+                $f3->set('services.103.status', '1');
+            } else {
+                $f3->set('services.103.status', '0');
+            }
+
+            if(is_null($user_req->user_steam_uid) || empty($user_req->user_steam_uid)) {
+                $is_steam_connected = array_search('steam', array_column($UserConnections, 'type'));
+                if ($is_steam_connected) {
+                    $steam_uid = $UserConnections[$is_steam_connected]['id'];
+                    $user_req->user_steam_uid = $steam_uid;
+                    $user_req->save();
+                }
+            }
+            if(is_null($user_req->user_steam_uid) || empty($user_req->user_steam_uid)) {
+                $is_xbox_connected = array_search('xbox', array_column($UserConnections, 'type'));
+                if ($is_steam_connected) {
+                    $xbox_uid = $UserConnections[$is_xbox_connected]['name'];
+                    $user_req->user_xbox_uid = $xbox_uid;
+                    $user_req->save();
+                }
+            }
+
             $user_discord_uid = $user_req->user_discord_uid;
+            $f3->set('user_uid', $user_discord_uid);
             $f3->set('user_picture', 'https://cdn.discordapp.com/avatars/' . $user_discord_uid . '/'. $UserData['avatar'] . '.png');
         }
-
 
         $user_roles_arr = $UserRoles['roles'];
         if (in_array("1190662270460624986", $user_roles_arr)) {
@@ -295,7 +343,14 @@ $f3->route('GET /profile', function ($f3) {
 
         $f3->set('achievements', $achievements_req);
 
-
+        $gifts_req = new DB\SQL\Mapper($f3->get('REINEKE_DB'), 'user_gifts');
+        $gifts_result = $gifts_req->find(array('user_discord_uid=?',$user_discord_uid));
+        if (!$gifts_req->count(array('user_discord_uid=?',$user_discord_uid))) {
+            $f3->set('gifts_empty', 'true');
+        } else {
+            $f3->set('gifts_empty', 'false');
+            $f3->set('gifts', $gifts_result);
+        }
         echo Template::instance()->render('profile/profile.htm');
     } else {
         $f3->reroute('/profile/signin');
@@ -355,6 +410,22 @@ $f3->route('GET /profile/lang/@language', function ($f3, $params) {
     $user_lang = ($set_lang == "ru" || $set_lang == "et" || $set_lang == "en") ? $set_lang : "ru";
     $f3->set('SESSION.native', $user_lang);
     $f3->reroute('/profile');
+});
+
+$f3->route('GET /profile/ovpn/@file', function ($f3, $params) {
+    if ($f3->get('SESSION.discord_token')) {
+        $f3->reroute('/resources/ovpn/' . $params['file']);
+    } else {
+        $f3->reroute('/error');
+    }    
+});
+
+$f3->route('GET /profile/vless/@file', function ($f3, $params) {
+    if ($f3->get('SESSION.discord_token')) {
+        $f3->reroute('/resources/vless/' . $params['file']);
+    } else {
+        $f3->reroute('/error');
+    }    
 });
 
 $f3->run();
